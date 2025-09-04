@@ -1,10 +1,10 @@
 import type { ParsedXMLElement } from "./xml.js";
-import { OAIPMHInnerValidationError } from "../../error/validation-error.js";
+import { OaiPmhInnerValidationError } from "../../error/validation-error.js";
 import { parseToRecordOrString } from "../../parser/xml_parser.js";
-import { parseOAIPMHResponseBase } from "./base_oai_pmh.js";
+import { parseOaiPmhResponseBase } from "./base_oai_pmh.js";
 import { parseKeyAsText, parseTextNodeArray } from "./shared.js";
 
-type OAIPMHIdentify = {
+type OaiPmhIdentify = {
   repositoryName: string;
   baseURL: string;
   protocolVersion: string;
@@ -18,26 +18,26 @@ type OAIPMHIdentify = {
 
 function parseIdentifyResponse(
   childNodeList: NodeListOf<ChildNode>,
-): OAIPMHIdentify {
-  const identify = parseOAIPMHResponseBase(childNodeList, "Identify");
+): OaiPmhIdentify {
+  const identify = parseOaiPmhResponseBase(childNodeList, "Identify");
 
   const parseResult = parseToRecordOrString(identify);
 
   if (parseResult instanceof Error) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       `error parsing <OAI-PMH><Identify>: ${parseResult.message}`,
     );
   }
 
   if (typeof parseResult !== "object") {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><Identify> node to have element child nodes",
     );
   }
 
   const { length } = Object.keys(parseResult);
   if (length < 7 || length > 9) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><Identify> to have only 7 to 9 possible types of element child nodes",
     );
   }
@@ -45,31 +45,31 @@ function parseIdentifyResponse(
   const repositoryName = parseKeyAsText(parseResult, "repositoryName");
 
   if (repositoryName instanceof Error) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   const baseURL = parseKeyAsText(parseResult, "baseURL");
 
   if (baseURL instanceof Error) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   const protocolVersion = parseKeyAsText(parseResult, "protocolVersion");
 
   if (protocolVersion instanceof Error) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   const earliestDatestamp = parseKeyAsText(parseResult, "earliestDatestamp");
 
   if (earliestDatestamp instanceof Error) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   const deletedRecord = parseKeyAsText(parseResult, "deletedRecord");
 
   if (deletedRecord instanceof Error) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   if (
@@ -77,26 +77,26 @@ function parseIdentifyResponse(
     deletedRecord !== "transient" &&
     deletedRecord !== "persistent"
   ) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   const granularity = parseKeyAsText(parseResult, "granularity");
 
   if (granularity instanceof Error) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   if (granularity !== "YYYY-MM-DD" && granularity !== "YYYY-MM-DDThh:mm:ssZ") {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
   const adminEmail = parseKeyAsText(parseResult, "adminEmail");
 
   if (adminEmail instanceof Error) {
-    throw new OAIPMHInnerValidationError("todo");
+    throw new OaiPmhInnerValidationError("todo");
   }
 
-  const oaiPMHIdentify: OAIPMHIdentify = {
+  const oaiPMHIdentify: OaiPmhIdentify = {
     repositoryName,
     baseURL,
     protocolVersion,
@@ -112,7 +112,7 @@ function parseIdentifyResponse(
     const parsedCompression = parseTextNodeArray(compression);
 
     if (parsedCompression instanceof Error) {
-      throw new OAIPMHInnerValidationError("todo");
+      throw new OaiPmhInnerValidationError("todo");
     }
 
     oaiPMHIdentify.compression = parsedCompression;
@@ -125,4 +125,4 @@ function parseIdentifyResponse(
   return oaiPMHIdentify;
 }
 
-export { type OAIPMHIdentify, parseIdentifyResponse };
+export { type OaiPmhIdentify, parseIdentifyResponse };

@@ -1,3 +1,5 @@
+export type SafeOmit<T, K extends keyof T> = Omit<T,K>;
+
 export type ListOptions = {
   from?: string;
   until?: string;
@@ -17,16 +19,16 @@ export type URLSearchParamsRecord = Record<string, string>;
  * {@link RequestInit} without {@link RequestInit.body} and
  * {@link RequestInit.method} properties.
  */
-export type ExtraRequestInit = Omit<RequestInit, "body" | "method">;
+export type ExtraRequestInit = SafeOmit<RequestInit, "body" | "method">;
 
 /** Same as {@link ExtraRequestInit} but without {@link ExtraRequestInit.signal}. */
-export type BaseRequestInit = Omit<ExtraRequestInit, "signal">;
+export type BaseRequestInit = SafeOmit<ExtraRequestInit, "signal">;
 
 /**
  * Same as {@link BaseRequestInit} but with its headers property forced as a
  * {@link Headers} object.
  */
-export type HttpRequestsRequestInit = Omit<BaseRequestInit, "headers"> & {
+export type HttpRequestsRequestInit = SafeOmit<BaseRequestInit, "headers"> & {
   headers: Headers;
 };
 
@@ -62,7 +64,7 @@ export type CustomRequestFn = (
   ...args: Parameters<typeof fetch>
 ) => Promise<CustomRequestFnResult>;
 
-export type OAIPMHRequestConstructorOptions = {
+export type OaiPmhRequestConstructorOptions = {
   baseUrl: string;
   init?: BaseRequestInit;
   usePost?: boolean;

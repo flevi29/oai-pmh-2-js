@@ -1,41 +1,27 @@
 <script lang="ts">
-  import { untrack } from "svelte";
-  import { oai } from "$lib/stores/oai-pmh/oai-pmh.svelte";
-  import {
-    listMetadataFormats,
-    fields,
-  } from "$lib/stores/oai-pmh/list-metadata-formats.svelte";
-  import ButtonComponent from "$lib/components/buttons/button.svelte";
-  import SimpleTextInputComponent from "$lib/components/inputs/simple-text-input.svelte";
+  import { getListMetadataFormatsResultStore } from "./list-metadata-formats.svelte";
+  import Button from "$lib/components/buttons/button.svelte";
+  import TextInput from "$lib/components/inputs/styled-text-input.svelte";
   import JSONComponent from "$lib/components/json.svelte";
   import Loading from "$lib/components/loading.svelte";
 
-  $effect(() => {
-    if (oai.oaiPMH !== null) {
-      untrack(() => {
-        if (listMetadataFormats.r.isRunning) {
-          listMetadataFormats.abort();
-        }
-      });
-    }
-  });
+  let identifier = $state<string>();
+
+  const r = getListMetadataFormatsResultStore(() => identifier);
 </script>
 
-<ButtonComponent
-  onclick={() =>
-    listMetadataFormats.r.isRunning
-      ? listMetadataFormats.abort()
-      : listMetadataFormats.run()}
-  disabled={oai.oaiPMH === null && !listMetadataFormats.r.isRunning}
-  >{listMetadataFormats.r.isRunning ? "Stop" : "Run"}</ButtonComponent
->
+<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
 
-<Loading isLoading={listMetadataFormats.r.isRunning} />
+<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
 
-<SimpleTextInputComponent
-  value={fields.identifier}
+<Loading isLoading={r.isRunning} />
+
+<TextInput
+  value={identifier}
   placeholder="identifier"
-  onValueChanged={fields.setIdentifier}
+  onValueChanged={(v) => {
+    identifier = v || undefined;
+  }}
 />
 
-<JSONComponent result={listMetadataFormats.r.result} valuesPerPage={10} />
+<JSONComponent result={r.result} valuesPerPage={10} />

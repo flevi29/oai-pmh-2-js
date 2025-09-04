@@ -1,6 +1,6 @@
-import { OAIPMHInnerValidationError } from "../../error/validation-error.js";
+import { OaiPmhInnerValidationError } from "../../error/validation-error.js";
 import { parseToRecordOrString } from "../../parser/xml_parser.js";
-import { parseOAIPMHResponseBase } from "./base_oai_pmh.js";
+import { parseOaiPmhResponseBase } from "./base_oai_pmh.js";
 import {
   type ListResponse,
   parseKeyAsText,
@@ -8,15 +8,15 @@ import {
 } from "./shared.js";
 import type { ParsedXMLElement } from "./xml.js";
 
-type OAIPMHSet = {
+type OaiPmhSet = {
   setSpec: string;
   setName: string;
   setDescription?: ParsedXMLElement[];
 };
 
-function parseSet({ attr, value }: ParsedXMLElement): OAIPMHSet {
+function parseSet({ attr, value }: ParsedXMLElement): OaiPmhSet {
   if (attr !== undefined || value === undefined) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><ListSets><set> to not be empty and to have no attributes",
     );
   }
@@ -24,20 +24,20 @@ function parseSet({ attr, value }: ParsedXMLElement): OAIPMHSet {
   const parsedSet = parseToRecordOrString(value);
 
   if (parsedSet instanceof Error) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       `error parsing <OAI-PMH><ListSets><set> contents: ${parsedSet.message}`,
     );
   }
 
   if (typeof parsedSet !== "object") {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><ListSets><set> node to have element child nodes",
     );
   }
 
   const { length } = Object.keys(parsedSet);
   if (length < 2 || length > 3) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><ListSets><set> to have only 2 or 3 possible types of element child nodes",
     );
   }
@@ -45,7 +45,7 @@ function parseSet({ attr, value }: ParsedXMLElement): OAIPMHSet {
   const setSpec = parseKeyAsText(parsedSet, "setSpec");
 
   if (setSpec instanceof Error) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       `error parsing <OAI-PMH><ListSets><set><setSpec>: ${setSpec.message}`,
     );
   }
@@ -53,12 +53,12 @@ function parseSet({ attr, value }: ParsedXMLElement): OAIPMHSet {
   const setName = parseKeyAsText(parsedSet, "setName");
 
   if (setName instanceof Error) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       `error parsing <OAI-PMH><ListSets><set><setName>: ${setName.message}`,
     );
   }
 
-  const oaiPMHSet: OAIPMHSet = { setSpec, setName };
+  const oaiPMHSet: OaiPmhSet = { setSpec, setName };
 
   const { setDescription } = parsedSet;
   if (setDescription !== undefined) {
@@ -70,26 +70,26 @@ function parseSet({ attr, value }: ParsedXMLElement): OAIPMHSet {
 
 function parseListSetsResponse(
   childNodeList: NodeListOf<ChildNode>,
-): ListResponse<OAIPMHSet> {
-  const listSets = parseOAIPMHResponseBase(childNodeList, "ListSets");
+): ListResponse<OaiPmhSet> {
+  const listSets = parseOaiPmhResponseBase(childNodeList, "ListSets");
 
   const parseResult = parseToRecordOrString(listSets);
 
   if (parseResult instanceof Error) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       `error parsing <OAI-PMH><ListSets>: ${parseResult.message}`,
     );
   }
 
   if (typeof parseResult !== "object") {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><ListSets> node to have element child nodes",
     );
   }
 
   const { length } = Object.keys(parseResult);
   if (length < 1 || length > 2) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><ListSets> to have only 2 possible types of element child nodes",
     );
   }
@@ -98,13 +98,13 @@ function parseListSetsResponse(
     parsedResumptionToken = parseResumptionToken(resumptionToken);
 
   if (parsedResumptionToken instanceof Error) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       `error parsing <OAI-PMH><ListSets><resumptionToken>: ${parsedResumptionToken.message}`,
     );
   }
 
   if (set === undefined) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected <OAI-PMH><ListSets> to have <set> element child nodes",
     );
   }
@@ -115,4 +115,4 @@ function parseListSetsResponse(
   };
 }
 
-export { type OAIPMHSet, parseListSetsResponse };
+export { type OaiPmhSet, parseListSetsResponse };

@@ -1,15 +1,15 @@
-import { OAIPMHError } from "./error.js";
+import { OaiPmhError } from "./error.js";
 
-export class OAIPMHInnerValidationError extends OAIPMHError {
-  override name = "OAIPMHInnerValidationError";
+export class OaiPmhInnerValidationError extends OaiPmhError {
+  override name = "OaiPmhInnerValidationError";
 }
 
-export class OAIPMHValidationError extends OAIPMHError {
-  override name = "OAIPMHValidationError";
-  override cause: OAIPMHInnerValidationError;
+export class OaiPmhValidationError extends OaiPmhError {
+  override name = "OaiPmhValidationError";
+  override cause: OaiPmhInnerValidationError;
   xml: string;
 
-  constructor(error: OAIPMHInnerValidationError, xml: string) {
+  constructor(error: OaiPmhInnerValidationError, xml: string) {
     super(
       error.message +
         "\n(hint: inspect `xml` property for the whole XML document)",

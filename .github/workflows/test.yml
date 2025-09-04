@@ -2,15 +2,14 @@ name: Tests
 
 on:
   pull_request:
-  push:
 
 jobs:
   lint_and_type_check_and_test:
     name: Lint, type check and test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup-deno
       - name: Lint
         run: |
           deno task lint

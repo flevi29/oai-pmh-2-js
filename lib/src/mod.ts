@@ -1,24 +1,24 @@
-export { OAIPMH } from "./oai-pmh.js";
+export { OaiPmh } from "./oai-pmh.js";
 
 export {
-  OAIPMHResponseError,
-  type OAIPMHResponseErrorCause,
-  type OAIPMHResponseErrorData,
+  OaiPmhResponseError,
+  type OaiPmhResponseErrorCause,
+  type OaiPmhResponseErrorData,
 } from "./error/response-error.js";
-export { OAIPMHRequestError as UnexpectedStatusCodeError } from "./error/request-error.js";
-export { OAIPMHValidationError as ValidationError } from "./error/validation-error.js";
+export { OaiPmhRequestError as UnexpectedStatusCodeError } from "./error/request-error.js";
+export { OaiPmhValidationError as ValidationError } from "./error/validation-error.js";
 
 export type {
   ListOptions,
-  OAIPMHRequestConstructorOptions,
+  OaiPmhRequestConstructorOptions,
 } from "./model/oai-pmh.js";
 
-export type { OAIPMHErrorCode } from "./model/parser/error.js";
-export type { OAIPMHMetadataFormat } from "./model/parser/metadata_format.js";
-export type { OAIPMHRecord } from "./model/parser/record.js";
-export type { OAIPMHHeader } from "./model/parser/header.js";
-export type { OAIPMHIdentify } from "./model/parser/identify.js";
-export type { OAIPMHSet } from "./model/parser/set.js";
+export type { OaiPmhErrorCode } from "./model/parser/error.js";
+export type { OaiPmhMetadataFormat } from "./model/parser/metadata_format.js";
+export type { OaiPmhRecord } from "./model/parser/record.js";
+export type { OaiPmhHeader } from "./model/parser/header.js";
+export type { OaiPmhIdentify } from "./model/parser/identify.js";
+export type { OaiPmhSet } from "./model/parser/set.js";
 export type {
   ParsedXMLAttributes,
   ParsedXMLAttributeValue,

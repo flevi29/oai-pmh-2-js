@@ -1,8 +1,9 @@
 <script lang="ts">
   import type { ComponentProps } from "svelte";
-  import DebouncedTextInput from "./debounced-text-input.svelte";
+  import type { SafeOmit } from "oai-pmh-2-js/model/oai-pmh";
+  import DebouncedTextInput from "./text-input.svelte";
 
-  const props: Omit<
+  const props: SafeOmit<
     ComponentProps<typeof DebouncedTextInput>,
     "class"
   > = $props();

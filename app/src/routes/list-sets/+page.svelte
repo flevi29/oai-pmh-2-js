@@ -1,43 +1,16 @@
 <script lang="ts">
-  import { oai } from "$lib/stores/oai-pmh/oai-pmh.svelte";
-  import { listSets } from "$lib/stores/oai-pmh/list-sets.svelte";
-  import ButtonComponent from "$lib/components/buttons/button.svelte";
-  import OAIPMHListComponent from "../oai-pmh-list.svelte";
+  import { getListSetsResultStore } from "./list-sets.svelte";
+  import Button from "$lib/components/buttons/button.svelte";
+  import JSONComponent from "$lib/components/json.svelte";
   import Loading from "$lib/components/loading.svelte";
 
-  let listComponent = $state<ReturnType<typeof OAIPMHListComponent> | null>(
-    null,
-  );
-
-  $effect(() => {
-    if (oai.oaiPMH !== null) {
-      //
-    }
-  });
+  const r = getListSetsResultStore();
 </script>
 
-<ButtonComponent
-  onclick={() => {
-    if (listComponent !== null) {
-      listSets.r.isRunning
-        ? listComponent.stopList()
-        : listComponent.startList();
-    }
-  }}
-  disabled={(oai.oaiPMH === null && !listSets.r.isRunning) ||
-    listSets.r.isBeingStopped}
-  >{listSets.r.isRunning ? "Stop" : "List"}</ButtonComponent
->
+<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
 
-<Loading isLoading={listSets.r.isRunning} />
+<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
 
-<OAIPMHListComponent
-  bind:this={listComponent}
-  listFn={() => listSets.run()}
-  abort={listSets.abort}
-  isRunning={listSets.r.isRunning}
-  isBeingStopped={listSets.r.isBeingStopped}
-  result={listSets.r.result}
-  valuesPerPage={10}
-  pXMLElemArrKey="setDescription"
-/>
+<Loading isLoading={r.isRunning} />
+
+<JSONComponent result={r.result} pXMLElemArrKey="setDescription" />

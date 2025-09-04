@@ -37,11 +37,11 @@ npm i oai-pmh-2-js
 
 ```typescript
 // `... from "npm:oai-pmh-2-js"` for Deno
-import { OAIPMH, STATUS } from "oai-pmh-2-js";
+import { OaiPmh, STATUS } from "oai-pmh-2-js";
 
 // you can find OAI-PMH providers here (although a lot of them might not work):
 // https://www.openarchives.org/Register/BrowseSites
-const oaiPMH = new OAIPMH({
+const oaiPMH = new OaiPmh({
   baseURL:
     "http://bibliotecavirtual.asturias.es/i18n/oai/oai_bibliotecavirtual.asturias.es.cmd",
 });

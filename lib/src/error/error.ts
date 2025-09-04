@@ -1,3 +1,3 @@
-export class OAIPMHError extends Error {
-  override name = "OAIPMHError";
+export class OaiPmhError extends Error {
+  override name = "OaiPmhError";
 }

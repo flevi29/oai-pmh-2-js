@@ -1,8 +1,8 @@
-import { OAIPMHError } from "./error.js";
+import { OaiPmhError } from "./error.js";
 
 /** Error thrown when a HTTP request times out. */
-export class OAIPMHRequestTimeOutError extends OAIPMHError {
-  override name = "OAIPMHRequestTimeOutError";
+export class OaiPmhRequestTimeOutError extends OaiPmhError {
+  override name = "OaiPmhRequestTimeOutError";
   override cause: { timeout: number; init: RequestInit };
 
   constructor(timeout: number, init: RequestInit) {

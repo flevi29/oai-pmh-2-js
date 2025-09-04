@@ -1,32 +1,29 @@
 <script lang="ts">
+  import type { Result } from "../stores/result.svelte";
   import { tick, type ComponentProps } from "svelte";
-  import { type OAIPMHResult, OAI_PMH_RESULT_TYPE } from "../oai-pmh-result";
   import { getPagination } from "../pagination.svelte";
   import JSONInnerComponent from "./json-inner.svelte";
   import NumberedPaginationComponent from "./numbered-pagination.svelte";
-  import OAIPMHErrorComponent from "./oai-pmh-error.svelte";
-  import GeneralOAIPMHErrorComponent from "./general-oai-pmh-error.svelte";
+  import GeneralOaiPmhErrorComponent from "./general-oai-pmh-error.svelte";
   import InformationCircle from "./svgs/information-circle.svelte";
 
   const {
-      result,
-      valuesPerPage = 5,
-      collapseLimit = 10,
-      pXMLElemArrKey,
-      nodeListKey,
-    }: {
-      result: OAIPMHResult<unknown> | null;
-      valuesPerPage?: number;
-      collapseLimit?: number;
-      pXMLElemArrKey?: string;
-      nodeListKey?: string;
-    } = $props(),
-    pagination = $derived(
-      result?.status === OAI_PMH_RESULT_TYPE.SUCCESS &&
-        Array.isArray(result.value)
-        ? getPagination(result.value, valuesPerPage)
-        : null,
-    );
+    result,
+    valuesPerPage = 5,
+    collapseLimit = 10,
+    pXMLElemArrKey,
+    nodeListKey,
+  }: {
+    result: Result<unknown[]>;
+    valuesPerPage?: number;
+    collapseLimit?: number;
+    pXMLElemArrKey?: string;
+    nodeListKey?: string;
+  } = $props();
+
+  const pagination = $derived(
+    result.success ? getPagination(result.value, valuesPerPage) : null,
+  );
 
   let topDivElement = $state<HTMLDivElement | null>(null);
 </script>
@@ -42,17 +39,7 @@
 
 <div bind:this={topDivElement}>
   <div class="break-all">
-    {#if result === null}
-      <div class="relative flex min-h-28 w-full items-center justify-center">
-        <InformationCircle
-          class="absolute inset-0 mx-auto size-28 text-gray-100/70"
-        />
-
-        <div class="relative size-max text-lg text-gray-400 italic">
-          <span>No results to show</span>
-        </div>
-      </div>
-    {:else if pagination !== null}
+    {#if pagination !== null}
       {#each pagination.valuesForCurrentPage as value}
         {@render JSONInnerSnippet({
           value,
@@ -61,17 +48,27 @@
           collapseLimit,
         })}
       {/each}
-    {:else if result.status === OAI_PMH_RESULT_TYPE.SUCCESS}
-      {@render JSONInnerSnippet({
-        value: result.value,
-        pXMLElemArrKey,
-        nodeListKey,
-        collapseLimit,
-      })}
-    {:else if result.status === OAI_PMH_RESULT_TYPE.OAI_ERR}
-      <OAIPMHErrorComponent errorCause={result.value.cause} />
+    {:else if result.success}
+      {#if result.value.length === 0}
+        <div class="relative flex min-h-28 w-full items-center justify-center">
+          <InformationCircle
+            class="absolute inset-0 mx-auto size-28 text-gray-100/70"
+          />
+
+          <div class="relative size-max text-lg text-gray-400 italic">
+            <span>No results to show</span>
+          </div>
+        </div>
+      {:else}
+        {@render JSONInnerSnippet({
+          value: result.value,
+          pXMLElemArrKey,
+          nodeListKey,
+          collapseLimit,
+        })}
+      {/if}
     {:else}
-      <GeneralOAIPMHErrorComponent error={result.value} />
+      <GeneralOaiPmhErrorComponent error={result.value} />
     {/if}
   </div>
 

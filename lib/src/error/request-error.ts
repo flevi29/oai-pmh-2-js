@@ -1,4 +1,4 @@
-import { OAIPMHError } from "./error.js";
+import { OaiPmhError } from "./error.js";
 
 function trimMessage(message: string): string {
   let newLnIdx: number | null = message.indexOf("\n");
@@ -9,8 +9,8 @@ function trimMessage(message: string): string {
     : message;
 }
 
-export class OAIPMHRequestError extends OAIPMHError {
-  override name = "OAIPMHRequestError";
+export class OaiPmhRequestError extends OaiPmhError {
+  override name = "OaiPmhRequestError";
   override cause: {
     message: string;
     details: unknown;

@@ -1,30 +1,30 @@
 import { WebRequest } from "./web-request.js";
-import { OAIPMHParser } from "./parser/oai-pmh-parser.js";
+import { OaiPmhParser } from "./parser/oai-pmh-parser.js";
 import type {
   ListContinuationParams,
   ListOptions,
   ListOptionsWithVerb,
-  OAIPMHRequestConstructorOptions,
+  OaiPmhRequestConstructorOptions,
   ReqOpt,
 } from "./model/oai-pmh.js";
-import type { OAIPMHMetadataFormat } from "./model/parser/metadata_format.js";
-import type { OAIPMHHeader } from "./model/parser/header.js";
-import type { OAIPMHRecord } from "./model/parser/record.js";
-import type { OAIPMHSet } from "./model/parser/set.js";
-import type { OAIPMHIdentify } from "./model/parser/identify.js";
+import type { OaiPmhMetadataFormat } from "./model/parser/metadata_format.js";
+import type { OaiPmhHeader } from "./model/parser/header.js";
+import type { OaiPmhRecord } from "./model/parser/record.js";
+import type { OaiPmhSet } from "./model/parser/set.js";
+import type { OaiPmhIdentify } from "./model/parser/identify.js";
 import type { ListResponse } from "./model/parser/shared.js";
 
-// TODO: Rename OAIPMH to OaiPmh
-export class OAIPMH {
+// TODO: Rename OaiPmh to OaiPmh
+export class OaiPmh {
   readonly #webRequest: WebRequest;
-  readonly #parser: OAIPMHParser;
+  readonly #parser: OaiPmhParser;
 
-  constructor(options: OAIPMHRequestConstructorOptions) {
+  constructor(options: OaiPmhRequestConstructorOptions) {
     this.#webRequest = new WebRequest(options);
-    this.#parser = new OAIPMHParser(options.domParser ?? DOMParser);
+    this.#parser = new OaiPmhParser(options.domParser ?? DOMParser);
   }
 
-  async identify(options?: ReqOpt): Promise<OAIPMHIdentify> {
+  async identify(options?: ReqOpt): Promise<OaiPmhIdentify> {
     const xml = await this.#webRequest.request({
       params: { verb: "Identify" },
       ...options,
@@ -36,7 +36,7 @@ export class OAIPMH {
     identifier: string,
     metadataPrefix: string,
     options?: ReqOpt,
-  ): Promise<OAIPMHRecord> {
+  ): Promise<OaiPmhRecord> {
     const xml = await this.#webRequest.request({
       params: {
         verb: "GetRecord",
@@ -86,7 +86,7 @@ export class OAIPMH {
   listIdentifiers(
     listOptions: ListOptions,
     options?: ReqOpt,
-  ): AsyncGenerator<OAIPMHHeader[], void> {
+  ): AsyncGenerator<OaiPmhHeader[], void> {
     return this.#list(
       this.#parser.parseListIdentifiers,
       { verb: "ListIdentifiers", ...listOptions },
@@ -97,7 +97,7 @@ export class OAIPMH {
   async listMetadataFormats(
     identifier?: string,
     options?: ReqOpt,
-  ): Promise<OAIPMHMetadataFormat[]> {
+  ): Promise<OaiPmhMetadataFormat[]> {
     const verb = "ListMetadataFormats",
       xml = await this.#webRequest.request({
         params: identifier === undefined ? { verb } : { verb, identifier },
@@ -109,7 +109,7 @@ export class OAIPMH {
   listRecords(
     listOptions: ListOptions,
     options?: ReqOpt,
-  ): AsyncGenerator<OAIPMHRecord[], void> {
+  ): AsyncGenerator<OaiPmhRecord[], void> {
     return this.#list(
       this.#parser.parseListRecords,
       { verb: "ListRecords", ...listOptions },
@@ -117,7 +117,7 @@ export class OAIPMH {
     );
   }
 
-  listSets(options?: ReqOpt): AsyncGenerator<OAIPMHSet[], void> {
+  listSets(options?: ReqOpt): AsyncGenerator<OaiPmhSet[], void> {
     return this.#list(
       this.#parser.parseListSets,
       { verb: "ListSets" },

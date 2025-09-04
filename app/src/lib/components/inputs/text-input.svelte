@@ -1,16 +1,17 @@
 <script lang="ts">
+  import type { HTMLInputAttributes } from "svelte/elements";
+  import type { SafeOmit } from "oai-pmh-2-js/model/oai-pmh";
+
   const {
+    spellcheck = "false",
     value = "",
     placeholder,
     timeout = 700,
     onValueChanged,
-    class: inputClass,
-  }: {
-    value?: string;
-    placeholder?: string;
+    ...restOfProps
+  }: SafeOmit<HTMLInputAttributes, "type"> & {
     timeout?: number;
     onValueChanged: (value: string) => void;
-    class?: string;
   } = $props();
 
   let to: ReturnType<typeof setTimeout> | null = null;
@@ -37,10 +38,10 @@
 
 <input
   type="text"
-  spellcheck="false"
+  {spellcheck}
   {value}
   {placeholder}
-  class={inputClass}
   oninput={(event) => changeValueWithDebounce(event.currentTarget.value)}
-  onfocusout={(event) => changeValue(event.currentTarget.value)}
+  onblur={(event) => changeValue(event.currentTarget.value)}
+  {...restOfProps}
 />

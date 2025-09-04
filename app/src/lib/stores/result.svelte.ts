@@ -1,42 +1,119 @@
-import { ABORT_SYMBOL } from "$lib/abort-controller";
-import {
-  OAI_PMH_RESULT_TYPE,
-  OAIPMHResponseError,
-  type OAIPMHResult,
-} from "../oai-pmh-result";
+import type { OaiPmh } from "oai-pmh-2-js/oai-pmh";
+import { untrack } from "svelte";
+import { oai } from "./oai-pmh.svelte";
 
-export function getResultStore<T>() {
-  let isRunning = $state<boolean>(false),
-    result = $state<OAIPMHResult<T> | null>(null);
+export type Result<T> =
+  | { success: true; value: T }
+  | { success: false; value: unknown };
+
+const ABORT_SYMBOL = Symbol("<stopped>");
+
+function getAbortController() {
+  let ac = new AbortController();
+  let signal = ac.signal;
 
   return {
-    get result() {
-      return result;
+    get signal() {
+      return signal;
     },
-    run(getPromise: () => Promise<T> | void) {
-      isRunning = true;
-      const promise = getPromise();
+    abort(): void {
+      ac.abort(ABORT_SYMBOL);
+      ac = new AbortController();
+      signal = ac.signal;
+    },
+  };
+}
 
-      if (promise === undefined) {
-        isRunning = false;
-        return;
+export function getResultStore<T>(
+  getGenerator: (
+    oaiPmh: OaiPmh,
+    signal: AbortSignal,
+  ) => AsyncGenerator<T[], void>,
+  initialValue: T[] = [],
+) {
+  const ac = getAbortController();
+
+  // TODO: Make these things global, and if isRunning is true disallow setting a new oaiPmh
+  let isRunning = $state(false);
+  let isBeingStopped = $state(false);
+  let result = $state<Result<T[]>>({ success: true, value: initialValue });
+
+  const canBeStopped = $derived(isRunning && !isBeingStopped);
+
+  function stop() {
+    if (isBeingStopped) {
+      throw new Error("stopping procedure already in progress");
+    }
+
+    isBeingStopped = true;
+    ac.abort();
+  }
+
+  // in case oaiPmh changes, stop and reset values
+  let isFirstRun = true;
+  $effect(() => {
+    oai.oaiPMH;
+
+    // skip first run so we don't react to init
+    if (isFirstRun) {
+      isFirstRun = false;
+      return;
+    }
+
+    untrack(() => {
+      if (canBeStopped) {
+        stop();
       }
 
-      promise
-        .then((value) => {
-          result = { status: OAI_PMH_RESULT_TYPE.SUCCESS, value };
-        })
+      result = { success: true, value: [] };
+    });
+  });
+
+  // stop when unmounted
+  $effect(() => () => {
+    if (canBeStopped) {
+      stop();
+    }
+  });
+
+  return {
+    run() {
+      if (isRunning) {
+        throw new Error("already running");
+      }
+
+      isRunning = true;
+
+      (async () => {
+        if (oai.oaiPMH === null) {
+          // TODO
+          throw new Error("oaiPMH null");
+        }
+
+        result = { success: true, value: [] };
+
+        for await (const items of getGenerator(oai.oaiPMH, ac.signal)) {
+          result.value.push(...items);
+        }
+      })()
         .catch((error) => {
-          if (error !== ABORT_SYMBOL) {
-            result =
-              error instanceof OAIPMHResponseError
-                ? { status: OAI_PMH_RESULT_TYPE.OAI_ERR, value: error }
-                : { status: OAI_PMH_RESULT_TYPE.GEN_ERR, value: error };
+          if (Object.hasOwn(error, "cause") && error.cause === ABORT_SYMBOL) {
+            return;
           }
+
+          result = { success: false, value: error };
         })
         .finally(() => {
           isRunning = false;
+          isBeingStopped = false;
         });
+    },
+    stop,
+    get result() {
+      return result;
+    },
+    get canBeStopped() {
+      return canBeStopped;
     },
     get isRunning() {
       return isRunning;

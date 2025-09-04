@@ -26,10 +26,10 @@
             href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin"
             target="_blank"
             >"CORS header ‘Access-Control-Allow-Origin’ missing"</a
-          > error, in which case the resrource at the URL is inaccessible from browser
+          > error, in which case the resource at the URL is inaccessible from browser
           JavaScript code.
         </span>
-        <!-- @TODO: Explain how they might choose another URL, URL crawler, and possibly CORS proxy -->
+        <!-- TODO: Explain how they might choose another URL, URL crawler, and possibly CORS proxy -->
       {/if}
     {:else}
       <span>{JSON.stringify(error)}</span>

@@ -1,33 +1,32 @@
+<script lang="ts" module>
+  import type { OaiPmhIdentify } from "oai-pmh-2-js/mod";
+
+  let initialValue: OaiPmhIdentify[] | undefined = undefined;
+</script>
+
 <script lang="ts">
-  import { untrack } from "svelte";
-  import { oai } from "$lib/stores/oai-pmh/oai-pmh.svelte";
-  import { identify } from "$lib/stores/oai-pmh/identify.svelte";
-  import PlayButton from "$lib/components/buttons/play-button.svelte";
-  import JSONComponent from "$lib/components/json.svelte";
+  import { getResultStore } from "$lib/stores/result.svelte";
+  import Button from "$lib/components/buttons/button.svelte";
   import Loading from "$lib/components/loading.svelte";
+  import JSONComponent from "$lib/components/json.svelte";
+
+  const r = getResultStore<OaiPmhIdentify>(async function* (oaiPmh, signal) {
+    yield [await oaiPmh.identify({ init: { signal } })];
+  }, initialValue);
 
   $effect(() => {
-    if (oai.oaiPMH !== null) {
-      untrack(() => {
-        if (identify.r.isRunning) {
-          identify.abort();
-        }
-      });
-    }
+    initialValue = r.result.success ? r.result.value : undefined;
   });
 </script>
 
-<PlayButton
-  onclick={() => (identify.r.isRunning ? identify.abort() : identify.run())}
-  disabled={oai.oaiPMH === null && !identify.r.isRunning}
-  isPlaying={identify.r.isRunning}
-  >{identify.r.isRunning ? "Stop" : "Run"}</PlayButton
->
+<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
 
-<Loading isLoading={identify.r.isRunning} />
+<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
+
+<Loading isLoading={r.isRunning} />
 
 <JSONComponent
-  result={identify.r.result}
+  result={r.result}
   collapseLimit={100}
   pXMLElemArrKey="description"
 />

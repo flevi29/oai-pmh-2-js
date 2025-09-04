@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { oai } from "$lib/stores/oai-pmh/oai-pmh.svelte";
-  import DebouncedTextInput from "$lib/components/inputs/debounced-text-input.svelte";
+  import { oai } from "$lib/stores/oai-pmh.svelte";
+  import DebouncedTextInput from "$lib/components/inputs/text-input.svelte";
   import Button from "$lib/components/buttons/button.svelte";
   import MicroAlert from "$lib/components/svgs/micro-alert.svelte";
   import LinkSvg from "$lib/components/svgs/link-svg.svelte";
@@ -16,8 +16,7 @@
   <div class="flex">
     <details>
       <summary
-        class="border-light-silver-lighter active:bg-bright-gray-huh hover:bg-anti-flash-white-huh
-        bg-ghost-white text-charleston-green shadow-resting-small shadow-dark-gunmetal/5 outline-true-blue transition-button ease-something-input inline-flex h-8
+        class="inline-flex h-8
         min-w-max cursor-pointer items-center gap-1 rounded-l-md border px-3
         text-sm font-medium break-words duration-75
         select-none focus-visible:outline-2 active:transition-none"
@@ -32,11 +31,10 @@
 
     <div class="text-dim-gray relative w-full">
       <DebouncedTextInput
-        class="border-light-silver bg-ghost-white shadow-inset-resting-small shadow-dark-gunmetal/5 transition-button ease-something-input focus:shadow-input-focus focus-visible:border-true-blue focus-visible:shadow-true-blue
-        block w-full rounded-r-md border py-[5px] pr-3
+        class="block w-full rounded-r-md border py-[5px] pr-3
         pl-8 align-middle text-sm break-words duration-75
         focus:bg-white focus-visible:outline-none"
-        placeholder="OAI-PMH URL here..."
+        placeholder="Type OAI-PMH URL here..."
         value={oai.url}
         onValueChanged={oai.setURL}
       />
@@ -55,7 +53,7 @@
   </div>
 
   {#if !isURLValid}
-    <span class="text-amaranth-red mt-2 pl-3 text-xs font-semibold">
+    <span class="mt-2 pl-3 text-xs font-semibold">
       <MicroAlert class="inline-block size-3" />
       <span>Please enter a valid URL</span>
     </span>

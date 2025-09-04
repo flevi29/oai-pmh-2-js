@@ -1,5 +1,6 @@
 name: Deploy to GitHub Pages
 
+# TODO: This should also run tests and linting and it should run on releases perhaps?
 on:
   push:
 
@@ -10,8 +11,8 @@ jobs:
     steps:
       - id: pages_cfg
         uses: actions/configure-pages@v5
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup-deno
       - name: Build
         env:
           PAGES_BASE_PATH: ${{steps.pages_cfg.outputs.base_path}}

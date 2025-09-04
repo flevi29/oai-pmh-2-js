@@ -1,10 +1,10 @@
 import type { ParsedXMLElement, ParsedXMLRecord } from "./xml.js";
-import { OAIPMHInnerValidationError } from "../../error/validation-error.js";
+import { OaiPmhInnerValidationError } from "../../error/validation-error.js";
 import { parseToRecordOrString } from "../../parser/xml_parser.js";
-import { OAIPMHResponseError } from "../../error/response-error.js";
+import { OaiPmhResponseError } from "../../error/response-error.js";
 import { parseKeyAsText, parseKeyAsTextWithAttributes } from "./shared.js";
 
-type OAIPMHErrorCode =
+type OaiPmhErrorCode =
   | "badArgument"
   | "badResumptionToken"
   | "badVerb"
@@ -14,25 +14,25 @@ type OAIPMHErrorCode =
   | "noMetadataFormats"
   | "noSetHierarchy";
 
-function isOAIPMHErrorCode(value: string): value is OAIPMHErrorCode {
+function isOaiPmhErrorCode(value: string): value is OaiPmhErrorCode {
   return (
-    <OAIPMHErrorCode>value === "badArgument" ||
-    <OAIPMHErrorCode>value === "badResumptionToken" ||
-    <OAIPMHErrorCode>value === "badVerb" ||
-    <OAIPMHErrorCode>value === "cannotDisseminateFormat" ||
-    <OAIPMHErrorCode>value === "idDoesNotExist" ||
-    <OAIPMHErrorCode>value === "noRecordsMatch" ||
-    <OAIPMHErrorCode>value === "noMetadataFormats" ||
-    <OAIPMHErrorCode>value === "noSetHierarchy"
+    <OaiPmhErrorCode>value === "badArgument" ||
+    <OaiPmhErrorCode>value === "badResumptionToken" ||
+    <OaiPmhErrorCode>value === "badVerb" ||
+    <OaiPmhErrorCode>value === "cannotDisseminateFormat" ||
+    <OaiPmhErrorCode>value === "idDoesNotExist" ||
+    <OaiPmhErrorCode>value === "noRecordsMatch" ||
+    <OaiPmhErrorCode>value === "noMetadataFormats" ||
+    <OaiPmhErrorCode>value === "noSetHierarchy"
   );
 }
 
-function validateAndGetOAIPMHErrorResponse(
+function validateAndGetOaiPmhErrorResponse(
   error: ParsedXMLElement[],
   parseResult: ParsedXMLRecord,
-): OAIPMHResponseError {
+): OaiPmhResponseError {
   if (error.length === 0) {
-    throw new OAIPMHInnerValidationError(
+    throw new OaiPmhInnerValidationError(
       "expected at least one of <OAI-PMH><error> node",
     );
   }
@@ -41,13 +41,13 @@ function validateAndGetOAIPMHErrorResponse(
   const request = parseKeyAsTextWithAttributes(parseResult, "request");
 
   if (request instanceof Error) {
-    throw new OAIPMHInnerValidationError(`todo`);
+    throw new OaiPmhInnerValidationError(`todo`);
   }
 
   const responseDate = parseKeyAsText(parseResult, "responseDate");
 
   if (responseDate instanceof Error) {
-    throw new OAIPMHInnerValidationError(`todo`);
+    throw new OaiPmhInnerValidationError(`todo`);
   }
 
   const errors = error.map(({ value, attr }) => {
@@ -55,27 +55,27 @@ function validateAndGetOAIPMHErrorResponse(
       value === undefined ? value : parseToRecordOrString(value);
 
     if (parsedValue instanceof Error) {
-      throw new OAIPMHInnerValidationError(
+      throw new OaiPmhInnerValidationError(
         `error parsing <OAI-PMH><error>: ${parsedValue.message}`,
       );
     }
 
     if (typeof parsedValue === "object" || attr === undefined) {
-      throw new OAIPMHInnerValidationError(
+      throw new OaiPmhInnerValidationError(
         "expected all <OAI-PMH><error> nodes to either contain nothing or text, and to have attributes",
       );
     }
 
     const attrEntries = Object.entries(attr);
     if (attrEntries.length !== 1) {
-      throw new OAIPMHInnerValidationError(
+      throw new OaiPmhInnerValidationError(
         "expected <OAI-PMH><error> to only have one attribute",
       );
     }
 
     const [attrKey, { value: attrVal }] = attrEntries[0]!;
-    if (attrKey !== "code" || !isOAIPMHErrorCode(attrVal)) {
-      throw new OAIPMHInnerValidationError(
+    if (attrKey !== "code" || !isOaiPmhErrorCode(attrVal)) {
+      throw new OaiPmhInnerValidationError(
         'expected <OAI-PMH><error> attribute key to be "code" and its value to be a valid OAI-PMH error code',
       );
     }
@@ -83,11 +83,11 @@ function validateAndGetOAIPMHErrorResponse(
     return { code: attrVal, text: parsedValue };
   });
 
-  return new OAIPMHResponseError({
+  return new OaiPmhResponseError({
     errors,
     request,
     responseDate,
   });
 }
 
-export { type OAIPMHErrorCode, validateAndGetOAIPMHErrorResponse };
+export { type OaiPmhErrorCode, validateAndGetOaiPmhErrorResponse };

@@ -1,19 +1,19 @@
-import type { OAIPMHErrorCode } from "../model/parser/error.js";
+import type { OaiPmhErrorCode } from "../model/parser/error.js";
 import type { TextNodeWithAttributes } from "../model/parser/shared.js";
-import { OAIPMHError } from "./error.js";
+import { OaiPmhError } from "./error.js";
 
-export type OAIPMHResponseErrorData = { code: OAIPMHErrorCode; text?: string };
-export type OAIPMHResponseErrorCause = {
-  errors: OAIPMHResponseErrorData[];
+export type OaiPmhResponseErrorData = { code: OaiPmhErrorCode; text?: string };
+export type OaiPmhResponseErrorCause = {
+  errors: OaiPmhResponseErrorData[];
   request: TextNodeWithAttributes;
   responseDate: string;
 };
 
-export class OAIPMHResponseError extends OAIPMHError {
-  override name = "OAIPMHResponseError";
-  override cause: OAIPMHResponseErrorCause;
+export class OaiPmhResponseError extends OaiPmhError {
+  override name = "OaiPmhResponseError";
+  override cause: OaiPmhResponseErrorCause;
 
-  constructor(cause: OAIPMHResponseErrorCause) {
+  constructor(cause: OaiPmhResponseErrorCause) {
     super(
       "OAI-PMH provider returned error(s):" +
         cause.errors

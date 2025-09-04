@@ -1,16 +1,14 @@
 import pkg from "../package.json" with { type: "json" };
-import { OAIPMHRequestInitError } from "./error/request-init-error.js";
-import { OAIPMHRequestTimeOutError } from "./error/request-timeout-error.js";
-import { OAIPMHRequestError } from "./error/request-error.js";
+import { OaiPmhRequestInitError } from "./error/request-init-error.js";
+import { OaiPmhRequestTimeOutError } from "./error/request-timeout-error.js";
+import { OaiPmhRequestError } from "./error/request-error.js";
 import type {
   CustomRequestFn,
   HttpRequestsRequestInit,
   MainRequestOptions,
-  OAIPMHRequestConstructorOptions as WebRequestConstructorOptions,
+  OaiPmhRequestConstructorOptions,
   URLSearchParamsRecord,
 } from "./model/oai-pmh.js";
-
-// TODO: https://www.openarchives.org/OAI/openarchivesprotocol.html#StatusCodes
 
 /** Append a set of key value pairs to a {@link URLSearchParams} object. */
 function appendRecordToURLSearchParams(
@@ -119,9 +117,7 @@ export class WebRequest {
   readonly #requestFn?: CustomRequestFn;
   readonly #timeout?: number;
 
-  // TODO: add a callback which allows using a different request fn than fetch
-  //       this also allows to inject corsproxy https://corsproxy.io/?url=${encodeURIComponent(...)}
-  constructor(options: WebRequestConstructorOptions) {
+  constructor(options: OaiPmhRequestConstructorOptions) {
     let baseUrl = options.baseUrl;
     if (!baseUrl.endsWith("/")) {
       baseUrl += "/";
@@ -206,7 +202,7 @@ export class WebRequest {
         const resp = await this.#requestFn(url, init);
 
         if (!resp.success) {
-          throw new OAIPMHRequestError(resp.value, resp.details);
+          throw new OaiPmhRequestError(resp.value, resp.details);
         }
 
         return resp.value;
@@ -215,10 +211,10 @@ export class WebRequest {
       response = await fetch(url, init);
       responseBody = await response.text();
     } catch (error) {
-      throw new OAIPMHRequestInitError(
+      throw new OaiPmhRequestInitError(
         url.toString(),
         Object.is(error, TIMEOUT_ID)
-          ? new OAIPMHRequestTimeOutError(this.#timeout!, init)
+          ? new OaiPmhRequestTimeOutError(this.#timeout!, init)
           : error,
       );
     } finally {
@@ -226,7 +222,7 @@ export class WebRequest {
     }
 
     if (!response.ok) {
-      throw new OAIPMHRequestError(responseBody, response);
+      throw new OaiPmhRequestError(responseBody, response);
     }
 
     return responseBody;

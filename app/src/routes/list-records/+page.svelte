@@ -1,82 +1,80 @@
-<script lang="ts">
-  import { oai } from "$lib/stores/oai-pmh/oai-pmh.svelte";
-  import { listRecords, fields } from "$lib/stores/oai-pmh/list-records.svelte";
-  import ButtonComponent from "$lib/components/buttons/button.svelte";
-  import SimpleTextInputComponent from "$lib/components/inputs/simple-text-input.svelte";
-  import Loading from "$lib/components/loading.svelte";
-  import OAIPMHListComponent from "../oai-pmh-list.svelte";
-  import SetPicker from "../set-picker.svelte";
-  import MetadataFormatPicker from "../metadata-format-picker.svelte";
+<script lang="ts" module>
+  import type { OaiPmhRecord } from "oai-pmh-2-js/mod";
 
-  let listComponent = $state<ReturnType<typeof OAIPMHListComponent> | null>(
-    null,
+  let initialValue: OaiPmhRecord[] | undefined = undefined;
+</script>
+
+<script lang="ts">
+  import { getResultStore } from "$lib/stores/result.svelte";
+  import Button from "$lib/components/buttons/button.svelte";
+  import Loading from "$lib/components/loading.svelte";
+  import TextInput from "$lib/components/inputs/styled-text-input.svelte";
+  import SetPicker from "../list-sets/set-picker.svelte";
+  import MetadataPrefixPicker from "../list-metadata-formats/metadata-prefix-picker.svelte";
+  import JSONComponent from "$lib/components/json.svelte";
+
+  // TODO: These have to be reset on URL change
+  let from = $state<string>();
+  let until = $state<string>();
+  let set = $state<string>();
+  let metadataPrefix = $state<string>();
+
+  const r = getResultStore<OaiPmhRecord>(
+    (oaiPmh, signal) =>
+      oaiPmh.listRecords(
+        {
+          from,
+          until,
+          set,
+          // let OAI-PMH provider return error about this required property
+          metadataPrefix: metadataPrefix!,
+        },
+        { init: { signal } },
+      ),
+    initialValue,
   );
 
   $effect(() => {
-    if (oai.oaiPMH !== null) {
-      //
-    }
+    initialValue = r.result.success ? r.result.value : undefined;
   });
 </script>
 
-<ButtonComponent
-  onclick={() => {
-    if (listComponent !== null) {
-      listRecords.r.isRunning
-        ? listComponent.stopList()
-        : listComponent.startList();
-    }
-  }}
-  disabled={(oai.oaiPMH === null && !listRecords.r.isRunning) ||
-    listRecords.r.isBeingStopped}
-  >{listRecords.r.isRunning ? "Stop" : "List"}</ButtonComponent
->
+<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
 
-<Loading isLoading={listRecords.r.isRunning} />
+<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
 
-<SimpleTextInputComponent
-  value={fields.from}
+<Loading isLoading={r.isRunning} />
+
+<TextInput
+  value={from}
   placeholder="from"
-  onValueChanged={fields.setFrom}
+  onValueChanged={(v) => {
+    from = v;
+  }}
 />
 
-<SimpleTextInputComponent
-  value={fields.until}
+<TextInput
+  value={until}
   placeholder="until"
-  onValueChanged={fields.setUntil}
+  onValueChanged={(v) => {
+    until = v;
+  }}
 />
 
 <SetPicker
-  currentItem={fields.set || undefined}
-  setItem={fields.setSet}
-  dataName="sets"
-  dataRoute="/list-sets"
-  routeName="ListSets"
+  onValueChanged={(v) => {
+    set = v;
+  }}
 />
 
-<MetadataFormatPicker
-  currentItem={fields.metadataPrefix || undefined}
-  setItem={fields.setMetadataPrefix}
-  dataName="metadata formats"
-  dataRoute="/list-metadata-formats"
-  routeName="ListMetadataFormats"
+<MetadataPrefixPicker
+  onValueChanged={(v) => {
+    metadataPrefix = v;
+  }}
 />
 
-<OAIPMHListComponent
-  bind:this={listComponent}
-  listFn={() =>
-    listRecords.run({
-      from: fields.from || undefined,
-      until: fields.until || undefined,
-      set: fields.set || undefined,
-      metadataPrefix: fields.metadataPrefix,
-    })}
-  abort={listRecords.abort}
-  isRunning={listRecords.r.isRunning}
-  isBeingStopped={listRecords.r.isBeingStopped}
-  result={listRecords.r.result}
-  maxValues={listRecords.r.maxValues}
-  valuesPerPage={3}
+<JSONComponent
+  result={r.result}
   pXMLElemArrKey="about"
   nodeListKey="metadata"
 />
