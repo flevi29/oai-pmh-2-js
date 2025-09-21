@@ -1,4 +1,5 @@
 import pkg from "../package.json" with { type: "json" };
+import { writeFileSync, copyFileSync } from "node:fs";
 
 const baseUrl = new URL("..", import.meta.url);
 const workspaceUrl = new URL("..", baseUrl);
@@ -13,7 +14,7 @@ const readmeUrlTo = new URL("README.md", distUrl);
 const { publishExports, exports: _, ...restOfPkg } = pkg;
 const pkgWithProperExports = { exports: publishExports, ...restOfPkg };
 
-Deno.writeTextFileSync(pkgUrl, JSON.stringify(pkgWithProperExports, null, 2));
+writeFileSync(pkgUrl, JSON.stringify(pkgWithProperExports, null, 2));
 
-Deno.copyFileSync(licenseUrl, licenseUrlTo);
-Deno.copyFileSync(readmeUrl, readmeUrlTo);
+copyFileSync(licenseUrl, licenseUrlTo);
+copyFileSync(readmeUrl, readmeUrlTo);

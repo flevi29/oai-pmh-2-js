@@ -52,7 +52,7 @@
 
 <dialog
   class={[
-    "m-0 max-h-none max-w-none bg-transparent backdrop:bg-blue-300/20 focus:outline-none",
+    "m-0 max-h-dvh max-w-none bg-transparent backdrop:bg-blue-300/20 focus:outline-none",
     cls,
   ]}
   bind:this={dialogElement}
@@ -62,7 +62,7 @@
   }}
   {...restOfProps}
 >
-  <div class="mx-auto flex w-72 flex-col items-center gap-y-3 pt-10">
+  <div class="flex flex-col items-center gap-y-3 pt-10">
     <div class="self-end">
       <button
         class="rounded-full bg-gray-500/20 p-1 text-gray-800 hover:bg-gray-500/50"

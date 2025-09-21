@@ -12,13 +12,13 @@ jobs:
       - id: pages_cfg
         uses: actions/configure-pages@v5
       - uses: actions/checkout@v5
-      - uses: ./.github/actions/setup-deno
+      - uses: ./.github/actions/setup-nodejs
       - name: Build
         env:
           PAGES_BASE_PATH: ${{steps.pages_cfg.outputs.base_path}}
         run: |
-          deno task --cwd=app prepare
-          deno task --cwd=app build
+          pnpm -C=app prepare
+          pnpm -C=app build
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v4

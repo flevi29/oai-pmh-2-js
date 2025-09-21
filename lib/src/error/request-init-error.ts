@@ -1,4 +1,4 @@
-import { OaiPmhError } from "./error.js";
+import { OaiPmhError } from "./error.ts";
 
 export class OaiPmhRequestInitError extends OaiPmhError {
   override name = "OaiPmhRequestInitError";

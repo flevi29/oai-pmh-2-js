@@ -1,6 +1,6 @@
 import type { OaiPmh } from "oai-pmh-2-js/oai-pmh";
 import { untrack } from "svelte";
-import { oai } from "./oai-pmh.svelte";
+import { globalOaiPmh } from "./oai-pmh.svelte";
 
 export type Result<T> =
   | { success: true; value: T }
@@ -52,7 +52,7 @@ export function getResultStore<T>(
   // in case oaiPmh changes, stop and reset values
   let isFirstRun = true;
   $effect(() => {
-    oai.oaiPMH;
+    globalOaiPmh;
 
     // skip first run so we don't react to init
     if (isFirstRun) {
@@ -85,14 +85,14 @@ export function getResultStore<T>(
       isRunning = true;
 
       (async () => {
-        if (oai.oaiPMH === null) {
+        if (globalOaiPmh.value === undefined) {
           // TODO
-          throw new Error("oaiPMH null");
+          throw new Error("oaiPmh undefined");
         }
 
         result = { success: true, value: [] };
 
-        for await (const items of getGenerator(oai.oaiPMH, ac.signal)) {
+        for await (const items of getGenerator(globalOaiPmh.value, ac.signal)) {
           result.value.push(...items);
         }
       })()

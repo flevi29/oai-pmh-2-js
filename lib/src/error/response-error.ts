@@ -1,11 +1,21 @@
-import type { OaiPmhErrorCode } from "../model/parser/error.js";
-import type { TextNodeWithAttributes } from "../model/parser/shared.js";
-import { OaiPmhError } from "./error.js";
+import type { OaiPmhErrorCode } from "../model/oai-pmh-stuff.ts";
+import { OaiPmhError } from "./error.ts";
 
 export type OaiPmhResponseErrorData = { code: OaiPmhErrorCode; text?: string };
 export type OaiPmhResponseErrorCause = {
   errors: OaiPmhResponseErrorData[];
-  request: TextNodeWithAttributes;
+  request: {
+    value: string;
+    attr?: {
+      verb?: string;
+      identifier?: string;
+      metadataPrefix?: string;
+      from?: string;
+      until?: string;
+      set?: string;
+      resumptionToken?: string;
+    };
+  };
   responseDate: string;
 };
 

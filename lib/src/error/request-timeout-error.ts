@@ -1,4 +1,4 @@
-import { OaiPmhError } from "./error.js";
+import { OaiPmhError } from "./error.ts";
 
 /** Error thrown when a HTTP request times out. */
 export class OaiPmhRequestTimeOutError extends OaiPmhError {

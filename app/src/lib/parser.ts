@@ -2,8 +2,8 @@ import {
   NON_WHITESPACE,
   parseElementNode,
   parseTextNode,
-} from "oai-pmh-2-js/parser/xml_parser";
-import type { ParsedXMLElement } from "oai-pmh-2-js/model/parser/xml";
+} from "oai-pmh-2-js/parser/xml-parser";
+import type { ParsedXMLElement } from "oai-pmh-2-js/model/xml";
 
 const SOME_TYPE = Object.freeze({
   TEXT: 0,
@@ -44,6 +44,7 @@ function parseChildNode(childNode: ChildNode): SomeReturnType | null {
     case childNode.DOCUMENT_FRAGMENT_NODE: {
       return {
         type: SOME_TYPE.UNPARSED,
+        // TODO: this could fail in some cases for some node types
         value: serializer.serializeToString(childNode),
       };
     }

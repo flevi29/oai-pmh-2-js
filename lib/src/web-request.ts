@@ -1,14 +1,14 @@
 import pkg from "../package.json" with { type: "json" };
-import { OaiPmhRequestInitError } from "./error/request-init-error.js";
-import { OaiPmhRequestTimeOutError } from "./error/request-timeout-error.js";
-import { OaiPmhRequestError } from "./error/request-error.js";
+import { OaiPmhRequestInitError } from "./error/request-init-error.ts";
+import { OaiPmhRequestTimeOutError } from "./error/request-timeout-error.ts";
+import { OaiPmhRequestError } from "./error/request-error.ts";
 import type {
   CustomRequestFn,
   HttpRequestsRequestInit,
   MainRequestOptions,
   OaiPmhRequestConstructorOptions,
   URLSearchParamsRecord,
-} from "./model/oai-pmh.js";
+} from "./model/oai-pmh.ts";
 
 /** Append a set of key value pairs to a {@link URLSearchParams} object. */
 function appendRecordToURLSearchParams(
@@ -31,6 +31,11 @@ function appendRecordToURLSearchParams(
 function getHeaders(headersInit?: HeadersInit): Headers {
   const headers = new Headers(headersInit);
 
+  const accept = "Accept";
+  if (!headers.has(accept)) {
+    headers.set(accept, "application/xml");
+  }
+
   const userAgent = "User-Agent";
   if (!headers.has(userAgent)) {
     headers.set(userAgent, `${pkg.name}/${pkg.version}`);
@@ -38,7 +43,7 @@ function getHeaders(headersInit?: HeadersInit): Headers {
 
   const acceptEncoding = "Accept-Encoding";
   if (!headers.has(acceptEncoding)) {
-    headers.set(acceptEncoding, "gzip, deflate, br, zstd, identity;q=1.0");
+    headers.set(acceptEncoding, "gzip,deflate,br,zstd,identity;q=1.0");
   }
 
   return headers;

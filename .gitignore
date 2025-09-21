@@ -16,3 +16,8 @@ vite.config.ts.timestamp-*
 
 # Editor
 /.vscode
+
+# Output
+/app/.svelte-kit
+/app/build
+/lib/dist

@@ -17,7 +17,11 @@
   let metadataPrefix = $state<string>();
 
   const r = getResultStore<OaiPmhRecord>(async function* (oaiPmh, signal) {
-    yield [await oaiPmh.getRecord(identifier!, metadataPrefix!, { init: { signal } })];
+    yield [
+      await oaiPmh.getRecord(identifier!, metadataPrefix!, {
+        init: { signal },
+      }),
+    ];
   }, initialValue);
 
   $effect(() => {

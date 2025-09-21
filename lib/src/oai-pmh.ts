@@ -1,20 +1,21 @@
-import { WebRequest } from "./web-request.js";
-import { OaiPmhParser } from "./parser/oai-pmh-parser.js";
 import type {
   ListContinuationParams,
   ListOptions,
   ListOptionsWithVerb,
   OaiPmhRequestConstructorOptions,
   ReqOpt,
-} from "./model/oai-pmh.js";
-import type { OaiPmhMetadataFormat } from "./model/parser/metadata_format.js";
-import type { OaiPmhHeader } from "./model/parser/header.js";
-import type { OaiPmhRecord } from "./model/parser/record.js";
-import type { OaiPmhSet } from "./model/parser/set.js";
-import type { OaiPmhIdentify } from "./model/parser/identify.js";
-import type { ListResponse } from "./model/parser/shared.js";
+} from "./model/oai-pmh.ts";
+import type {
+  ListResponse,
+  OaiPmhHeader,
+  OaiPmhIdentify,
+  OaiPmhMetadataFormat,
+  OaiPmhRecord,
+  OaiPmhSet,
+} from "./model/oai-pmh-stuff.ts";
+import { WebRequest } from "./web-request.ts";
+import { OaiPmhParser } from "./parser/oai-pmh-parser.ts";
 
-// TODO: Rename OaiPmh to OaiPmh
 export class OaiPmh {
   readonly #webRequest: WebRequest;
   readonly #parser: OaiPmhParser;

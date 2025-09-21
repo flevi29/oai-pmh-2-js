@@ -41,12 +41,12 @@ import { OaiPmh, STATUS } from "oai-pmh-2-js";
 
 // you can find OAI-PMH providers here (although a lot of them might not work):
 // https://www.openarchives.org/Register/BrowseSites
-const oaiPMH = new OaiPmh({
-  baseURL:
+const oaiPmh = new OaiPmh({
+  baseUrl:
     "http://bibliotecavirtual.asturias.es/i18n/oai/oai_bibliotecavirtual.asturias.es.cmd",
 });
 
-const g = oaiPMH.listIdentifiers(
+const g = oaiPmh.listIdentifiers(
   { metadataPrefix: "marc21", from: "2015-04-10", until: "2015-10-28" },
   { signal: AbortSignal.timeout(30_000) },
 );

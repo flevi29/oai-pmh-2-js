@@ -4,6 +4,7 @@
   import RadioInputList from "$lib/components/radio-input-list.svelte";
   import Button from "$lib/components/buttons/button.svelte";
   import Loading from "$lib/components/loading.svelte";
+  import ErrorComponent from "$lib/components/error.svelte";
 
   const r = getListSetsResultStore();
 
@@ -27,12 +28,7 @@
       </div>
     </div>
   {:else if !r.result.success}
-    <!-- TODO: Shared error component -->
-    <div
-      class="w-full rounded-lg border border-red-500 bg-red-100 p-2 text-red-700 shadow-sm"
-    >
-      <p>Error fetching available sets.</p>
-    </div>
+    <ErrorComponent error={r.result.value} />
   {:else}
     <RadioInputList
       items={r.result.value.map((v) => ({

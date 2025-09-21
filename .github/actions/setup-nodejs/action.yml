@@ -1,0 +1,12 @@
+name: "Setup Node.js and dependencies"
+runs:
+  using: "composite"
+  steps:
+    - uses: pnpm/action-setup@v4
+    - name: Use Node.js
+      uses: actions/setup-node@v5
+      with:
+        node-version: 22
+        cache: "pnpm"
+    - name: Install dependencies
+      run: pnpm install

@@ -1,25 +1,26 @@
 <script lang="ts">
-  import { oai } from "$lib/stores/oai-pmh.svelte";
+  import { getOaiPmhStore } from "$lib/stores/oai-pmh.svelte";
   import DebouncedTextInput from "$lib/components/inputs/text-input.svelte";
   import Button from "$lib/components/buttons/button.svelte";
   import MicroAlert from "$lib/components/svgs/micro-alert.svelte";
   import LinkSvg from "$lib/components/svgs/link-svg.svelte";
   import TriangleDownSvg from "$lib/components/svgs/triangle-down-svg.svelte";
 
-  let { isInURLSelectionMode = false }: { isInURLSelectionMode?: boolean } =
+  const r = getOaiPmhStore();
+  let { isInUrlSelectionMode = false }: { isInUrlSelectionMode?: boolean } =
     $props();
 
-  const isURLValid = $derived(oai.url === "" || oai.oaiPMH !== null);
+  const isUrlValid = $derived(r.url === "" || r.oaiPmh !== undefined);
 </script>
 
-<div class:hidden={isInURLSelectionMode}>
+<div class:hidden={isInUrlSelectionMode}>
   <div class="flex">
     <details>
       <summary
         class="inline-flex h-8
-        min-w-max cursor-pointer items-center gap-1 rounded-l-md border px-3
-        text-sm font-medium break-words duration-75
-        select-none focus-visible:outline-2 active:transition-none"
+        min-w-max cursor-pointer select-none items-center gap-1 break-words rounded-l-md
+        border px-3 text-sm font-medium
+        duration-75 focus-visible:outline-2 active:transition-none"
       >
         <span>Select URL</span>
 
@@ -31,15 +32,15 @@
 
     <div class="text-dim-gray relative w-full">
       <DebouncedTextInput
-        class="block w-full rounded-r-md border py-[5px] pr-3
-        pl-8 align-middle text-sm break-words duration-75
+        class="block w-full break-words rounded-r-md border py-[5px]
+        pl-8 pr-3 align-middle text-sm duration-75
         focus:bg-white focus-visible:outline-none"
         placeholder="Type OAI-PMH URL here..."
-        value={oai.url}
-        onValueChanged={oai.setURL}
+        value={r.url}
+        onValueChanged={r.setUrl}
       />
 
-      <LinkSvg class="pointer-events-none absolute top-[9px] left-2 size-4" />
+      <LinkSvg class="pointer-events-none absolute left-2 top-[9px] size-4" />
     </div>
 
     <!-- <div class="whitespace-nowrap">
@@ -52,7 +53,7 @@
     </div> -->
   </div>
 
-  {#if !isURLValid}
+  {#if !isUrlValid}
     <span class="mt-2 pl-3 text-xs font-semibold">
       <MicroAlert class="inline-block size-3" />
       <span>Please enter a valid URL</span>
@@ -60,11 +61,11 @@
   {/if}
 </div>
 
-{#if isInURLSelectionMode}
+{#if isInUrlSelectionMode}
   <div class="rounded-xl border p-6 shadow-sm">
     <Button
       onclick={() => {
-        isInURLSelectionMode = false;
+        isInUrlSelectionMode = false;
       }}>"Close"</Button
     >
 
@@ -75,7 +76,7 @@
             type="button"
             class="border"
             onclick={() => {
-              oai.setURL(url);
+              oai.setUrl(url);
               isInURLSelectionMode = false;
             }}>{name}</button
           >

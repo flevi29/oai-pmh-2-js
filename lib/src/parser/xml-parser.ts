@@ -3,7 +3,8 @@ import type {
   ParsedXMLAttributeValue,
   ParsedXMLElement,
   ParsedXMLRecord,
-} from "../model/parser/xml.js";
+} from "../model/xml.ts";
+import type { ParserHelper } from "./helper.ts";
 
 function getPrefixAndLocalName(
   nodeName: string,
@@ -15,7 +16,7 @@ function getPrefixAndLocalName(
     : [nodeName.slice(0, indexOfColon), nodeName.slice(indexOfColon + 1)];
 }
 
-function parseAtributes(attributes: NamedNodeMap): ParsedXMLAttributes {
+function parseAttributes(attributes: NamedNodeMap): ParsedXMLAttributes {
   const attr: ParsedXMLAttributes = {};
   for (const attribute of attributes) {
     const { name: combinedName, value } = attribute;
@@ -32,7 +33,7 @@ function parseAtributes(attributes: NamedNodeMap): ParsedXMLAttributes {
   return attr;
 }
 
-function parseElementNode(node: Element): ParsedXMLElement {
+export function parseElementNode(node: Element): ParsedXMLElement {
   const { nodeName, attributes, childNodes } = node;
   const [prefix, name] = getPrefixAndLocalName(nodeName);
 
@@ -43,7 +44,7 @@ function parseElementNode(node: Element): ParsedXMLElement {
   }
 
   if (node.hasAttributes()) {
-    parsed.attr = parseAtributes(attributes);
+    parsed.attr = parseAttributes(attributes);
   }
 
   if (node.hasChildNodes()) {
@@ -53,45 +54,48 @@ function parseElementNode(node: Element): ParsedXMLElement {
   return parsed;
 }
 
-function parseTextNode(node: Text | CDATASection): string {
-  // NOTE: `nodeValue` of Text or CDATASection cannot be null
+export function parseTextNode(node: Text | CDATASection): string {
+  // `nodeValue` of Text or CDATASection cannot be null
   return node.nodeValue!;
 }
 
-const NON_WHITESPACE = /\S/;
+export const NON_WHITESPACE = /\S/;
 
-function parseToRecordOrString(
+export type XMLParseResult = ParsedXMLRecord | string | undefined;
+
+// TODO: Open this up
+export function parseToRecordOrString(
+  helper: ParserHelper,
   childNodeList: NodeListOf<ChildNode>,
-): ParsedXMLRecord | string | undefined | Error {
-  let parsedXMLRecord: ParsedXMLRecord | string | undefined = undefined;
+): XMLParseResult {
+  let parsedXMLRecord: XMLParseResult = undefined;
 
   for (const childNode of childNodeList) {
     switch (childNode.nodeType) {
       case childNode.ELEMENT_NODE: {
         if (typeof parsedXMLRecord === "string") {
-          return new Error(
-            "invalid XML for OAI-PMH, non-whitespace Text and Element nodes can not mix at this level",
+          throw helper.getErr(
+            "invalid XML for OAI-PMH, non-whitespace Text and Element nodes can not mix",
           );
         }
 
-        const parsed = parseElementNode(<Element>childNode);
+        const parsed = parseElementNode(childNode as Element);
         // `??=` doesn't seem to be doing type narrowing
-        ((<ParsedXMLRecord>(parsedXMLRecord ??= {}))[parsed.name] ??= []).push(
-          parsed,
-        );
+        (((parsedXMLRecord ??= {}) as ParsedXMLRecord)[parsed.name] ??=
+          []).push(parsed);
 
         break;
       }
       case childNode.TEXT_NODE:
       case childNode.CDATA_SECTION_NODE: {
-        const parsed = parseTextNode(<Text | CDATASection>childNode);
+        const parsed = parseTextNode(childNode as Text | CDATASection);
 
         if (!NON_WHITESPACE.test(parsed)) {
           continue;
         }
 
         if (typeof parsedXMLRecord === "object") {
-          return new Error(
+          throw helper.getErr(
             "invalid XML for OAI-PMH, non-whitespace Text and Element nodes can not mix at this level",
           );
         }
@@ -106,7 +110,7 @@ function parseToRecordOrString(
         break;
       }
       default: {
-        return new Error(
+        throw helper.getErr(
           `node type ${childNode.nodeType} not supported/implemented`,
         );
       }
@@ -116,22 +120,10 @@ function parseToRecordOrString(
   return parsedXMLRecord;
 }
 
-class XMLParser {
-  readonly #domParser: DOMParser;
+export type ParseXML = (xml: string) => XMLDocument;
 
-  constructor(domParser: typeof DOMParser) {
-    this.#domParser = new domParser();
-  }
-
-  parse(xml: string): XMLDocument {
-    return this.#domParser.parseFromString(xml, "text/xml");
-  }
+export function getXMLParser(domParser: typeof DOMParser): ParseXML {
+  const parser = new domParser();
+  // TODO: https://developer.mozilla.org/en-US/docs/Web/API/DOMParser/parseFromString#error_handling
+  return (xml) => parser.parseFromString(xml, "text/xml");
 }
-
-export {
-  NON_WHITESPACE,
-  parseElementNode,
-  parseTextNode,
-  parseToRecordOrString,
-  XMLParser,
-};

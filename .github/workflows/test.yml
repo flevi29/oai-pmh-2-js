@@ -9,16 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: ./.github/actions/setup-deno
+      - uses: ./.github/actions/setup-nodejs
       - name: Lint
         run: |
-          deno task lint
-          deno task --cwd=app lint
-          deno task --cwd=lib lint
+          pnpm lint
+          pnpm -C=app lint
       - name: Type check
         run: |
-          deno task --cwd=app check
-          deno task --cwd=lib check
+          pnpm -C=app check
+          pnpm -C=lib check
       - name: Test
         # TODO
         run: echo TODO

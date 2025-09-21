@@ -4,7 +4,7 @@
   import { getPagination } from "../pagination.svelte";
   import JSONInnerComponent from "./json-inner.svelte";
   import NumberedPaginationComponent from "./numbered-pagination.svelte";
-  import GeneralOaiPmhErrorComponent from "./general-oai-pmh-error.svelte";
+  import ErrorComponent from "./error.svelte";
   import InformationCircle from "./svgs/information-circle.svelte";
 
   const {
@@ -55,7 +55,7 @@
             class="absolute inset-0 mx-auto size-28 text-gray-100/70"
           />
 
-          <div class="relative size-max text-lg text-gray-400 italic">
+          <div class="relative size-max text-lg italic text-gray-400">
             <span>No results to show</span>
           </div>
         </div>
@@ -68,7 +68,7 @@
         })}
       {/if}
     {:else}
-      <GeneralOaiPmhErrorComponent error={result.value} />
+      <ErrorComponent error={result.value} />
     {/if}
   </div>
 

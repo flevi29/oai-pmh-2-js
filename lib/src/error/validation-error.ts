@@ -1,7 +1,11 @@
-import { OaiPmhError } from "./error.js";
+import { OaiPmhError } from "./error.ts";
 
 export class OaiPmhInnerValidationError extends OaiPmhError {
   override name = "OaiPmhInnerValidationError";
+
+  constructor(xmlPath: string, message: string) {
+    super(`${xmlPath}: ${message}`);
+  }
 }
 
 export class OaiPmhValidationError extends OaiPmhError {
@@ -10,10 +14,7 @@ export class OaiPmhValidationError extends OaiPmhError {
   xml: string;
 
   constructor(error: OaiPmhInnerValidationError, xml: string) {
-    super(
-      error.message +
-        "\n(hint: inspect `xml` property for the whole XML document)",
-    );
+    super(error.message);
     this.cause = error;
     this.xml = xml;
   }
