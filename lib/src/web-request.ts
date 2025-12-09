@@ -154,27 +154,20 @@ export class WebRequest {
    * @returns A new Headers object or the main headers of this class if no
    *   headers are provided
    */
-  #getHeaders(extraHeaders?: HeadersInit, postContentLength?: number): Headers {
-    if (extraHeaders === undefined && postContentLength === undefined) {
+  #getHeaders(extraHeaders?: HeadersInit): Headers {
+    if (extraHeaders === undefined) {
       return this.#init.headers;
     }
 
-    const headers = new Headers({
-      ...Object.fromEntries(this.#init.headers.entries()),
-      ...Object.fromEntries(new Headers(extraHeaders).entries()),
-    });
-
-    if (postContentLength !== undefined) {
-      headers.set("Content-Type", "x-www-form-urlencoded");
-      headers.set("Content-Length", postContentLength.toString());
-    }
-
-    return headers;
+    return new Headers([
+      ...Array.from(this.#init.headers.entries()),
+      ...Array.from(new Headers(extraHeaders).entries()),
+    ]);
   }
 
   async request({
     params,
-    post = this.#usePost,
+    usePost: post = this.#usePost,
     init: extraInit,
   }: MainRequestOptions): Promise<string> {
     const url = new URL(this.#baseUrl);
@@ -186,12 +179,12 @@ export class WebRequest {
 
     if (post) {
       init.method = "POST";
-      init.body = new URLSearchParams(params).toString();
-      init.headers = this.#getHeaders(extraInit?.headers, init.body.length);
+      init.body = new URLSearchParams(params);
     } else {
       appendRecordToURLSearchParams(url.searchParams, params);
-      init.headers = this.#getHeaders(extraInit?.headers);
     }
+
+    init.headers = this.#getHeaders(extraInit?.headers);
 
     const startTimeout =
       this.#timeout !== undefined ? getTimeoutFn(init, this.#timeout) : null;

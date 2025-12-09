@@ -36,7 +36,12 @@ export type HttpRequestsRequestInit = SafeOmit<BaseRequestInit, "headers"> & {
 export type MainRequestOptions = {
   /** The search parameters of the URL. */
   params: URLSearchParamsRecord;
-  post?: boolean;
+  /**
+   * Pass {@link MainRequestOptions.params} through the body of requests via POST method.
+   *
+   * Read more {@link https://www.openarchives.org/OAI/openarchivesprotocol.html#HTTPRequestFormat | here}.
+   */
+  usePost?: boolean;
   /**
    * An extra, more limited {@link RequestInit}, that may override some of the
    * options.
