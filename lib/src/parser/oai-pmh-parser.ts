@@ -5,12 +5,12 @@ import type {
   OaiPmhMetadataFormat,
   OaiPmhRecord,
   OaiPmhSet,
-} from "../model/oai-pmh-stuff.ts";
+} from "#model/oai-pmh-stuff";
 import { getXMLParser, type ParseXML } from "./xml-parser.ts";
 import {
   OaiPmhInnerValidationError,
   OaiPmhValidationError,
-} from "../error/validation-error.ts";
+} from "#error/validation-error";
 import { parseIdentify } from "./identify.ts";
 import { parseGetRecordResponse, parseListRecordsResponse } from "./record.ts";
 import { parseListIdentifiersResponse } from "./header.ts";

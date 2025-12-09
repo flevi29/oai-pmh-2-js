@@ -1,4 +1,4 @@
-import type { ListResponse, OaiPmhSet } from "../model/oai-pmh-stuff.ts";
+import type { ListResponse, OaiPmhSet } from "#model/oai-pmh-stuff";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
 import { parseResumptionToken } from "./resumption-token.ts";
 

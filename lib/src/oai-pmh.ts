@@ -4,7 +4,7 @@ import type {
   ListOptionsWithVerb,
   OaiPmhRequestConstructorOptions,
   ReqOpt,
-} from "./model/oai-pmh.ts";
+} from "#model/oai-pmh";
 import type {
   ListResponse,
   OaiPmhHeader,
@@ -12,7 +12,7 @@ import type {
   OaiPmhMetadataFormat,
   OaiPmhRecord,
   OaiPmhSet,
-} from "./model/oai-pmh-stuff.ts";
+} from "#model/oai-pmh-stuff";
 import { WebRequest } from "./web-request.ts";
 import { OaiPmhParser } from "./parser/oai-pmh-parser.ts";
 

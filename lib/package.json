@@ -32,6 +32,10 @@
       "require": "./cjs/mod.cjs"
     }
   },
+  "imports": {
+    "#error/*": "./src/error/*.ts",
+    "#model/*": "./src/model/*.ts"
+  },
   "exports": {
     "./*": "./src/*.ts"
   },

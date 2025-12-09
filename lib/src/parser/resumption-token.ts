@@ -1,5 +1,5 @@
-import type { ParsedXMLRecord } from "../model/xml.ts";
-import type { ParserHelper } from "./helper.ts";
+import type { ParsedXMLRecord } from "#model/xml";
+import type { ParserHelper } from "./helper/parse-helper.ts";
 
 export function parseResumptionToken(
   helper: ParserHelper,

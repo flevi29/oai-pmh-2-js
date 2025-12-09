@@ -7,7 +7,7 @@ export default defineConfig({
     sourcemap: true,
     target: tsconfig.compilerOptions.target,
     lib: {
-      entry: "src/mod.ts",
+      entry: "src/index.ts",
       formats: ["es", "cjs"],
       fileName: (format, entryName) => {
         switch (format) {

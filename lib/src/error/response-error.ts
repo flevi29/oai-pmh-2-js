@@ -1,4 +1,4 @@
-import type { OaiPmhErrorCode } from "../model/oai-pmh-stuff.ts";
+import type { OaiPmhErrorCode } from "#model/oai-pmh-stuff";
 import { OaiPmhError } from "./error.ts";
 
 export type OaiPmhResponseErrorData = { code: OaiPmhErrorCode; text?: string };

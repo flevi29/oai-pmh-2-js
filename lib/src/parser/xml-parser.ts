@@ -3,8 +3,8 @@ import type {
   ParsedXMLAttributeValue,
   ParsedXMLElement,
   ParsedXMLRecord,
-} from "../model/xml.ts";
-import type { ParserHelper } from "./helper.ts";
+} from "#model/xml";
+import type { ParserHelper } from "./helper/parse-helper.ts";
 
 function getPrefixAndLocalName(
   nodeName: string,
@@ -64,6 +64,7 @@ export const NON_WHITESPACE = /\S/;
 export type XMLParseResult = ParsedXMLRecord | string | undefined;
 
 // TODO: Open this up
+//       Later note: what did I mean?
 export function parseToRecordOrString(
   helper: ParserHelper,
   childNodeList: NodeListOf<ChildNode>,

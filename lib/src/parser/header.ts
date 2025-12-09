@@ -1,6 +1,7 @@
-import type { ListResponse, OaiPmhHeader } from "../model/oai-pmh-stuff.ts";
-import type { ParsedXMLRecord } from "../model/xml.ts";
-import type { AttrParser, ParserHelper } from "./helper.ts";
+import type { ListResponse, OaiPmhHeader } from "#model/oai-pmh-stuff";
+import type { ParsedXMLRecord } from "#model/xml";
+import type { AttrParser } from "./helper/attr-parser.ts";
+import type { ParserHelper } from "./helper/parse-helper.ts";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
 import { parseResumptionToken } from "./resumption-token.ts";
 
