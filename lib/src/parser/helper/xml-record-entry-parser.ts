@@ -59,11 +59,12 @@ export class XMLRecordEntryParser {
   }
 
   toString(): [string, AttrParser] {
-    const asd = this.toMaybeString();
-    if (asd === undefined) {
+    const strings = this.toMaybeString();
+    if (strings === undefined) {
       throw this.#helper.getErr("missing node");
     }
-    return asd;
+
+    return strings;
   }
 
   toMaybeRecords(): [ParserHelper, ParsedXMLRecord, AttrParser][] | undefined {
@@ -96,11 +97,12 @@ export class XMLRecordEntryParser {
   }
 
   toRecords(): [ParserHelper, ParsedXMLRecord, AttrParser][] {
-    const asd = this.toMaybeRecords();
-    if (asd === undefined) {
+    const records = this.toMaybeRecords();
+    if (records === undefined) {
       throw this.#helper.getErr("missing node");
     }
-    return asd;
+
+    return records;
   }
 
   toMaybeStrings(): [string | undefined, AttrParser][] | undefined {
@@ -129,10 +131,11 @@ export class XMLRecordEntryParser {
   }
 
   toStrings(): [string | undefined, AttrParser][] {
-    const asd = this.toMaybeStrings();
-    if (asd === undefined) {
+    const strings = this.toMaybeStrings();
+    if (strings === undefined) {
       throw this.#helper.getErr("missing node");
     }
-    return asd;
+
+    return strings;
   }
 }

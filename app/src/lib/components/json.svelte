@@ -28,7 +28,7 @@
   let topDivElement = $state<HTMLDivElement | null>(null);
 </script>
 
-{#snippet JSONInnerSnippet(props: ComponentProps<typeof JSONInnerComponent>)}
+{#snippet JSONInnerSnippet(props: ComponentProps)}
   <div
     class="border-b border-dotted border-gray-500 p-2 font-mono text-gray-700 first:rounded-t-xl
         last:rounded-b-xl last:border-b-0 hover:bg-gray-50/60"
@@ -55,7 +55,7 @@
             class="absolute inset-0 mx-auto size-28 text-gray-100/70"
           />
 
-          <div class="relative size-max text-lg italic text-gray-400">
+          <div class="relative size-max text-lg text-gray-400 italic">
             <span>No results to show</span>
           </div>
         </div>

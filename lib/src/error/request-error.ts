@@ -4,7 +4,7 @@ const TRIM_IDX = 250;
 
 function trimMessage(message: string): string {
   return message.length - 1 > TRIM_IDX
-    ? message.substring(0, TRIM_IDX) + " ..."
+    ? message.slice(0, TRIM_IDX) + " ..."
     : message;
 }
 

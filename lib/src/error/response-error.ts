@@ -25,12 +25,13 @@ export class OaiPmhResponseError extends OaiPmhError {
 
   constructor(cause: OaiPmhResponseErrorCause) {
     super(
-      "OAI-PMH provider returned error(s):" +
+      "OAI-PMH provider returned error(s):\n" +
         cause.errors
           .map(
-            (v) => `\n\t${v.code}${v.text !== undefined ? `: ${v.text}` : ""}`,
+            (v) =>
+              `${v.code}: ${v.text || "<error code has no accompanying description>"}`,
           )
-          .join(""),
+          .join("\n"),
     );
 
     this.cause = cause;

@@ -18,9 +18,9 @@
     <details>
       <summary
         class="inline-flex h-8
-        min-w-max cursor-pointer select-none items-center gap-1 break-words rounded-l-md
-        border px-3 text-sm font-medium
-        duration-75 focus-visible:outline-2 active:transition-none"
+        min-w-max cursor-pointer items-center gap-1 rounded-l-md border px-3
+        text-sm font-medium break-words duration-75
+        select-none focus-visible:outline-2 active:transition-none"
       >
         <span>Select URL</span>
 
@@ -32,15 +32,15 @@
 
     <div class="text-dim-gray relative w-full">
       <DebouncedTextInput
-        class="block w-full break-words rounded-r-md border py-[5px]
-        pl-8 pr-3 align-middle text-sm duration-75
+        class="block w-full rounded-r-md border py-[5px] pr-3
+        pl-8 align-middle text-sm break-words duration-75
         focus:bg-white focus-visible:outline-none"
         placeholder="Type OAI-PMH URL here..."
         value={r.url}
         onValueChanged={r.setUrl}
       />
 
-      <LinkSvg class="pointer-events-none absolute left-2 top-[9px] size-4" />
+      <LinkSvg class="pointer-events-none absolute top-[9px] left-2 size-4" />
     </div>
 
     <!-- <div class="whitespace-nowrap">
