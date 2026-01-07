@@ -40,6 +40,6 @@
     "./*": "./src/*.ts"
   },
   "devDependencies": {
-    "linkedom": "~0.18"
+    "linkedom": "0.18.12"
   }
 }
