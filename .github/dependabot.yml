@@ -1,0 +1,31 @@
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "semiannually"
+
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: "semiannually"
+    versioning-strategy: increase
+    groups:
+      vite:
+        patterns:
+          - "vite"
+          - "@sveltejs/adapter-static"
+          - "@sveltejs/vite-plugin-svelte"
+          - "@tailwindcss/vite"
+      svelte:
+        patterns:
+          - "@sveltejs/kit"
+          - "svelte"
+          - "svelte-check"
+      prettier:
+        patterns:
+          - "prettier"
+          - "prettier-plugin-svelte"
+          - "prettier-plugin-tailwindcss"
