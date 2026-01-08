@@ -1,5 +1,5 @@
 import { untrack } from "svelte";
-import { OaiPmh } from "oai-pmh-2-js/mod";
+import { OaiPmh } from "oai-pmh-2-js/index";
 
 const LAST_OAI_PMH_URL_KEY = "lastOaiPmhUrl";
 

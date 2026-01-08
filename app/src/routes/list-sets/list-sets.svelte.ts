@@ -1,4 +1,4 @@
-import type { OaiPmhSet } from "oai-pmh-2-js/mod";
+import type { OaiPmhSet } from "oai-pmh-2-js/index";
 import { getResultStore } from "$lib/stores/result.svelte";
 
 let initialValue: OaiPmhSet[] | undefined = undefined;

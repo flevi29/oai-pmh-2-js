@@ -34,7 +34,8 @@
   },
   "imports": {
     "#error/*": "./src/error/*.ts",
-    "#model/*": "./src/model/*.ts"
+    "#model/*": "./src/model/*.ts",
+    "#parser/*": "./src/parser/*.ts"
   },
   "exports": {
     "./*": "./src/*.ts"

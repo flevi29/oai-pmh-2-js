@@ -14,7 +14,7 @@ import type {
   OaiPmhSet,
 } from "#model/oai-pmh-stuff";
 import { WebRequest } from "./web-request.ts";
-import { OaiPmhParser } from "./parser/oai-pmh-parser.ts";
+import { getOaiPmhParser, type OaiPmhParser } from "./parser/oai-pmh-parser.ts";
 
 export class OaiPmh {
   readonly #webRequest: WebRequest;
@@ -22,7 +22,7 @@ export class OaiPmh {
 
   constructor(options: OaiPmhRequestConstructorOptions) {
     this.#webRequest = new WebRequest(options);
-    this.#parser = new OaiPmhParser(options.domParser ?? DOMParser);
+    this.#parser = getOaiPmhParser(options.domParser ?? DOMParser);
   }
 
   async identify(options?: ReqOpt): Promise<OaiPmhIdentify> {

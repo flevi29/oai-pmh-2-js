@@ -3,11 +3,16 @@ import { default as process } from "node:process";
 import { writeFileSync } from "node:fs";
 import { DOMParser } from "linkedom/worker";
 import { getXMLParser } from "oai-pmh-2-js/parser/xml-parser";
-import { OaiPmhParser } from "oai-pmh-2-js/parser/oai-pmh-parser";
+import { getOaiPmhParser } from "oai-pmh-2-js/parser/oai-pmh-parser";
 import { OaiPmhValidationError } from "oai-pmh-2-js/error/validation-error";
-import { ParserHelper } from "oai-pmh-2-js/parser/helper";
+import { ParserHelper } from "#parser/helper/parse-helper";
 
-const URL_LIST_URL = "https://www.openarchives.org/pmh/registry/ListFriends";
+// useful info on status of maintained OAI-PMH lists
+// https://groups.google.com/g/oai-pmh/c/b11cH343bIo
+// should probably implement one of the listed sources instead of the link underneath
+
+const URL_LIST_URL =
+  "https://www.openarchives.org/pmh/registry/ListFriends_HISTORICAL_2025-10-08.xml";
 
 function getSemaphore(weight: number) {
   let promiseChain = Promise.resolve(() => {});
@@ -53,7 +58,7 @@ function* parseBaseURLs(childNodeList: NodeListOf<ChildNode>) {
 
   const { number: n } = baseUrlsAttr.toRecord("number");
 
-  console.log(`${n} amount of URLs.`);
+  console.log(`total OAI-PMH URLs in list: ${n}`);
 
   const urls = nextHelper
     .parseXMLRecordEntry(baseUrlsRecord, "baseURL")
@@ -108,7 +113,7 @@ async function fetchURLs() {
 try {
   const urls = await fetchURLs();
   const semaphore = getSemaphore(50);
-  const parser = new OaiPmhParser(
+  const parser = getOaiPmhParser(
     // @ts-expect-error: https://github.com/WebReflection/linkedom/issues/167
     DOMParser,
   );

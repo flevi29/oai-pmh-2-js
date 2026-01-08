@@ -28,7 +28,7 @@
   let topDivElement = $state<HTMLDivElement | null>(null);
 </script>
 
-{#snippet JSONInnerSnippet(props: ComponentProps)}
+{#snippet JSONInnerSnippet(props: ComponentProps<typeof JSONInnerComponent>)}
   <div
     class="border-b border-dotted border-gray-500 p-2 font-mono text-gray-700 first:rounded-t-xl
         last:rounded-b-xl last:border-b-0 hover:bg-gray-50/60"

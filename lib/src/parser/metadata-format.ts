@@ -1,4 +1,4 @@
-import type { OaiPmhMetadataFormat } from "#model/oai-pmh-stuff.ts";
+import type { OaiPmhMetadataFormat } from "#model/oai-pmh-stuff";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
 
 export function parseListMetadataFormats(

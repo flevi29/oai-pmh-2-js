@@ -1,5 +1,5 @@
 <script lang="ts" module>
-  import type { OaiPmhIdentify } from "oai-pmh-2-js/mod";
+  import type { OaiPmhIdentify } from "oai-pmh-2-js/index";
 
   let initialValue: OaiPmhIdentify[] | undefined = undefined;
 </script>

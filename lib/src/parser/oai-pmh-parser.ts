@@ -6,7 +6,7 @@ import type {
   OaiPmhRecord,
   OaiPmhSet,
 } from "#model/oai-pmh-stuff";
-import { getXMLParser, type ParseXML } from "./xml-parser.ts";
+import { getXMLParser } from "./xml-parser.ts";
 import {
   OaiPmhInnerValidationError,
   OaiPmhValidationError,
@@ -19,22 +19,18 @@ import { parseListSetsResponse } from "./set.ts";
 
 // TODO: provide a callback for XSD validation
 //       for instance https://github.com/nikku/node-xsd-schema-validator
-export class OaiPmhParser {
-  readonly #parseXML: ParseXML;
+export function getOaiPmhParser(domParser: typeof DOMParser) {
+  const parseXML = getXMLParser(domParser);
 
-  constructor(domParser: typeof DOMParser) {
-    this.#parseXML = getXMLParser(domParser);
-  }
-
-  #errorWrapper<TReturn>(
+  function errorWrapper<TReturn>(
     xml: string,
     callback: (childNodes: NodeListOf<ChildNode>) => TReturn,
   ): NoInfer<TReturn> {
-    const { childNodes } = this.#parseXML(xml);
+    const { childNodes } = parseXML(xml);
 
     try {
       return callback(childNodes);
-    } catch (error: unknown) {
+    } catch (error) {
       if (error instanceof OaiPmhInnerValidationError) {
         throw new OaiPmhValidationError(error, xml);
       }
@@ -43,27 +39,31 @@ export class OaiPmhParser {
     }
   }
 
-  parseIdentify(xml: string): OaiPmhIdentify {
-    return this.#errorWrapper(xml, parseIdentify);
-  }
+  return {
+    parseIdentify(xml: string): OaiPmhIdentify {
+      return errorWrapper(xml, parseIdentify);
+    },
 
-  parseGetRecord(xml: string): OaiPmhRecord {
-    return this.#errorWrapper(xml, parseGetRecordResponse);
-  }
+    parseGetRecord(xml: string): OaiPmhRecord {
+      return errorWrapper(xml, parseGetRecordResponse);
+    },
 
-  parseListIdentifiers(xml: string): ListResponse<OaiPmhHeader> {
-    return this.#errorWrapper(xml, parseListIdentifiersResponse);
-  }
+    parseListIdentifiers(xml: string): ListResponse<OaiPmhHeader> {
+      return errorWrapper(xml, parseListIdentifiersResponse);
+    },
 
-  parseListMetadataFormats(xml: string): OaiPmhMetadataFormat[] {
-    return this.#errorWrapper(xml, parseListMetadataFormats);
-  }
+    parseListMetadataFormats(xml: string): OaiPmhMetadataFormat[] {
+      return errorWrapper(xml, parseListMetadataFormats);
+    },
 
-  parseListRecords(xml: string): ListResponse<OaiPmhRecord> {
-    return this.#errorWrapper(xml, parseListRecordsResponse);
-  }
+    parseListRecords(xml: string): ListResponse<OaiPmhRecord> {
+      return errorWrapper(xml, parseListRecordsResponse);
+    },
 
-  parseListSets(xml: string): ListResponse<OaiPmhSet> {
-    return this.#errorWrapper(xml, parseListSetsResponse);
-  }
+    parseListSets(xml: string): ListResponse<OaiPmhSet> {
+      return errorWrapper(xml, parseListSetsResponse);
+    },
+  };
 }
+
+export type OaiPmhParser = ReturnType<typeof getOaiPmhParser>;

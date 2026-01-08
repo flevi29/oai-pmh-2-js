@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ParsedXMLAttributes } from "oai-pmh-2-js/mod";
+  import type { ParsedXMLAttributes } from "oai-pmh-2-js/index";
 
   const { attr }: { attr: ParsedXMLAttributes } = $props();
 </script>
