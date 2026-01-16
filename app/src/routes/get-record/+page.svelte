@@ -1,57 +1,63 @@
 <script lang="ts" module>
+  import {
+    getResultStore,
+    getCachedResultValue,
+  } from "$lib/stores/result.svelte";
   import type { OaiPmhRecord } from "oai-pmh-2-js/index";
 
-  let initialValue: OaiPmhRecord[] | undefined = undefined;
+  const cache = getCachedResultValue<OaiPmhRecord>();
 </script>
 
 <script lang="ts">
-  import { getResultStore } from "$lib/stores/result.svelte";
-  import Button from "$lib/components/buttons/button.svelte";
-  import Loading from "$lib/components/loading.svelte";
-  import TextInput from "$lib/components/inputs/styled-text-input.svelte";
+  import { getOaiPmhGetter } from "$lib/stores/oai-pmh.svelte";
   import MetadataPrefixPicker from "../list-metadata-formats/metadata-prefix-picker.svelte";
-  import JSONComponent from "$lib/components/json.svelte";
+  import PaginatedResult from "$lib/components/paginated-result.svelte";
+  import BaseFields from "$lib/components/base-fields.svelte";
+  import DebouncedTextInput from "$lib/components/debounced-text-input.svelte";
 
-  // TODO: These have to be reset on URL change
-  let identifier = $state<string>();
-  let metadataPrefix = $state<string>();
+  let identifier = $state.raw<string>();
+  let metadataPrefix = $state.raw<string>();
 
-  const r = getResultStore<OaiPmhRecord>(async function* (oaiPmh, signal) {
-    yield [
-      await oaiPmh.getRecord(identifier!, metadataPrefix!, {
-        init: { signal },
-      }),
-    ];
-  }, initialValue);
+  const r = getResultStore<OaiPmhRecord>(
+    getOaiPmhGetter(),
+    async function* (oaiPmh, signal) {
+      yield [
+        await oaiPmh.getRecord(identifier!, metadataPrefix!, {
+          init: { signal },
+        }),
+      ];
+    },
+    cache,
+  );
 
-  $effect(() => {
-    initialValue = r.result.success ? r.result.value : undefined;
-  });
+  let metadataPrefixPicker = $state.raw<MetadataPrefixPicker>();
 </script>
 
-<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
-
-<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
-
-<Loading isLoading={r.isRunning} />
-
-<TextInput
-  value={identifier}
-  placeholder="identifier"
-  onValueChanged={(v) => {
-    identifier = v;
-  }}
-/>
-
 <MetadataPrefixPicker
+  bind:this={metadataPrefixPicker}
   onValueChanged={(v) => {
     metadataPrefix = v;
   }}
 />
 
-<JSONComponent
-  result={r.result}
-  collapseLimit={100}
-  pXMLElemArrKey="about"
-  nodeListKey="metadata"
-/>
+<BaseFields
+  onstart={() => r.run()}
+  isStartDisabled={r.isRunning}
+  onstop={() => r.stop()}
+  isStopDisabled={!r.canBeStopped}
+  isLoading={r.isRunning}
+>
+  <button type="button" onclick={() => metadataPrefixPicker?.open()}>
+    <code>{metadataPrefix ?? "<select metadata prefix>"}</code>
+  </button>
+
+  <DebouncedTextInput
+    value={identifier}
+    placeholder="identifier"
+    onValueChanged={(v) => {
+      identifier = v;
+    }}
+  />
+</BaseFields>
+
+<PaginatedResult result={r.result} xmlPathPattern={/^\.about\.\d+$/} />

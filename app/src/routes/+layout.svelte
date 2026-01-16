@@ -1,30 +1,51 @@
 <script lang="ts">
   import "../app.css";
-  import URLInputComponent from "./url-input.svelte";
-  import NavsComponent from "$lib/components/navs.svelte";
+  import { getLastOaiPmhUrl, setupOaiPmh } from "$lib/stores/oai-pmh.svelte";
+  import OaiPmhURLInput from "./oai-pmh-url-input.svelte";
+  import Navigation from "$lib/components/navigation.svelte";
 
   const { children } = $props();
+
+  let url = $state.raw(getLastOaiPmhUrl());
+  let isCorsProxied = $state.raw(true);
+
+  setupOaiPmh(
+    () => url,
+    () => isCorsProxied,
+  );
 </script>
 
-<div>
-  <div class="mx-auto max-w-5xl py-5">
-    <div class="w-full py-4">
-      <URLInputComponent />
-    </div>
+<header>
+  <Navigation
+    navigationObjects={[
+      ["Identify", "/identify"],
+      ["ListMetadataFormats", "/list-metadata-formats"],
+      ["ListIdentifiers", "/list-identifiers"],
+      ["ListRecords", "/list-records"],
+      ["ListSets", "/list-sets"],
+      ["GetRecord", "/get-record"],
+    ]}
+  />
+</header>
 
-    <NavsComponent
-      navigationObjects={[
-        ["Identify", "/identify"],
-        ["ListMetadataFormats", "/list-metadata-formats"],
-        ["ListIdentifiers", "/list-identifiers"],
-        ["ListRecords", "/list-records"],
-        ["ListSets", "/list-sets"],
-        ["GetRecord", "/get-record"],
-      ]}
-    />
-
-    <div class="rounded-xl border p-6 shadow-sm">
-      {@render children()}
-    </div>
+<main class="main mx-auto">
+  <div class="pt-4">
+    <OaiPmhURLInput bind:url bind:isCorsProxied />
   </div>
-</div>
+
+  <section class="section mx-auto">
+    {@render children()}
+  </section>
+</main>
+
+<footer class="text-center"><p><small><i>FOOTER TODO</i></small></p></footer>
+
+<style>
+  .main {
+    max-width: 64rem;
+  }
+
+  .section {
+    max-width: 52rem;
+  }
+</style>

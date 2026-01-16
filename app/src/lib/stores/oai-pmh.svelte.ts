@@ -1,84 +1,47 @@
-import { untrack } from "svelte";
+import { createContext } from "svelte";
 import { OaiPmh } from "oai-pmh-2-js/index";
+import type { Result } from "$lib/generic-result";
 
 const LAST_OAI_PMH_URL_KEY = "lastOaiPmhUrl";
 
-export let globalOaiPmh = (() => {
-  let value = $state<OaiPmh>();
+export function getLastOaiPmhUrl(): string {
+  return localStorage.getItem(LAST_OAI_PMH_URL_KEY) ?? "";
+}
 
-  return {
-    get value() {
-      return value;
-    },
-    setValue(v?: OaiPmh) {
-      value = v;
-    },
-  };
-})();
+const [getOaiPmhGetter, setOaiPmhGetter] =
+  createContext<() => Result<OaiPmh>>();
 
-export function getOaiPmhStore() {
-  let isCorsProxied = $state(true);
-  let url = $state(localStorage.getItem(LAST_OAI_PMH_URL_KEY) ?? "");
+export { getOaiPmhGetter };
 
-  let oaiConstructionError = $state<unknown>();
-
-  const oaiPmh = $derived.by(() => {
-    untrack(() => {
-      oaiConstructionError = undefined;
-    });
-
+export function setupOaiPmh(
+  getUrl: () => string,
+  getIsCorsProxied: () => boolean,
+): void {
+  const result = $derived.by<Result<OaiPmh>>(() => {
     try {
-      return new OaiPmh({
-        baseUrl: url,
-        requestFn: isCorsProxied
-          ? async (input, init) => {
-              const { url } = new Request(input);
-              // TODO: Should add option whether we want to proxy it or not, enabled by default
-              const corsProxiedUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+      return {
+        success: true,
+        value: new OaiPmh({
+          baseUrl: getUrl(),
+          requestFn: getIsCorsProxied()
+            ? async (input, init) => {
+                const { url } = new Request(input);
+                const corsProxiedUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
 
-              const resp = await fetch(corsProxiedUrl, init);
-              const parsedBody = await resp.text();
+                const resp = await fetch(corsProxiedUrl, init);
+                const parsedBody = await resp.text();
 
-              return resp.ok
-                ? { success: true, value: parsedBody, headers: resp.headers }
-                : { success: false, value: parsedBody, details: resp };
-            }
-          : undefined,
-      });
+                return resp.ok
+                  ? { success: true, value: parsedBody, headers: resp.headers }
+                  : { success: false, value: parsedBody, details: resp };
+              }
+            : undefined,
+        }),
+      };
     } catch (error) {
-      untrack(() => {
-        oaiConstructionError = error;
-      });
+      return { success: false, value: error };
     }
   });
 
-  $effect(() => {
-    oaiPmh;
-
-    return untrack(() => {
-      globalOaiPmh.setValue(oaiPmh);
-      return () => {
-        globalOaiPmh.setValue();
-      };
-    });
-  });
-
-  return {
-    get url() {
-      return url;
-    },
-    get oaiPmh() {
-      return oaiPmh;
-    },
-    setUrl(value: string): void {
-      url = value;
-      localStorage.setItem(LAST_OAI_PMH_URL_KEY, value);
-    },
-    get isCorsProxied() {
-      return isCorsProxied;
-    },
-    setIsCorsProxied(v: boolean) {
-      isCorsProxied = v;
-    },
-  };
+  setOaiPmhGetter(() => result);
 }

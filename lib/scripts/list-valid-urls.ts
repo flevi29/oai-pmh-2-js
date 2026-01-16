@@ -44,7 +44,6 @@ function getSemaphore(weight: number) {
         };
       }));
     },
-    getCurrentPromise: () => p.promise,
   };
 }
 
@@ -58,33 +57,51 @@ function* parseBaseURLs(childNodeList: NodeListOf<ChildNode>) {
 
   const { number: n } = baseUrlsAttr.toRecord("number");
 
-  console.log(`total OAI-PMH URLs in list: ${n}`);
-
   const urls = nextHelper
     .parseXMLRecordEntry(baseUrlsRecord, "baseURL")
     .toStrings();
 
-  for (const [url, attr] of urls) {
+  let lastI = 0;
+  for (const [i, [url, attr]] of urls.entries()) {
     if (url === undefined) {
       throw nextHelper.getErr("expected no missing text nodes");
     }
 
     const id = attr.toMaybeRecord("id")?.id;
 
+    if (i - lastI >= 300) {
+      lastI = i;
+      console.log(`${i}/${n}`);
+    }
+
     yield [url, id] as const;
   }
 }
 
+const rootUrl = new URL("../..", import.meta.url);
+const errorUrl = new URL("./error.jsonl", rootUrl);
+const appProvidersUrl = new URL("./app/static/valid-providers/", rootUrl);
+
 function appendErrorFile(obj: unknown) {
-  writeFileSync("./error.jsonl", JSON.stringify(obj) + "\n", {
-    flag: "a",
-  });
+  writeFileSync(errorUrl, JSON.stringify(obj) + "\n", { flag: "a" });
 }
 
-function appendOkFile(obj: unknown) {
-  writeFileSync("./ok.jsonl", JSON.stringify(obj) + "\n", {
-    flag: "a",
-  });
+let no = 0;
+function writeOkFile(obj: unknown[]) {
+  const fileUrl = new URL(`./providers-${no}.json`, appProvidersUrl);
+
+  console.log(fileUrl.href);
+
+  writeFileSync(fileUrl, JSON.stringify(obj));
+
+  no += 1;
+}
+
+function writeDateFile(date: Date) {
+  writeFileSync(
+    new URL("./date.json", appProvidersUrl),
+    JSON.stringify(date.toISOString()),
+  );
 }
 
 async function fetchURLs() {
@@ -111,6 +128,7 @@ async function fetchURLs() {
 }
 
 try {
+  const startDate = new Date();
   const urls = await fetchURLs();
   const semaphore = getSemaphore(50);
   const parser = getOaiPmhParser(
@@ -118,34 +136,49 @@ try {
     DOMParser,
   );
 
+  let cached: unknown[] = [];
+  function pushCached(value: unknown) {
+    cached.push(value);
+
+    if (cached.length >= 500) {
+      writeOkFile(cached);
+      cached = [];
+    }
+  }
+
+  function flushCached() {
+    writeOkFile(cached);
+  }
+
   for (const [url, id] of urls) {
+    const releaseLock = await semaphore.acquireLock();
+
     (async () => {
-      const releaseLock = await semaphore.acquireLock();
+      const response = await fetch(`${url}?verb=Identify`, {
+        signal: AbortSignal.timeout(30_000),
+      });
 
-      try {
-        const response = await fetch(`${url}?verb=Identify`, {
-          signal: AbortSignal.timeout(30_000),
-        });
-        const responseBodyText = await response.text();
+      if (!response.ok) {
+        // const { status, statusText } = response;
+        // console.error({ url, status, statusText, responseBodyText });
+        return;
+      }
 
-        if (!response.ok) {
-          const { status, statusText } = response;
-          console.error({ url, status, statusText, responseBodyText });
-        }
+      const requiredHeader = response.headers.get(
+        "Access-Control-Allow-Origin",
+      );
 
-        const requiredHeader = response.headers.get(
-          "Access-Control-Allow-Origin",
-        );
+      const responseBodyText = await response.text();
+      const identify = parser.parseIdentify(responseBodyText);
 
-        const identify = parser.parseIdentify(responseBodyText);
-
-        appendOkFile({
-          url,
-          id,
-          name: identify.repositoryName,
-          requiredHeader,
-        });
-      } catch (error) {
+      pushCached({
+        url,
+        id,
+        name: identify.repositoryName,
+        requiredHeader,
+      });
+    })()
+      .catch((error) => {
         appendErrorFile({
           url,
           id,
@@ -159,11 +192,22 @@ try {
                 ? error.toString()
                 : JSON.stringify(error),
         });
-      } finally {
+      })
+      .finally(() => {
         releaseLock();
-      }
-    })();
+      });
   }
+
+  const releaseLock = await semaphore.acquireLock();
+  try {
+    flushCached();
+  } finally {
+    releaseLock();
+  }
+
+  console.log(`finished after ${Date.now() - startDate.getTime()}ms`);
+
+  writeDateFile(startDate);
 } catch (error) {
   console.error(error);
   process.exitCode = 1;

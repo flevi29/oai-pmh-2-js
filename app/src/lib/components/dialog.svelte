@@ -1,12 +1,13 @@
 <script module lang="ts">
-  const BODY_CLASSES = ["blur-sm"];
+  // https://picocss.com/docs/modal#utilities
+  const modalOpenClass = "modal-is-open";
   let openDialogs = 0;
 
   function incrementOpenDialogs() {
     openDialogs += 1;
 
     if (openDialogs === 1) {
-      document.body.classList.add(...BODY_CLASSES);
+      document.body.classList.add(modalOpenClass);
     }
   }
 
@@ -14,23 +15,22 @@
     openDialogs -= 1;
 
     if (openDialogs === 0) {
-      document.body.classList.remove(...BODY_CLASSES);
+      document.body.classList.remove(modalOpenClass);
     }
   }
 </script>
 
 <script lang="ts">
   import type { HTMLDialogAttributes } from "svelte/elements";
-  import XMark from "./svgs/x-mark.svelte";
 
   const {
-    class: cls,
+    headerContent,
     children,
     onclose,
     ...restOfProps
-  }: HTMLDialogAttributes = $props();
+  }: HTMLDialogAttributes & { headerContent: string } = $props();
 
-  let dialogElement = $state<HTMLDialogElement | null>(null);
+  let dialogElement = $state.raw<HTMLDialogElement | null>(null);
 
   function close(): void {
     if (dialogElement?.open) {
@@ -45,34 +45,35 @@
     }
   }
 
-  $effect(() => close);
-
   export { close, showModal };
 </script>
 
 <dialog
-  class={[
-    "m-0 max-h-dvh max-w-none bg-transparent backdrop:bg-blue-300/20 focus:outline-none",
-    cls,
-  ]}
   bind:this={dialogElement}
-  onclose={(...props) => {
+  onclose={(...args) => {
     decrementOpenDialogs();
-    onclose?.(...props);
+    onclose?.(...args);
   }}
   {...restOfProps}
 >
-  <div class="flex flex-col items-center gap-y-3 pt-10">
-    <div class="self-end">
-      <button
-        class="rounded-full bg-gray-500/20 p-1 text-gray-800 hover:bg-gray-500/50"
-        type="button"
-        onclick={() => dialogElement?.close()}
-      >
-        <XMark />
-      </button>
-    </div>
+  <article>
+    <header>
+      <!-- svelte-ignore a11y_invalid_attribute -->
+      <a
+        href="javascript:void(0)"
+        aria-label="Close"
+        rel="prev"
+        onclick={(event) => {
+          event.preventDefault();
+          close();
+        }}
+      ></a>
+
+      <p>
+        <b>{headerContent}</b>
+      </p>
+    </header>
 
     {@render children?.()}
-  </div>
+  </article>
 </dialog>

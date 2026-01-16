@@ -1,11 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-@import "tailwindcss";
+:root {
+  --spacing: 0.25rem;
+}
 
-/* @custom-variant section-md-bg (&:where([data-md-bg], [data-md-bg] *));
-@custom-variant dark (&:where(body:has(#dark-color-scheme-toggle:checked),
-  body:has(#dark-color-scheme-toggle:checked) *)); */
+.size-5 {
+  width: calc(var(--spacing) * 5);
+  height: calc(var(--spacing) * 5);
+}
 
-@theme {
-  --font-roboto: "Roboto", sans-serif;
-  --font-roboto-mono: "Roboto Mono", monospace;
+.p-0 {
+  padding: 0;
+}
+
+.pt-4 {
+  padding-top: calc(var(--spacing) * 4);
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mx-auto {
+  margin-inline: auto;
 }

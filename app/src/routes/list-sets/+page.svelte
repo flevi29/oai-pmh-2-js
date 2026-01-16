@@ -1,16 +1,34 @@
-<script lang="ts">
-  import { getListSetsResultStore } from "./list-sets.svelte";
-  import Button from "$lib/components/buttons/button.svelte";
-  import JSONComponent from "$lib/components/json.svelte";
-  import Loading from "$lib/components/loading.svelte";
+<script module lang="ts">
+  import {
+    getResultStore,
+    getCachedResultValue,
+  } from "$lib/stores/result.svelte";
+  import type { OaiPmhSet } from "oai-pmh-2-js/index";
 
-  const r = getListSetsResultStore();
+  export const cache = getCachedResultValue<OaiPmhSet>();
 </script>
 
-<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
+<script lang="ts">
+  import { getOaiPmhGetter } from "$lib/stores/oai-pmh.svelte";
+  import BaseFields from "$lib/components/base-fields.svelte";
+  import PaginatedResult from "$lib/components/paginated-result.svelte";
 
-<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
+  const r = getResultStore<OaiPmhSet>(
+    getOaiPmhGetter(),
+    (oaiPmh, signal) => oaiPmh.listSets({ init: { signal } }),
+    cache,
+  );
+</script>
 
-<Loading isLoading={r.isRunning} />
+<BaseFields
+  onstart={() => r.run()}
+  isStartDisabled={r.isRunning}
+  onstop={() => r.stop()}
+  isStopDisabled={!r.canBeStopped}
+  isLoading={r.isRunning}
+/>
 
-<JSONComponent result={r.result} pXMLElemArrKey="setDescription" />
+<PaginatedResult
+  result={r.result}
+  xmlPathPattern={/^\.setDescription\.\d+$/}
+/>

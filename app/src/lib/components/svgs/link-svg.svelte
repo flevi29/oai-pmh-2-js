@@ -1,14 +1,16 @@
 <script lang="ts">
-  const { class: svgClass = "size-6" }: { class?: string } = $props();
+  import type { SVGAttributes } from "svelte/elements";
+
+  const {
+    fill = "none",
+    stroke = "currentColor",
+    viewBox = "0 0 24 24",
+    "stroke-width": strokeWidth = "1.5",
+    ...props
+  }: SVGAttributes<EventTarget> = $props();
 </script>
 
-<svg
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.5"
-  class={svgClass}
-  viewBox="0 0 24 24"
->
+<svg {fill} {stroke} stroke-width={strokeWidth} {viewBox} {...props}>
   <path
     stroke-linecap="round"
     stroke-linejoin="round"

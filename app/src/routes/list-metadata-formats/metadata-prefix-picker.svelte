@@ -1,54 +1,60 @@
 <script lang="ts">
-  import { getListMetadataFormatsResultStore } from "./list-metadata-formats.svelte";
+  import { cache } from "./+page.svelte";
+  import { getOaiPmhGetter } from "$lib/stores/oai-pmh.svelte";
+  import { getResultStore, resultStatus } from "$lib/stores/result.svelte";
   import Dialog from "$lib/components/dialog.svelte";
   import RadioInputList from "$lib/components/radio-input-list.svelte";
-  import Button from "$lib/components/buttons/button.svelte";
   import Loading from "$lib/components/loading.svelte";
-  import ErrorComponent from "$lib/components/error.svelte";
-
-  const r = getListMetadataFormatsResultStore(() => undefined);
-
-  let currentOaiPmhMetadataFormat = $state<string>();
+  import ErrorComponent from "$lib/components/request-error.svelte";
+  import type { OaiPmhMetadataFormat } from "oai-pmh-2-js/index";
 
   const {
     onValueChanged,
   }: { onValueChanged: (oaiPmhMetadataFormat?: string) => void } = $props();
 
-  $effect(() => {
-    onValueChanged(currentOaiPmhMetadataFormat);
-  });
+  // TODO: have to be reset on URL change
+  let currentOaiPmhMetadataFormat = $state.raw<string>();
 
-  let dialogComponent = $state<ReturnType<typeof Dialog>>();
+  const r = getResultStore<OaiPmhMetadataFormat>(
+    getOaiPmhGetter(),
+    async function* (oaiPmh, signal) {
+      yield await oaiPmh.listMetadataFormats(undefined, { init: { signal } });
+    },
+    cache,
+  );
+
+  let dialogComponent = $state.raw<Dialog>();
+
+  export function open() {
+    dialogComponent?.showModal();
+    if (r.result.status !== resultStatus.success && !r.isRunning) {
+      r.run();
+    }
+  }
 </script>
 
-<Dialog bind:this={dialogComponent}>
-  {#if r.isRunning}
-    <div class="w-full rounded-lg bg-white p-2 text-center text-sm shadow-sm">
-      <div class="mx-auto w-max">
-        <Loading isLoading />
-      </div>
-    </div>
-  {:else if !r.result.success}
-    <ErrorComponent error={r.result.value} />
-  {:else}
+<Dialog
+  bind:this={dialogComponent}
+  headerContent="Pick OAI-PMH Metadata Prefix"
+>
+  {#if r.result.status === resultStatus.success}
     <RadioInputList
       items={r.result.value.map((v) => ({
+        name: v.metadataPrefix,
         value: v.metadataPrefix,
         isSelected: v.metadataPrefix === currentOaiPmhMetadataFormat,
       }))}
       onclick={(event) => {
         currentOaiPmhMetadataFormat = event.currentTarget.value;
+        onValueChanged(currentOaiPmhMetadataFormat);
         dialogComponent?.close();
       }}
     />
+  {:else if r.result.status === resultStatus.failure}
+    <ErrorComponent error={r.result.value} />
+  {:else}
+    <Loading isLoading={r.isRunning} />
+
+    <p class="text-center"><i>pending...</i></p>
   {/if}
 </Dialog>
-
-<Button
-  onclick={() => {
-    dialogComponent?.showModal();
-    if ((!r.result.success || r.result.value.length === 0) && !r.isRunning) {
-      r.run();
-    }
-  }}>{currentOaiPmhMetadataFormat ?? "<select metadataPrefix>"}</Button
->

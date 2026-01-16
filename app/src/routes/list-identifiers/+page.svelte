@@ -1,25 +1,28 @@
 <script lang="ts" module>
+  import {
+    getResultStore,
+    getCachedResultValue,
+  } from "$lib/stores/result.svelte";
   import type { OaiPmhHeader } from "oai-pmh-2-js/index";
 
-  let initialValue: OaiPmhHeader[] | undefined = undefined;
+  export const cache = getCachedResultValue<OaiPmhHeader>();
 </script>
 
 <script lang="ts">
-  import { getResultStore } from "$lib/stores/result.svelte";
-  import Button from "$lib/components/buttons/button.svelte";
-  import Loading from "$lib/components/loading.svelte";
-  import TextInput from "$lib/components/inputs/styled-text-input.svelte";
+  import { getOaiPmhGetter } from "$lib/stores/oai-pmh.svelte";
   import SetPicker from "../list-sets/set-picker.svelte";
   import MetadataPrefixPicker from "../list-metadata-formats/metadata-prefix-picker.svelte";
-  import JSONComponent from "$lib/components/json.svelte";
+  import BaseFields from "$lib/components/base-fields.svelte";
+  import FromUntilFieldset from "../from-until-fieldset.svelte";
+  import PaginatedResult from "$lib/components/paginated-result.svelte";
 
-  // TODO: These have to be reset on URL change
-  let from = $state<string>();
-  let until = $state<string>();
-  let set = $state<string>();
-  let metadataPrefix = $state<string>();
+  let from = $state.raw<string>();
+  let until = $state.raw<string>();
+  let set = $state.raw<string>();
+  let metadataPrefix = $state.raw<string>();
 
   const r = getResultStore<OaiPmhHeader>(
+    getOaiPmhGetter(),
     (oaiPmh, signal) =>
       oaiPmh.listIdentifiers(
         {
@@ -31,46 +34,51 @@
         },
         { init: { signal } },
       ),
-    initialValue,
+    cache,
   );
 
-  $effect(() => {
-    initialValue = r.result.success ? r.result.value : undefined;
-  });
+  let metadataPrefixPicker = $state.raw<MetadataPrefixPicker>();
+  let setPicker = $state.raw<SetPicker>();
 </script>
 
-<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
-
-<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
-
-<Loading isLoading={r.isRunning} />
-
-<TextInput
-  value={from}
-  placeholder="from"
-  onValueChanged={(v) => {
-    from = v;
-  }}
-/>
-
-<TextInput
-  value={until}
-  placeholder="until"
-  onValueChanged={(v) => {
-    until = v;
-  }}
-/>
-
 <SetPicker
+  bind:this={setPicker}
   onValueChanged={(v) => {
     set = v;
   }}
 />
-
 <MetadataPrefixPicker
+  bind:this={metadataPrefixPicker}
   onValueChanged={(v) => {
     metadataPrefix = v;
   }}
 />
 
-<JSONComponent result={r.result} />
+<BaseFields
+  onstart={() => r.run()}
+  isStartDisabled={r.isRunning}
+  onstop={() => r.stop()}
+  isStopDisabled={!r.canBeStopped}
+  isLoading={r.isRunning}
+>
+  <div role="group">
+    <button type="button" onclick={() => setPicker?.open()}>
+      <code>{set ?? "<select set>"}</code>
+    </button>
+
+    <button type="button" onclick={() => metadataPrefixPicker?.open()}>
+      <code>{metadataPrefix ?? "<select metadata prefix>"}</code>
+    </button>
+  </div>
+
+  <FromUntilFieldset
+    onFrom={(v) => {
+      from = v;
+    }}
+    onUntil={(v) => {
+      until = v;
+    }}
+  />
+</BaseFields>
+
+<PaginatedResult result={r.result} />

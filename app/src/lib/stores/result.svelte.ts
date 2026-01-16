@@ -1,10 +1,39 @@
+import type { Result } from "$lib/generic-result";
 import type { OaiPmh } from "oai-pmh-2-js/oai-pmh";
-import { untrack } from "svelte";
-import { globalOaiPmh } from "./oai-pmh.svelte";
 
-export type Result<T> =
-  | { success: true; value: T }
-  | { success: false; value: unknown };
+export const resultStatus = Object.freeze({
+  pending: 0,
+  success: 1,
+  failure: 2,
+});
+
+type ResultStatusType = typeof resultStatus;
+export type ResultStatus = ResultStatusType[keyof ResultStatusType];
+
+export type OaiPmhResult<T> =
+  | { status: ResultStatusType["pending"] }
+  | { status: ResultStatusType["success"]; value: T }
+  | { status: ResultStatusType["failure"]; value: unknown };
+
+export function getCachedResultValue<T>() {
+  let cachedValue: T[] | undefined = undefined;
+
+  return {
+    get() {
+      return cachedValue;
+    },
+
+    set(newValue: T[]) {
+      cachedValue = newValue;
+    },
+
+    unset() {
+      cachedValue = undefined;
+    },
+  };
+}
+
+export type CachedResultValue<T> = ReturnType<typeof getCachedResultValue<T>>;
 
 const ABORT_SYMBOL = Symbol("<stopped>");
 
@@ -25,18 +54,28 @@ function getAbortController() {
 }
 
 export function getResultStore<T>(
+  getOaiPmh: () => Result<OaiPmh>,
   getGenerator: (
     oaiPmh: OaiPmh,
     signal: AbortSignal,
   ) => AsyncGenerator<T[], void>,
-  initialValue: T[] = [],
+  cache: CachedResultValue<T>,
 ) {
   const ac = getAbortController();
 
   // TODO: Make these things global, and if isRunning is true disallow setting a new oaiPmh
-  let isRunning = $state(false);
-  let isBeingStopped = $state(false);
-  let result = $state<Result<T[]>>({ success: true, value: initialValue });
+  let isRunning = $state.raw(false);
+  let isBeingStopped = $state.raw(false);
+
+  const cachedValue = cache.get();
+  let result = $state.raw<OaiPmhResult<T[]>>(
+    cachedValue !== undefined
+      ? {
+          status: resultStatus.success,
+          value: cachedValue,
+        }
+      : { status: resultStatus.pending },
+  );
 
   const canBeStopped = $derived(isRunning && !isBeingStopped);
 
@@ -48,26 +87,6 @@ export function getResultStore<T>(
     isBeingStopped = true;
     ac.abort();
   }
-
-  // in case oaiPmh changes, stop and reset values
-  let isFirstRun = true;
-  $effect(() => {
-    globalOaiPmh;
-
-    // skip first run so we don't react to init
-    if (isFirstRun) {
-      isFirstRun = false;
-      return;
-    }
-
-    untrack(() => {
-      if (canBeStopped) {
-        stop();
-      }
-
-      result = { success: true, value: [] };
-    });
-  });
 
   // stop when unmounted
   $effect(() => () => {
@@ -85,36 +104,49 @@ export function getResultStore<T>(
       isRunning = true;
 
       (async () => {
-        if (globalOaiPmh.value === undefined) {
-          // TODO
-          throw new Error("oaiPmh undefined");
+        const { success, value } = getOaiPmh();
+        if (!success) {
+          throw value;
         }
 
-        result = { success: true, value: [] };
+        const arr: T[] = [];
+        result = { status: resultStatus.pending };
 
-        for await (const items of getGenerator(globalOaiPmh.value, ac.signal)) {
-          result.value.push(...items);
+        for await (const items of getGenerator(value, ac.signal)) {
+          arr.push(...items);
+          result = { status: resultStatus.success, value: arr };
+          cache.set(arr);
         }
       })()
         .catch((error) => {
-          if (Object.hasOwn(error, "cause") && error.cause === ABORT_SYMBOL) {
+          if (
+            error !== null &&
+            typeof error === "object" &&
+            Object.hasOwn(error, "cause") &&
+            error.cause === ABORT_SYMBOL
+          ) {
             return;
           }
 
-          result = { success: false, value: error };
+          result = { status: resultStatus.failure, value: error };
+          cache.unset();
         })
         .finally(() => {
           isRunning = false;
           isBeingStopped = false;
         });
     },
+
     stop,
+
     get result() {
       return result;
     },
+
     get canBeStopped() {
       return canBeStopped;
     },
+
     get isRunning() {
       return isRunning;
     },

@@ -1,14 +1,6 @@
 <script lang="ts">
-  const { isLoading = false }: { isLoading?: boolean } = $props();
+  const { isLoading }: { isLoading: boolean } = $props();
 </script>
 
-<div
-  class="inline-flex size-11 items-center justify-center text-sm text-gray-800"
->
-  <div
-    class={[
-      "size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent text-blue-600",
-      { "invisible animate-none": !isLoading },
-    ]}
-  ></div>
-</div>
+<progress style:visibility={isLoading ? undefined : "hidden"} max="100"
+></progress>

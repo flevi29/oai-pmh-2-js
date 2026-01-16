@@ -1,15 +1,15 @@
 <script lang="ts">
   import type { HTMLInputAttributes } from "svelte/elements";
-  import type { SafeOmit } from "oai-pmh-2-js/model/oai-pmh";
 
   const {
+    type = "text",
     spellcheck = "false",
     value = "",
     placeholder,
     timeout = 700,
     onValueChanged,
     ...restOfProps
-  }: SafeOmit<HTMLInputAttributes, "type"> & {
+  }: HTMLInputAttributes & {
     timeout?: number;
     onValueChanged: (value: string) => void;
   } = $props();
@@ -37,7 +37,7 @@
 </script>
 
 <input
-  type="text"
+  {type}
   {spellcheck}
   {value}
   {placeholder}

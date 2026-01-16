@@ -1,27 +1,45 @@
-<script lang="ts">
-  import { getListMetadataFormatsResultStore } from "./list-metadata-formats.svelte";
-  import Button from "$lib/components/buttons/button.svelte";
-  import TextInput from "$lib/components/inputs/styled-text-input.svelte";
-  import JSONComponent from "$lib/components/json.svelte";
-  import Loading from "$lib/components/loading.svelte";
+<script module lang="ts">
+  import {
+    getResultStore,
+    getCachedResultValue,
+  } from "$lib/stores/result.svelte";
+  import type { OaiPmhMetadataFormat } from "oai-pmh-2-js/index";
 
-  let identifier = $state<string>();
-
-  const r = getListMetadataFormatsResultStore(() => identifier);
+  export const cache = getCachedResultValue<OaiPmhMetadataFormat>();
 </script>
 
-<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
+<script lang="ts">
+  import { getOaiPmhGetter } from "$lib/stores/oai-pmh.svelte";
+  import BaseFields from "$lib/components/base-fields.svelte";
+  import DebouncedTextInput from "$lib/components/debounced-text-input.svelte";
+  import PaginatedResult from "$lib/components/paginated-result.svelte";
 
-<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
+  let identifier = $state.raw<string>();
 
-<Loading isLoading={r.isRunning} />
+  const r = getResultStore<OaiPmhMetadataFormat>(
+    getOaiPmhGetter(),
+    async function* (oaiPmh, signal) {
+      yield await oaiPmh.listMetadataFormats(identifier, { init: { signal } });
+    },
+    cache,
+  );
+</script>
 
-<TextInput
-  value={identifier}
-  placeholder="identifier"
-  onValueChanged={(v) => {
-    identifier = v || undefined;
-  }}
-/>
+<BaseFields
+  onstart={() => r.run()}
+  isStartDisabled={r.isRunning}
+  onstop={() => r.stop()}
+  isStopDisabled={!r.canBeStopped}
+  isLoading={r.isRunning}
+>
+  <DebouncedTextInput
+    type="text"
+    value={identifier}
+    placeholder="identifier"
+    onValueChanged={(v) => {
+      identifier = v || undefined;
+    }}
+  />
+</BaseFields>
 
-<JSONComponent result={r.result} valuesPerPage={10} />
+<PaginatedResult result={r.result} valuesPerPage={10} />

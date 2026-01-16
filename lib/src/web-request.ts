@@ -119,6 +119,7 @@ export class WebRequest {
   readonly #baseUrl: URL;
   readonly #init: HttpRequestsRequestInit;
   readonly #usePost: boolean;
+  // TODO: There should also be a way to just manipulate request options, and not the whole function
   readonly #requestFn?: CustomRequestFn;
   readonly #timeout?: number;
 

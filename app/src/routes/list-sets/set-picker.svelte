@@ -1,35 +1,37 @@
 <script lang="ts">
-  import { getListSetsResultStore } from "./list-sets.svelte";
+  import { cache } from "./+page.svelte";
+  import { getOaiPmhGetter } from "$lib/stores/oai-pmh.svelte";
+  import { getResultStore, resultStatus } from "$lib/stores/result.svelte";
   import Dialog from "$lib/components/dialog.svelte";
   import RadioInputList from "$lib/components/radio-input-list.svelte";
-  import Button from "$lib/components/buttons/button.svelte";
   import Loading from "$lib/components/loading.svelte";
-  import ErrorComponent from "$lib/components/error.svelte";
-
-  const r = getListSetsResultStore();
-
-  let currentOaiPmhSet = $state<string>();
+  import ErrorComponent from "$lib/components/request-error.svelte";
+  import type { OaiPmhSet } from "oai-pmh-2-js/index";
 
   const { onValueChanged }: { onValueChanged: (oaiPmhSet?: string) => void } =
     $props();
 
-  $effect(() => {
-    onValueChanged(currentOaiPmhSet);
-  });
+  let currentOaiPmhSet = $state.raw<string>();
 
-  let dialogComponent = $state<ReturnType<typeof Dialog>>();
+  const r = getResultStore<OaiPmhSet>(
+    getOaiPmhGetter(),
+    (oaiPmh, signal) => oaiPmh.listSets({ init: { signal } }),
+    cache,
+  );
+
+  let dialogComponent = $state.raw<Dialog>();
+
+  export function open() {
+    dialogComponent?.showModal();
+    if (r.result.status !== resultStatus.success && !r.isRunning) {
+      r.run();
+    }
+  }
 </script>
 
-<Dialog bind:this={dialogComponent}>
-  {#if r.isRunning}
-    <div class="w-full rounded-lg bg-white p-2 text-center text-sm shadow-sm">
-      <div class="mx-auto w-max">
-        <Loading isLoading />
-      </div>
-    </div>
-  {:else if !r.result.success}
-    <ErrorComponent error={r.result.value} />
-  {:else}
+<!-- TODO: This interferes with role=group, need to separate from button -->
+<Dialog bind:this={dialogComponent} headerContent="Pick OAI-PMH Set">
+  {#if r.result.status === resultStatus.success}
     <RadioInputList
       items={r.result.value.map((v) => ({
         name: v.setName,
@@ -38,17 +40,15 @@
       }))}
       onclick={(event) => {
         currentOaiPmhSet = event.currentTarget.value;
+        onValueChanged(currentOaiPmhSet);
         dialogComponent?.close();
       }}
     />
+  {:else if r.result.status === resultStatus.failure}
+    <ErrorComponent error={r.result.value} />
+  {:else}
+    <Loading isLoading={r.isRunning} />
+
+    <p class="text-center"><i>pending...</i></p>
   {/if}
 </Dialog>
-
-<Button
-  onclick={() => {
-    dialogComponent?.showModal();
-    if ((!r.result.success || r.result.value.length === 0) && !r.isRunning) {
-      r.run();
-    }
-  }}>{currentOaiPmhSet ?? "<select set>"}</Button
->

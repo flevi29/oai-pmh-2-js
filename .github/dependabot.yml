@@ -17,7 +17,6 @@ updates:
         patterns:
           - "vite"
           - "@sveltejs/vite-plugin-svelte"
-          - "@tailwindcss/vite"
       svelte:
         patterns:
           - "@sveltejs/kit"
@@ -28,4 +27,3 @@ updates:
         patterns:
           - "prettier"
           - "prettier-plugin-svelte"
-          - "prettier-plugin-tailwindcss"

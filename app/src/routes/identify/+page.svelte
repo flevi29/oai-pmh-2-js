@@ -1,32 +1,36 @@
 <script lang="ts" module>
+  import {
+    getResultStore,
+    getCachedResultValue,
+  } from "$lib/stores/result.svelte";
   import type { OaiPmhIdentify } from "oai-pmh-2-js/index";
 
-  let initialValue: OaiPmhIdentify[] | undefined = undefined;
+  const cache = getCachedResultValue<OaiPmhIdentify>();
 </script>
 
 <script lang="ts">
-  import { getResultStore } from "$lib/stores/result.svelte";
-  import Button from "$lib/components/buttons/button.svelte";
-  import Loading from "$lib/components/loading.svelte";
-  import JSONComponent from "$lib/components/json.svelte";
+  import { getOaiPmhGetter } from "$lib/stores/oai-pmh.svelte";
+  import BaseFields from "$lib/components/base-fields.svelte";
+  import PaginatedResult from "$lib/components/paginated-result.svelte";
 
-  const r = getResultStore<OaiPmhIdentify>(async function* (oaiPmh, signal) {
-    yield [await oaiPmh.identify({ init: { signal } })];
-  }, initialValue);
-
-  $effect(() => {
-    initialValue = r.result.success ? r.result.value : undefined;
-  });
+  const r = getResultStore<OaiPmhIdentify>(
+    getOaiPmhGetter(),
+    async function* (oaiPmh, signal) {
+      yield [await oaiPmh.identify({ init: { signal } })];
+    },
+    cache,
+  );
 </script>
 
-<Button onclick={() => r.run()} disabled={r.isRunning}>Start</Button>
+<BaseFields
+  onstart={() => r.run()}
+  isStartDisabled={r.isRunning}
+  onstop={() => r.stop()}
+  isStopDisabled={!r.canBeStopped}
+  isLoading={r.isRunning}
+/>
 
-<Button onclick={() => r.stop()} disabled={!r.canBeStopped}>Stop</Button>
-
-<Loading isLoading={r.isRunning} />
-
-<JSONComponent
+<PaginatedResult
   result={r.result}
-  collapseLimit={100}
-  pXMLElemArrKey="description"
+  xmlPathPattern={/^\.description\.\d+$/}
 />
