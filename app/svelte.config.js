@@ -8,6 +8,7 @@ import adapter from "@sveltejs/adapter-static";
  */
 const paths =
   env.PAGES_BASE_PATH !== undefined ? { base: env.PAGES_BASE_PATH } : undefined;
+console.log(paths);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
