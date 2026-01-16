@@ -2,6 +2,10 @@ import { createContext } from "svelte";
 import { OaiPmh } from "oai-pmh-2-js/index";
 import type { Result } from "$lib/generic-result";
 
+function getCorsProxiedUrl(url: string) {
+  return `https://corsproxy.io/?${encodeURIComponent(url)}`;
+}
+
 const LAST_OAI_PMH_URL_KEY = "lastOaiPmhUrl";
 
 export function getLastOaiPmhUrl(): string {
@@ -26,7 +30,7 @@ export function setupOaiPmh(
           requestFn: getIsCorsProxied()
             ? async (input, init) => {
                 const { url } = new Request(input);
-                const corsProxiedUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+                const corsProxiedUrl = getCorsProxiedUrl(url);
 
                 const resp = await fetch(corsProxiedUrl, init);
                 const parsedBody = await resp.text();

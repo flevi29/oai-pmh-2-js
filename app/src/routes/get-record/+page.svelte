@@ -47,9 +47,11 @@
   isStopDisabled={!r.canBeStopped}
   isLoading={r.isRunning}
 >
-  <button type="button" onclick={() => metadataPrefixPicker?.open()}>
-    <code>{metadataPrefix ?? "<select metadata prefix>"}</code>
-  </button>
+  <div role="group">
+    <button type="button" onclick={() => metadataPrefixPicker?.open()}>
+      <code>{metadataPrefix ?? "<select metadata prefix>"}</code>
+    </button>
+  </div>
 
   <DebouncedTextInput
     value={identifier}

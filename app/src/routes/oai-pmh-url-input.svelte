@@ -61,8 +61,6 @@
   });
 
   let dialogElement = $state.raw<Dialog | undefined>();
-
-  export { oaiPmhGetter };
 </script>
 
 <Dialog bind:this={dialogElement} headerContent="Options">
