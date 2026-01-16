@@ -9,7 +9,7 @@
     "prettier": "3.7.4",
     "prettier-plugin-svelte": "3.4.1",
     "typescript": "5.9.3",
-    "@types/node": "24.10.4"
+    "@types/node": "24.10.9"
   },
   "packageManager": "pnpm@10.27.0"
 }
