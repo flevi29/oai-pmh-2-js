@@ -12,7 +12,9 @@
     list: T[];
     depth: number;
     kind: EnclosingType;
-    inside: Snippet<[listItem: T, indentationStr: string, newDepth: number, i: number]>;
+    inside: Snippet<
+      [listItem: T, indentationStr: string, newDepth: number, i: number]
+    >;
   } = $props();
 
   const newDepth = $derived(depth + 1);

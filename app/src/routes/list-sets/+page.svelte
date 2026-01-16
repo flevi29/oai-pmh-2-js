@@ -28,7 +28,4 @@
   isLoading={r.isRunning}
 />
 
-<PaginatedResult
-  result={r.result}
-  xmlPathPattern={/^\.setDescription\.\d+$/}
-/>
+<PaginatedResult result={r.result} xmlPathPattern={/^\.setDescription\.\d+$/} />

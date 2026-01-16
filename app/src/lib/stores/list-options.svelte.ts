@@ -9,7 +9,9 @@ export function getListOptionsStores(key: string) {
   let from = $state.raw<string>(localStorage.getItem(FROM_KEY) ?? "");
   let until = $state.raw(localStorage.getItem(UNTIL_KEY) ?? "");
   let set = $state.raw(localStorage.getItem(SET_KEY) ?? "");
-  let metadataPrefix = $state.raw(localStorage.getItem(METADATA_PREFIX_KEY) ?? "");
+  let metadataPrefix = $state.raw(
+    localStorage.getItem(METADATA_PREFIX_KEY) ?? "",
+  );
 
   return {
     get from() {
