@@ -56,7 +56,10 @@
     fetch(validProviderAssetPaths[i]!)
       .then(async (response) => {
         if (!response.ok) {
-          throw new Error("failed to fetch file");
+          throw new Error(
+            `${response.status}: ${response.statusText} ${await response.text()}`,
+            { cause: response },
+          );
         }
 
         const responseJson = await response.json();
