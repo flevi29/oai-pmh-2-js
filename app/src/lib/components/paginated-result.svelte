@@ -7,7 +7,7 @@
 
   const {
     result,
-    valuesPerPage = 2,
+    valuesPerPage = 10,
     xmlPathPattern,
   }: {
     result: OaiPmhResult<unknown[]>;

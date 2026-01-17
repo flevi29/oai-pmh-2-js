@@ -81,4 +81,8 @@
   />
 </BaseFields>
 
-<PaginatedResult result={r.result} xmlPathPattern={/^\.\d+\.about\.\d+$/} />
+<PaginatedResult
+  result={r.result}
+  valuesPerPage={2}
+  xmlPathPattern={/^\.\d+\.about\.\d+$/}
+/>
