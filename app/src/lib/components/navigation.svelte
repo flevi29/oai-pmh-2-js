@@ -29,8 +29,12 @@
   let isOpen = $state.raw(false);
 </script>
 
+<svelte:head>
+  <title>{currentPageName}</title>
+</svelte:head>
+
 <nav>
-  <ul class="grow max-w-full text-center" style="margin-left: 0">
+  <ul class="grow max-w-full text-center" style:margin-left="0">
     <li class="grow p-0">
       <details class="dropdown" bind:open={isOpen}>
         <!-- svelte-ignore a11y_no_redundant_roles -->
