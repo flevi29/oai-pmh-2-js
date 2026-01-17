@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "@picocss/pico/css/pico.sand.min.css";
   import "../app.css";
   import { getLastOaiPmhUrl, setupOaiPmh } from "$lib/stores/oai-pmh.svelte";
   import OaiPmhURLInput from "./oai-pmh-url-input.svelte";
