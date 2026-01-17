@@ -52,7 +52,7 @@
     }
 
     isFetching = true;
-    fetch(asset(validProviderAssetPaths[i]!))
+    fetch(validProviderAssetPaths[i]!)
       .then(async (response) => {
         if (!response.ok) {
           throw new Error(
