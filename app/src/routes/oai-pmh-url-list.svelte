@@ -1,4 +1,5 @@
 <script module lang="ts">
+  import { asset } from "$app/paths";
   import type { Asset } from "$app/types";
 
   type ValidProviders = Exclude<
@@ -15,12 +16,10 @@
     "/valid-providers/providers-5.json": true,
     "/valid-providers/providers-6.json": true,
     "/valid-providers/providers-7.json": true,
-  } satisfies { [TKey in ValidProviders]: true }) as ValidProviders[];
+  } satisfies { [TKey in ValidProviders]: true }).map(asset);
 </script>
 
 <script lang="ts">
-  import { asset } from "$app/paths";
-
   // TODO: Find out why the following doesn't work
   // import(asset("/valid-providers/date.json"), { with: { type: "json" } });
 
@@ -53,7 +52,7 @@
     }
 
     isFetching = true;
-    fetch(validProviderAssetPaths[i]!)
+    fetch(asset(validProviderAssetPaths[i]!))
       .then(async (response) => {
         if (!response.ok) {
           throw new Error(

@@ -7,9 +7,7 @@ import adapter from "@sveltejs/adapter-static";
  * @type {import('@sveltejs/kit').KitConfig["paths"]}
  */
 const paths =
-  env.PAGES_BASE_PATH !== undefined
-    ? { base: env.PAGES_BASE_PATH, relative: false }
-    : undefined;
+  env.PAGES_BASE_PATH !== undefined ? { base: env.PAGES_BASE_PATH } : undefined;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
