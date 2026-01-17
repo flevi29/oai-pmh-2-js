@@ -1,10 +1,11 @@
 <script module lang="ts">
-  type SVHelper<T> = [
-    snippet: Snippet<[param: T, path: string, depth: number]>,
+  type SVParams<T> = [
     param: T,
     path: string,
     depth: number,
+    isWhiteSpaceNormal?: boolean,
   ];
+  type SVHelper<T> = [snippet: Snippet<SVParams<T>>, ...params: SVParams<T>];
 
   type ReadyForRenderingValue =
     | SVHelper<string>
@@ -119,9 +120,16 @@
 
 <!-- ------------------- Snippets ------------------- -->
 
-{#snippet stringSnippet(value: string)}
+{#snippet stringSnippet(
+  value: string,
+  _path: string,
+  _depth: number,
+  isWhiteSpaceNormal = false,
+)}
   {#if value.trim() !== ""}
-    <span style:white-space="normal">{value}</span>
+    <span style:white-space={isWhiteSpaceNormal ? "normal" : undefined}
+      >{value}</span
+    >
   {:else}
     <i style:color={emptyColor}>&lt;empty string&gt;</i>
   {/if}
@@ -192,7 +200,7 @@
 )}
   {@const nodeAsText = getNodeIfIsNodeListOnlyOneTextNode(value)}
   {#if nodeAsText !== null}
-    {@render stringSnippet(nodeAsText)}
+    {@render stringSnippet(nodeAsText, path, depth, true)}
   {:else}
     <RecordComponent list={Array.from(value)} {depth} kind="angle-brackets">
       {#snippet inside(childNode, indentationStr, newDepth)}
@@ -204,7 +212,12 @@
           )}
         {:else}
           {@const serialized = serializeNode(childNode)}
-          {#if serialized}{@render stringSnippet(serialized)}{serialized}{/if}
+          {#if serialized}{@render stringSnippet(
+              serialized,
+              path,
+              newDepth,
+              true,
+            )}{serialized}{/if}
         {/if}
       {/snippet}
     </RecordComponent>
@@ -225,6 +238,8 @@
       {indentationStr}<small
         >{@render prefixAndNameSnippet(name, prefix)} = {@render stringSnippet(
           value,
+          "",
+          depth,
         )}</small
       >
     {/snippet}

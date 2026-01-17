@@ -28,24 +28,15 @@
   />
 </header>
 
-<main class="main mx-auto">
+<main class="mx-auto" style:max-width="64rem">
   <div class="pt-4">
     <OaiPmhURLInput bind:url bind:isCorsProxied />
   </div>
 
-  <section class="section mx-auto">
+  <section class="mx-auto" style:max-width="52rem">
     {@render children()}
   </section>
 </main>
 
+<!-- TODO: page last updated, link to repository, license -->
 <footer class="text-center"><p><small><i>FOOTER TODO</i></small></p></footer>
-
-<style>
-  .main {
-    max-width: 64rem;
-  }
-
-  .section {
-    max-width: 52rem;
-  }
-</style>

@@ -16,6 +16,7 @@ const config = {
 
   kit: {
     adapter: adapter({
+      // TODO: Maybe this ain't right, firefox logs show 404 on GET
       // https://svelte.dev/docs/kit/adapter-static#Options-fallback
       fallback: "404.html",
       precompress: true,
