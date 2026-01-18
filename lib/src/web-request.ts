@@ -4,6 +4,7 @@ import { OaiPmhRequestTimeOutError } from "#error/request-timeout-error";
 import { OaiPmhRequestError } from "#error/request-error";
 import type {
   CustomRequestFn,
+  CustomRequestParams,
   HttpRequestsRequestInit,
   MainRequestOptions,
   OaiPmhRequestConstructorOptions,
@@ -119,7 +120,7 @@ export class WebRequest {
   readonly #baseUrl: URL;
   readonly #init: HttpRequestsRequestInit;
   readonly #usePost: boolean;
-  // TODO: There should also be a way to just manipulate request options, and not the whole function
+  readonly #paramsFn?: CustomRequestParams;
   readonly #requestFn?: CustomRequestFn;
   readonly #timeout?: number;
 
@@ -144,6 +145,7 @@ export class WebRequest {
 
     this.#usePost = options.usePost ?? false;
 
+    this.#paramsFn = options.paramsFn;
     this.#requestFn = options.requestFn;
     this.#timeout = options.timeout;
   }
@@ -196,18 +198,24 @@ export class WebRequest {
     let responseBody: string;
 
     try {
+      // modify params in case paramsFn is provided
+      const params = this.#paramsFn?.(url, init) ?? [url, init];
+
       if (this.#requestFn !== undefined) {
         // when using custom HTTP client, response is handled differently
-        const resp = await this.#requestFn(url, init);
+        const customResponse = await this.#requestFn(...params);
 
-        if (!resp.success) {
-          throw new OaiPmhRequestError(resp.value, resp.details);
+        if (!customResponse.success) {
+          throw new OaiPmhRequestError(
+            customResponse.value,
+            customResponse.details,
+          );
         }
 
-        return resp.value;
+        return customResponse.value;
       }
 
-      response = await fetch(url, init);
+      response = await fetch(...params);
       responseBody = await response.text();
     } catch (error) {
       throw new OaiPmhRequestInitError(

@@ -2,7 +2,8 @@ import { createContext } from "svelte";
 import { OaiPmh } from "oai-pmh-2-js/index";
 import type { Result } from "$lib/generic-result";
 
-function getCorsProxiedUrl(url: string) {
+function getCorsProxiedUrl(input: string | URL | Request) {
+  const { url } = new Request(input);
   return `https://corsproxy.io/?${encodeURIComponent(url)}`;
 }
 
@@ -27,18 +28,8 @@ export function setupOaiPmh(
         success: true,
         value: new OaiPmh({
           baseUrl: getUrl(),
-          requestFn: getIsCorsProxied()
-            ? async (input, init) => {
-                const { url } = new Request(input);
-                const corsProxiedUrl = getCorsProxiedUrl(url);
-
-                const resp = await fetch(corsProxiedUrl, init);
-                const parsedBody = await resp.text();
-
-                return resp.ok
-                  ? { success: true, value: parsedBody, headers: resp.headers }
-                  : { success: false, value: parsedBody, details: resp };
-              }
+          paramsFn: getIsCorsProxied()
+            ? (input, init) => [getCorsProxiedUrl(input), init]
             : undefined,
         }),
       };

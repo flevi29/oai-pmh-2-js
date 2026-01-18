@@ -1,10 +1,7 @@
 <script module lang="ts">
-  type SVParams<T> = [
-    param: T,
-    path: string,
-    depth: number,
-    isWhiteSpaceNormal?: boolean,
-  ];
+  import { isWhitespaceOnly } from "$lib/is-whitespace-only";
+
+  type SVParams<T> = [param: T, path: string, depth: number];
   type SVHelper<T> = [snippet: Snippet<SVParams<T>>, ...params: SVParams<T>];
 
   type ReadyForRenderingValue =
@@ -19,10 +16,6 @@
     | SVHelper<ParsedXMLElement>;
 
   const serializer = new XMLSerializer();
-
-  function isWhitespaceOnly(str: string) {
-    return /^\s*$/.test(str);
-  }
 
   function serializeNode(value: Node) {
     const serialized = serializer.serializeToString(value);
@@ -52,6 +45,7 @@
   import type { Snippet } from "svelte";
   import { parseElementNode } from "oai-pmh-2-js/parser/xml-parser";
   import RecordComponent from "./record.svelte";
+  import JsonXmlText from "./json-xml-text.svelte";
 
   const { value, xmlPathPattern }: { value: unknown; xmlPathPattern?: RegExp } =
     $props();
@@ -120,19 +114,8 @@
 
 <!-- ------------------- Snippets ------------------- -->
 
-{#snippet stringSnippet(
-  value: string,
-  _path: string,
-  _depth: number,
-  isWhiteSpaceNormal = false,
-)}
-  {#if value.trim() !== ""}
-    <span style:white-space={isWhiteSpaceNormal ? "normal" : undefined}
-      >{value}</span
-    >
-  {:else}
-    <i style:color={emptyColor}>&lt;empty string&gt;</i>
-  {/if}
+{#snippet stringSnippet(value: string)}
+  <JsonXmlText {value} {emptyColor} />
 {/snippet}
 
 {#snippet numberSnippet(value: number)}
@@ -200,7 +183,7 @@
 )}
   {@const nodeAsText = getNodeIfIsNodeListOnlyOneTextNode(value)}
   {#if nodeAsText !== null}
-    {@render stringSnippet(nodeAsText, path, depth, true)}
+    {@render stringSnippet(nodeAsText)}
   {:else}
     <RecordComponent list={Array.from(value)} {depth} kind="angle-brackets">
       {#snippet inside(childNode, indentationStr, newDepth)}
@@ -212,12 +195,7 @@
           )}
         {:else}
           {@const serialized = serializeNode(childNode)}
-          {#if serialized}{@render stringSnippet(
-              serialized,
-              path,
-              newDepth,
-              true,
-            )}{serialized}{/if}
+          {#if serialized}{@render stringSnippet(serialized)}{serialized}{/if}
         {/if}
       {/snippet}
     </RecordComponent>
@@ -238,8 +216,6 @@
       {indentationStr}<small
         >{@render prefixAndNameSnippet(name, prefix)} = {@render stringSnippet(
           value,
-          "",
-          depth,
         )}</small
       >
     {/snippet}
