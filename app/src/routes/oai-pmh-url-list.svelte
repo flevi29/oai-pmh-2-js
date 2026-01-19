@@ -2,6 +2,13 @@
   import { asset } from "$app/paths";
   import type { Asset } from "$app/types";
 
+  type ValidProviderObject = {
+    url: string;
+    id: string;
+    name: string;
+    requiredHeader: string | null;
+  };
+
   type ValidProviders = Exclude<
     Asset,
     "/favicon.png" | "/robots.txt" | "/valid-providers/date.json"
@@ -20,8 +27,14 @@
 </script>
 
 <script lang="ts">
+  import Pagination from "$lib/components/pagination.svelte";
+
+  const { useUrl }: { useUrl: (url: string) => void } = $props();
+
   // TODO: Find out why the following doesn't work
   // import(asset("/valid-providers/date.json"), { with: { type: "json" } });
+
+  let pagination = $state.raw<Pagination<ValidProviderObject>>();
 
   // TODO: Fetch only when parent dialog is opened
   const datePromise = fetch(asset("/valid-providers/date.json")).then(
@@ -30,19 +43,12 @@
         throw new Error("failed to fetch");
       }
 
-      return response.json();
+      return response.json() as Promise<string>;
     },
   );
 
   let i = $state(0);
-  let parsed = $state.raw<
-    {
-      url: string;
-      id: string;
-      name: string;
-      requiredHeader: string | null;
-    }[]
-  >([]);
+  let parsedValues = $state.raw<ValidProviderObject[]>();
   const canParseNext = $derived(i < validProviderAssetPaths.length);
 
   let isFetching = $state(false);
@@ -61,17 +67,30 @@
           );
         }
 
-        const responseJson = await response.json();
+        const responseJson = (await response.json()) as ValidProviderObject[];
         i += 1;
 
-        parsed = parsed.concat(responseJson);
+        parsedValues = responseJson;
       })
-      .catch(console.error)
+      .catch((reason) => {
+        console.error(reason);
+        parsedValues = undefined;
+      })
       .finally(() => {
         isFetching = false;
       });
   }
 </script>
+
+{#snippet buttonSnippet(title: string)}
+  <button
+    type="button"
+    onclick={() => fetchNext()}
+    disabled={isFetching || !canParseNext}>{title}</button
+  >
+{/snippet}
+
+<h3>URL List</h3>
 
 <p>
   <small>
@@ -89,20 +108,27 @@
   </small>
 </p>
 
-<!-- TODO: Paginated list + better structure/styling -->
-{#if parsed.length !== 0}
-  <ul>
-    {#each parsed as { url, name }}
-      <li>
-        {name}
-        <ul><li><code>{url}</code></li></ul>
-      </li>
-    {/each}
-  </ul>
-{/if}
+<Pagination bind:this={pagination} values={parsedValues}>
+  <!-- TODO: better structure/styling -->
+  {#snippet valueSnippet(valuesSlice, isLastPage)}
+    <ul>
+      {#each valuesSlice as value}
+        <li>
+          <!-- svelte-ignore a11y_invalid_attribute -->
+          <a href="javascript:void(0)" onclick={() => useUrl(value.url)}
+            >{value.name}</a
+          >
+        </li>
+      {/each}
+    </ul>
 
-<button
-  type="button"
-  onclick={() => fetchNext()}
-  disabled={isFetching || !canParseNext}>Fetch next</button
->
+    {#if isLastPage}
+      <div role="group">
+        {@render buttonSnippet("More")}
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet pendingSnippet()}
+    {@render buttonSnippet("Fetch valid providers")}
+  {/snippet}
+</Pagination>

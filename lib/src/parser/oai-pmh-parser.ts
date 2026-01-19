@@ -14,7 +14,7 @@ import {
 import { parseIdentify } from "./identify.ts";
 import { parseGetRecordResponse, parseListRecordsResponse } from "./record.ts";
 import { parseListIdentifiersResponse } from "./header.ts";
-import { parseListMetadataFormats } from "./metadata_format.ts";
+import { parseListMetadataFormats } from "./metadata-format.ts";
 import { parseListSetsResponse } from "./set.ts";
 
 // TODO: provide a callback for XSD validation

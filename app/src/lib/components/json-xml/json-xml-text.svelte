@@ -34,6 +34,7 @@
   let dialogElement = $state.raw<Dialog | undefined>();
 </script>
 
+<!-- TODO: The style of Dialog is being affected by parent pre and code; fix! -->
 {#if valueWithType.kind === stringType.normal}
   {valueWithType.value}
 {:else if valueWithType.kind === stringType.whiteSpace}

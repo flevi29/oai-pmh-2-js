@@ -3,6 +3,7 @@
   import { resolve } from "$app/paths";
   import { setLastVisitedOaiPmhAction } from "$lib/stores/last-visited-oai-pmh-action";
 
+  // TODO: Each object should also link to documentation about specific oai-pmh method
   const {
     navigationObjects,
   }: {
@@ -34,8 +35,8 @@
 </svelte:head>
 
 <nav>
-  <ul class="grow max-w-full text-center" style:margin-left="0">
-    <li class="grow p-0">
+  <ul class="grow text-center" style:margin-left="0" style:max-width="100%">
+    <li class="grow" style:padding="0">
       <details class="dropdown" bind:open={isOpen}>
         <!-- svelte-ignore a11y_no_redundant_roles -->
         <summary role="button" class="outline text-center"

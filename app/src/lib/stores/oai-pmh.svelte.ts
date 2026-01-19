@@ -13,6 +13,10 @@ export function getLastOaiPmhUrl(): string {
   return localStorage.getItem(LAST_OAI_PMH_URL_KEY) ?? "";
 }
 
+export function setLastOaiPmhUrl(url: string): void {
+  localStorage.setItem(LAST_OAI_PMH_URL_KEY, url);
+}
+
 const [getOaiPmhGetter, setOaiPmhGetter] =
   createContext<() => Result<OaiPmh>>();
 

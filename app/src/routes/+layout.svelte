@@ -30,7 +30,7 @@
 </header>
 
 <main class="mx-auto" style:max-width="64rem">
-  <div class="pt-4">
+  <div style:padding-top="calc(var(--spacing) * 4)">
     <OaiPmhURLInput bind:url bind:isCorsProxied />
   </div>
 

@@ -14,11 +14,11 @@ function parseRecord(
   );
   const { metadata, about } = recordRecord;
 
-  if (metadata === undefined) {
+  if (metadata === undefined && !header.isDeleted) {
     throw helper.getErr("expected `metadata` child node element");
   }
 
-  return { header, metadata: metadata[0]?.value, about };
+  return { header, metadata: metadata?.[0]?.value, about };
 }
 
 export function parseGetRecordResponse(

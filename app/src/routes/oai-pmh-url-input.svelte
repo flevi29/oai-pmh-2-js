@@ -41,6 +41,7 @@
 </script>
 
 <script lang="ts">
+  import { setLastOaiPmhUrl } from "$lib/stores/oai-pmh.svelte";
   import DebouncedTextInput from "$lib/components/debounced-text-input.svelte";
   import Dialog from "$lib/components/dialog.svelte";
   import More from "$lib/components/svgs/more.svelte";
@@ -55,6 +56,7 @@
   const urlsList = $derived.by(() => {
     if (!isUrlInvalid) {
       setSavedUrls(url);
+      setLastOaiPmhUrl(url);
     }
 
     return Array.from(cachedUrls);
@@ -101,7 +103,12 @@
 
   <hr />
 
-  <OaiPmhUrlList />
+  <OaiPmhUrlList
+    useUrl={(v) => {
+      url = v;
+      dialogElement?.close();
+    }}
+  />
 </Dialog>
 
 <datalist id={savedUrlsListId}>
