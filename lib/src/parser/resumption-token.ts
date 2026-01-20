@@ -5,6 +5,8 @@ export function parseResumptionToken(
   helper: ParserHelper,
   record: ParsedXMLRecord,
 ): string | null {
+  // TODO: Anything to do with the attributes?
+  // https://www.openarchives.org/OAI/openarchivesprotocol.html#FlowControl
   const maybeToken = helper
     .parseXMLRecordEntry(record, "resumptionToken")
     .toMaybeString();
@@ -15,5 +17,5 @@ export function parseResumptionToken(
 
   const [token] = maybeToken;
 
-  return token;
+  return token === "" ? null : token;
 }

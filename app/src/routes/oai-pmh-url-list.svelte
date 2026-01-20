@@ -4,9 +4,8 @@
 
   type ValidProviderObject = {
     url: string;
-    id: string;
-    name: string;
-    requiredHeader: string | null;
+    repositoryName: string;
+    accessControlAllowOrigin: string | null;
   };
 
   type ValidProviders = Exclude<
@@ -116,7 +115,7 @@
         <li>
           <!-- svelte-ignore a11y_invalid_attribute -->
           <a href="javascript:void(0)" onclick={() => useUrl(value.url)}
-            >{value.name}</a
+            >{value.repositoryName}</a
           >
         </li>
       {/each}

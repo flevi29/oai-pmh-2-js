@@ -37,7 +37,7 @@ export function parseElementNode(node: Element): ParsedXMLElement {
   const { nodeName, attributes, childNodes } = node;
   const [prefix, name] = getPrefixAndLocalName(nodeName);
 
-  const parsed: ParsedXMLElement = { name };
+  const parsed: ParsedXMLElement = { name, value: childNodes };
 
   if (prefix !== undefined) {
     parsed.prefix = prefix;
@@ -45,10 +45,6 @@ export function parseElementNode(node: Element): ParsedXMLElement {
 
   if (node.hasAttributes()) {
     parsed.attr = parseAttributes(attributes);
-  }
-
-  if (node.hasChildNodes()) {
-    parsed.value = childNodes;
   }
 
   return parsed;
@@ -61,7 +57,7 @@ export function parseTextNode(node: Text | CDATASection): string {
 
 export const NON_WHITESPACE = /\S/;
 
-export type XMLParseResult = ParsedXMLRecord | string | undefined;
+export type XMLParseResult = ParsedXMLRecord | string;
 
 // TODO: Open this up
 //       Later note: what did I mean?
@@ -69,7 +65,7 @@ export function parseToRecordOrString(
   helper: ParserHelper,
   childNodeList: NodeListOf<ChildNode>,
 ): XMLParseResult {
-  let parsedXMLRecord: XMLParseResult = undefined;
+  let parsedXMLRecord: XMLParseResult | undefined = undefined;
 
   for (const childNode of childNodeList) {
     switch (childNode.nodeType) {
@@ -118,7 +114,7 @@ export function parseToRecordOrString(
     }
   }
 
-  return parsedXMLRecord;
+  return parsedXMLRecord ?? "";
 }
 
 export type ParseXML = (xml: string) => XMLDocument;

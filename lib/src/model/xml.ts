@@ -9,7 +9,7 @@ export type ParsedXMLElement = {
   prefix?: string;
   name: string;
   attr?: ParsedXMLAttributes;
-  value?: NodeListOf<ChildNode>;
+  value: NodeListOf<ChildNode>;
 };
 
 // Simplified parsed XML, where we know there shouldn't be text nodes between element nodes

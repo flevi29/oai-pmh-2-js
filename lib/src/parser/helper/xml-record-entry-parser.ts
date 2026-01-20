@@ -16,10 +16,6 @@ export class XMLRecordEntryParser {
     value: subChildNodeList,
     attr,
   }: ParsedXMLElement): [XMLParseResult, AttrParser] {
-    if (subChildNodeList === undefined) {
-      throw this.#helper.getErr("expected child node elements");
-    }
-
     return [
       parseToRecordOrString(this.#helper, subChildNodeList),
       new AttrParser(this.#helper, attr),
@@ -59,12 +55,12 @@ export class XMLRecordEntryParser {
   }
 
   toString(): [string, AttrParser] {
-    const strings = this.toMaybeString();
-    if (strings === undefined) {
+    const maybeString = this.toMaybeString();
+    if (maybeString === undefined) {
       throw this.#helper.getErr("missing node");
     }
 
-    return strings;
+    return maybeString;
   }
 
   toMaybeRecords(): [ParserHelper, ParsedXMLRecord, AttrParser][] | undefined {
@@ -75,7 +71,7 @@ export class XMLRecordEntryParser {
     return this.#xmlRecordEntry.map(({ value: subChildNodeList, attr }, i) => {
       const nextHelper = this.#helper.addPath(i.toString());
 
-      if (subChildNodeList === undefined) {
+      if (subChildNodeList.length === 0) {
         throw nextHelper.getErr("expected child node elements");
       }
 
@@ -113,10 +109,6 @@ export class XMLRecordEntryParser {
     return this.#xmlRecordEntry.map(({ value: subChildNodeList, attr }, i) => {
       const nextHelper = this.#helper.addPath(i.toString());
 
-      if (subChildNodeList === undefined) {
-        throw nextHelper.getErr("expected child node elements");
-      }
-
       const recordOrString = parseToRecordOrString(
         nextHelper,
         subChildNodeList,
@@ -131,11 +123,11 @@ export class XMLRecordEntryParser {
   }
 
   toStrings(): [string | undefined, AttrParser][] {
-    const strings = this.toMaybeStrings();
-    if (strings === undefined) {
+    const maybeStrings = this.toMaybeStrings();
+    if (maybeStrings === undefined) {
       throw this.#helper.getErr("missing node");
     }
 
-    return strings;
+    return maybeStrings;
   }
 }

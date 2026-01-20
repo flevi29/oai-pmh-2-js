@@ -17,7 +17,7 @@
 </script>
 
 <script lang="ts" generics="T">
-  import { tick, untrack, type Snippet } from "svelte";
+  import { tick, type Snippet } from "svelte";
 
   const {
     values,
@@ -47,6 +47,7 @@
       paginatedValues,
       valuesForCurrentPage: paginatedValues[page]!,
       totalPages: paginatedValues.length,
+      isOnlyOneElement: values.length === 1,
     };
   });
 
@@ -89,30 +90,6 @@
   }
 </script>
 
-{#snippet navigationSnippet(scroll: boolean, totalPages: number)}
-  <nav>
-    <button
-      type="button"
-      disabled={page === 0}
-      onclick={() => setPage(page - 1, scroll)}
-    >
-      Prev
-    </button>
-
-    <small><code>{pageCountText}</code></small>
-
-    <button
-      type="button"
-      disabled={totalPages === undefined ||
-        totalPages === 0 ||
-        page === totalPages - 1}
-      onclick={() => setPage(page + 1, scroll)}
-    >
-      Next
-    </button>
-  </nav>
-{/snippet}
-
 <div bind:this={topElement}>
   {#if p === undefined}
     {@render pendingSnippet?.()}
@@ -121,12 +98,38 @@
     <p class="text-center"><small>⚠️ <i>no results</i></small></p>
     <hr />
   {:else}
-    {@render navigationSnippet(false, p.totalPages)}
+    {#snippet navigationSnippet(scroll: boolean)}
+      {#if !p.isOnlyOneElement}
+        <nav>
+          <button
+            type="button"
+            disabled={page === 0}
+            onclick={() => setPage(page - 1, scroll)}
+          >
+            Prev
+          </button>
+
+          <small><code>{pageCountText}</code></small>
+
+          <button
+            type="button"
+            disabled={p.totalPages === undefined ||
+              p.totalPages === 0 ||
+              page === p.totalPages - 1}
+            onclick={() => setPage(page + 1, scroll)}
+          >
+            Next
+          </button>
+        </nav>
+      {/if}
+    {/snippet}
+
+    {@render navigationSnippet(false)}
 
     <div>
       {@render valueSnippet(p.valuesForCurrentPage, page === p.totalPages - 1)}
     </div>
 
-    {@render navigationSnippet(true, p.totalPages)}
+    {@render navigationSnippet(true)}
   {/if}
 </div>

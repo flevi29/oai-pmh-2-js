@@ -66,7 +66,7 @@ export type CustomRequestParams = (
  * details about the error on failure.
  */
 export type CustomRequestFnResult =
-  | { success: true; value: string; headers: HeadersInit }
+  | { success: true; value: string }
   | {
       success: false;
       value: string;

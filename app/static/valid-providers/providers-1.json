@@ -1,2975 +1,2502 @@
 [
   {
-    "url": "https://journals.irapa.org/index.php/IIJBS/oai",
-    "id": "ojs2.journals.irapa.org",
-    "name": "iRAPA International Journal of Business Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.scilook.eu/index.php/slif/oai",
-    "id": "sw.www.scilook.eu",
-    "name": "Науковий погляд у майбутнє",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jclr.rovedar.com/index.php/JCLR/oai",
-    "id": "jclr.rovedar.com",
-    "name": "Journal of Contemporary Language Research",
-    "requiredHeader": "*"
-  },
-  {
-    "url": "http://zbc.uz.zgora.pl/dlibra/oai-pmh-repository.xml",
-    "name": "Zielonogórska Biblioteka Cyfrowa",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://international.arimbi.or.id/index.php/ePaperBisnis/oai",
-    "id": "ojs2.international.arimbi.or.id",
-    "name": "ePaper Bisnis : International Journal of Entrepreneurship and Management ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.palcomtech.ac.id/index.php/teknomatika/oai",
-    "id": "ojs.ojs.palcomtech.ac.id",
-    "name": "Teknomatika",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ijohmn.com/index.php/ijohmn/oai",
-    "id": "ojs2.ijohmn.com",
-    "name": "International Journal Online of Humanities",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://publications.iadb.org/pt/oai/request",
-    "id": "publications.iadb.org",
-    "name": "Publications by Inter-American Development Bank (pt)",
-    "requiredHeader": "*"
-  },
-  {
-    "url": "https://international.appisi.or.id/index.php/IJSS/oai",
-    "id": "ojs2.international.appisi.or.id",
-    "name": "International Journal of Social Science and Humanity",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.ugm.ac.id/jae/oai",
-    "id": "jurnal.ugm.ac.id",
-    "name": "Agro Ekonomi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://account.journal.asqde.org/index.php/asqde-j-jasqde/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Journal of the American Society of Questioned Document Examiners",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.antitraffickingreview.org/index.php/atrjournal/oai",
-    "id": "ojs.www.antitraffickingreview.org",
-    "name": "Anti-Trafficking Review",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ejournal.unis.ac.id/index.php/pelita/oai",
-    "id": "ojs.ejournal.unis.ac.id",
-    "name": "Pelita : Jurnal Penelitian dan Karya Ilmiah",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journals.asianresassoc.org/index.php/bsr/oai",
-    "id": "ojs2.journals.asianresassoc.org",
-    "name": "Bulletin of Scientific Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcommons.onu.edu/do/oai/",
-    "id": "digitalcommons.onu.edu",
-    "name": "DigitalCommons@ONU",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.stiami.ac.id/index.php/lugas/oai",
-    "id": "ojs.ojs.stiami.ac.id",
-    "name": "LUGAS Jurnal Komunikasi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ink.library.smu.edu.sg/do/oai/",
-    "id": "ink.library.smu.edu.sg",
-    "name": "Institutional Knowledge at Singapore Management University",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://nawalaeducation.com/index.php/SJ/oai",
-    "id": "ojs2.nawalaeducation.com",
-    "name": "Socious Journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnaliainpontianak.or.id/index.php/khatulistiwa/oai",
-    "id": "ojs.jurnaliainpontianak.or.id",
-    "name": "Khatulistiwa",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.revistastpr.com/index.php/index/oai",
-    "id": "ojs.www.revistastpr.com",
-    "name": "Revista de la Secretaría del Tribunal Permanente de Revisión",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcommons.centracare.com/do/oai/",
-    "id": "digitalcommons.centracare.com",
-    "name": "DigitalCommons@CentraCare Health",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://iepa.org.pe/raep/index.php/ojs/oai",
-    "id": "ojs.iepa.org.pe",
-    "name": "Revista Andina de Estudios Políticos",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://st.agnes.repo.nii.ac.jp/oai",
-    "name": "Heian Jogakuin(St. Agnes’) University Institutional Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.ciad.mx/estudiosociales/index.php/es/oai",
-    "id": "ojs.ciad.mx",
-    "name": "Estudios Sociales Revista de Alimentación Contemporánea y Desarrollo Regional",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://indexlaw.org/index.php/revistarbda/oai",
-    "id": "ojs.indexlaw.org",
-    "name": "Revista de Biodireito e Direito dos Animais",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.pps-ibrahimy.ac.id/index.php/ris/oai",
-    "id": "ojs2.ojs.pps-ibrahimy.ac.id",
-    "name": "Review of Islamic Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal-s.org/index.php/nk/oai",
-    "id": "ojs.journal-s.org",
-    "name": "Наука Красноярья",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://publications.imp.fu-berlin.de/cgi/oai2",
-    "id": "biocomputing-berlin.de",
-    "name": "fu_mi_publications",
-    "requiredHeader": "*"
-  },
-  {
-    "url": "http://ubphj.nuph.edu.ua/oai",
-    "id": "journals.nuph.edu.ua",
-    "name": "Ukrainian biopharmaceutical journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://sb-keip.kpi.ua/index.php/2310-5534/oai",
-    "id": "ojs.journals.uran.ua",
-    "name": "Сучасні проблеми економіки і підприємництво",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.diacronia.ro/ro/oai2",
-    "id": "diacronia.ro",
-    "name": "Diacronia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.pdt-journal.com/jour/oai",
-    "id": "ojs.bioph.elpub.ru",
-    "name": "Biomedical Photonics",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://visnyk.nuwm.edu.ua/index.php/tehn/oai",
-    "id": "visnyk.nuwm.edu.ua",
-    "name": "Bulletin National University of Water and Environmental Engineering",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://spectrum.library.concordia.ca/cgi/oai2",
-    "id": "spectrum.library.concordia.ca",
-    "name": "Spectrum: Concordia University Research Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.rematec.net.br/index.php/rematec/oai",
-    "id": "ojs.rematec.net.br",
-    "name": "REMATEC",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.explorationpub.com/em/oai",
-    "id": "www.explorationpub.com",
-    "name": "Exploration of Medicine",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistas.ucp.pt/index.php/cpedagogiasocial/oai",
-    "id": "ojs.revistas.ucp.pt",
-    "name": "Cadernos de Pedagogia Social",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.trunojoyo.ac.id/triac/oai",
-    "id": "ojs.journal.trunojoyo.ac.id",
-    "name": "Jurnal Teknik Elektro dan Komputer TRIAC",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistas.utp.edu.co/index.php/historia/oai",
-    "id": "ojs2.revistasoldversion.utp.edu.co",
-    "name": "Ciencia Nueva, revista de Historia y Política",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://visionarypublication.com/JVP/oai",
-    "id": "ojs2.visionarypublication.com",
-    "name": "Journal of Visionary Philosophers",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://agrimaroc.org/index.php/Actes_IAVH2/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Revue Marocaine des Sciences Agronomiques et Vétérinaires",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://kig.kartografija.hr/index.php/kig/oai",
-    "id": "ojs.kig.kartografija.hr",
-    "name": "Kartografija i geoinformacije (Cartography and Geoinformation)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.unisbank.ac.id/ojs/index.php/fe2/oai",
-    "id": "www.unisbank.id",
-    "name": "Fokus Ekonomi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://nsuworks.nova.edu/do/oai/",
-    "id": "nsuworks.nova.edu",
-    "name": "NSUWorks",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://utndrepository.utnd.ac.id/cgi/oai2",
-    "id": "utndrepository.utnd.ac.id",
-    "name": "utndrepository",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://revistas.unisimon.edu.co/index.php/psicogente/oai",
-    "id": "ojs.revistas.unisimon.edu.co",
-    "name": "Psicogente",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://niigata-u.repo.nii.ac.jp/oai",
-    "name": "Niigata University Academic Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repositorio.uniajc.edu.co/oai/request",
-    "id": "repositorio.uniajc.edu.co",
-    "name": "Biblioteca Digital Uniajc",
-    "requiredHeader": "https://repositorio.uniajc.edu.co"
-  },
-  {
-    "url": "https://transactions-journal.aesop-planning.eu/index.php/TrAESOP/oai",
-    "id": "transactions-journal.aesop-planning.eu",
-    "name": "Transactions of the Association of European Schools of Planning",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.yasin-alsys.org/index.php/arzusin/oai",
-    "id": "ojs2.ejournal.yasin-alsys.org",
-    "name": "ARZUSIN",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://industria.ub.ac.id/index.php/industri/oai",
-    "id": "industria.ub.ac.id",
-    "name": "Industria: Jurnal Teknologi dan Manajemen Agroindustri",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://mip.pruf.hhu.de/oai",
-    "id": "ojs.ulb.hhu.de",
-    "name": "Zeitschrift für Parteienwissenschaften",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://publikasi.polije.ac.id/index.php/jii/oai",
-    "id": "ojs.publikasi.polije.ac.id",
-    "name": "Jurnal Ilmiah Inovasi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repository.law.miami.edu/do/oai/",
-    "id": "repository.law.miami.edu",
-    "name": "University of Miami School of Law Institutional Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journals.sjp.ac.lk/index.php/jcs/oai",
-    "id": "ojs.www.sci.sjp.ac.lk",
-    "name": "Journal of Computer Science",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.jamstec.go.jp/es-repository/oai/oai2.0.cgi",
-    "name": "Earth Simulator Research Results Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://e-jurnal.iphorr.com/index.php/hjk/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Holistik Jurnal Kesehatan",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal.unpar.ac.id/index.php/melintas/oai",
-    "id": "ojs.journal.unpar.ac.id",
-    "name": "MELINTAS An International Journal of Philosophy and Religion (MIJPR)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal.uinjkt.ac.id/index.php/ijee/oai",
-    "id": "ojs.localhost",
-    "name": "IJEE (Indonesian Journal of English Education)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://indexlaw.org/index.php/direitofamilia/oai",
-    "id": "ojs.indexlaw.org",
-    "name": "Revista de Direito de Família e Sucessão",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistasdigitales.upec.edu.ec/index.php/visionempresarial/oai",
-    "id": "revistasdigitales.upec.edu.ec",
-    "name": "Visión Empresarial",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://biomedgrid.com/oai.xml",
-    "id": "www.biomedgrid.com",
-    "name": "BiomedGrid",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journals.mosgu.ru/zpu/oai",
-    "id": "ojs.journals.mosgu.ru",
-    "name": "Знание. Понимание. Умение",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.wellbeingintlstudiesrepository.org/do/oai/",
-    "id": "www.wellbeingintlstudiesrepository.org",
-    "name": "WBI Studies Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journals.shareok.org/jheai/oai",
-    "id": "journals.shareok.org",
-    "name": "Journal of Higher Education Athletics & Innovation",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistas.udea.edu.co/index.php/ingenieria/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Revista Facultad de Ingeniería Universidad de Antioquia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.pps-ibrahimy.ac.id/index.php/index/oai",
-    "id": "ojs.localhost",
-    "name": "Scientific Journal of Ibrahimy University",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ciencimed.sld.cu/index.php/ciencimed/oai",
-    "id": "ciencimed.sld.cu",
-    "name": "CienCiMed",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.uokufa.edu.iq/index.php/jall/oai",
-    "id": "ojs2.journal.uokufa.edu.iq",
-    "name": "مجلة اللغة العربية وادابها",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://dspace.tdea.edu.co/oai/request",
-    "id": "dspace.tdea.edu.co",
-    "name": "Repositorio Institucional Tecnológico de Antioquia",
-    "requiredHeader": "http://dspace.tdea.edu.co"
-  },
-  {
-    "url": "https://jlah.org/index.php/jlah/oai",
-    "id": "ojs2.jlah.org",
-    "name": " Journal of Livestock and Animal Health ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs3.unpatti.ac.id/index.php/barekeng/oai",
-    "id": "ojs3.unpatti.ac.id",
-    "name": "BAREKENG: Jurnal Ilmu Matematika dan Terapan",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcommons.winthrop.edu/do/oai/",
-    "id": "digitalcommons.winthrop.edu",
-    "name": "Digital Commons @ Winthrop University",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://icrp.org.uk/journal/index.php/jhvd/oai",
-    "id": "ojs2.icrp.org.uk",
-    "name": "Journal of Heart Valve Disease Innovation",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://revistas.unilibre.edu.co/index.php/ingeniare/oai",
-    "id": "revistas.unilibre.edu.co",
-    "name": "Ingeniare",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://european-science.com/eojnss/oai",
-    "id": "ojs.european-science.com",
-    "name": "European Online Journal of Natural and Social Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcollections.dordt.edu/do/oai/",
-    "id": "digitalcollections.dordt.edu",
-    "name": "Dordt Digital Collections",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://pub.uni-bielefeld.de/oai",
-    "id": "pub.uni-bielefeld.de",
-    "name": "PUB - Publications at Bielefeld University",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.rbherbicidas.com.br/index.php/index/oai",
-    "id": "rbherbicidas.com.br",
-    "name": "RBH - Revista Brasileira de Herbicidas",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://econjournals.sgh.waw.pl/KSzPP/oai",
-    "id": "ojs2.econjournals.sgh.waw.pl",
-    "name": "Studia z Polityki Publicznej",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://bitjournal.ru/index.php/bit/oai",
-    "id": "ojs.bitjournal.ru",
-    "name": "Бюллетень инновационных технологий",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://account.cpsyjournal.org/index.php/up-j-cp/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Computational Psychiatry",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.polgan.ac.id/index.php/remik/oai",
-    "id": "ojs2.jurnal.polgan.ac.id",
-    "name": "REMIK: Riset dan E-Jurnal Manajemen Informatika Komputer",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal2.uad.ac.id/index.php/spekta/oai",
-    "id": "ojs.www.journal2.uad.ac.id",
-    "name": "SPEKTA (Jurnal Pengabdian Kepada Masyarakat : Teknologi dan Aplikasi)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.uajy.ac.id/index.php/jik/oai",
-    "id": "oai.ojs.uajy.ac.id",
-    "name": "Jurnal ILMU KOMUNIKASI",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.tripaledu.com/jefa/oai",
-    "id": "ojs.tripal.com",
-    "name": "Journal of Economics and Financial Analysis",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://kafaah.org/index.php/kafaah/oai",
-    "id": "ojs.kafaah.org",
-    "name": "Kafa`ah: Journal of Gender Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.stitradenwijaya.ac.id/index.php/pgr/oai",
-    "id": "ojs2.jurnal.stitradenwijaya.ac.id",
-    "name": "PROGRESSA: Journal of Islamic Religious Instruction",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://e-journal.poltekkesjogja.ac.id/index.php/kia/oai",
-    "id": "ojs2.e-journal.poltekkesjogja.ac.id",
-    "name": "Jurnal Kesehatan Ibu dan Anak",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://bcnroc.ajuntament.barcelona.cat/oai/request",
-    "id": "bcnroc.ajuntament.barcelona.cat",
-    "name": "BCNROC. Repositori Obert de Coneixement de l'Ajuntament de Barcelona",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ijcc.chemoprev.org/index.php/ijcc/oai",
-    "id": "ojs.ijcc.chemoprev.org",
-    "name": "Indonesian Journal of Cancer Chemoprevention",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://mundofinanciero.indecsar.org/revista/index.php/munfin/oai",
-    "id": "ojs2.mundofinanciero.indecsar.org",
-    "name": "Revista Mundo Financiero",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://repositori.irta.cat/oai/request",
-    "id": "repositori.irta.cat",
-    "name": "IRTA Pubpro",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://uklo.edu.mk/ojs/index.php/horizons/oai",
-    "id": "ojs2.uklo.edu.mk",
-    "name": "Horizons - International Scientific Journal ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://publichealth.medresearch.in/index.php/ijphr/oai",
-    "id": "oai.publichealth.medresearch.in",
-    "name": " Public Health Review: International Journal of Public Health Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://midas.lt/action/oaipmh",
-    "id": "oai.midas.lt",
-    "name": "MIDAS OAI-PMH",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://czasopisma.ignatianum.edu.pl/index.php/rfi/oai",
-    "id": "czasopisma.ignatianum.edu.pl",
-    "name": "Rocznik Filozoficzny Ignatianum",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcommons.pvamu.edu/do/oai/",
-    "id": "digitalcommons.pvamu.edu",
-    "name": "Digital Commons @PVAMU",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.kemensos.go.id/index.php/SosioKonsepsia/oai",
-    "id": "ejournal.kemensos.go.id",
-    "name": "Sosio Konsepsia: Jurnal Penelitian dan Pengembangan Kesejahteraan Sosial",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://eyereports.org/index.php/eyereports/oai",
-    "id": "www.eyereports.org",
-    "name": "Eye Reports",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ejournal.staimnglawak.ac.id/index.php/educatio/oai",
-    "id": "ojs3.ejournal.staimnglawak.ac.id",
-    "name": "EDUCATIO : Journal of Education",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://atripress.org/index.php/jmss/oai",
-    "id": "atripress.org",
-    "name": "Journal of Modern Social Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://hipatiapress.com/hpjournals/index.php/demesci/oai",
-    "id": "journals.hipatiapress.com",
-    "name": "The Journal of Deliberative Mechanisms in Science",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.pacificejournals.com/journal/index.php/apalm/oai",
-    "id": "ojs.localhost",
-    "name": "Annals of Pathology and Laboratory Medicine",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.ijeca.info/index.php/IJECA/oai",
-    "id": "ojs.ijeca.info",
-    "name": "International Journal of Energetica",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://seisa.repo.nii.ac.jp/oai",
-    "name": "SEISA University Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://account.lawreview.lse.ac.uk/index.php/lse-j-lselr/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "LSE Law Review",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://sips-snahp.ojs.umontreal.ca/index.php/sips-snahp/oai",
-    "id": "ojs2.sips-snahp.ojs.umontreal.ca",
-    "name": "Science of Nursing and Health Practices",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jsdtl.sciview.net/index.php/jsdtl/oai",
-    "id": "ojs2.jsdtl.sciview.net",
-    "name": "Journal of Sustainable Development of Transport and Logistics",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://publishing.socionic.info/index.php/psychology/oai",
-    "id": "ojs.publishing.socionic.info",
-    "name": "Психология и соционика межличностных отношений",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.larramendi.es/i18n/oai/oai.cmd",
-    "id": "larramendi.es",
-    "name": "Bibliotecas Virtuales FHL. Registros bibliográficos",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repository.usta.edu.co/oai/request",
-    "id": "repository.usta.edu.co",
-    "name": "Repositorio Universidad Santo Tomás",
-    "requiredHeader": "null"
-  },
-  {
-    "url": "http://ousar.lib.okayama-u.ac.jp/oai/Request",
-    "name": "OKAYAMA UNIVERSITY SCIENTIFIC ACHIEVEMENT REPOSITORY",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://atlas-social-angers.fr:443/oai.php",
-    "id": "atlas-social-angers.fr",
-    "name": "atlas-social-angers.fr",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://archive.culturalequity.org/oai/request",
-    "id": "archive.culturalequity.org",
-    "name": "Lomax Digital Archive",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://repository.radenintan.ac.id/cgi/oai2",
-    "id": "repository.radenintan.ac.id",
-    "name": "Raden Intan Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://bufnets.tech/index.php/index/oai",
-    "id": "ojs.bufnets.tech",
-    "name": "BULLETIN OF NETWORK ENGINEER AND INFORMATICS",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.revistas.udesc.br/index.php/modapalavra/oai",
-    "id": "ojs.revistas.udesc.br",
-    "name": " Modapalavra e-periódico",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.unigal.ac.id/index.php/mimbaragribisnis/oai",
-    "id": "oai.jurnal.unigal.ac.id",
-    "name": "Mimbar Agribisnis : Jurnal Pemikiran Masyarakat Ilmiah Berwawasan Agribisnis",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://gredos.usal.es/oai/request",
-    "name": "Gestión del Repositorio Documental de la Universidad de Salamanca",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://diabesity.ejournals.ca/index.php/diabesity/oai",
-    "id": "ojs.diabesity.ejournals.ca",
-    "name": "Diabesity",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.unida.ac.id/index.php/JSEI/oai",
-    "id": "ejournal.unida.ac.id",
-    "name": "Jurnal Syarikah : Jurnal Ekonomi Islam",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://rrpress.utsa.edu/server/oai/request",
-    "id": "rrpress.utsa.edu",
-    "name": "DSpace at University of Texas at San Antonio",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ukinstitute.org/journals/1/makein/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Majalah Kesehatan Indonesia",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.humanitiesandrights.com/journal/index.php/har/oai",
-    "id": "ojs2.humanitiesandrights.com",
-    "name": "HUMANITIES AND RIGHTS GLOBAL NETWORK JOURNAL",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistasdigitales.upec.edu.ec/index.php/sathiri/oai",
-    "id": "revistasdigitales.upec.edu.ec",
-    "name": "SATHIRI",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://press.religacion.com/index.php/press/oai",
-    "id": "religacionpress.religacion.com",
-    "name": "Religacion Press",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://dspace.aab-edu.net/oai/request",
-    "id": "dspace.aab-edu.net",
-    "name": "AAB College Digital Library",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.msdinstitute.org/index.php/PEC/oai",
-    "id": "ojs1.journal.msdinstitute.org",
-    "name": "Journal of Power, Energy, and Control",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.ssbfnet.com/ojs/index.php/ijfbs/oai",
-    "id": "ojs.www.ssbfnet.com",
-    "name": "International Journal of Finance & Banking Studies (2147-4486)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://serwiss.bib.hs-hannover.de/oai",
-    "id": "serwiss.opus4",
-    "name": "SerWisS - Server für wissenschaftliche Schriften der Hochschule Hannover",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://international.arikesi.or.id/index.php/IJHSB/oai",
-    "id": "ojs2.international.arikesi.or.id",
-    "name": "International Journal of Health and Social Behavior",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ijbssrnet.com/index.php/ijbssr/oai",
-    "id": "ojs2.ijbssrnet.com",
-    "name": "International Journal of Business and Social Science Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.ar-raniry.ac.id/index.php/jsai/oai",
-    "id": "ojs.journal.ar-raniry.ac.id",
-    "name": "Jurnal Sosiologi Agama Indonesia (JSAI)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://pubfilosofia.izt.uam.mx/index.php/pf/oai",
-    "id": "pubfilosofia.izt.uam.mx",
-    "name": "Libros del Departamento de Filosofía",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journals.dbuniversity.ac.in/ojs/index.php/AJEEE/oai",
-    "id": "journals.dbuniversity.ac.in",
-    "name": "ADBU Journal of Electrical and Electronics Engineering (AJEEE)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://addi.ehu.es/oai/request",
-    "id": "addi.ehu.es",
-    "name": "ADDI",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://apuntesuniversitarios.upeu.edu.pe/index.php/revapuntes/oai",
-    "id": "ojs.apuntesuniversitarios.upeu.edu.pe",
-    "name": "Apuntes Universitarios",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.unilim.fr/ebooks/oai.php",
-    "id": "ebooks.unilim.fr",
-    "name": "Livres PULIM",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.ijoro.org/index.php/ijoro/oai",
-    "id": "ojs.ijoro.org",
-    "name": "International Journal of Research in Orthopaedics",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.fh.unila.ac.id/index.php/fiat/oai",
-    "id": "ojs.jurnal.fh.unila.ac.id",
-    "name": "Fiat Justisia: Jurnal Ilmu Hukum",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journals.open.tudelft.nl/jscms/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Journal of Supply Chain Management Science",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://vestngau.elpub.ru/jour/oai",
-    "id": "oai.vestngau.elpub.ru",
-    "name": "Вестник НГАУ (Новосибирский государственный аграрный университет)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jss.keu-journals.com/index.php/jss/oai",
-    "id": "ojs2.jss.keu-journals.com",
-    "name": "Payam Marafat Journal of Social Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://iptek.its.ac.id/index.php/joae/oai",
-    "id": "ojs.iptek2.its.ac.id",
-    "name": "Journal of Architecture&ENVIRONMENT",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journals.irapa.org/index.php/index/oai",
-    "id": "ojs2.journals.irapa.org",
-    "name": "iRAPA, Journal Managing System",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://imrecsjournal.com/journals/index.php/rietm/oai",
-    "id": "ojs.imrecsjournal.com",
-    "name": "Research in Education, Technology, and Multiculture",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.unikom.ac.id/index.php/artic/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "ARTic",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://snitt.polman-babel.ac.id/index.php/snitt/oai",
-    "id": "ojs2.snitt.polman-babel.ac.id",
-    "name": "Prosiding Seminar Nasional Inovasi Teknologi Terapan",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://gprjournals.org/journals/index.php/ijea/oai",
-    "id": "ojs2.gprjournals.org",
-    "name": "International Journal of Engineering and Architecture ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.staidk.ac.id/index.php/attadbir/oai",
-    "id": "ojs.journal.staidk.ac.id",
-    "name": "At-Tadbir: Jurnal Manajemen Pendidikan Islam",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://edicoes.aforges.org/index.php/revista/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "REVISTA FORGES",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal-center.litpam.com/index.php/ijpi/oai",
-    "id": "ojs2.journal-center.litpam.com",
-    "name": "International Journal of Population Issues",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.unilim.fr/espaces-linguistiques/oai.php",
-    "id": "espaces-linguistiques.unilim.fr",
-    "name": "Espaces linguistiques",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcommons.chapman.edu/do/oai/",
-    "id": "digitalcommons.chapman.edu",
-    "name": "Chapman University Digital Commons",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://research-repository.st-andrews.ac.uk/dspace-oai/request",
-    "name": "St Andrews Research Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.lpkd.or.id/index.php/Humif/oai",
-    "id": "ojs2.journal.lpkd.or.id",
-    "name": "Hukum Inovatif : Jurnal Ilmu Hukum Sosial dan Humaniora",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.lpkd.or.id/index.php/Hardik/oai",
-    "id": "ojs2.journal.lpkd.or.id",
-    "name": "Harmoni Pendidikan : Jurnal Ilmu Pendidikan",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistas.unl.edu.ec/index.php/economica/oai",
-    "id": "ojs.revistas.unl.edu.ec",
-    "name": "Revista Económica",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.unikom.ac.id/index.php/visualita/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Visualita: Jurnal Online Desain Komunikasi Visual",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnaltarbiyah.uinsu.ac.id/index.php/tarbiyah/oai",
-    "id": "jurnaltarbiyah.uinsu.ac.id",
-    "name": "JURNAL TARBIYAH",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ejurnalmalahayati.ac.id/index.php/kesehatan/oai",
-    "id": "ojs.ejurnalmalahayati.ac.id",
-    "name": "Jurnal Ilmu Kedokteran dan Kesehatan",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://gafj.org/journal/oai",
-    "id": "ojs2.gafj.org",
-    "name": "Global Academic Frontiers",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.unimed.ac.id/2012/index.php/jpkm/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "JURNAL PENGABDIAN KEPADA MASYARAKAT",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.uph.edu/index.php/DJM/oai",
-    "id": "ojs.uph.edu",
-    "name": "DeReMa (Development Research of Management): Jurnal Manajemen",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://acikerisim.deu.edu.tr:8080/oai/request",
-    "id": "acikerisim.deu.edu.tr",
-    "name": "DSpace at Dokuz Eylul University",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://opus4.kobv.de/opus4-uni-passau/oai",
-    "id": "kobv.de-opus4-uni-passau",
-    "name": "Opus4 uni Passau",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://innovareacademics.in/journals/index.php/ijss/oai",
-    "id": "ojs.innovareacademics.in",
-    "name": "Innovare Journal of Social Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://soar.usa.edu/do/oai/",
-    "id": "soar.usa.edu",
-    "name": "SOAR @ USA",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnaliainpontianak.or.id/index.php/index/oai",
-    "id": "ojs.jurnaliainpontianak.or.id",
-    "name": "Jurnal IAIN Pontianak",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistaiberociencias.org/index.php/multidisciplinar/oai",
-    "id": "ojs2.revistaiberociencias.org",
-    "name": "Ibero Ciencias - Revista Científica y Académica - ISSN 3072-7197",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://pkm.lpkd.or.id/index.php/InovasiSosial/oai",
-    "id": "ojs2.pkm.lpkd.or.id",
-    "name": "Inovasi Sosial : Jurnal Pengabdian Masyarakat",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.ugm.ac.id/rpcpe/oai",
-    "id": "jurnal.ugm.ac.id",
-    "name": "Review of Primary Care Practice and Education",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://commons.ln.edu.hk/do/oai/",
-    "id": "commons.ln.edu.hk",
-    "name": "Digital Commons @ Lingnan University",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ijis.keu-journals.com/index.php/ijis/oai",
-    "id": "ojs2.ijis.keu-journals.com",
-    "name": "International Journal of Islamic Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://rour.neicon.ru/oai/request",
-    "id": "rour.neicon.ru",
-    "name": "NORA",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://irjas.com/index.php/sciencejournal/oai",
-    "id": "ojs2.irjas.com",
-    "name": "International Research Journal of Advanced Science",
-    "requiredHeader": "*"
-  },
-  {
-    "url": "https://gprjournals.org/journals/index.php/jphs/oai",
-    "id": "ojs2.gprjournals.org",
-    "name": "Journal of Public Health Studies ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://indexlaw.org/index.php/historiadireito/oai",
-    "id": "ojs.indexlaw.org",
-    "name": "Revista Brasileira de História do Direito",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://buescholar.bue.edu.eg/do/oai/",
-    "id": "buescholar.bue.edu.eg",
-    "name": "BUE Scholar",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.esdc.com.br/seer/index.php/rbdc/oai",
-    "id": "ojs.www.esdc.com.br",
-    "name": "Revista Brasileira de Direito Constitucional",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://repository.uinjkt.ac.id/oai/request",
-    "id": "repository.uinjkt.ac.id",
-    "name": "Institutional Repository UIN Syarif Hidayatullah Jakarta",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal.reforestationchallenges.org/index.php/REFOR/oai",
-    "id": "ojs.journal.reforestationchallenges.org",
-    "name": "REFORESTA",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://dash.harvard.edu/oai/request",
-    "name": "Harvard DASH",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ejournal.kopertais4.or.id/madura/index.php/alanwar/oai",
-    "id": "oai.ejournal.kopertais4.or.id",
-    "name": "Al-Anwar : Jurnal Ekonomi dan Bisnis Islam",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://pf.spr-journal.ru/jour/oai",
-    "id": "ojs.ppharm.elpub.ru",
-    "name": "Педиатрическая фармакология",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.kdpu.edu.ua/ped/oai",
-    "id": "journal.kdpu.edu.ua",
-    "name": "Pedagogy of Higher and Secondary Education",
-    "requiredHeader": null
+    "url": "https://swastikajournal.com/index.php/jsscs/oai",
+    "repositoryName": "Journal of Social Sciences and Cultural Study",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://hedatuz.euskomedia.org/cgi/oai2",
-    "id": "hedatuz.euskomedia.org",
-    "name": "Hedatuz",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://biblioteca.galiciana.gal/i18n/oai/oai_galiciana-bibliotecadegalicia.xunta.es.cmd",
-    "id": "galiciana-bibliotecadegalicia.xunta.es",
-    "name": "Galiciana: Biblioteca Digital de Galicia",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.ijcbr.com/index.php/ijcbr/oai",
-    "id": "ojs2.www.ijcbr.com",
-    "name": "International Journal of Clinical and Biomedical Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digital.stpetersburg.usf.edu/do/oai/",
-    "id": "digital.stpetersburg.usf.edu",
-    "name": "Digital Commons @ University of South Florida",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.jfpublisher.com/index.php/jpb/oai",
-    "id": "ojs2.journal.jfpublisher.com",
-    "name": "Simplisia: Journal of Pharmaceutical & Biology",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://analisisfilosofico.org/index.php/af/oai",
-    "id": "ojs2.analisisfilosofico.org",
-    "name": "Análisis Filosófico",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.upgrisba.ac.id/index.php/tell-us/oai",
-    "id": "ojs.ejournal.stkip-pgri-sumbar.ac.id",
-    "name": "TELL-US JOURNAL",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://reydesnudo.com.ar/rey-desnudo/oai.",
-    "id": "ojs.reydesnudo.com.ar",
-    "name": "Rey Desnudo",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.trunojoyo.ac.id/pamator/oai",
-    "id": "ojs.journal.trunojoyo.ac.id",
-    "name": "Jurnal Pamator : Jurnal Ilmiah Universitas Trunojoyo",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnaltarbiyah.uinsu.ac.id/index.php/index/oai",
-    "id": "jurnaltarbiyah.uinsu.ac.id",
-    "name": "JURNAL FAKULTAS ILMU TARBIYAH DAN KEGURUAN",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://raigal.unvm.edu.ar/ojs/index.php/raigal/oai",
-    "id": "ojs.revistasociales.unvm.edu.ar",
-    "name": "Raigal",
-    "requiredHeader": null
+    "repositoryName": "Hedatuz",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://dergi.fsm.edu.tr/index.php/ia/oai",
-    "id": "ojs.dergi.fsm.edu.tr",
-    "name": "FSM İlmî Araştırmalar İnsan ve Toplum Bilimleri Dergisi",
-    "requiredHeader": null
+    "repositoryName": "FSM İlmî Araştırmalar İnsan ve Toplum Bilimleri Dergisi",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://bvrajyl.rajyl.es/i18n/oai/oai_bvrajyl.rajyl.es.cmd",
-    "id": "bvrajyl.rajyl.es",
-    "name": "IURIS Digital. Biblioteca Virtual de la Real Academia de Jurisprudencia y Legislación",
-    "requiredHeader": null
+    "url": "http://ojs.unida.ac.id/index.php/JSEI/oai",
+    "repositoryName": "Jurnal Syarikah : Jurnal Ekonomi Islam",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://swastikajournal.com/index.php/jsscs/oai",
-    "id": "ojs2.swastikajournal.com",
-    "name": "Journal of Social Sciences and Cultural Study",
-    "requiredHeader": null
+    "url": "https://analisisfilosofico.org/index.php/af/oai",
+    "repositoryName": "Análisis Filosófico",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://www.ogrenen.net/index.php/istlj/oai",
-    "id": "ojs2.ogrenen.net",
-    "name": "International Society that Learn Journal",
-    "requiredHeader": null
+    "url": "https://digitalcommons.chapman.edu/do/oai/",
+    "repositoryName": "Chapman University Digital Commons",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://ehe.pitt.edu/ojs/index.php/ehe/oai",
-    "id": "ojs.ehe.pitt.edu",
-    "name": "Excellence in Higher Education",
-    "requiredHeader": null
+    "url": "http://commons.ln.edu.hk/do/oai/",
+    "repositoryName": "Digital Commons @ Lingnan University",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://ssjournals.com/index.php/ijpr/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "International Journal of Pharmacological Research",
-    "requiredHeader": null
+    "url": "http://raigal.unvm.edu.ar/ojs/index.php/raigal/oai",
+    "repositoryName": "Raigal",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://scholarworks.law.ubalt.edu/do/oai/",
-    "id": "scholarworks.law.ubalt.edu",
-    "name": "ScholarWorks@University of Baltimore School of Law",
-    "requiredHeader": null
+    "url": "https://journal.kdpu.edu.ua/ped/oai",
+    "repositoryName": "Pedagogy of Higher and Secondary Education",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://eprints.ums.edu.my/cgi/oai2",
-    "id": "eprints.ums.edu.my",
-    "name": "UMS INSTITUTIONAL REPOSITORY",
-    "requiredHeader": null
+    "url": "http://www.esdc.com.br/seer/index.php/rbdc/oai",
+    "repositoryName": "Revista Brasileira de Direito Constitucional",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journal.stekom.ac.id/index.php/elkom/oai",
-    "id": "journal.stekom.ac.id",
-    "name": "Elkom: Jurnal Elektronika dan Komputer",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://khalifah.aksarashofa.com/index.php/khalifah/oai",
-    "id": "ojs2.khalifah.aksarashofa.com",
-    "name": "Khalifah : Jurnal Pendidikan Nusantara",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://dc.etsu.edu/do/oai/",
-    "id": "dc.etsu.edu",
-    "name": "Digital Commons @ East Tennessee State University",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.uokufa.edu.iq/index.php/jkp/oai",
-    "id": "ojs2.journal.uokufa.edu.iq",
-    "name": "Journal of Kufa-Physics",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.pnc.ac.id/index.php/jinita/oai",
-    "id": "ejournal.pnc.ac.id",
-    "name": "Journal of Innovation Information Technology and Application (JINITA)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.glaucomajournal.ru/jour/oai",
-    "id": "ojs.glaucoma.elpub.ru",
-    "name": "Национальный журнал Глаукома",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://pressto.amu.edu.pl/index.php/sup/oai",
-    "id": "ojs.pressto.amu.edu.pl",
-    "name": "Studia Ukrainica Posnaniensia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.medgen-journal.ru/jour/oai",
-    "id": "ojs.medgen.elpub.ru",
-    "name": "Медицинская генетика",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://doktori.bibl.u-szeged.hu/cgi/oai2",
-    "id": "doktori.bibl.u-szeged.hu",
-    "name": "SZTE Doktori Repozitórium",
-    "requiredHeader": null
+    "url": "http://acikerisim.deu.edu.tr:8080/oai/request",
+    "repositoryName": "DSpace at Dokuz Eylul University",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://jurnal.fmipa.unmul.ac.id/index.php/ppj/oai",
-    "id": "ojs.jurnal.fmipa.unmul.ac.id",
-    "name": "Progressive Physics Journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.unida.ac.id/index.php/jpnu/oai",
-    "id": "ejournal.unida.ac.id",
-    "name": "Jurnal Peternakan Nusantara",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://rei.esprint.tech/index.php/esprint-investigacion/oai",
-    "id": "ojs.rei.esprint.tech",
-    "name": "Esprint Investigación",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://omp.unair.ac.id/aup/oai",
-    "id": "omp.unair.ac.id",
-    "name": "Airlangga University Press",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.umsu.ac.id/index.php/delegalata/oai",
-    "id": "ojs.jurnal.umsu.ac.id",
-    "name": "DE LEGA LATA: Jurnal Ilmu Hukum",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repository.belmont.edu/do/oai/",
-    "id": "repository.belmont.edu",
-    "name": "Belmont Digital Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejurnal.esaunggul.ac.id/index.php/PBK/oai",
-    "id": "ojs.ejurnal.esaunggul.ac.id",
-    "name": "PUBLIKA Jurnal Administrasi Publik",
-    "requiredHeader": null
+    "repositoryName": "Progressive Physics Journal",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://eldorado.tu-dortmund.de/server/oai/request",
-    "id": "eldorado.tu-dortmund.de",
-    "name": "Eldorado",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://eduq.info/oai/request",
-    "name": "DSpace CDC",
-    "requiredHeader": null
+    "repositoryName": "Eldorado",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://ijhcm.com/index.php/journal/oai",
-    "id": "ojs.ijhcm.com",
-    "name": "International Journal of Health & Complementary Medicine",
-    "requiredHeader": null
+    "repositoryName": "International Journal of Health & Complementary Medicine",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://21bs.ru/index.php/index/oai",
-    "id": "ojs21bs.ru",
-    "name": "Фонд научных исследований \"XXI век\"",
-    "requiredHeader": "*"
+    "url": "http://jurnal.umsu.ac.id/index.php/delegalata/oai",
+    "repositoryName": "DE LEGA LATA: Jurnal Ilmu Hukum",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://revistas.cef.udima.es/index.php/marketing/oai",
-    "id": "revistas.cef.udima.es",
-    "name": "Revista de Marketing y Publicidad",
-    "requiredHeader": null
+    "url": "https://ejurnal.esaunggul.ac.id/index.php/PBK/oai",
+    "repositoryName": "PUBLIKA Jurnal Administrasi Publik",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://revmedmilitar.sld.cu/index.php/mil/oai",
-    "id": "www.revmedmilitar.sld.cu",
-    "name": "Revista Cubana de Medicina Militar",
-    "requiredHeader": null
+    "url": "https://khalifah.aksarashofa.com/index.php/khalifah/oai",
+    "repositoryName": "Khalifah : Jurnal Pendidikan Nusantara",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://revistas.ul.edu.co/index.php/index/oai",
+    "repositoryName": "",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://acityajournal.com/index.php/ljes/oai",
-    "id": "ojs2.acityajournal.com",
-    "name": "Loka: Journal Of Environmental Sciences",
-    "requiredHeader": null
+    "repositoryName": "Loka: Journal Of Environmental Sciences",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://e-jlia.com/index.php/jlia/oai",
-    "id": "ojs2.e-jlia.com",
-    "name": "Journal of Liberty and International Affairs",
-    "requiredHeader": null
+    "url": "http://www.glaucomajournal.ru/jour/oai",
+    "repositoryName": "Национальный журнал Глаукома",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.ijcbr.com/index.php/ijcbr/oai",
+    "repositoryName": "International Journal of Clinical and Biomedical Research",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://buescholar.bue.edu.eg/do/oai/",
+    "repositoryName": "BUE Scholar",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistas.cef.udima.es/index.php/marketing/oai",
+    "repositoryName": "Revista de Marketing y Publicidad",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ojs.uph.edu/index.php/DJM/oai",
+    "repositoryName": "DeReMa (Development Research of Management): Jurnal Manajemen",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://gprjournals.org/journals/index.php/ajgds/oai",
-    "id": "ojs2.gprjournals.org",
-    "name": "American Journal of Gender and Development Studies ",
-    "requiredHeader": null
+    "repositoryName": "American Journal of Gender and Development Studies ",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://eprints.itenas.ac.id/cgi/oai2",
-    "id": "eprints.itenas.ac.id",
-    "name": "Itenas Repository",
-    "requiredHeader": null
+    "url": "https://journal.uokufa.edu.iq/index.php/jkp/oai",
+    "repositoryName": "Journal of Kufa-Physics",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://repository.usfca.edu/do/oai/",
-    "id": "repository.usfca.edu",
-    "name": "USF Scholarship: a digital repository @ Gleeson Library | Geschke Center",
-    "requiredHeader": null
+    "url": "https://soar.usa.edu/do/oai/",
+    "repositoryName": "SOAR @ USA",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://ejce.liuc.it/oai/default.asp",
-    "name": "EJCE_repository",
-    "requiredHeader": null
+    "url": "https://e-jlia.com/index.php/jlia/oai",
+    "repositoryName": "Journal of Liberty and International Affairs",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://acityajournal.com/index.php/jpls/oai",
-    "id": "ojs2.acityajournal.com",
-    "name": "Journal of Political And Legal Sovereignty",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://archive.umsida.ac.id/index.php/archive/oai",
-    "id": "ops.archive.umsida.ac.id",
-    "name": "UMSIDA Preprints Server",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://e-jurnal.iphorr.com/index.php/msc/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "JOURNAL OF Medical Surgical Concerns",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.arimbi.or.id/index.php/Rimba/oai",
-    "id": "ojs2.journal.arimbi.or.id",
-    "name": "Jurnal Rimba Riset Ilmu manajemen Bisnis dan Akuntansi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://abc.us.org/ojs/index.php/ajtp/oai",
-    "id": "ojs2.abc.us.org",
-    "name": "American Journal of Trade and Policy",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ijmres.pk/index.php/IJMRES/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "International Journal of Management Research and Emerging Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.galiciana.gal/arpadhub/i18n/oai/oai_galiciana.xunta.es.do",
-    "id": "galiciana.xunta.es",
-    "name": "Galiciana",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://gprjournals.org/journals/index.php/jfshn/oai",
-    "id": "ojs2.gprjournals.org",
-    "name": "Journal of Food Science and Human Nutrition ",
-    "requiredHeader": null
+    "url": "https://ejournal.pnc.ac.id/index.php/jinita/oai",
+    "repositoryName": "Journal of Innovation Information Technology and Application (JINITA)",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://ejurnal.ung.ac.id/index.php/jgeosrev/oai",
-    "id": "ejurnal.ung.ac.id",
-    "name": "Jambura Geoscience Review",
-    "requiredHeader": null
+    "repositoryName": "Jambura Geoscience Review",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://sekizgenacademy.com/journals/index.php/index/oai",
-    "id": "ojs2.journals.sekizgenacademy.com",
-    "name": "Sekizgen Akademi Dergileri",
-    "requiredHeader": null
+    "url": "https://acityajournal.com/index.php/jpls/oai",
+    "repositoryName": "Journal of Political And Legal Sovereignty",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://periodicos.ufes.br/simbiotica/oai",
-    "id": "ojs1.ufes.br",
-    "name": "Simbiótica. Revista Eletrônica",
-    "requiredHeader": null
+    "url": "http://ojs.unida.ac.id/index.php/jpnu/oai",
+    "repositoryName": "Jurnal Peternakan Nusantara",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.medgen-journal.ru/jour/oai",
+    "repositoryName": "Медицинская генетика",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://ejurnalmalahayati.ac.id/index.php/risetekonomi/oai",
-    "id": "ojs.ejurnalmalahayati.ac.id",
-    "name": "Jurnal Riset Akuntansi dan Manajemen Malahayati (JRAMM)",
-    "requiredHeader": null
+    "repositoryName": "Jurnal Riset Akuntansi dan Manajemen Malahayati (JRAMM)",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://www.ijrcog.org/index.php/ijrcog/oai",
-    "id": "ojs.ijrcog.org",
-    "name": "International Journal of Reproduction, Contraception, Obstetrics and Gynecology",
-    "requiredHeader": null
+    "url": "http://pressto.amu.edu.pl/index.php/sup/oai",
+    "repositoryName": "Studia Ukrainica Posnaniensia",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://risetpress.com/index.php/ijmars/oai",
-    "id": "ojs2.risetpress.com",
-    "name": "International Journal of Multidisciplinary Approach Research and Science",
-    "requiredHeader": null
+    "url": "http://21bs.ru/index.php/index/oai",
+    "repositoryName": "Фонд научных исследований \"XXI век\"",
+    "accessControlAllowOrigin": "*"
   },
   {
-    "url": "https://ojs.jdss.org.pk/journal/oai",
-    "id": "ojs2.ojs.jdss.org.pk",
-    "name": "Journal of Development and Social Sciences",
-    "requiredHeader": null
+    "url": "https://e-jurnal.iphorr.com/index.php/msc/oai",
+    "repositoryName": "JOURNAL OF Medical Surgical Concerns",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journals.sub.uni-hamburg.de/hup2/kommges/oai",
-    "id": "hup2.journals.sub.uni-hamburg.de",
-    "name": "kommunikation@gesellschaft",
-    "requiredHeader": null
+    "url": "http://eprints.itenas.ac.id/cgi/oai2",
+    "repositoryName": "Itenas Repository",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://www.actabiomedica.ru/jour/oai",
-    "id": "oai.actabiomedica.elpub.ru",
-    "name": "Acta Biomedica Scientifica",
-    "requiredHeader": null
+    "url": "https://digital.stpetersburg.usf.edu/do/oai/",
+    "repositoryName": "Digital Commons @ University of South Florida",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journal.trunojoyo.ac.id/rekayasa/oai",
-    "id": "ojs.journal.trunojoyo.ac.id",
-    "name": "Rekayasa",
-    "requiredHeader": null
+    "url": "https://gprjournals.org/journals/index.php/jfshn/oai",
+    "repositoryName": "Journal of Food Science and Human Nutrition ",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://ir.vtei.edu.ua/oai.php",
-    "id": "ir.vtei.edu.ua",
-    "name": "VTEI : Vinnytsia Institute of Trade and Economics of Kyiv National University of Trade and Economics",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://grhas.centraluniteduniversity.de/index.php/files/oai",
-    "id": "ojs2.grhas.centraluniteduniversity.de",
-    "name": "Global Review of Humanities, Arts, and Society",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://bibliotecadigital.carm.es/oai2/oai2.php",
-    "id": "bibliotecadigital.carm.es",
-    "name": "Biblioteca Digital de la Región de Murcia",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ijcrpp.com/index.php/ijcrpp/oai",
-    "id": "ojs2.ijcrpp.com",
-    "name": "International Journal of Current Research in Physiology and Pharmacology",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://cedar.wwu.edu/do/oai/",
-    "id": "cedar.wwu.edu",
-    "name": "Western CEDAR",
-    "requiredHeader": null
+    "url": "http://reydesnudo.com.ar/rey-desnudo/oai.",
+    "repositoryName": "Rey Desnudo",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://ojs.unsulbar.ac.id/index.php/jstp/oai",
-    "id": "ojs.unsulbar.ac.id",
-    "name": "Jurnal Sains dan Teknologi Peternakan",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.uajournals.com/ojs/index.php/cisdejournal/oai",
-    "id": "ojs.uajournals.com",
-    "name": "Revista de Pensamiento Estratégico y Seguridad CISDE",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.spiruharet.ro/index.php/index/oai",
-    "id": "ojs.ctb.ro",
-    "name": "Open Journal Systems",
-    "requiredHeader": null
+    "repositoryName": "Jurnal Sains dan Teknologi Peternakan",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://journals.urfu.ru/index.php/QR/oai",
-    "id": "journals.urfu.ru",
-    "name": "Quaestio Rossica",
-    "requiredHeader": null
+    "repositoryName": "Quaestio Rossica",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://ijcc.chemoprev.org/index.php/ijcc/oai",
-    "id": "ojs.ijcc.chemoprev.org",
-    "name": "Indonesian Journal of Cancer Chemoprevention",
-    "requiredHeader": null
+    "url": "https://scholarworks.law.ubalt.edu/do/oai/",
+    "repositoryName": "ScholarWorks@University of Baltimore School of Law",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://ejurnal.poltekkes-tjk.ac.id/index.php/index/oai",
-    "id": "ojs.ejurnal.poltekkes-tjk.ac.id",
-    "name": "e-Jurnal Poltekkes Tanjungkarang",
-    "requiredHeader": null
+    "url": "https://www.ijrcog.org/index.php/ijrcog/oai",
+    "repositoryName": "International Journal of Reproduction, Contraception, Obstetrics and Gynecology",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://repository.belmont.edu/do/oai/",
+    "repositoryName": "Belmont Digital Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://omp.unair.ac.id/aup/oai",
+    "repositoryName": "Airlangga University Press",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://diglit.ub.uni-heidelberg.de/cgi-bin/digioai.cgi",
-    "id": "digi.ub.uni-heidelberg.de",
-    "name": "University of Heidelberg, GERMANY, Diglit",
-    "requiredHeader": null
+    "repositoryName": "University of Heidelberg, GERMANY, Diglit",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://publikasi.dinus.ac.id/index.php/jpeb/oai",
-    "id": "publikasi.dinus.ac.id",
-    "name": "Jurnal Penelitian Ekonomi dan Bisnis",
-    "requiredHeader": null
+    "url": "https://ojs.jdss.org.pk/journal/oai",
+    "repositoryName": "Journal of Development and Social Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://dc.etsu.edu/do/oai/",
+    "repositoryName": "Digital Commons @ East Tennessee State University",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://doktori.bibl.u-szeged.hu/cgi/oai2",
+    "repositoryName": "SZTE Doktori Repozitórium",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://pkm.lpkd.or.id/index.php/InovasiSosial/oai",
+    "repositoryName": "Inovasi Sosial : Jurnal Pengabdian Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.actabiomedica.ru/jour/oai",
+    "repositoryName": "Acta Biomedica Scientifica",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://journals.sub.uni-hamburg.de/hup2/jlar/oai",
-    "id": "hup2.journals.sub.uni-hamburg.de",
-    "name": "Journal of Language and Aging Research",
-    "requiredHeader": null
+    "repositoryName": "Journal of Language and Aging Research",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journal.cybrarians.info/index.php/cj/oai",
-    "id": "ojs.journal.cybrarians.info",
-    "name": "Cybrarians Journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ejournal.unp.ac.id/index.php/ibs/oai",
-    "id": "ojs.ejournal.unp.ac.id",
-    "name": "Jurnal Bahasa dan Sastra",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.gynecology.su/jour/oai",
-    "id": "oai.akusherstvo.elpub.ru",
-    "name": "Obstetrics, Gynecology and Reproduction",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.uokufa.edu.iq/index.php/kufa_arts/oai",
-    "id": "ojs2.journal.uokufa.edu.iq",
-    "name": "Kufa Journal of Arts",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.ntmsci.com/jacm/ajaxtool/oai",
-    "name": "Journal of Abstract and Computational Mathematics",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://seer.ufu.br/index.php/dominiosdelinguagem/oai",
-    "id": "ojs.www.seer.ufu.br",
-    "name": "Domínios de Lingu@gem",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.asritani.or.id/index.php/Manfaat/oai",
-    "id": "ojs2.journal.asritani.or.id",
-    "name": "Manfaat : Jurnal Pengabdian Pada Masyarakat Indonesia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://pt.cision.com/edpoai/oai2.aspx",
-    "name": "EDP OAI",
-    "requiredHeader": null
+    "url": "https://repository.usfca.edu/do/oai/",
+    "repositoryName": "USF Scholarship: a digital repository @ Gleeson Library | Geschke Center",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://jurnal.polibatam.ac.id/index.php/index/oai",
-    "id": "jurnal.polibatam.ac.id",
-    "name": "JURNAL POLITEKNIK NEGERI BATAM",
-    "requiredHeader": null
+    "repositoryName": "JURNAL POLITEKNIK NEGERI BATAM",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journals.matheo.si/index.php/index/oai",
-    "id": "ojs.abelium.eu",
-    "name": "Acta Chimica Slovenica",
-    "requiredHeader": null
+    "url": "http://ejurnal.poltekkes-tjk.ac.id/index.php/index/oai",
+    "repositoryName": "e-Jurnal Poltekkes Tanjungkarang",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journal.kdpu.edu.ua/world_lit/oai",
-    "id": "journal.kdpu.edu.ua",
-    "name": "Літератури світу: поетика, ментальність і духовність",
-    "requiredHeader": null
+    "url": "https://journals.sub.uni-hamburg.de/hup2/kommges/oai",
+    "repositoryName": "kommunikation@gesellschaft",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://jrckicn.repo.nii.ac.jp/oai",
-    "name": "Japanese Red Cross Kyushu International College of Nursing Repository",
-    "requiredHeader": null
+    "url": "https://risetpress.com/index.php/ijmars/oai",
+    "repositoryName": "International Journal of Multidisciplinary Approach Research and Science",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://journals.uran.ua/index.php/2226-0285/oai",
-    "id": "ojs.journals.uran.ua",
-    "name": "Альманах \"Культура і Сучасність\"",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://acnsci.org/journal/index.php/cte/oai",
-    "id": "ojs2.acnsci.org",
-    "name": "CTE Workshop Proceedings",
-    "requiredHeader": null
+    "url": "http://www.gynecology.su/jour/oai",
+    "repositoryName": "Obstetrics, Gynecology and Reproduction",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://www.jmolbiochem.com/index.php/JmolBiochem/oai",
-    "id": "ojs.jmolbiochem.com",
-    "name": "Journal of Molecular Biochemistry",
-    "requiredHeader": null
+    "repositoryName": "Journal of Molecular Biochemistry",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://www.diagnosticpathology.eu/content/index.php/dpath/oai",
-    "id": "ojs.localhost",
-    "name": "Diagnostic Pathology",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://vestnik.kemsu.ru/jour/oai",
-    "id": "ojs.kemsu.elpub.ru",
-    "name": "СибСкрипт",
-    "requiredHeader": null
+    "url": "https://eprints.ums.edu.my/cgi/oai2",
+    "repositoryName": "UMS INSTITUTIONAL REPOSITORY",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://revistaensenaecuador.org/index.php/simbiosiseducativa/oai",
-    "id": "ojs2.revistaensenaecuador.org",
-    "name": "Simbiosis Educativa",
-    "requiredHeader": null
+    "repositoryName": "Simbiosis Educativa",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://polipapers.upv.es/index.php/cs/oai",
-    "id": "ojs.upv.es",
-    "name": "Culturas. Revista de Gestión Cultural",
-    "requiredHeader": null
+    "url": "https://journal.kdpu.edu.ua/world_lit/oai",
+    "repositoryName": "Літератури світу: поетика, ментальність і духовність",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://www.jotmi.org/index.php/GT/oai",
-    "id": "ojs.jotmi.org",
-    "name": "Journal of Technology Management and Innovation",
-    "requiredHeader": null
+    "url": "http://zbc.uz.zgora.pl/dlibra/oai-pmh-repository.xml",
+    "repositoryName": "Zielonogórska Biblioteka Cyfrowa",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://indexlaw.org/index.php/direitocivil/oai",
-    "id": "ojs.indexlaw.org",
-    "name": "Revista Brasileira de Direito Civil em Perspectiva",
-    "requiredHeader": null
+    "url": "http://www.diagnosticpathology.eu/content/index.php/dpath/oai",
+    "repositoryName": "Diagnostic Pathology",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://jlmc.edu.np/index.php/JLMC/oai",
-    "id": "ojs.jlmc.edu.np",
-    "name": "Journal of Lumbini Medical College",
-    "requiredHeader": null
+    "url": "http://www.uajournals.com/ojs/index.php/cisdejournal/oai",
+    "repositoryName": "Revista de Pensamiento Estratégico y Seguridad CISDE",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://www.periodicos.univasf.edu.br/index.php/revasf/oai",
-    "id": "ojs.localhost",
-    "name": "Revista de Educação do Vale do São Francisco",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://pressto.amu.edu.pl/index.php/pspsj/oai",
-    "id": "ojs.pressto.amu.edu.pl",
-    "name": "Poznańskie Studia Polonistyczne. Seria Językoznawcza",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ajis.fisip.unand.ac.id/index.php/ajis/oai",
-    "id": "ojs.ajis.fisip.unand.ac.id",
-    "name": "Andalas Journal of International Studies (AJIS)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://phytomedicine.ejournals.ca/index.php/phytomedicine/oai",
-    "id": "ojs.phytomedicine.ejournals.ca",
-    "name": "Discovery Phytomedicine - Journal of Natural Products Research and Ethnopharmacology",
-    "requiredHeader": null
+    "url": "http://journals.uran.ua/index.php/2226-0285/oai",
+    "repositoryName": "Альманах \"Культура і Сучасність\"",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://journal.asu.ru/urisl/oai",
-    "id": "journal.asu.ru",
-    "name": "Юрислингвистика",
-    "requiredHeader": null
+    "repositoryName": "Юрислингвистика",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://journal.umpo.ac.id/index.php/PUBLIS/oai",
-    "id": "ojs.journal.umpo.ac.id",
-    "name": "Publication Library and Information Science",
-    "requiredHeader": null
+    "url": "https://jurnal.polgan.ac.id/index.php/remik/oai",
+    "repositoryName": "REMIK: Riset dan E-Jurnal Manajemen Informatika Komputer",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://wartaandalas.lppm.unand.ac.id/index.php/jwa/oai",
-    "id": "ojs2.wartaandalas.lppm.unand.ac.id",
-    "name": "Warta Pengabdian Andalas",
-    "requiredHeader": null
+    "url": "http://polipapers.upv.es/index.php/cs/oai",
+    "repositoryName": "Culturas. Revista de Gestión Cultural",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://omiyage.ppj.unp.ac.id/index.php/omiyage/oai",
-    "id": "ojs.omiyage.ppj.unp.ac.id",
-    "name": "Omiyage : Jurnal Bahasa dan Pembelajaran Bahasa Jepang",
-    "requiredHeader": null
+    "url": "https://cedar.wwu.edu/do/oai/",
+    "repositoryName": "Western CEDAR",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://jurnal.umpwr.ac.id/index.php/radiasi/oai",
-    "id": "ojs3.jurnal.umpwr.ac.id",
-    "name": "Radiasi : Jurnal Berkala Pendidikan Fisika",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnalmadanimedika.ac.id/index.php/JMM/oai",
-    "id": "ojs2.jurnalmadanimedika.ac.id",
-    "name": "Jurnal Kesehatan Madani Medika",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journals.lnb.lt/parliamentary-studies/oai",
-    "id": "journals.lnb.lt",
-    "name": "Parliamentary Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.ywnr.org/index.php/cfabr/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": " The Contrarian : Finance, Accounting, and Business Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://centracs.es/revista/oai",
-    "id": "ojs2.centracs.es",
-    "name": "Revista CENTRA de Ciencias Sociales",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://publicaciones.fcnym.unlp.edu.ar/rmlp/oai",
-    "id": "ojs.fcnym.unlp.edu.ar",
-    "name": "Revista del Museo de La Plata",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://oro.open.ac.uk/cgi/oai2",
-    "id": "open.ac.uk.OAI2",
-    "name": "Open Research Online",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.polinema.ac.id/index.php/JETM/oai",
-    "id": "ojs2.jurnal.polinema.ac.id",
-    "name": "Jurnal Energi dan Teknologi Manufaktur",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://acityajournal.com/index.php/jebd/oai",
-    "id": "ojs2.acityajournal.com",
-    "name": "Journal of Entrepreneurial and Business Diversity",
-    "requiredHeader": null
+    "url": "https://journal.cybrarians.info/index.php/cj/oai",
+    "repositoryName": "Cybrarians Journal",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://jurnal.usbypkp.ac.id/index.php/jemper/oai",
-    "id": "jurnal.usbypkp.ac.id",
-    "name": "Jurnal Ekonomi Manajemen Perbankan",
-    "requiredHeader": null
+    "repositoryName": "Jurnal Ekonomi Manajemen Perbankan",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://dspace.ankara.edu.tr/server/oai/request",
-    "id": "dspace.ankara.edu.tr",
-    "name": "Ankara Universitesi",
-    "requiredHeader": null
+    "url": "https://journal.uokufa.edu.iq/index.php/kufa_arts/oai",
+    "repositoryName": "Kufa Journal of Arts",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journal.staidk.ac.id/index.php/alifbata/oai",
-    "id": "ojs2.journal.staidk.ac.id",
-    "name": "Alifbata : Jurnal Pendidikan Dasar",
-    "requiredHeader": null
+    "url": "http://ajis.fisip.unand.ac.id/index.php/ajis/oai",
+    "repositoryName": "Andalas Journal of International Studies (AJIS)",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journal.arteii.or.id/index.php/Saturnus/oai",
-    "id": "ojs2.journal.arteii.or.id",
-    "name": "Saturnus: Jurnal Teknologi dan Sistem Informasi",
-    "requiredHeader": null
+    "url": "http://jlmc.edu.np/index.php/JLMC/oai",
+    "repositoryName": "Journal of Lumbini Medical College",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://estudiossociales.bono.edu.do/index.php/es/oai",
-    "id": "ojs2.estudiossociales.bono.edu.do",
-    "name": "Revista Estudios Sociales",
-    "requiredHeader": null
+    "url": "https://journal.asritani.or.id/index.php/Manfaat/oai",
+    "repositoryName": "Manfaat : Jurnal Pengabdian Pada Masyarakat Indonesia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnalmadanimedika.ac.id/index.php/JMM/oai",
+    "repositoryName": "Jurnal Kesehatan Madani Medika",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.polinema.ac.id/index.php/JETM/oai",
+    "repositoryName": "Jurnal Energi dan Teknologi Manufaktur",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://acityajournal.com/index.php/jebd/oai",
+    "repositoryName": "Journal of Entrepreneurial and Business Diversity",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.lpkd.or.id/index.php/Humif/oai",
+    "repositoryName": "Hukum Inovatif : Jurnal Ilmu Hukum Sosial dan Humaniora",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://vestnik.kemsu.ru/jour/oai",
+    "repositoryName": "СибСкрипт",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://publikasi.dinus.ac.id/index.php/jpeb/oai",
+    "repositoryName": "Jurnal Penelitian Ekonomi dan Bisnis",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.ywnr.org/index.php/cfabr/oai",
+    "repositoryName": " The Contrarian : Finance, Accounting, and Business Research",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.periodicos.univasf.edu.br/index.php/revasf/oai",
+    "repositoryName": "Revista de Educação do Vale do São Francisco",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://periodicos.ufes.br/simbiotica/oai",
+    "repositoryName": "Simbiótica. Revista Eletrônica",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://acnsci.org/journal/index.php/cte/oai",
+    "repositoryName": "CTE Workshop Proceedings",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://oai.erudit.org/oai/",
-    "id": "oai.erudit.org",
-    "name": "Erudit",
-    "requiredHeader": null
+    "repositoryName": "Erudit",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://eres.architexturez.net/oai-pmh",
-    "name": "ERES Digital Library",
-    "requiredHeader": null
+    "url": "https://journals.lnb.lt/parliamentary-studies/oai",
+    "repositoryName": "Parliamentary Studies",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://jurnal2.isi-dps.ac.id/index.php/amarasi/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "AMARASI: JURNAL DESAIN KOMUNIKASI VISUAL",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnalfe.ustjogja.ac.id/index.php/akuntansi/oai",
-    "id": "ojs.jurnalfe.ustjogja.ac.id",
-    "name": "Jurnal Akuntansi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.tethys.at/oai",
-    "id": "tethys.at",
-    "name": "Tethys RDR",
-    "requiredHeader": "*"
+    "url": "https://archive.umsida.ac.id/index.php/archive/oai",
+    "repositoryName": "UMSIDA Preprints Server",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://afrijme.org/index.php/journal/oai",
-    "id": "ojs2.afrijme.org",
-    "name": "The African journal of monitoring and evaluation",
-    "requiredHeader": null
+    "repositoryName": "The African journal of monitoring and evaluation",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://seer.ufrgs.br/Poled/oai",
-    "id": "seer.ufrgs.br",
-    "name": "Políticas Educativas – PolEd",
-    "requiredHeader": null
+    "url": "https://centracs.es/revista/oai",
+    "repositoryName": "Revista CENTRA de Ciencias Sociales",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://myjurnal.poltekkes-kdi.ac.id/index.php/HIJP/oai",
-    "id": "ojs2.myjurnal.poltekkes-kdi.ac.id",
-    "name": "Health Information : Jurnal Penelitian",
-    "requiredHeader": null
+    "url": "https://seer.ufu.br/index.php/dominiosdelinguagem/oai",
+    "repositoryName": "Domínios de Lingu@gem",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://jurnal2.isi-dps.ac.id/index.php/abdiwidya/oai",
-    "id": "jurnal2.isi-dps.ac.id",
-    "name": "Abdi Widya : Jurnal Pengabdian Masyarakat",
-    "requiredHeader": null
+    "url": "https://publicaciones.fcnym.unlp.edu.ar/rmlp/oai",
+    "repositoryName": "Revista del Museo de La Plata",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://www.envigogika.cuni.cz/index.php/Envigogika/oai",
-    "id": "ojs.envigogika.cuni.cz",
-    "name": "Envigogika",
-    "requiredHeader": null
+    "url": "https://www.tethys.at/oai",
+    "repositoryName": "Tethys RDR",
+    "accessControlAllowOrigin": "*"
   },
   {
-    "url": "http://demo.vebrary.vn/oai2",
-    "name": "Lac Viet Intergated Library Repository",
-    "requiredHeader": null
+    "url": "http://pressto.amu.edu.pl/index.php/pspsj/oai",
+    "repositoryName": "Poznańskie Studia Polonistyczne. Seria Językoznawcza",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://jurnal.iain-padangsidimpuan.ac.id/index.php/Kuttab/oai",
-    "id": "jurnal.iain-padangsidimpuan.ac.id",
-    "name": "Al-Kuttab : Jurnal Kajian Perpustakaan, Informasi dan Kearsipan",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://etd.adm.unipi.it/ETD-db/NDLTD-OAI/oai.pl",
-    "id": "etd.adm.unipi.it",
-    "name": "Electronic Thesis and Dissertation Archive",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.rdm.uff.br/index.php/rdm/oai",
-    "id": "ojs.www.rdm.uff.br",
-    "name": "Revista de Direito dos Monitores da Universidade Federal Fluminense",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://zdb.uni-bielefeld.de/index.php/zdb/oai",
-    "id": "zdb.uni-bielefeld.de",
-    "name": "Zeitschrift für Didaktik der Biologie (ZDB) - Biologie Lehren und Lernen",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://rpmgf.pt/ojs/index.php/rpmgf/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Revista Portuguesa de Medicina Geral e Familiar",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal.umpalangkaraya.ac.id/index.php/mits/oai",
-    "id": "journal.umpalangkaraya.ac.id",
-    "name": "Media Ilmiah Teknik Sipil",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.yasin-alsys.org/index.php/yasin/oai",
-    "id": "ojs2.ejournal.yasin-alsys.org",
-    "name": "YASIN",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnaliainpontianak.or.id/index.php/alhikmah/oai",
-    "id": "ojs.jurnaliainpontianak.or.id",
-    "name": "Jurnal Al-Hikmah: Jurnal Dakwah",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ejournal.utp.ac.id/index.php/ganesha/oai",
-    "id": "ojs.ejournal.utp.ac.id",
-    "name": "GANESHA: Jurnal Pengabdian Masyarakat",
-    "requiredHeader": null
+    "url": "https://journal.lpkd.or.id/index.php/Hardik/oai",
+    "repositoryName": "Harmoni Pendidikan : Jurnal Ilmu Pendidikan",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://repository.corp.at/cgi/oai2",
-    "id": "repository.corp.at",
-    "name": "REAL CORP Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://oai.ukdataservice.ac.uk/oai/provider",
-    "name": "UK Data Service OAI-PMH Repository (Production)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://secyt.unpa.edu.ar/journal/index.php/index/oai",
-    "id": "journal.localhost",
-    "name": "Publicaciones de la Secretaría de Ciencia y Tecnología",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.uwks.ac.id/index.php/sosioagribis/oai",
-    "id": "ojs2.journal.uwks.ac.id",
-    "name": "Jurnal Ilmiah Sosio Agribis",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://commons.und.edu/do/oai/",
-    "id": "commons.und.edu",
-    "name": "UND Scholarly Commons",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://czasopisma.upjp2.edu.pl/foliahistoricacracoviensia/oai",
-    "id": "ojs.czasopisma.upjp2.edu.pl",
-    "name": "Folia Historica Cracoviensia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.spc.int/DigitalLibrary/SPC/OAI",
-    "name": "SPC Digital Library",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ee.zntu.edu.ua/index.php/1607-6761/oai",
-    "id": "ojs.journals.uran.ua",
-    "name": "Electrical Engineering and Power Engineering",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal2.isi-dps.ac.id/index.php/damar/oai",
-    "id": "jurnal2.isi-dps.ac.id",
-    "name": "JURNAL DAMAR PEDALANGAN",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnaliainpontianak.or.id/index.php/Almaslahah/oai",
-    "id": "ojs.jurnaliainpontianak.or.id",
-    "name": "Al-Maslahah : Jurnal Ilmu Syariah",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.journals.vu.lt/ekonomika/oai",
-    "id": "ojs.www4063.vu.lt",
-    "name": "Ekonomika",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.thejas.com.pk/index.php/pjhs/oai",
-    "id": "ojs2.www.thejas.com.pk",
-    "name": "Pakistan Journal of Health Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal.umpalangkaraya.ac.id/index.php/jsakti/oai",
-    "id": "journal.umpalangkaraya.ac.id",
-    "name": "Jurnal Sains Komputer dan Teknologi Informasi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://seer.ufu.br/index.php/GTLex/oai",
-    "id": "ojs.www.seer.ufu.br",
-    "name": "Revista GTLex",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.stiesa.ac.id/index.php/jass/oai",
-    "id": "ojs2.www.ojs.stiesa.ac.id",
-    "name": "JASS (Journal of Accounting for Sustainable Society)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journals.sub.uni-hamburg.de/apropos/oai",
-    "id": "ojs.journals.sub.uni-hamburg.de",
-    "name": "apropos [Perspektiven auf die Romania]",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://fhukum.unpatti.ac.id/jurnal/balobe/oai",
-    "id": "ojs.fhukum.unpatti.ac.id",
-    "name": "Balobe Law Journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://books.gdeon.org/index.php/gdeon/oai",
-    "id": "omp.books.gdeon.org",
-    "name": "GDEON Editorial",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://e-journal.nalanda.ac.id/index.php/KHIRANI/oai",
-    "id": "ojs2.e-journal.nalanda.ac.id",
-    "name": "Khirani: Jurnal Pendidikan Anak Usia Dini",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://revistas.udg.co.cu/index.php/olimpia/oai",
-    "id": "new.revistas.udg.co.cu",
-    "name": "Revista científica Olimpia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://aplicaciones.bibliolatino.com:81/index.php/fi/oai",
-    "id": "ojs.aplicaciones.bibliolatino.com",
-    "name": "Filosofía & Ciencias de la información",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.ugm.ac.id/index/oai",
-    "id": "ojs.journal.ugm.ac.id",
-    "name": "Jurnal Universitas Gadjah Mada",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repositorio.xoc.uam.mx/oai/request",
-    "id": "repositorio.xoc.uam.mx",
-    "name": "Repositorio Institucional de UAM-Xochimilco",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.rps-journal.ru/jour/oai",
-    "id": "oai.ps-journal.elpub.ru",
-    "name": "Russian Journal of Pediatric Surgery, Anesthesia and Intensive Care",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repositorio.cuc.edu.co/oai/request",
-    "id": "repositorio.cuc.edu.co",
-    "name": "Repositorio de la Universidad de la Costa CUC",
-    "requiredHeader": "https://repositorio.cuc.edu.co/"
-  },
-  {
-    "url": "https://www.jelsciences.com/oai.php",
-    "id": "jelsciences.com",
-    "name": " Journal of Biomedical Research and Environmental Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal.jcopublishing.com/index.php/jcell/oai",
-    "id": "ojs2.journal.jcopublishing.com",
-    "name": "Journal Corner of Education, Linguistics, and Literature",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://mjar.singhpublication.com/index.php/ojs/oai",
-    "id": "oai.mjar.singhpublication.com",
-    "name": "Management Journal for Advanced Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://teee.eu/index.php/index/oai",
-    "id": "eeeic.org",
-    "name": "Transactions on Environment and Electrical Engineering",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://phsreda.com/oai",
-    "id": "phsreda.com",
-    "name": "Publishing house \"Sreda\"",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.ped-perinatology.ru/jour/oai",
-    "id": "ojs.perinatology.elpub.ru",
-    "name": "Российский вестник перинатологии и педиатрии",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.polinema.ac.id/index.php/jaeb/oai",
-    "id": "ojs2.jurnal.polinema.ac.id",
-    "name": "Jurnal Akuntansi dan Ekonomi Bisnis",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://acikerisim.fsm.edu.tr/oai/request",
-    "id": "acikerisim.fsm.edu.tr",
-    "name": "FSM Vakıf University Institutional Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://abcresearchalert.com/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "ABC Research Alert",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://account.utrechtlawreview.org/index.php/up-j-ulr/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Utrecht Law Review",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.journals.vu.lt/AML/oai",
-    "id": "ojs.www4063.vu.lt",
-    "name": "Acta medica Lituanica",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://eprints.nottingham.ac.uk/perl/oai2",
-    "id": "eprints.nottingham.ac.uk.OAI2",
-    "name": "Nottingham ePrints",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://dc.law.utah.edu/do/oai/",
-    "id": "dc.law.utah.edu",
-    "name": "Utah Law Digital Commons",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://diobma.udg.edu/dspace-oai/request",
-    "name": "DUGiMedia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.rhythmos.gr/index.php/Rhythmos/oai",
-    "id": "ojs.rhythmos.gr",
-    "name": "Rhythmos",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repositorio.ecci.edu.co/oai/request",
-    "id": "repositorio.ecci.edu.co",
-    "name": "Repositorio Digital Universidad ECCI",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revista.ibraspp.com.br/RBDPP/oai",
-    "id": "ojs.emnuvens.com.br",
-    "name": "Revista Brasileira de Direito Processual Penal",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://indexlaw.org/index.php/revistadireitoarteliteratura/oai",
-    "id": "ojs.indexlaw.org",
-    "name": "Revista de Direito, Arte e Literatura",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://amcor.asahikawa-med.ac.jp/modules/xoonips/oai.php",
-    "name": "amcor",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.jfpublisher.com/index.php/jcj/oai",
-    "id": "ojs2.journal.jfpublisher.com",
-    "name": "YURIS: Journal of Court and Justice",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.uniku.ac.id/index.php/FON/oai",
-    "id": "lib.journal.uniku.ac.id",
-    "name": "Fon : Jurnal Pendidikan Bahasa dan Sastra Indonesia (Migration to fon.uniku.ac.id)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ekonomi-univetbantara.id/index.php/ijbmir/oai",
-    "id": "ojs2.ekonomi-univetbantara.id",
-    "name": "International Journal Business, Management and Innovation Review",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.unib.ac.id/index.php/jurnaldiksa/oai",
-    "id": "ojs.localhost",
-    "name": "Diksa : Jurnal Pendidikan Bahasa dan Sastra Indonesia",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.unmuhjember.ac.id/index.php/AGRIBEST/oai",
-    "id": "ojs.localhost",
-    "name": "Jurnal Agribest",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.ar-raniry.ac.id/index.php/Share/oai",
-    "id": "ojs.jurnal.ar-raniry.ac.id",
-    "name": "Share: Jurnal Ekonomi dan Keuangan Islam",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://periodicos.ufcat.edu.br/espaco/oai",
-    "id": "ojs2.periodicos.ufcat.edu.br",
-    "name": "Espaço em Revista",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.fkip.unila.ac.id/index.php/JPSI/oai",
-    "id": "ojs.jurnal.fkip.unila.ac.id",
-    "name": "Jurnal Pengabdian Sosial Indonesia",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.uinbanten.ac.id/index.php/holistic/oai",
-    "id": "ojs2.jurnal.uinbanten.ac.id",
-    "name": "Holistic al-Hadis",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.yasin-alsys.org/index.php/masaliq/oai",
-    "id": "ojs2.ejournal.yasin-alsys.org",
-    "name": "MASALIQ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://clinscinutr.org/oai",
-    "id": "clinscinutr.org",
-    "name": "Clinical Science of Nutrition",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://cims.fti.dp.ua/j/oai",
-    "id": "ojs2.cims.fti.dp.ua",
-    "name": "Challenges and Issues of Modern Science",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.staiarrosyid.ac.id/index.php/risda/oai",
-    "id": "ojs2.ejournal.staiarrosyid.ac.id",
-    "name": "Risda: Jurnal Pemikiran dan Pendidikan Islam",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcommons.lmunet.edu/do/oai/",
-    "id": "digitalcommons.lmunet.edu",
-    "name": "LMU Institutional Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://digitalcommons.law.buffalo.edu/do/oai/",
-    "id": "digitalcommons.law.buffalo.edu",
-    "name": "Digital Commons @ University at Buffalo School of Law",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://morethesis.unimore.it/ETD-db/NDLTD-OAI/oai.pl",
-    "id": "morethesis.unimore.it",
-    "name": "MoreThesis",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://account.rc.lse.ac.uk/index.php/lse-j-rc/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Rerum Causae",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://revistas.ubiobio.cl/index.php/index/oai",
-    "id": "ojs.revistas.ubiobio.cl",
-    "name": "Revistas Universidad del Bío-Bío",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://visaemdebate.incqs.fiocruz.br/index.php/visaemdebate/oai",
-    "id": "ojs.visaemdebate.incqs.fiocruz.br",
-    "name": "Vigilância Sanitária em Debate ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistas.ufps.edu.co/index.php/profundidad/oai",
-    "id": "oai.revistas.ufps.edu.co",
-    "name": "Revista Científica Profundidad Construyendo Futuro",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://teknosi.fti.unand.ac.id/index.php/teknosi/oai",
-    "id": "ojs.teknosi.fti.unand.ac.id",
-    "name": "Jurnal Nasional Teknologi dan Sistem Informasi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.modscires.pro/index.php/msr/oai",
-    "id": "sw.www.modscires.pro",
-    "name": "Modern scientific researches",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journals.copmadrid.org/apj/oai",
-    "id": "journals.copmadrid.org",
-    "name": "Anuario de Psicología Jurídica",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://avia.mstuca.ru/jour/oai",
-    "id": "ojs.caht.elpub.ru",
-    "name": "Научный вестник МГТУ ГА",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journals.assaf.org.za/index.php/per/oai",
-    "id": "journals.assaf.org.za",
-    "name": "Potchefstroom Electronic Law Journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.journaljammr.com/index.php/index/oai",
-    "id": "ojs2.journaljammr.com",
-    "name": "SCIENCEDOMAIN international",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.unilim.fr/histoire-education/oai-pmh-repository/request",
-    "id": "histoire-education.unilim.fr",
-    "name": "Fonds Histoire de l'Education",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.sciencepubco.com/index.php/IJAES/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "International Journal of Accounting and Economics Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://afdifaljournal.com/journal/index.php/ijhet/oai",
-    "id": "ojs3.afdifaljournal.com",
-    "name": "International Journal of Health Engineering and Technology",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistas.uca.edu.sv/index.php/index/oai",
-    "id": "revistas.uca.edu.sv",
-    "name": "Portal de Revistas y Publicaciones Seriadas.",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://repository.uin-suska.ac.id/cgi/oai2",
-    "id": "repository.uin-suska.ac.id",
-    "name": "Universitas Islam Negeri Sultan Syarif Kasim Riau Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.journals.vu.lt/Semiotika/oai",
-    "id": "ojs.www4063.vu.lt",
-    "name": "Semiotika",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal-theo.ukdw.ac.id/index.php/aradha/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Aradha: Journal of Divinity, Peace and Conflict Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://minpaku.repo.nii.ac.jp/oai",
-    "name": "National Museum of Ethnology Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnal.fp.unila.ac.id/index.php/JPBP/oai",
-    "id": "ojs.ojsfp.unila.ac.id",
-    "name": "Aqusains: Jurnal Ilmu Perikanan dan Sumberdaya Perairan",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://publishing.socionic.info/index.php/language/oai",
-    "id": "ojs.publishing.socionic.info",
-    "name": "Origin of language and culture: ancient history of mankind",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://pcc.a2zjournals.com/index.php/pcc/oai",
-    "id": "oai.pcc.a2zjournals.com",
-    "name": "International Journal of Primary and Critical Care",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://www.shipjournal.co/index.php/sst/oai",
-    "id": "www.shipjournal.co",
-    "name": "Ship science & technology (Cartagena)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.ijcp.in/IJCP/oai",
-    "id": "ojs2.ojs.ijcp.in",
-    "name": "Indian Journal Of Clinical Practice",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ahr.a2zjournals.com/index.php/ahr/oai",
-    "id": "oai.ahr.a2zjournals.com",
-    "name": "International Journal of Ayurveda and Herbal Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.ywnr.org/index.php/rapi/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Riset Akuntansi dan Portofolio Investasi",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ojs.serambimekkah.ac.id/jnkti/oai",
-    "id": "ojs.jurnal.serambimekkah.ac.id",
-    "name": "Jurnal Nasional Komputasi dan Teknologi Informasi (JNKTI)",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnal.unpad.ac.id/informatio/oai",
-    "id": "ojs.jurnal.unpad.ic.id",
-    "name": "Informatio: Journal of Library and Information Science",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://hw.oeaw.ac.at/oai",
-    "id": "hw.oeaw.ac.at",
-    "name": "Elektronisches Publikationsportal der Österreichischen Akademie der Wissenschaften",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.environcj.in/index.php/ecj/oai",
-    "id": "journal.environcj.in",
-    "name": "Environment Conservation Journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://bibnum.univ-rennes2.fr/oai-pmh-repository/request",
-    "id": "bibnum.univ-rennes2.fr",
-    "name": "Bibliothèque numérique - Université de Rennes 2",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://sebhau.edu.ly/journal/index.php/jopas/oai",
-    "id": "journal.sebhau.edu.ly",
-    "name": "Journal of Pure & Applied Sciences ",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journals.lagh-univ.dz/index.php/index/oai",
-    "id": "journals.lagh-univ.dz",
-    "name": "Scientific Journals of University Amar Telidji - Laghouat",
-    "requiredHeader": null
+    "repositoryName": "REAL CORP Repository",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://www.jbarbiomed.com/index.php/home/oai",
-    "id": "ojs2.jbarbiomed.com",
-    "name": "Journal of Basic and Applied Research in Biomedicine",
-    "requiredHeader": null
+    "repositoryName": "Journal of Basic and Applied Research in Biomedicine",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://jurnal.iain-padangsidimpuan.ac.id/index.php/TZ/oai",
-    "id": "jurnal.iain-padangsidimpuan.ac.id",
-    "name": "Tazkir: Jurnal Penelitian Ilmu-ilmu Sosial dan Keislaman",
-    "requiredHeader": null
+    "url": "http://www.spc.int/DigitalLibrary/SPC/OAI",
+    "repositoryName": "SPC Digital Library",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://czasopisma.uni.opole.pl/index.php/ees/oai",
-    "id": "ojs2.czasopisma.uni.opole.pl",
-    "name": "Economic and Environmental Studies",
-    "requiredHeader": null
+    "url": "https://ojs.stiesa.ac.id/index.php/jass/oai",
+    "repositoryName": "JASS (Journal of Accounting for Sustainable Society)",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://journals.copmadrid.org/ejpalc/oai",
-    "id": "journals.copmadrid.org",
-    "name": "The European Journal of Psychology Applied to Legal Context",
-    "requiredHeader": null
+    "url": "http://journal.umpalangkaraya.ac.id/index.php/mits/oai",
+    "repositoryName": "Media Ilmiah Teknik Sipil",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://international.arimbi.or.id/index.php/DigitalInnovation/oai",
-    "id": "ojs2.international.arimbi.or.id",
-    "name": "Digital Innovation : International Journal of Management",
-    "requiredHeader": null
+    "url": "https://ejournal.yasin-alsys.org/index.php/yasin/oai",
+    "repositoryName": "YASIN",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://sorer.somaliren.org.so/oai2d",
-    "name": "SORER",
-    "requiredHeader": null
+    "url": "https://repositorio.xoc.uam.mx/oai/request",
+    "repositoryName": "Repositorio Institucional de UAM-Xochimilco",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://indexlaw.org/index.php/revistards/oai",
-    "id": "ojs.indexlaw.org",
-    "name": "Revista de Direito e Sustentabilidade",
-    "requiredHeader": null
+    "url": "https://rpmgf.pt/ojs/index.php/rpmgf/oai",
+    "repositoryName": "Revista Portuguesa de Medicina Geral e Familiar",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://touroscholar.touro.edu/do/oai/",
-    "id": "touroscholar.touro.edu",
-    "name": "Touro Scholar",
-    "requiredHeader": null
+    "url": "https://fhukum.unpatti.ac.id/jurnal/balobe/oai",
+    "repositoryName": "Balobe Law Journal",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://repository.cshl.edu/cgi/oai2",
-    "id": "repository.cshl.edu",
-    "name": "CSHL Scientific Digital Repository",
-    "requiredHeader": null
+    "url": "https://www.thejas.com.pk/index.php/pjhs/oai",
+    "repositoryName": "Pakistan Journal of Health Sciences",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://revistas.javeriana.edu.co/index.php/iyu/oai",
-    "id": "ojs.www.javeriana.edu.co",
-    "name": "Ingenieria y Universidad",
-    "requiredHeader": "*"
+    "url": "http://jurnal.iain-padangsidimpuan.ac.id/index.php/Kuttab/oai",
+    "repositoryName": "Al-Kuttab : Jurnal Kajian Perpustakaan, Informasi dan Kearsipan",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://publicaciones.unirioja.es/ojs/index.php/index/oai",
-    "id": "ojs.www.unirioja.es",
-    "name": "Portal de Revistas de la Universidad de La Rioja",
-    "requiredHeader": null
+    "url": "http://aplicaciones.bibliolatino.com:81/index.php/fi/oai",
+    "repositoryName": "Filosofía & Ciencias de la información",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://revmedmilitar.sld.cu/index.php/mil/oai",
+    "repositoryName": "Revista Cubana de Medicina Militar",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://repositorio.cuc.edu.co/oai/request",
+    "repositoryName": "Repositorio de la Universidad de la Costa CUC",
+    "accessControlAllowOrigin": "https://repositorio.cuc.edu.co/"
+  },
+  {
+    "url": "http://journal.umpalangkaraya.ac.id/index.php/jsakti/oai",
+    "repositoryName": "Jurnal Sains Komputer dan Teknologi Informasi",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.jcopublishing.com/index.php/jcell/oai",
+    "repositoryName": "Journal Corner of Education, Linguistics, and Literature",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://estudiossociales.bono.edu.do/index.php/es/oai",
+    "repositoryName": "Revista Estudios Sociales",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.rdm.uff.br/index.php/rdm/oai",
+    "repositoryName": "Revista de Direito dos Monitores da Universidade Federal Fluminense",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://myjurnal.poltekkes-kdi.ac.id/index.php/HIJP/oai",
+    "repositoryName": "Health Information : Jurnal Penelitian",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://teee.eu/index.php/index/oai",
+    "repositoryName": "Transactions on Environment and Electrical Engineering",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.polinema.ac.id/index.php/jaeb/oai",
+    "repositoryName": "Jurnal Akuntansi dan Ekonomi Bisnis",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://wartaandalas.lppm.unand.ac.id/index.php/jwa/oai",
+    "repositoryName": "Warta Pengabdian Andalas",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://eprints.nottingham.ac.uk/perl/oai2",
+    "repositoryName": "Nottingham ePrints",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.arteii.or.id/index.php/Saturnus/oai",
+    "repositoryName": "Saturnus: Jurnal Teknologi dan Sistem Informasi",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://repositorio.ecci.edu.co/oai/request",
+    "repositoryName": "Repositorio Digital Universidad ECCI",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://diobma.udg.edu/dspace-oai/request",
+    "repositoryName": "DUGiMedia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://account.rc.lse.ac.uk/index.php/lse-j-rc/oai",
+    "repositoryName": "Rerum Causae",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://mjar.singhpublication.com/index.php/ojs/oai",
+    "repositoryName": "Management Journal for Advanced Research",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://abcresearchalert.com/oai",
+    "repositoryName": "ABC Research Alert",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.rhythmos.gr/index.php/Rhythmos/oai",
+    "repositoryName": "Rhythmos",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jurnalfe.ustjogja.ac.id/index.php/akuntansi/oai",
+    "repositoryName": "Jurnal Akuntansi",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ejournal.unp.ac.id/index.php/ibs/oai",
+    "repositoryName": "Jurnal Bahasa dan Sastra",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal2.isi-dps.ac.id/index.php/abdiwidya/oai",
+    "repositoryName": "Abdi Widya : Jurnal Pengabdian Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://seer.ufu.br/index.php/GTLex/oai",
+    "repositoryName": "Revista GTLex",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.ped-perinatology.ru/jour/oai",
+    "repositoryName": "Российский вестник перинатологии и педиатрии",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jurnal.umpwr.ac.id/index.php/radiasi/oai",
+    "repositoryName": "Radiasi : Jurnal Berkala Pendidikan Fisika",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://commons.und.edu/do/oai/",
+    "repositoryName": "UND Scholarly Commons",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/revistadireitoarteliteratura/oai",
+    "repositoryName": "Revista de Direito, Arte e Literatura",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.unilim.fr/histoire-education/oai-pmh-repository/request",
+    "repositoryName": "Fonds Histoire de l'Education",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ee.zntu.edu.ua/index.php/1607-6761/oai",
+    "repositoryName": "Electrical Engineering and Power Engineering",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.jfpublisher.com/index.php/jcj/oai",
+    "repositoryName": "YURIS: Journal of Court and Justice",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ejournal.utp.ac.id/index.php/ganesha/oai",
+    "repositoryName": "GANESHA: Jurnal Pengabdian Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.uinbanten.ac.id/index.php/holistic/oai",
+    "repositoryName": "Holistic al-Hadis",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ejournal.staiarrosyid.ac.id/index.php/risda/oai",
+    "repositoryName": "Risda: Jurnal Pemikiran dan Pendidikan Islam",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journals.sub.uni-hamburg.de/apropos/oai",
+    "repositoryName": "apropos [Perspektiven auf die Romania]",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://account.utrechtlawreview.org/index.php/up-j-ulr/oai",
+    "repositoryName": "Utrecht Law Review",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://demo.vebrary.vn/oai2",
+    "repositoryName": "Lac Viet Intergated Library Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/ekonomika/oai",
+    "repositoryName": "Ekonomika",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.sciencepubco.com/index.php/IJAES/oai",
+    "repositoryName": "International Journal of Accounting and Economics Studies",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://clinscinutr.org/oai",
+    "repositoryName": "Clinical Science of Nutrition",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://periodicos.ufcat.edu.br/espaco/oai",
+    "repositoryName": "Espaço em Revista",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://dc.law.utah.edu/do/oai/",
+    "repositoryName": "Utah Law Digital Commons",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://publishing.socionic.info/index.php/language/oai",
+    "repositoryName": "Origin of language and culture: ancient history of mankind",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal-theo.ukdw.ac.id/index.php/aradha/oai",
+    "repositoryName": "Aradha: Journal of Divinity, Peace and Conflict Studies",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal2.isi-dps.ac.id/index.php/damar/oai",
+    "repositoryName": "JURNAL DAMAR PEDALANGAN",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://avia.mstuca.ru/jour/oai",
+    "repositoryName": "Научный вестник МГТУ ГА",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://pcc.a2zjournals.com/index.php/pcc/oai",
+    "repositoryName": "International Journal of Primary and Critical Care",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://cims.fti.dp.ua/j/oai",
+    "repositoryName": "Challenges and Issues of Modern Science",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ejournal.unib.ac.id/index.php/jurnaldiksa/oai",
+    "repositoryName": "Diksa : Jurnal Pendidikan Bahasa dan Sastra Indonesia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://seer.ufrgs.br/Poled/oai",
+    "repositoryName": "Políticas Educativas – PolEd",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistas.ufps.edu.co/index.php/profundidad/oai",
+    "repositoryName": "Revista Científica Profundidad Construyendo Futuro",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ahr.a2zjournals.com/index.php/ahr/oai",
+    "repositoryName": "International Journal of Ayurveda and Herbal Research",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/Semiotika/oai",
+    "repositoryName": "Semiotika",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://afdifaljournal.com/journal/index.php/ijhet/oai",
+    "repositoryName": "International Journal of Health Engineering and Technology",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://e-journal.nalanda.ac.id/index.php/KHIRANI/oai",
+    "repositoryName": "Khirani: Jurnal Pendidikan Anak Usia Dini",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://sebhau.edu.ly/journal/index.php/jopas/oai",
+    "repositoryName": "Journal of Pure & Applied Sciences ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.uniku.ac.id/index.php/FON/oai",
+    "repositoryName": "Fon : Jurnal Pendidikan Bahasa dan Sastra Indonesia (Migration to fon.uniku.ac.id)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.shipjournal.co/index.php/sst/oai",
+    "repositoryName": "Ship science & technology (Cartagena)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journals.copmadrid.org/apj/oai",
+    "repositoryName": "Anuario de Psicología Jurídica",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/AML/oai",
+    "repositoryName": "Acta medica Lituanica",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://repository.uin-suska.ac.id/cgi/oai2",
+    "repositoryName": "Universitas Islam Negeri Sultan Syarif Kasim Riau Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jurnal.fp.unila.ac.id/index.php/JPBP/oai",
+    "repositoryName": "Aqusains: Jurnal Ilmu Perikanan dan Sumberdaya Perairan",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ejournal.yasin-alsys.org/index.php/masaliq/oai",
+    "repositoryName": "MASALIQ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.ywnr.org/index.php/rapi/oai",
+    "repositoryName": "Riset Akuntansi dan Portofolio Investasi",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.journaljammr.com/index.php/index/oai",
+    "repositoryName": "SCIENCEDOMAIN international",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://bibnum.univ-rennes2.fr/oai-pmh-repository/request",
+    "repositoryName": "Bibliothèque numérique - Université de Rennes 2",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://digitalcommons.law.buffalo.edu/do/oai/",
+    "repositoryName": "Digital Commons @ University at Buffalo School of Law",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journals.lagh-univ.dz/index.php/index/oai",
+    "repositoryName": "Scientific Journals of University Amar Telidji - Laghouat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://digitalcommons.lmunet.edu/do/oai/",
+    "repositoryName": "LMU Institutional Repository",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://ejournal.imperiuminstitute.org/index.php/AKURASI/oai",
-    "id": "ojs2.ejournal.imperiuminstitute.org",
-    "name": "AKURASI: Jurnal Riset Akuntansi dan Keuangan",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://nmwa.repo.nii.ac.jp/oai",
-    "name": "The National Museum of Western Art, Tokyo - Publications Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://iipublications.com/iipimrj/oai",
-    "id": "iipublications.com",
-    "name": "IIP : International Multidisciplinary Research Journal",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://e-journal.unair.ac.id/JVHS/oai",
-    "id": "e-journal.unair.ac.id",
-    "name": "Journal of Vocational Health Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistas.ponteditora.org/index.php/j2/oai",
-    "id": "revistas.ponteditora.org",
-    "name": "Jornal Jurídico (J²)",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://journal.lppmunindra.ac.id/index.php/index/oai",
-    "id": "ojs.localhost",
-    "name": "Official Journal of Universitas Indraprasta PGRI",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://osnadocs.ub.uni-osnabrueck.de/oai/request",
-    "id": "osnadocs.ub.uni-osnabrueck.de",
-    "name": "osnaDocs",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://revistasdigitales.upec.edu.ec/index.php/enfermeria/oai",
-    "id": "revistasdigitales.upec.edu.ec",
-    "name": "Horizontes de Enfermería",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jurnaliainpontianak.or.id/index.php/raheema/oai",
-    "id": "ojs.jurnaliainpontianak.or.id",
-    "name": "Raheema",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://vestnik.sibsutis.ru/jour/oai",
-    "id": "oai.sibsutis.elpub.ru",
-    "name": "Вестник СибГУТИ",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ijmrr.medresearch.in/index.php/ijmrr/oai",
-    "id": "oai.ijmrr.medresearch.in",
-    "name": "International Journal of Medical Research and Review",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://drarch.org/index.php/drarch/oai",
-    "id": "drarch.org",
-    "name": "Journal of Design for Resilience in Architecture and Planning",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.ijsciences.com/oai_pmh/oai2.php",
-    "name": "International Journal of Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://e-journals.unmul.ac.id/index.php/JTAF/oai",
-    "id": "ojs.localhost",
-    "name": "Journal of Tropical AgriFood",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.olimpianos.com.br/journal/index.php/Olimpianos/oai",
-    "id": "ojs2.ojs.olimpianos.com.br",
-    "name": "Olimpianos - Journal of Olympic Studies",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://mundoagrario.unlp.edu.ar/index.php/mundoagrario/oai",
-    "id": "ojs.revistas.fahce.unlp.edu.ar",
-    "name": "Mundo Agrario",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://repositorio.cun.edu.co/oai/request",
-    "id": "repositorio.cun.edu.co",
-    "name": "Repositorio Digital Corporación Unificada Nacional de Educación Superior",
-    "requiredHeader": "https://repositorio.cun.edu.co/"
-  },
-  {
-    "url": "https://journal.kdp.co.id/index.php/japsi/oai",
-    "id": "ojs2.journal.kdp.co.id",
-    "name": "Journal of Agriprecision & Social Impact",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://oai.archive.gd.edu.kg/",
-    "name": "GitData Archive",
-    "requiredHeader": "*"
-  },
-  {
-    "url": "https://ijsrcs.isroset.org/index.php/j/oai",
-    "id": "oai.ijsrcs.isroset.org",
-    "name": "International Journal of Scientific Research in Chemical Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://repositorio.ampf.org.ar/greenstone/oaiserver",
-    "id": "repositorio.ampf.org.ar",
-    "name": "Repositorio Institucional de la Asociación Mutual de Protección Familiar",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://account.practicalimplementationofnursingscience.org/index.php/ll-j-pins/oai",
-    "id": "ojs.pkp.sfu.ca",
-    "name": "Practical Implementation of Nursing Science",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://journal.arimsi.or.id/index.php/Kolaborasi/oai",
-    "id": "ojs2.journal.arimsi.or.id",
-    "name": "Kolaborasi : Jurnal Hasil Kegiatan Kolaborasi Pengabdian Masyarakat",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://proceedings.kopertais4.or.id/index.php/ancoms/oai",
-    "id": "oai.proceedings.kopertais4.or.id",
-    "name": "Proceedings of Annual Conference for Muslim Scholars",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://jurnalpembumianpancasila.id/index.php/jpp/oai",
-    "id": "ojs2.jurnalpembumianpancasila.id",
-    "name": "Jurnal Pembumian Pancasila",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://www.sciopen.com/oai_pmh/oai_pmh/joac/oai",
-    "id": "Sciopen.JournalofAdvancedCeramics",
-    "name": "sciopen of Journal of Advanced Ceramics",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ijcbr.com/index.php/ijcbr/oai",
-    "id": "ojs2.ijcbr.com",
-    "name": "International Journal of Clinical and Biomedical Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ejurnalmalahayati.ac.id/index.php/manuju/oai",
-    "id": "ojs.ejurnalmalahayati.ac.id",
-    "name": "Malahayati Nursing Journal",
-    "requiredHeader": null
+    "repositoryName": "AKURASI: Jurnal Riset Akuntansi dan Keuangan",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://sistemasi.ftik.unisi.ac.id/index.php/stmsi/oai",
-    "id": "sistemasi.ftik.unisi.ac.id",
-    "name": "Sistemasi: Jurnal Sistem Informasi",
-    "requiredHeader": null
+    "repositoryName": "Sistemasi: Jurnal Sistem Informasi",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://edoc.bseu.by:8080/oai/request",
-    "id": "edoc.bseu.by",
-    "name": "Электронная библиотека БГЭУ",
-    "requiredHeader": null
+    "url": "http://journals.assaf.org.za/index.php/per/oai",
+    "repositoryName": "Potchefstroom Electronic Law Journal",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://international.aripi.or.id/index.php/IJSIE/oai",
-    "id": "ojs2.international.aripi.or.id",
-    "name": "International Journal of Studies in International Education",
-    "requiredHeader": null
+    "url": "https://journals.copmadrid.org/ejpalc/oai",
+    "repositoryName": "The European Journal of Psychology Applied to Legal Context",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://osnadocs.ub.uni-osnabrueck.de/oai/request",
+    "repositoryName": "osnaDocs",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jurnal.iain-padangsidimpuan.ac.id/index.php/TZ/oai",
+    "repositoryName": "Tazkir: Jurnal Penelitian Ilmu-ilmu Sosial dan Keislaman",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/revistards/oai",
+    "repositoryName": "Revista de Direito e Sustentabilidade",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://sorer.somaliren.org.so/oai2d",
+    "repositoryName": "SORER",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.ijsciences.com/oai_pmh/oai2.php",
+    "repositoryName": "International Journal of Sciences",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://diposit.eina.cat/oai/request",
-    "id": "diposit.eina.cat",
-    "name": "Dipòsit Digital EINA",
-    "requiredHeader": null
+    "repositoryName": "Dipòsit Digital EINA",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://repository.westernsem.edu/pkp/index.php/index/oai",
-    "id": "ojs.repository.westernsem.edu",
-    "name": "Western Theological Seminary Journals",
-    "requiredHeader": null
+    "url": "http://maplants.elpub.ru/jour/oai",
+    "repositoryName": "Машины и установки: проектирование, разработка и эксплуатация",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://www.journals.vu.lt/td/oai",
-    "id": "ojs.www4063.vu.lt",
-    "name": "Tautosakos darbai",
-    "requiredHeader": null
+    "url": "http://repository.cshl.edu/cgi/oai2",
+    "repositoryName": "CSHL Scientific Digital Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jurnal.ar-raniry.ac.id/index.php/Share/oai",
+    "repositoryName": "Share: Jurnal Ekonomi dan Keuangan Islam",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistasdigitales.upec.edu.ec/index.php/enfermeria/oai",
+    "repositoryName": "Horizontes de Enfermería",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://oai.archive.gd.edu.kg/",
+    "repositoryName": "GitData Archive",
+    "accessControlAllowOrigin": "*"
+  },
+  {
+    "url": "https://revistas.ponteditora.org/index.php/j2/oai",
+    "repositoryName": "Jornal Jurídico (J²)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.lppmunindra.ac.id/index.php/index/oai",
+    "repositoryName": "Official Journal of Universitas Indraprasta PGRI",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://proceedings.kopertais4.or.id/index.php/ancoms/oai",
+    "repositoryName": "Proceedings of Annual Conference for Muslim Scholars",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://agritrop.cirad.fr/cgi/oai2",
-    "id": "agritrop.cirad.fr",
-    "name": "Agritrop",
-    "requiredHeader": null
+    "repositoryName": "Agritrop",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://revistas.upr.edu/index.php/index/oai",
-    "id": "revistas.upr.edu",
-    "name": "Portal de Revistas Académicas de la Universidad de Puerto Rico",
-    "requiredHeader": null
+    "url": "https://touroscholar.touro.edu/do/oai/",
+    "repositoryName": "Touro Scholar",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://www.iapress.org/index.php/soic/oai",
-    "id": "ojs.www.iapress.org",
-    "name": "Statistics, Optimization & Information Computing",
-    "requiredHeader": null
+    "url": "http://jurnaliainpontianak.or.id/index.php/Almaslahah/oai",
+    "repositoryName": "Al-Maslahah : Jurnal Ilmu Syariah",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://wrap.warwick.ac.uk/cgi/oai2",
-    "id": "wrap.warwick.ac.uk",
-    "name": "WRAP: Warwick Research Archive Portal",
-    "requiredHeader": null
+    "url": "http://ejurnalmalahayati.ac.id/index.php/manuju/oai",
+    "repositoryName": "Malahayati Nursing Journal",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://aei.pitt.edu/perl/oai2",
-    "id": "PITTAEI.OAI2",
-    "name": "Archive of European Integration",
-    "requiredHeader": null
+    "url": "https://journal.kdp.co.id/index.php/japsi/oai",
+    "repositoryName": "Journal of Agriprecision & Social Impact",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://czasopisma.uni.opole.pl/index.php/ees/oai",
+    "repositoryName": "Economic and Environmental Studies",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnalpembumianpancasila.id/index.php/jpp/oai",
+    "repositoryName": "Jurnal Pembumian Pancasila",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://ejurnalmalahayati.ac.id/index.php/kebidanan/oai",
-    "id": "ojs.ejurnalmalahayati.ac.id",
-    "name": "JKM (Jurnal Kebidanan Malahayati)",
-    "requiredHeader": null
+    "repositoryName": "JKM (Jurnal Kebidanan Malahayati)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://account.practicalimplementationofnursingscience.org/index.php/ll-j-pins/oai",
+    "repositoryName": "Practical Implementation of Nursing Science",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://drarch.org/index.php/drarch/oai",
+    "repositoryName": "Journal of Design for Resilience in Architecture and Planning",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ijsrcs.isroset.org/index.php/j/oai",
+    "repositoryName": "International Journal of Scientific Research in Chemical Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://repository.lasalle.edu.co/oai/request",
+    "repositoryName": "Repositorio Institucional Universidad de La Salle",
+    "accessControlAllowOrigin": "null"
+  },
+  {
+    "url": "https://ijmrr.medresearch.in/index.php/ijmrr/oai",
+    "repositoryName": "International Journal of Medical Research and Review",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://vestnik.sibsutis.ru/jour/oai",
+    "repositoryName": "Вестник СибГУТИ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://mundoagrario.unlp.edu.ar/index.php/mundoagrario/oai",
+    "repositoryName": "Mundo Agrario",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://czasopisma.upjp2.edu.pl/foliahistoricacracoviensia/oai",
+    "repositoryName": "Folia Historica Cracoviensia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.arimsi.or.id/index.php/Kolaborasi/oai",
+    "repositoryName": "Kolaborasi : Jurnal Hasil Kegiatan Kolaborasi Pengabdian Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ijcbr.com/index.php/ijcbr/oai",
+    "repositoryName": "International Journal of Clinical and Biomedical Research",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://press.religacion.com/index.php/rgn/oai",
+    "repositoryName": "",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://aei.pitt.edu/perl/oai2",
+    "repositoryName": "Archive of European Integration",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://wrap.warwick.ac.uk/cgi/oai2",
+    "repositoryName": "WRAP: Warwick Research Archive Portal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://publicaciones.unirioja.es/ojs/index.php/index/oai",
+    "repositoryName": "Portal de Revistas de la Universidad de La Rioja",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.hiskimalang.com/index.php/hiskimalang/oai",
+    "repositoryName": "Jurnal Pembelajaran Sastra",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://innovacionestetica.indecsar.org/revista/index.php/innest/oai",
+    "repositoryName": "Revista Innovación Estética",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journals.urfu.ru/index.php/Izvestia3/oai",
+    "repositoryName": "Tempus et Memoria",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/td/oai",
+    "repositoryName": "Tautosakos darbai",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://international.aripi.or.id/index.php/IJSIE/oai",
+    "repositoryName": "International Journal of Studies in International Education",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://era.dpi.qld.gov.au/cgi/oai2",
-    "id": "era.dpi.qld.gov.au",
-    "name": "DPI eResearch Archive (eRA)",
-    "requiredHeader": null
+    "repositoryName": "DPI eResearch Archive (eRA)",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://publicatio.bibl.u-szeged.hu/cgi/oai2",
-    "id": "publicatio.bibl.u-szeged.hu",
-    "name": "SZTE Publicatio Repozitórium",
-    "requiredHeader": null
+    "url": "https://acnsci.org/journal/index.php/etq/oai",
+    "repositoryName": "Educational Technology Quarterly",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://ojs.ubharajaya.ac.id/index.php/kamnas/oai",
-    "id": "ojs2.ojs.ubharajaya.ac.id",
-    "name": "Jurnal Keamanan Nasional",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://cienciaspecuarias.inifap.gob.mx/index.php/Pecuarias/oai",
-    "id": "cienciaspecuarias.inifap.gob.mx",
-    "name": "Revista Mexicana de Ciencias Pecuarias",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://bcsdjournals.com/index.php/jareas/oai",
-    "id": "ojs2.bcsdjournals.com",
-    "name": "Journal of Advanced Research in Economics and Administrative Sciences",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ojs.pps-ibrahimy.ac.id/index.php/istidlal/oai",
-    "id": "ojs2.ojs.pps-ibrahimy.ac.id",
-    "name": "Istidlal: Jurnal Ekonomi dan Hukum Islam",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.unesa.ac.id/index.php/index/oai",
-    "id": "ojs2.ejournal.unesa.ac.id",
-    "name": "Online Electronic Journal Portal Universitas Negeri Surabaya",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://jumanji.unjani.ac.id/index.php/jumanji/oai",
-    "id": "ojs2.jumanji.unjani.ac.id",
-    "name": "JUMANJI (Jurnal Masyarakat Informatika Unjani)",
-    "requiredHeader": null
+    "url": "https://www.produccioncientificaluz.org/index.php/agronomia/oai",
+    "repositoryName": "Revista de la Facultad de Agronomía de la Universidad del Zulia",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://journal.unpas.ac.id/index.php/planologi/oai",
-    "id": "ojs.journal.unpas.ac.id",
-    "name": "Jurnal Planologi Unpas",
-    "requiredHeader": null
+    "repositoryName": "Jurnal Planologi Unpas",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://jurnal.staiddimakassar.ac.id/index.php/aujpsi/oai",
-    "id": "ojs2.jurnal.staiddimakassar.ac.id",
-    "name": "Al-Ubudiyah: Jurnal Pendidikan dan Studi Islam",
-    "requiredHeader": null
+    "url": "https://revistas.uniss.edu.cu/index.php/margenes/oai",
+    "repositoryName": "Márgenes",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://ejournal.arimbi.or.id/index.php/JUKERDI/oai",
-    "id": "ojs2.ejournal.arimbi.or.id",
-    "name": "Jurnal Kewirausahaan Cerdas dan Digital",
-    "requiredHeader": null
+    "url": "http://www.sciencepubco.com/index.php/IJAMS/oai",
+    "repositoryName": "International Journal of Advanced Mathematical Sciences",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://ebsina.or.id/journals/index.php/djpm/oai",
-    "id": "ojs2.ebsina.or.id",
-    "name": "DEDIKASI SAINTEK Jurnal Pengabdian Masyarakat",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://ijair.id/index.php/ijair/oai",
-    "id": "ojs.ijair.id",
-    "name": "International Journal of Artificial Intelligence Research",
-    "requiredHeader": null
-  },
-  {
-    "url": "https://ejournal.unmuha.ac.id/index.php/bidig/oai",
-    "id": "repository.unmuha.ac.id",
-    "name": "Jurnal Bisnis Digital",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://hipatiapress.com/hpjournals/index.php/qre/oai",
-    "id": "journals.hipatiapress.com",
-    "name": "Qualitative Research in Education",
-    "requiredHeader": null
+    "url": "http://www.uajournals.com/ojs/index.php/businesssimulationjournal/oai",
+    "repositoryName": "Company Games & Business Simulation Academic Journal",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://ijss.keu-journals.com/index.php/ijss/oai",
-    "id": "ojs2.ijss.keu-journals.com",
-    "name": "International Journal of Social Sciences",
-    "requiredHeader": null
+    "repositoryName": "International Journal of Social Sciences",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://www.biopreparations.ru/jour/oai",
-    "id": "oai.biopreparat.elpub.ru",
-    "name": "БИОпрепараты. Профилактика, диагностика, лечение",
-    "requiredHeader": null
+    "url": "http://oapub.org/edu/index.php/ejse/oai",
+    "repositoryName": "European Journal of Special Education Research",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://publicaciones.unirioja.es/ojs/index.php/index/oai",
-    "id": "ojs.www.unirioja.es",
-    "name": "Portal de Revistas de la Universidad de La Rioja",
-    "requiredHeader": null
+    "url": "https://ebsina.or.id/journals/index.php/djpm/oai",
+    "repositoryName": "DEDIKASI SAINTEK Jurnal Pengabdian Masyarakat",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://international.arimbi.or.id/index.php/GreenInflation/oai",
-    "id": "ojs2.international.arimbi.or.id",
-    "name": "Green Inflation: International Journal of Management and Strategic Business Leadership",
-    "requiredHeader": null
+    "url": "http://ijair.id/index.php/ijair/oai",
+    "repositoryName": "International Journal of Artificial Intelligence Research",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://jagworks.southalabama.edu/do/oai/",
-    "id": "jagworks.southalabama.edu",
-    "name": "JagWorks@USA",
-    "requiredHeader": null
+    "url": "https://e-journal.unair.ac.id/JVHS/oai",
+    "repositoryName": "Journal of Vocational Health Studies",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://ejournal.areai.or.id/index.php/JBEP/oai",
-    "id": "ojs2.ejournal.areai.or.id",
-    "name": "Jurnal Bisnis, Ekonomi Syariah, dan Pajak",
-    "requiredHeader": null
+    "url": "http://repository.center.wakayama-u.ac.jp/oai/request",
+    "repositoryName": "和歌山大学学術リポジトリ ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ojs.pps-ibrahimy.ac.id/index.php/istidlal/oai",
+    "repositoryName": "Istidlal: Jurnal Ekonomi dan Hukum Islam",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://agpegondwanajournal.co.in/index.php/agpe/oai",
+    "repositoryName": "AGPE THE ROYAL GONDWANA RESEARCH JOURNAL OF HISTORY, SCIENCE, ECONOMIC, POLITICAL AND SOCIAL SCIENCE",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://plj.ac.id/ojs/index.php/jrakt/oai",
+    "repositoryName": "JURNAL LENTERA AKUNTANSI",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://bcsdjournals.com/index.php/jareas/oai",
+    "repositoryName": "Journal of Advanced Research in Economics and Administrative Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/sll/oai",
+    "repositoryName": "Senoji Lietuvos literatūra",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.staiddimakassar.ac.id/index.php/aujpsi/oai",
+    "repositoryName": "Al-Ubudiyah: Jurnal Pendidikan dan Studi Islam",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://hipatiapress.com/hpjournals/index.php/qre/oai",
+    "repositoryName": "Qualitative Research in Education",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journals.rta.lv/index.php/SIE/oai",
+    "repositoryName": "SOCIETY. INTEGRATION. EDUCATION. Proceedings of the International Scientific Conference",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://hw.oeaw.ac.at/oai",
+    "repositoryName": "Elektronisches Publikationsportal der Österreichischen Akademie der Wissenschaften",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "https://cadernos.abralin.org/index.php/cadernos/oai",
-    "id": "ojs3.cadernos.abralin.org",
-    "name": "Cadernos de Linguística",
-    "requiredHeader": null
+    "repositoryName": "Cadernos de Linguística",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://ecollections.law.fiu.edu/do/oai/",
-    "id": "ecollections.law.fiu.edu",
-    "name": "eCollections",
-    "requiredHeader": null
+    "url": "https://phsreda.com/oai",
+    "repositoryName": "Publishing house \"Sreda\"",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "https://digitalcommons.dartmouth.edu/do/oai/",
-    "id": "digitalcommons.dartmouth.edu",
-    "name": "Dartmouth Digital Commons",
-    "requiredHeader": null
+    "url": "https://repositorio.be-anid.com/server/oai/request",
+    "repositoryName": "Repositorio ANID",
+    "accessControlAllowOrigin": null
   },
   {
-    "url": "http://repository.dl.itc.u-tokyo.ac.jp/oai",
-    "name": "UTokyo Repository",
-    "requiredHeader": null
-  },
-  {
-    "url": "http://kyoto-art.repo.nii.ac.jp/oai",
-    "name": "Kyoto University of the Arts Repository",
-    "requiredHeader": null
+    "url": "https://revistas.ute.edu.ec/index.php/tsafiqui/oai",
+    "repositoryName": "Tsafiqui - Revista Científica en Ciencias Sociales",
+    "accessControlAllowOrigin": null
   },
   {
     "url": "http://journal.umpalangkaraya.ac.id/index.php/daun/oai",
-    "id": "journal.umpalangkaraya.ac.id",
-    "name": "Daun: Jurnal Ilmiah Pertanian dan Kehutanan",
-    "requiredHeader": null
+    "repositoryName": "Daun: Jurnal Ilmiah Pertanian dan Kehutanan",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://rivisteclueb.it/riviste/index.php/index/oai",
+    "repositoryName": "Riviste Clueb",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jffp.pitt.edu/ojs/index.php/jffp/oai",
+    "repositoryName": "Journal of French and Francophone Philosophy",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://publicatio.bibl.u-szeged.hu/cgi/oai2",
+    "repositoryName": "SZTE Publicatio Repozitórium",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ejournal.unwaha.ac.id/index.php/dinamika/oai",
+    "repositoryName": "DINAMIKA : Jurnal Kajian Pendidikan dan Keislaman",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.uinjkt.ac.id/index.php/arabiyat/oai",
+    "repositoryName": "Arabiyat : Jurnal Pendidikan Bahasa Arab dan Kebahasaaraban",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://revista.psiquia.org/index.php/lt/oai",
+    "repositoryName": "PsiQuia Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://etd.adm.unipi.it/ETD-db/NDLTD-OAI/oai.pl",
+    "repositoryName": "Electronic Thesis and Dissertation Archive",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.lpkd.or.id/index.php/Dilan/oai",
+    "repositoryName": "Dinamika Pembelajaran : Jurnal Pendidikan dan bahasa",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ecollections.law.fiu.edu/do/oai/",
+    "repositoryName": "eCollections",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.stieken.ac.id/index.php/peta/oai",
+    "repositoryName": "Jurnal Penelitian Teori & Terapan Akuntansi (PETA)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://mcfns.com/index.php/Journal/oai",
+    "repositoryName": "Mathematical and Computational Forestry & Natural-Resource Sciences (MCFNS)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://visaemdebate.incqs.fiocruz.br/index.php/visaemdebate/oai",
+    "repositoryName": "Vigilância Sanitária em Debate ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://anesthesiaejournal.com/index.php/aej/oai",
+    "repositoryName": "Anesthesia eJournal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.environcj.in/index.php/ecj/oai",
+    "repositoryName": "Environment Conservation Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.biopreparations.ru/jour/oai",
+    "repositoryName": "БИОпрепараты. Профилактика, диагностика, лечение",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ejournal.mejailmiah.com/index.php/adagium/oai",
+    "repositoryName": "Adagium: Jurnal Ilmiah Hukum",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://sujo.usindh.edu.pk/index.php/THE-WOMEN/oai",
+    "repositoryName": "The Women - Annual Research Journal of Gender Studies             ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://tadayun.org/index.php/tadayun/oai",
+    "repositoryName": "Tadayun: Jurnal Hukum Ekonomi Syariah",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.ipb.ac.id/index.php/jikk/oai",
+    "repositoryName": "Jurnal Ilmu Keluarga dan Konsumen",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journals.gujaf.com.ng/index.php/gujaf/oai",
+    "repositoryName": "Gusau Journal of Accounting and Finance",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ub-madoc.bib.uni-mannheim.de/cgi/oai2",
+    "repositoryName": "MADOC ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://repository.westernsem.edu/pkp/index.php/index/oai",
+    "repositoryName": "Western Theological Seminary Journals",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.umpo.ac.id/index.php/dimensi/oai",
+    "repositoryName": "Jurnal Dimensi Pendidikan dan Pembelajaran",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://digitalcommons.dartmouth.edu/do/oai/",
+    "repositoryName": "Dartmouth Digital Commons",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jagworks.southalabama.edu/do/oai/",
+    "repositoryName": "JagWorks@USA",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://earsiv.ebyu.edu.tr/oai/request",
+    "repositoryName": "DSpace@Erzincan: Erzincan Binali Yildirim University Institutional Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://cienciaspecuarias.inifap.gob.mx/index.php/Pecuarias/oai",
+    "repositoryName": "Revista Mexicana de Ciencias Pecuarias",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://acnsci.org/journal/index.php/ed/oai",
+    "repositoryName": "Educational Dimension",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://rep.barsu.by/server/oai/request",
+    "repositoryName": "Репозиторий БарГУ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.collectconcept.de/oai.php",
+    "repositoryName": "CollectConcept",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://account.ubiquityproceedings.com/index.php/up-j-up/oai",
+    "repositoryName": "Ubiquity Proceedings",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ijitgeb.org/ijitgeb/oai",
+    "repositoryName": "International Journal in Information Technology in Governance, Education and Business",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ojs.indrastra.com/index.php/indrastra/oai",
+    "repositoryName": "IndraStra Global",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://riaa-tecno.unca.edu.ar/oai/request",
+    "repositoryName": "Repositorio Institucional de Acceso Abierto de la FTYCA de la UNCA",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://tantra.org.ar/biblioteca/index.php/Biblioteca/oai",
+    "repositoryName": "Biblioteca de la Escuela Argentina de Tantra | (descarga gratis)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.arteii.or.id/index.php/Uranus/oai",
+    "repositoryName": "Uranus: Jurnal Ilmiah Teknik Elektro, Sains dan Informatika",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://oai.e-spacio.uned.es/server/oai/request",
+    "repositoryName": "e-Spacio UNED",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://library.camtree.org/server/oai/request",
+    "repositoryName": "Camtree Digital Library",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://digitalcommons.latech.edu/do/oai/",
+    "repositoryName": "Louisiana Tech Digital Commons",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://eprints.soas.ac.uk/perl/oai2",
+    "repositoryName": "SOAS Research Online",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://e-jlia.com/index.php/jlpe/oai",
+    "repositoryName": "Journal of Legal and Political Education",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://scholarship.law.stjohns.edu/do/oai/",
+    "repositoryName": "St. John's Law Scholarship Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.midpublisher.com/index.php/jscd/oai",
+    "repositoryName": "Journal of Sustainable Community Development",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://publicaciones.unirioja.es/ojs/index.php/index/oai",
+    "repositoryName": "Portal de Revistas de la Universidad de La Rioja",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.unpas.ac.id/index.php/sampurasun/oai",
+    "repositoryName": "Journal Sampurasun : Interdisciplinary Studies for Cultural Heritage",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://digitalcommons.njit.edu/do/oai/",
+    "repositoryName": "Digital Commons @ NJIT",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://publications.lnu.edu.ua/journals/index.php/biology/oai",
+    "repositoryName": "Біологічні студії / Studia Biologica",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.kdpu.edu.ua/filstd/oai",
+    "repositoryName": "Філологічні студії: Науковий вісник Криворізького державного педагогічного університету",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://aasrc.org/aasrj/index.php/aasrj/oai",
+    "repositoryName": "American Academic & Scholarly Research Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jvestnik-politology.donnu.edu.ua/oai",
+    "repositoryName": "Вісник Донецького національного університету імені Василя Стуса. Серія політичні науки",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://scholarship.law.ufl.edu/do/oai/",
+    "repositoryName": "UF Law Scholarship Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/revistadgrc/oai",
+    "repositoryName": "Revista de Direito, Globalização e Responsabilidade nas Relações de Consumo",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.iapress.org/index.php/soic/oai",
+    "repositoryName": "Statistics, Optimization & Information Computing",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://researcharchive.lincoln.ac.nz/dspace-oai/request",
+    "repositoryName": "Research@Lincoln",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://pkm.lpkd.or.id/index.php/Bersama/oai",
+    "repositoryName": "Kesejahteraan Bersama : Jurnal Pengabdian dan Keberlanjutan Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.uhamka.ac.id/index.php/jutikom/oai",
+    "repositoryName": "Jurnal Teknik Informatika dan Komputer",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.rps-journal.ru/jour/oai",
+    "repositoryName": "Russian Journal of Pediatric Surgery, Anesthesia and Intensive Care",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://rdi.uncoma.edu.ar/oai/snrd",
+    "repositoryName": "Repositorio UNCo",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://revistas.ugca.edu.co/index.php/sophia/oai",
+    "repositoryName": "Sophia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://fuse.franklin.edu/do/oai/",
+    "repositoryName": "FUSE (Franklin University Scholarly Exchange)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://innovareacademics.in/journals/index.php/ijms/oai",
+    "repositoryName": "Innovare Journal of Medical Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.iapsmupuk.org/journal/index.php/IJCH/oai",
+    "repositoryName": "Indian Journal of Community Health",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://openriver.winona.edu/do/oai/",
+    "repositoryName": "OpenRiver",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ejournal.ipinternasional.com/index.php/ijcs/oai",
+    "repositoryName": "International Journal of Community Service (IJCS)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.siboncoj.ru/jour/oai",
+    "repositoryName": "Сибирский онкологический журнал",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ejournal.stmik-wp.ac.id/index.php/ictech/oai",
+    "repositoryName": "IC Tech: Majalah Ilmiah",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ojs.uv.es/index.php/MCLM/oai",
+    "repositoryName": "Magnificat Cultura i Literatura Medievals",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://hrcak.srce.hr/ojs/index.php/rgn/oai",
+    "repositoryName": "Rudarsko-geološko-naftni zbornik",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://e-journal.undikma.ac.id/index.php/prismasains/oai",
+    "repositoryName": "Prisma Sains : Jurnal Pengkajian Ilmu dan Pembelajaran Matematika dan IPA IKIP Mataram",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.unesa.ac.id/index.php/lenterabio/oai",
+    "repositoryName": "LenteraBio : Berkala Ilmiah Biologi ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://kontekstypedagogiczne.pl/kp/oai",
+    "repositoryName": "Konteksty Pedagogiczne",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ojs.unida.ac.id/index.php/jtdik/oai",
+    "repositoryName": "Didaktika Tauhidi: Jurnal Pendidikan Guru Sekolah Dasar",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://bdzalba.fau.unlp.edu.ar/greenstone/cgi-bin/oaiserver.cgi",
+    "repositoryName": "Biblioteca Digital Arq. Hilario Zalba - Facultad de Arquitectura y Urbanismo - Universidad Nacional de La Plata",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://archimage.efa.gr/oai.php",
+    "repositoryName": "Documents des Archives de l'EFA",
+    "accessControlAllowOrigin": "*"
+  },
+  {
+    "url": "http://repositorio.upct.es/oai/request",
+    "repositoryName": "Repositorio Digital UPCT",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.ijbcp.com/index.php/ijbcp/oai",
+    "repositoryName": "International Journal of Basic & Clinical Pharmacology",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://riiopenjournals.com/index.php/society_sustainability/oai",
+    "repositoryName": "Society & Sustainability",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://seocologi.com/index.php/seocology/oai",
+    "repositoryName": "International Journal of Seocology",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://tecnoscientifica.com/journal/tasp/oai",
+    "repositoryName": "Tropical Aquatic and Soil Pollution",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.jaast.org/index.php/jaast/oai",
+    "repositoryName": "Journal of Applied Agricultural Science and Technology",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jesica.itsk-soepraoen.ac.id/index.php/jesica/oai",
+    "repositoryName": "Journal of Enhanced Studies in Informatics and Computer Applications",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.uokufa.edu.iq/index.php/kmj/oai",
+    "repositoryName": "Kufa Medical Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://vjs.ac.vn/index.php/vjmech/oai",
+    "repositoryName": "Vietnam Journal of Mechanics",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://pub.h-brs.de/oai",
+    "repositoryName": "pub H-BRS - Publikationsserver der Hochschule Bonn-Rhein-Sieg",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ijfac.unsri.ac.id/index.php/ijfac/oai",
+    "repositoryName": "IJFAC (Indonesian Journal of Fundamental and Applied Chemistry)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://mednauki.ru/index.php/MD/oai",
+    "repositoryName": "Мать и Дитя в Кузбассе",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://repository.uinsu.ac.id/cgi/oai2",
+    "repositoryName": "Repository UIN Sumatera Utara ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.cogitatiopress.com/mediaandcommunication/oai",
+    "repositoryName": "Media and Communication",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistas.elpoli.edu.co/index.php/teu/oai",
+    "repositoryName": "Teuken Bidikay - Revista Latinoamericana de Investigación en Organizaciones, Ambiente y Sociedad",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://pkm.lpkd.or.id/index.php/Harmoni/oai",
+    "repositoryName": "Harmoni Sosial : Jurnal Pengabdian dan Solidaritas Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://swastikajournal.com/index.php/jmh/oai",
+    "repositoryName": "Journal Management and Hospitality",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.ijmp.jor.br/index.php/index/oai",
+    "repositoryName": "Independent Journal of Management & Production",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.animalproduction.net/index.php/JAP/oai",
+    "repositoryName": "ANIMAL PRODUCTION",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://libros.editorialunioncientifica.com/index.php/EUC/oai",
+    "repositoryName": "Editorial Unión Científica",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ph.pollub.pl/index.php/jcsi/oai",
+    "repositoryName": "Journal of Computer Sciences Institute",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://docs.lib.purdue.edu/do/oai/",
+    "repositoryName": "Purdue e-Pubs",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.enliinstitute.com/index.php/ABANNA/oai",
+    "repositoryName": "ABANNA: Journal Of Contemporary Islamic Education",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.engj.org/index.php/ej/oai",
+    "repositoryName": "Engineering Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ejournal.uin-suka.ac.id/febi/ekbis/oai",
+    "repositoryName": "EkBis: Jurnal Ekonomi dan Bisnis",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.uel.br/revistas/uel/index.php/educanalise/oai",
+    "repositoryName": "Educação em Análise",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://acityajournal.com/index.php/ijssc/oai",
+    "repositoryName": "Integration: Journal Of Social Sciences And Culture",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.joaasr.com/index.php/joaasr/oai",
+    "repositoryName": "JOURNAL OF ADVANCED APPLIED SCIENTIFIC RESEARCH",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://repository.tdmu.edu.ua/oai/request",
+    "repositoryName": "Scientific Repository of I. Horbachevsky Ternopil National Medical University",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/scandinavistica/oai",
+    "repositoryName": "Scandinavistica Vilnensis",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.cogitatiopress.com/oceanandsociety/oai",
+    "repositoryName": "Ocean and Society",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://bjihs.emnuvens.com.br/bjihs/oai",
+    "repositoryName": "Brazilian Journal of Implantology and Health Sciences  ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://neiudc.neiu.edu/do/oai/",
+    "repositoryName": "NEIU Digital Commons",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jspp.psychopen.eu/index.php/index/oai",
+    "repositoryName": "PsychOpen GOLD",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ojs.uv.es/index.php/JO3T/oai",
+    "repositoryName": "Journal of Ozone Therapy",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://wahacademia.com/index.php/journal/oai",
+    "repositoryName": "Wah Academia Journal of Social Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://racimo.usal.edu.ar/cgi/oai2",
+    "repositoryName": "RACIMO - Repositorio Institucional",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journals.gen.tr/index.php/ijla/oai",
+    "repositoryName": "International Journal of Language and Awareness",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://innovareacademics.in/journals/index.php/ijs/oai",
+    "repositoryName": "Innovare Journal of Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://digitalcommons.isical.ac.in/do/oai/",
+    "repositoryName": "ISI Digital Commons",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://repository.alt.ac.uk/cgi/oai2",
+    "repositoryName": "ALT Open Access Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.uinbanten.ac.id/index.php/uktub/oai",
+    "repositoryName": "Uktub: Journal of Arabic Studies",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.niidi.ru/jofin/oai",
+    "repositoryName": "Журнал инфектологии",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://horizonepublishing.com/journals/index.php/PST/oai",
+    "repositoryName": "Plant Science Today",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jieee.a2zjournals.com/index.php/ieee/oai",
+    "repositoryName": "Journal of Informatics Electrical and Electronics Engineering (JIEEE)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jase.a2zjournals.com/index.php/ase/oai",
+    "repositoryName": "Journal of Applied Science and Education (JASE) ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistasenlinea.saber.ucab.edu.ve/index.php/logoi/oai",
+    "repositoryName": "Lógoi. Revista de Filosofía",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://gayana.cl/index.php/gn/oai",
+    "repositoryName": "Gayana",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.ijcmph.com/index.php/ijcmph/oai",
+    "repositoryName": "International Journal Of Community Medicine And Public Health",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://ejournal.yasin-alsys.org/index.php/alsys/oai",
+    "repositoryName": "ALSYS",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://repository.udca.edu.co/oai/request",
+    "repositoryName": "Repositorio - Universidad de Ciencias Aplicadas y Ambientales UDCA.",
+    "accessControlAllowOrigin": "https://repository.udca.edu.co"
+  },
+  {
+    "url": "http://vestnik.socio.msu.ru/jour/oai",
+    "repositoryName": "Вестник Московского университета. Серия 18. Социология и политология",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jfu.fmipa.unand.ac.id/index.php/jfu/oai",
+    "repositoryName": "Jurnal Fisika Unand",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jurnal.fp.unila.ac.id/index.php/bdpi/oai",
+    "repositoryName": "e-Jurnal Rekayasa dan Teknologi Budidaya Perairan",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.e-rara.ch/oai/",
+    "repositoryName": "Visual Library Server",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://cvmet.misis.ru/jour/oai",
+    "repositoryName": "Известия вузов. Цветная металлургия",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistaannep.com.br/index.php/radp/oai",
+    "repositoryName": "Revista ANNEP de Direito Processual",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.widyagama.ac.id/index.php/jasee/oai",
+    "repositoryName": "JASEE Journal of Application and Science on Electrical Engineering ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.aseansocialwork.com/index.php/asw/oai",
+    "repositoryName": "Asean Social Work Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistas.unav.edu/index.php/rilce/oai",
+    "repositoryName": "Rilce. Revista de Filología Hispánica",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://account.pmejournal.org/index.php/up-j-pme/oai",
+    "repositoryName": "Perspectives on Medical Education",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.asrihindo.or.id/index.php/Komunitas/oai",
+    "repositoryName": "Komunitas: Hasil Kegiatan Pengabdian Masyarakat Indonesia ",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://agriprima.polije.ac.id/index.php/journal/oai",
+    "repositoryName": "Agriprima : Journal of Applied Agricultural Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://trendspediatrics.com/oai",
+    "repositoryName": "Trends in Pediatrics",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://polipapers.upv.es/index.php/reinad/oai",
+    "repositoryName": "Revista sobre la infancia y la adolescencia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.lawjournal.digital/jour/oai",
+    "repositoryName": "Journal of Digital Technologies and Law",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ijwpc.mcgill.ca/oai",
+    "repositoryName": "The International Journal of Whole Person Care",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.febubhara-sby.org/ijms/oai",
+    "repositoryName": "Indonesian Journal of Management Science",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.jfpublisher.com/index.php/sujana/oai",
+    "repositoryName": "SUJANA: Education and Learning Review",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://jesr.eng.unila.ac.id/index.php/index/oai",
+    "repositoryName": "",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://omp.ub.rub.de/index.php/ZEFIR/oai",
+    "repositoryName": "ZEFIR-Publikationen",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.kdpu.edu.ua/psychology/oai",
+    "repositoryName": "Актуальні проблеми психології в закладах освіти",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://mednauki.ru/index.php/MK/oai",
+    "repositoryName": "Медицина в Кузбассе",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://vestift.belnauka.by/jour/oai",
+    "repositoryName": "Известия Национальной академии наук Беларуси. Серия физико-технических наук",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://niveles.esprint.tech/index.php/niveles/oai",
+    "repositoryName": "Revista de Investigación Educativa Niveles",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://press.ierek.com/index.php/ARChive/oai",
+    "repositoryName": "ARCHive-SR",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://vtechworks.lib.vt.edu/oai/request",
+    "repositoryName": "VTechWorks",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://dirasathispanicas.org/index.php/dirasathispanicas/oai",
+    "repositoryName": "Dirāsāt Hispānicas. Revista Tunecina de Estudios Hispánicos",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/revistadtmat/oai",
+    "repositoryName": "Revista do Direito do Trabalho e Meio Ambiente do Trabalho",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://cajgh.pitt.edu/ojs/index.php/cajgh/oai",
+    "repositoryName": "Central Asian Journal of Global Health",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://hipatiapress.com/hpjournals/index.php/remie/oai",
+    "repositoryName": "Multidisciplinary Journal of Educational Research",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://gala.gre.ac.uk/cgi/oai2",
+    "repositoryName": "Greenwich Academic Literature Archive",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://publishing.pup.edu.ph/ojs/index.php/SSDR/oai",
+    "repositoryName": "Social Sciences and Development Review",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://scholar.dsu.edu/do/oai/",
+    "repositoryName": "Beadle Scholar",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://numismatics.org/archives/oai/",
+    "repositoryName": "American Numismatic Society",
+    "accessControlAllowOrigin": "*"
+  },
+  {
+    "url": "https://digitalcommons.rockefeller.edu/do/oai/",
+    "repositoryName": "Digital Commons @ RU",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://omp.ub.rub.de/index.php/RUB/oai",
+    "repositoryName": "OMP Ruhr-Universität Bochum",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.uinbanten.ac.id/index.php/assibyan/oai",
+    "repositoryName": "As-Sibyan: Jurnal Pendidikan Anak Usia Dini",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jap.fapet.unsoed.ac.id/index.php/JAP/oai",
+    "repositoryName": "ANIMAL PRODUCTION",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://seer.ufrgs.br/index.php/rita/oai",
+    "repositoryName": "Revista de Informática Teórica e Aplicada",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://josi.ft.unand.ac.id/index.php/josi/oai",
+    "repositoryName": "Jurnal Optimasi Sistem Industri",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://scholarworks.seattleu.edu/do/oai/",
+    "repositoryName": "ScholarWorks @ SeattleU",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.arteii.or.id/index.php/bumi/oai",
+    "repositoryName": "Bumi: Jurnal Hasil Kegiatan Sosialisasi Pengabdian kepada Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://eprints.dbis.informatik.uni-rostock.de/cgi/oai2",
+    "repositoryName": "Dbis Repository",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://riiopenjournals.com/index.php/hospitality-tourism-review/oai",
+    "repositoryName": "Hospitality & Tourism Review",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://pillars.taylor.edu/do/oai/",
+    "repositoryName": "Pillars at Taylor University",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ges.rgo.ru/jour/oai",
+    "repositoryName": "GEOGRAPHY, ENVIRONMENT, SUSTAINABILITY",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://bk.ppj.unp.ac.id/index.php/aiptekin/oai",
+    "repositoryName": "Jurnal Aplikasi IPTEK Indonesia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.sciencepubco.com/index.php/IJAA/oai",
+    "repositoryName": "International Journal of Advanced Astronomy",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://convergenceseditorial.com.br/index.php/enfermagembrasil/oai",
+    "repositoryName": "Enfermagem Brasil",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistas.faculdadedamas.edu.br/index.php/academico/oai",
+    "repositoryName": "Portal de Trabalhos Acadêmicos",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://aj-tuv.org/index.php/ajtuv/oai",
+    "repositoryName": "ГОДИШНИК НА ТЕХНИЧЕСКИ УНИВЕРСИТЕТ - ВАРНА",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://online-journal.unja.ac.id/mankeu/oai",
+    "repositoryName": "Jurnal Manajemen Terapan dan Keuangan",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journals.uran.ua/index.php/2307-0404/oai",
+    "repositoryName": "Medicni perspektivi",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ejournalyarsi.ac.id/index.php/KNJ/oai",
+    "repositoryName": "Khatulistiwa Nursing Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://saa.rovedar.com/index.php/SAA/oai",
+    "repositoryName": "Small Animal Advances",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://seer.ufrgs.br/index.php/revistaihgrgs/oai",
+    "repositoryName": "Revista do Instituto Histórico e Geográfico do Rio Grande do Sul",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://erevistas.saber.ula.ve/index.php/ecotropicos/oai",
+    "repositoryName": "Ecotrópicos",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://educationandscience.ted.org.tr/oai",
+    "repositoryName": "Education and Science",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://sapi.bntu.by/jour/oai",
+    "repositoryName": "Системный анализ и прикладная информатика",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.uokufa.edu.iq/index.php/kjg/oai",
+    "repositoryName": "Geographical Research Journal (Discontinued)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistas.unc.edu.pe/index.php/Quaestio-iuris/oai",
+    "repositoryName": "Revista quaestio iuris\t",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/direitotributario/oai",
+    "repositoryName": "Revista de Direito Tributário e Financeiro",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://otago.ourheritage.ac.nz/oai-pmh-repository/request",
+    "repositoryName": "ourheritage.ac.nz | OUR Heritage, University of Otago Library, Dunedin, New Zealand",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.unesa.ac.id/index.php/jpfa/oai",
+    "repositoryName": "Jurnal Penelitian Fisika dan Aplikasinya (JPFA)",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.enliinstitute.com/index.php/ENCOMMUNICATION/oai",
+    "repositoryName": "ENCOMMUNICATION: Journal of Communication Studies",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://eprints.tversu.ru/cgi/oai2",
+    "repositoryName": "Репозиторий Тверского госуниверситета",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ojs.indrastra.com/index.php/liberalstudies/oai",
+    "repositoryName": "Liberal Studies",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.uel.br/revistas/uel/index.php/index/oai",
+    "repositoryName": "Portal de Periódicos da UEL",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://pub.h-brs.de/oai",
+    "repositoryName": "pub H-BRS - Publikationsserver der Hochschule Bonn-Rhein-Sieg",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/rdagp/oai",
+    "repositoryName": "Revista de Direito Administrativo e Gestão Pública",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/psichologija/oai",
+    "repositoryName": "Psichologija",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://doras.dcu.ie/cgi/oai2",
+    "repositoryName": "DORAS",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistes.iec.cat/index.php/index/oai",
+    "repositoryName": "Hemeroteca Científica Catalana",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://digital.library.upenn.edu/webbin/OAI-celebration",
+    "repositoryName": "A Celebration of Women Writers",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://account.jotsjournal.org/index.php/vt-j-jts/oai",
+    "repositoryName": "Journal of Technology Studies",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://revue.ummto.dz/index.php/idi/oai",
+    "repositoryName": "Iles d imesli",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://e-journal.nalanda.ac.id/index.php/jipm/oai",
+    "repositoryName": "Jurnal Informasi Pengabdian Masyarakat",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnal.aksaraglobal.co.id/index.php/jkpim/oai",
+    "repositoryName": "Jurnal Kajian dan Penalaran Ilmu Manajemen",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.ipb.ac.id/index.php/jurnalikt/oai",
+    "repositoryName": "Jurnal Ilmu dan Teknologi Kelautan Tropis",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/revistadipic/oai",
+    "repositoryName": "Revista de Direito, Inovação, Propriedade Intelectual e Concorrência",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://grdspublishing.org/index.php/people/oai",
+    "repositoryName": "PEOPLE: International Journal of Social Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://medjournal.co.in/index.php/ajm/oai",
+    "repositoryName": "Academia Journal of Medicine",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://mji.ui.ac.id/journal/index.php/mji/oai",
+    "repositoryName": "Medical Journal of Indonesia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://digital.csic.es/dspace-oai/request",
+    "repositoryName": "DIGITAL.CSIC",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.lppmunindra.ac.id/index.php/Faktor_Exacta/oai",
+    "repositoryName": "Faktor Exacta",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://e-journal.my.id/onoma/oai",
+    "repositoryName": "Jurnal Onoma: Pendidikan, Bahasa, dan Sastra",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://eprints.unisla.ac.id/cgi/oai2",
+    "repositoryName": "Repository UNISLA",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ojs.diffundit.com/index.php/index/oai",
+    "repositoryName": "diffundit® Portal de Revistas Electrónicas",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://pswjournal.org/index.php/njpsw/oai",
+    "repositoryName": "National Journal of Professional Social Work",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://surgjournal.ru/index.php/BISSA/oai",
+    "repositoryName": "Bulletin of the International Scientific Surgical Association",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://olympusopen.com/journals/index.php/ijrsmhs/oai",
+    "repositoryName": "International Journal of Research Studies in Medical and Health Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journals.open.tudelft.nl/ejtir/oai",
+    "repositoryName": "European Journal of Transport and Infrastructure Research",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://revistas.ul.edu.co/index.php/REL/oai",
+    "repositoryName": "Enfoque latinoamericano",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://open.bu.edu/oai/request",
+    "repositoryName": "OpenBU",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journals.open.tudelft.nl/index/oai",
+    "repositoryName": "TU Delft OPEN Journals",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://revistasdigitales.upec.edu.ec/index.php/comercionegocio/oai",
+    "repositoryName": "Comercio y Negocio",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://sportpedagogy.org.ua/index.php/ppcs/oai",
+    "repositoryName": "Pedagogy of Physical Culture and Sports",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.bbronline.com.br/index.php/bbr/oai",
+    "repositoryName": "Brazilian Business Review",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://era.ujat.mx/index.php/rera/oai",
+    "repositoryName": "Ecosistemas y Recursos Agropecuarios",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://bulletin.nzsee.org.nz/index.php/bnzsee/oai",
+    "repositoryName": "Bulletin of the New Zealand Society for Earthquake Engineering",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://lirias.kuleuven.be/oai",
+    "repositoryName": "Lirias - The institutional repository of KU Leuven Association",
+    "accessControlAllowOrigin": "*"
+  },
+  {
+    "url": "http://apcz.umk.pl/czasopisma//index.php/FT/oai",
+    "repositoryName": "Folia Toruniensia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jurnalbhumi.stpn.ac.id/index.php/JB/oai",
+    "repositoryName": "BHUMI: Jurnal Agraria dan Pertanahan",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://dspace.aztidata.es/oai/request",
+    "repositoryName": "AZTI",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://bluetigercommons.lincolnu.edu/do/oai/",
+    "repositoryName": "Blue Tiger Commons",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/social-welfare/oai",
+    "repositoryName": "Social Welfare: Interdisciplinary Approach",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://fitisposij.web.uah.es/OJS/index.php/fitispos/oai",
+    "repositoryName": "FITISPos International Journal",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://repositorio.ufba.br/oai/request",
+    "repositoryName": "Universidade Federal da Bahia",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://oai.content-select.com/",
+    "repositoryName": "Content-Select",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://journal.uinjkt.ac.id/index.php/al-maktabah/oai",
+    "repositoryName": "Al Maktabah",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.ledonline.it/index.php/Relations/oai",
+    "repositoryName": "Relations. Beyond Anthropocentrism",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://indexlaw.org/index.php/rdaa/oai",
+    "repositoryName": "Revista de Direito Agrário e Agroambiental",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://extensioneducation.org/index.php/jee/oai",
+    "repositoryName": "Journal of Extension Education",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://www.journals.vu.lt/archaeologia-lituana/oai",
+    "repositoryName": "Archaeologia Lituana",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.lpkd.or.id/index.php/ViMed/oai",
+    "repositoryName": "Vitalitas Medis : Jurnal Kesehatan dan Kedokteran",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://www.ijceas.com/index.php/ijceas/oai",
+    "repositoryName": "International Journal of Contemporary Economics and Administrative Sciences",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://e-journal.nalanda.ac.id/index.php/SAMMAJIVA/oai",
+    "repositoryName": "Sammajiva: Jurnal Penelitian Bisnis dan Manajemen",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://saebipcas.elpub.ru/jour/oai",
+    "repositoryName": "Научные и образовательные основы в физической культуре и спорте",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://acikerisim.sakarya.edu.tr/oai/request",
+    "repositoryName": "Sakarya Üniversitesi",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://e-journal.nalanda.ac.id/index.php/TUTURAN/oai",
+    "repositoryName": "TUTURAN: Jurnal Ilmu Komunikasi, Sosial dan Humaniora",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://revistas.curn.edu.co/index.php/ergaomnes/oai",
+    "repositoryName": "Erg@omnes",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.uhamka.ac.id/index.php/solma/oai",
+    "repositoryName": "Jurnal SOLMA",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://jlar.rovedar.com/index.php/JLAR/oai",
+    "repositoryName": "Journal of Lab Animal Research",
+    "accessControlAllowOrigin": "*"
+  },
+  {
+    "url": "http://periodicos.fbuni.edu.br/index.php/index/oai",
+    "repositoryName": "Periódicos FB UNI",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "http://ijet.pl/index.php/ijet/oai",
+    "repositoryName": "International Journal of Electronics and Telecommunication",
+    "accessControlAllowOrigin": null
+  },
+  {
+    "url": "https://journal.seisense.com/index.php/jom/oai",
+    "repositoryName": "SEISENSE Journal of Management",
+    "accessControlAllowOrigin": null
   }
 ]

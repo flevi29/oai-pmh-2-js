@@ -32,6 +32,7 @@ export function setupOaiPmh(
         success: true,
         value: new OaiPmh({
           baseUrl: getUrl(),
+          // TODO: usePost option
           paramsFn: getIsCorsProxied()
             ? (input, init) => [getCorsProxiedUrl(input), init]
             : undefined,
