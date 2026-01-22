@@ -8,13 +8,20 @@ function trimMessage(message: string): string {
     : message;
 }
 
+/**
+ * Error thrown when the HTTP request completes but returns a non-success status
+ * or a protocol error.
+ */
 export class OaiPmhRequestError extends OaiPmhError {
-  override name = "OaiPmhRequestError";
-  override cause: unknown;
+  /**
+   * The full error message. {@linkcode OaiPmhRequestError.message} is a trimmed
+   * version of this.
+   */
   fullMessage: string;
 
   constructor(message: string, details: unknown) {
     super(message ? trimMessage(message) : "request returned an error");
+    this.name = "OaiPmhRequestError";
     this.cause = details;
     this.fullMessage = message;
   }

@@ -12,19 +12,13 @@ API client package/module for Node.js and Deno.
 npm i oai-pmh-2-js
 ```
 
-<!--deno-fmt-ignore-start-->
-
 > [!IMPORTANT]
 > For Node.js users a
 > [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#browser_compatibility)
 > compatible version of the runtime is required, or a polyfill otherwise (like
 > [`node-fetch`](https://github.com/node-fetch/node-fetch?tab=readme-ov-file#providing-global-access)).
 
-<!--deno-fmt-ignore-end-->
-
 ## Example
-
-<!--deno-fmt-ignore-start-->
 
 > [!NOTE]
 > It is possible to iterate through the generator with a `for...of`
@@ -32,8 +26,6 @@ npm i oai-pmh-2-js
 > [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield)
 > -ed values of the generator, the `return` -ed value would be lost, and the
 > `return` -ed value contains the potential error.
-
-<!--deno-fmt-ignore-end-->
 
 ```typescript
 // `... from "npm:oai-pmh-2-js"` for Deno
@@ -74,8 +66,6 @@ for (;;) {
 
 <!-- TODO: Mention import { setMaxListeners } from "node:events"; setMaxListeners(2000, this.#abortController.signal); -->
 
-<!--deno-fmt-ignore-start-->
-
 > [!WARNING]
 > When using an `AbortSignal` with any list method
 > (`listIdentifiers`, `listRecords`, `listSets`), there will be some minuscule
@@ -83,28 +73,6 @@ for (;;) {
 > additional listener registered for the signal. Specifically in Node.js this
 > will cause a lot of warnings (after 100 or so loops). This is a fetch API spec
 > limitation, see [issue](https://github.com/nodejs/undici/issues/939).
-
-<!--deno-fmt-ignore-end-->
-
-## General shape of parsed data
-
-```typescript
-type ParsedXMLRecordValue = {
-  // index in XML tree branch, for preserving order of elements
-  i: number;
-  // XML attributes
-  attr?: Record<string, string>;
-  // either a text value, another branch of the XML tree,
-  // or undefined in case of an empty XML element
-  val?: string | ParsedXML;
-};
-
-type ParsedXML = Record<string, ParsedXMLRecordValue[]>;
-```
-
-Find examples for all methods in
-[examples directory](https://github.com/flevi29/oai-pmh-2-js/tree/main/examples).
-Documentation via types.
 
 [npm-svg]: https://img.shields.io/npm/v/oai-pmh-2-js.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/oai-pmh-2-js

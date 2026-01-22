@@ -58,9 +58,9 @@ const TIMEOUT_ID = Symbol("<timeout>");
  * signal functionality, if there is one.
  *
  * @remarks
- * This could be a short few straight forward lines using {@link AbortSignal.any}
- * and {@link AbortSignal.timeout}, but these aren't yet widely supported enough,
- * nor polyfill -able, at the time of writing.
+ *   This could be a short few straight forward lines using {@link AbortSignal.any}
+ *   and {@link AbortSignal.timeout}, but these aren't yet widely supported
+ *   enough, nor polyfill -able, at the time of writing.
  * @returns A new function which starts the timeout, which then returns another
  *   function that clears the timeout
  */
@@ -116,6 +116,10 @@ function getTimeoutFn(
   };
 }
 
+/**
+ * Handles the low-level HTTP communication with the OAI-PMH repository. Manages
+ * base URLs, headers, timeouts, and method selection (GET/POST).
+ */
 export class WebRequest {
   readonly #baseUrl: URL;
   readonly #init: HttpRequestsRequestInit;
@@ -168,6 +172,15 @@ export class WebRequest {
     ]);
   }
 
+  /**
+   * Executes an HTTP request to the OAI-PMH repository.
+   *
+   * @param options - Configuration for the specific request including URL
+   *   params and overrides.
+   * @returns The raw text body of the response (usually XML).
+   * @throws {OaiPmhRequestInitError} If the request setup fails or times out.
+   * @throws {OaiPmhRequestError} If the server returns a failure status code.
+   */
   async request({
     params,
     usePost: post = this.#usePost,

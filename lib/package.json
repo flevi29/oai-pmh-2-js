@@ -3,7 +3,7 @@
   "version": "0.9.0",
   "author": "Fodor Levente",
   "license": "MIT",
-  "description": "OAI-PMH ECMAScript (JS) client.",
+  "description": "OAI-PMH Version 2.0 API ECMAScript client.",
   "keywords": [
     "OAI-PMH",
     "oaipmh",

@@ -4,12 +4,13 @@ import adapter from "@sveltejs/adapter-static";
 
 /**
  * `base_path` output at {@link https://github.com/actions/configure-pages/}
- * @type {import('@sveltejs/kit').KitConfig["paths"]}
+ *
+ * @type {import("@sveltejs/kit").KitConfig["paths"]}
  */
 const paths =
   env.PAGES_BASE_PATH !== undefined ? { base: env.PAGES_BASE_PATH } : undefined;
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import("@sveltejs/kit").Config} */
 const config = {
   // https://svelte.dev/docs/kit/integrations
   preprocess: vitePreprocess(),

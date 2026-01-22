@@ -1,9 +1,10 @@
 import type { ParsedXMLRecord } from "#model/xml";
-import type { ListResponse, OaiPmhRecord } from "#model/oai-pmh-stuff";
+import type { OaiPmhRecord } from "#model/oai-pmh-stuff";
+import type { ParserHelper } from "./helper/parse-helper.ts";
+import type { OaiPmhListResponse } from "#model/list";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
 import { parseHeader } from "./header.ts";
 import { parseResumptionToken } from "./resumption-token.ts";
-import type { ParserHelper } from "./helper/parse-helper.ts";
 
 function parseRecord(
   helper: ParserHelper,
@@ -35,7 +36,7 @@ export function parseGetRecordResponse(
 
 export function parseListRecordsResponse(
   childNodeList: NodeListOf<ChildNode>,
-): ListResponse<OaiPmhRecord> {
+): OaiPmhListResponse<OaiPmhRecord> {
   const [helper, listRecordsRecord] = parseOaiPmh(childNodeList, "ListRecords");
 
   return {

@@ -1,30 +1,23 @@
-export { OaiPmh } from "./oai-pmh.ts";
+/**
+ * {@link https://www.openarchives.org/OAI/openarchivesprotocol.html | OAI-PMH Version 2.0}
+ * API ECMAScript client.
+ *
+ * This module provides a client to interact with OAI-PMH compliant
+ * repositories. It supports all standard OAI-PMH verbs and handles pagination
+ * (resumption tokens) automatically via async generators.
+ *
+ * @module
+ */
 
-export {
-  OaiPmhResponseError,
-  type OaiPmhResponseErrorCause,
-  type OaiPmhResponseErrorData,
-} from "#error/response-error";
-export { OaiPmhRequestError as UnexpectedStatusCodeError } from "#error/request-error";
-export { OaiPmhValidationError as ValidationError } from "#error/validation-error";
+export * from "./oai-pmh.ts";
 
-export type {
-  ListOptions,
-  OaiPmhRequestConstructorOptions,
-} from "#model/oai-pmh";
+export * from "#error/error";
+export * from "#error/request-error";
+export * from "#error/request-init-error";
+export * from "#error/request-timeout-error";
+export * from "#error/response-error";
+export * from "#error/validation-error";
 
-export type {
-  OaiPmhErrorCode,
-  OaiPmhMetadataFormat,
-  OaiPmhRecord,
-  OaiPmhHeader,
-  OaiPmhIdentify,
-  OaiPmhSet,
-} from "#model/oai-pmh-stuff";
-
-export type {
-  ParsedXMLAttributes,
-  ParsedXMLAttributeValue,
-  ParsedXMLElement,
-  ParsedXMLRecord,
-} from "#model/xml";
+export type * from "#model/oai-pmh";
+export type * from "#model/oai-pmh-stuff";
+export type * from "#model/xml";

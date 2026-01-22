@@ -1,26 +1,9 @@
-import type { OaiPmhErrorCode } from "#model/oai-pmh-stuff";
+import type { OaiPmhResponseErrorCause } from "#model/oai-pmh-stuff";
 import { OaiPmhError } from "./error.ts";
 
-export type OaiPmhResponseErrorData = { code: OaiPmhErrorCode; text?: string };
-export type OaiPmhResponseErrorCause = {
-  errors: OaiPmhResponseErrorData[];
-  request: {
-    value: string;
-    attr?: {
-      verb?: string;
-      identifier?: string;
-      metadataPrefix?: string;
-      from?: string;
-      until?: string;
-      set?: string;
-      resumptionToken?: string;
-    };
-  };
-  responseDate: string;
-};
-
+/** Holds OAI-PMH error response. */
 export class OaiPmhResponseError extends OaiPmhError {
-  override name = "OaiPmhResponseError";
+  /** The deserialized form of the error response. */
   override cause: OaiPmhResponseErrorCause;
 
   constructor(cause: OaiPmhResponseErrorCause) {
@@ -34,6 +17,7 @@ export class OaiPmhResponseError extends OaiPmhError {
           .join("\n"),
     );
 
+    this.name = "OaiPmhResponseError";
     this.cause = cause;
   }
 }

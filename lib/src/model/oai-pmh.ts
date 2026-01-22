@@ -1,18 +1,21 @@
-export type SafeOmit<T, K extends keyof T> = Omit<T, K>;
+import type { SafeOmit } from "./util.ts";
 
+/** Options available for harvesting operations (ListRecords, ListIdentifiers). */
 export type ListOptions = {
+  /** An optional lower bound for datestamp-based selective harvesting. */
   from?: string;
+  /** An optional upper bound for datestamp-based selective harvesting. */
   until?: string;
+  /** An optional setSpec for set-based selective harvesting. */
   set?: string;
+  /**
+   * The metadata prefix of the format that should be included in the metadata
+   * part of the returned records.
+   */
   metadataPrefix: string;
 };
 
-type ListVerbOptions = { verb: "ListIdentifiers" | "ListRecords" | "ListSets" };
-export type ListOptionsWithVerb = ListVerbOptions & Partial<ListOptions>;
-export type ListContinuationParams = ListVerbOptions & {
-  resumptionToken: string;
-};
-
+/** URL search parameters in the form of string key value pairs. */
 export type URLSearchParamsRecord = Record<string, string>;
 
 /**
@@ -37,9 +40,11 @@ export type MainRequestOptions = {
   /** The search parameters of the URL. */
   params: URLSearchParamsRecord;
   /**
-   * Pass {@link MainRequestOptions.params} through the body of requests via POST method.
+   * Pass {@link MainRequestOptions.params} through the body of requests via POST
+   * method.
    *
-   * Read more {@link https://www.openarchives.org/OAI/openarchivesprotocol.html#HTTPRequestFormat | here}.
+   * Read more
+   * {@link https://www.openarchives.org/OAI/openarchivesprotocol.html#HTTPRequestFormat | here}.
    */
   usePost?: boolean;
   /**
@@ -49,11 +54,12 @@ export type MainRequestOptions = {
   init?: ExtraRequestInit;
 };
 
+/** HTTP request options overrides. */
 export type ReqOpt = Omit<MainRequestOptions, "params">;
 
 /**
- * A function that allows modifying parameters before they're
- * sent off to the request function.
+ * A function that allows modifying parameters before they're sent off to the
+ * request function.
  */
 export type CustomRequestParams = (
   ...params: Parameters<typeof fetch>
@@ -62,8 +68,8 @@ export type CustomRequestParams = (
 /**
  * An object in which `success` boolean indicates whether the response was
  * successful (status 200-299), `value` is the response body as text or a string
- * describing the error in case there is no text response body and `details` is any
- * details about the error on failure.
+ * describing the error in case there is no text response body and `details` is
+ * any details about the error on failure.
  */
 export type CustomRequestFnResult =
   | { success: true; value: string }
@@ -74,19 +80,30 @@ export type CustomRequestFnResult =
     };
 
 /**
- * A custom request function, that is called instead
- * of {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch | fetch} on web requests.
+ * A custom request function, that is called instead of
+ * {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch | fetch}
+ * on web requests.
  */
 export type CustomRequestFn = (
   ...args: Parameters<typeof fetch>
 ) => Promise<CustomRequestFnResult>;
 
+/** Configuration options for creating an OaiPmh client instance. */
 export type OaiPmhRequestConstructorOptions = {
+  /** The base URL of the OAI-PMH repository. */
   baseUrl: string;
+  /** Optional initialization settings for the HTTP requests (headers, etc). */
   init?: BaseRequestInit;
+  /** Whether to use HTTP POST for requests instead of GET. Defaults to false. */
   usePost?: boolean;
+  /**
+   * A DOMParser implementation (required in environments like Node.js where
+   * DOMParser is not global).
+   */
   domParser?: typeof DOMParser;
+  /** A hook to modify fetch parameters before the request is made. */
   paramsFn?: CustomRequestParams;
+  /** A custom fetch implementation to replace standard fetch. */
   requestFn?: CustomRequestFn;
   /** Timeout in milliseconds for each HTTP request. */
   timeout?: number;

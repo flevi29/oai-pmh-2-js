@@ -1,5 +1,5 @@
+import type { OaiPmhListResponse } from "#model/list";
 import type {
-  ListResponse,
   OaiPmhHeader,
   OaiPmhIdentify,
   OaiPmhMetadataFormat,
@@ -48,7 +48,7 @@ export function getOaiPmhParser(domParser: typeof DOMParser) {
       return errorWrapper(xml, parseGetRecordResponse);
     },
 
-    parseListIdentifiers(xml: string): ListResponse<OaiPmhHeader> {
+    parseListIdentifiers(xml: string): OaiPmhListResponse<OaiPmhHeader> {
       return errorWrapper(xml, parseListIdentifiersResponse);
     },
 
@@ -56,11 +56,11 @@ export function getOaiPmhParser(domParser: typeof DOMParser) {
       return errorWrapper(xml, parseListMetadataFormats);
     },
 
-    parseListRecords(xml: string): ListResponse<OaiPmhRecord> {
+    parseListRecords(xml: string): OaiPmhListResponse<OaiPmhRecord> {
       return errorWrapper(xml, parseListRecordsResponse);
     },
 
-    parseListSets(xml: string): ListResponse<OaiPmhSet> {
+    parseListSets(xml: string): OaiPmhListResponse<OaiPmhSet> {
       return errorWrapper(xml, parseListSetsResponse);
     },
   };

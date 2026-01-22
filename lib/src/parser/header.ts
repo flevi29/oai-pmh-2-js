@@ -1,4 +1,5 @@
-import type { ListResponse, OaiPmhHeader } from "#model/oai-pmh-stuff";
+import type { OaiPmhListResponse } from "#model/list";
+import type { OaiPmhHeader } from "#model/oai-pmh-stuff";
 import type { ParsedXMLRecord } from "#model/xml";
 import type { AttrParser } from "./helper/attr-parser.ts";
 import type { ParserHelper } from "./helper/parse-helper.ts";
@@ -31,7 +32,7 @@ export function parseHeader(
 
 export function parseListIdentifiersResponse(
   childNodeList: NodeListOf<ChildNode>,
-): ListResponse<OaiPmhHeader> {
+): OaiPmhListResponse<OaiPmhHeader> {
   const [helper, listIdentifiersRecord] = parseOaiPmh(
     childNodeList,
     "ListIdentifiers",
