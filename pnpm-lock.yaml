@@ -15,7 +15,7 @@ importers:
         specifier: 0.13.5
         version: 0.13.5
       linkedom:
-        specifier: ^0.18.12
+        specifier: 0.18.12
         version: 0.18.12
       prettier:
         specifier: 3.8.0
