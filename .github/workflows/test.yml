@@ -13,11 +13,11 @@ jobs:
       - name: Lint
         run: |
           pnpm lint
-          pnpm -C=app lint
+          pnpm -C=playground lint
       - name: Type check
         run: |
-          pnpm -C=app check
-          pnpm -C=lib check
+          pnpm -C=playground check
+          pnpm check
       - name: Test
         # TODO
         run: echo TODO

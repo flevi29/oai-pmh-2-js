@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
-# TODO: This should also run tests and linting and it should run on releases perhaps?
+# TODO: This should also run tests and linting
 on:
-  push:
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -17,8 +18,8 @@ jobs:
         env:
           PAGES_BASE_PATH: ${{steps.pages_cfg.outputs.base_path}}
         run: |
-          pnpm -C=app prepare
-          pnpm -C=app build
+          pnpm -C=playground prepare
+          pnpm -C=playground build
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v4

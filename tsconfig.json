@@ -10,5 +10,6 @@
     "verbatimModuleSyntax": true,
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true
-  }
+  },
+  "exclude": ["./playground/"]
 }

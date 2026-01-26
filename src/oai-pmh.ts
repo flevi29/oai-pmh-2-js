@@ -41,6 +41,8 @@ function safeGetDOMParser(): typeof DOMParser {
  *
  *
  *
+ *
+ *
  *   const oai = new OaiPmh({ baseUrl: "[http://example.org/oai](http://example.org/oai)" });
  *   const info = await oai.identify();
  *   for await (const records of oai.listRecords({ metadataPrefix: "oai_dc" })) {

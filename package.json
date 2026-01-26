@@ -1,11 +1,59 @@
 {
+  "name": "oai-pmh-2-js",
+  "version": "0.10.0",
+  "author": "Fodor Levente",
+  "license": "MIT",
+  "description": "OAI-PMH Version 2.0 API ECMAScript client.",
+  "keywords": [
+    "OAI-PMH",
+    "oaipmh",
+    "oai",
+    "metadata",
+    "harvest",
+    "protocol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flevi29/oai-pmh-2-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flevi29/oai-pmh-2-js/issues"
+  },
+  "homepage": "https://github.com/flevi29/oai-pmh-2-js#readme",
   "type": "module",
+  "imports": {
+    "#error/*": "./src/error/*.ts",
+    "#model/*": "./src/model/*.ts",
+    "#parser/*": "./src/parser/*.ts"
+  },
+  "files": [
+    "./src/",
+    "./dist/",
+    "./LICENSE"
+  ],
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/types/index.d.ts",
+        "import": "./dist/esm/index.js",
+        "require": "./dist/cjs/index.cjs"
+      }
+    }
+  },
   "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "create-jsr": "node scripts/create-jsr-json.ts",
+    "check": "tsc --noEmit",
     "format": "prettier --write .",
     "lint": "prettier --check ."
   },
   "devDependencies": {
     "@types/node": "24.10.9",
+    "jsr": "0.13.5",
+    "linkedom": "0.18.12",
     "prettier": "3.8.0",
     "prettier-plugin-jsdoc": "1.8.0",
     "prettier-plugin-svelte": "3.4.1",

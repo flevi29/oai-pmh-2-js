@@ -1,5 +1,3 @@
-/// <reference lib="dom.iterable" />
-
 /** Parsed XML attribute values. */
 export type ParsedXMLAttributeValue = {
   /** Optional prefix in the name of the attribute. */

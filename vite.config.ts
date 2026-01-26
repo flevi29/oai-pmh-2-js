@@ -3,11 +3,10 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
-    minify: false,
     sourcemap: true,
     target: tsconfig.compilerOptions.target,
     lib: {
-      entry: "src/index.ts",
+      entry: "./src/index.ts",
       formats: ["es", "cjs"],
       fileName: (format, entryName) => {
         switch (format) {

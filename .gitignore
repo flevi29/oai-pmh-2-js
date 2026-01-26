@@ -18,6 +18,9 @@ vite.config.ts.timestamp-*
 /.vscode
 
 # Output
-/app/.svelte-kit
-/app/build
-/lib/dist
+/playground/.svelte-kit
+/playground/build
+/dist
+
+# JSR generated config
+/jsr.json
