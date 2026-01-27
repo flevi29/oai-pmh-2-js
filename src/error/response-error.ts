@@ -12,7 +12,9 @@ export class OaiPmhResponseError extends OaiPmhError {
         cause.errors
           .map(
             (v) =>
-              `${v.code}: ${v.text || "<error code has no accompanying description>"}`,
+              `${v.code}: ${
+                v.text || "<error code has no accompanying description>"
+              }`,
           )
           .join("\n"),
     );
