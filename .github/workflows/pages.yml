@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 # TODO: This should also run tests and linting
 on:
-  release:
-    types: [published]
+  push:
+    branches: [$default-branch]
 
 jobs:
   build:
