@@ -1,4 +1,4 @@
-import type { OaiPmhIdentify } from "#model/oai-pmh-stuff";
+import type { OaiPmhIdentify } from "../model/oai-pmh-stuff.ts";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
 
 export function parseIdentify(

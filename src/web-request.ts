@@ -1,7 +1,7 @@
 import pkg from "../package.json" with { type: "json" };
-import { OaiPmhRequestInitError } from "#error/request-init-error";
-import { OaiPmhRequestTimeOutError } from "#error/request-timeout-error";
-import { OaiPmhRequestError } from "#error/request-error";
+import { OaiPmhRequestInitError } from "./error/request-init-error.ts";
+import { OaiPmhRequestTimeOutError } from "./error/request-timeout-error.ts";
+import { OaiPmhRequestError } from "./error/request-error.ts";
 import type {
   CustomRequestFn,
   CustomRequestParams,
@@ -9,7 +9,7 @@ import type {
   MainRequestOptions,
   OaiPmhRequestConstructorOptions,
   URLSearchParamsRecord,
-} from "#model/oai-pmh";
+} from "./model/oai-pmh.ts";
 
 /** Append a set of key value pairs to a {@link URLSearchParams} object. */
 function appendRecordToURLSearchParams(

@@ -1,16 +1,16 @@
-import type { OaiPmhListResponse } from "#model/list";
+import type { OaiPmhListResponse } from "../model/list.ts";
 import type {
   OaiPmhHeader,
   OaiPmhIdentify,
   OaiPmhMetadataFormat,
   OaiPmhRecord,
   OaiPmhSet,
-} from "#model/oai-pmh-stuff";
+} from "../model/oai-pmh-stuff.ts";
 import { getXMLParser } from "./xml-parser.ts";
 import {
   OaiPmhInnerValidationError,
   OaiPmhValidationError,
-} from "#error/validation-error";
+} from "../error/validation-error.ts";
 import { parseIdentify } from "./identify.ts";
 import { parseGetRecordResponse, parseListRecordsResponse } from "./record.ts";
 import { parseListIdentifiersResponse } from "./header.ts";

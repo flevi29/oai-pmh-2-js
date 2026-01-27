@@ -3,7 +3,7 @@ import type {
   ParsedXMLAttributeValue,
   ParsedXMLElement,
   ParsedXMLRecord,
-} from "#model/xml";
+} from "../model/xml.ts";
 import type { ParserHelper } from "./helper/parse-helper.ts";
 
 function getPrefixAndLocalName(

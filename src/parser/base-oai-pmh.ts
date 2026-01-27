@@ -1,5 +1,5 @@
-import type { OaiPmhErrorCode } from "#model/oai-pmh-stuff";
-import { OaiPmhResponseError } from "#error/response-error";
+import type { OaiPmhErrorCode } from "../model/oai-pmh-stuff.ts";
+import { OaiPmhResponseError } from "../error/response-error.ts";
 import { ParserHelper } from "./helper/parse-helper.ts";
 
 export function parseOaiPmh(

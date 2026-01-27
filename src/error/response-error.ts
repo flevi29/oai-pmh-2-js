@@ -1,4 +1,4 @@
-import type { OaiPmhResponseErrorCause } from "#model/oai-pmh-stuff";
+import type { OaiPmhResponseErrorCause } from "../model/oai-pmh-stuff.ts";
 import { OaiPmhError } from "./error.ts";
 
 /** Holds OAI-PMH error response. */

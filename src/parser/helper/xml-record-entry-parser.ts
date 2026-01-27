@@ -1,6 +1,6 @@
 import { parseToRecordOrString, type XMLParseResult } from "../xml-parser.ts";
 import { AttrParser } from "./attr-parser.ts";
-import type { ParsedXMLElement, ParsedXMLRecord } from "#model/xml";
+import type { ParsedXMLElement, ParsedXMLRecord } from "../../model/xml.ts";
 import type { ParserHelper } from "./parse-helper.ts";
 
 export class XMLRecordEntryParser {

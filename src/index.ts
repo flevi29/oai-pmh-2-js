@@ -11,13 +11,13 @@
 
 export * from "./oai-pmh.ts";
 
-export * from "#error/error";
-export * from "#error/request-error";
-export * from "#error/request-init-error";
-export * from "#error/request-timeout-error";
-export * from "#error/response-error";
-export * from "#error/validation-error";
+export * from "./error/error.ts";
+export * from "./error/request-error.ts";
+export * from "./error/request-init-error.ts";
+export * from "./error/request-timeout-error.ts";
+export * from "./error/response-error.ts";
+export * from "./error/validation-error.ts";
 
-export type * from "#model/oai-pmh";
-export type * from "#model/oai-pmh-stuff";
-export type * from "#model/xml";
+export type * from "./model/oai-pmh.ts";
+export type * from "./model/oai-pmh-stuff.ts";
+export type * from "./model/xml.ts";

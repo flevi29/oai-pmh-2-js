@@ -1,5 +1,5 @@
-import type { OaiPmhListResponse } from "#model/list";
-import type { OaiPmhSet } from "#model/oai-pmh-stuff";
+import type { OaiPmhListResponse } from "../model/list.ts";
+import type { OaiPmhSet } from "../model/oai-pmh-stuff.ts";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
 import { parseResumptionToken } from "./resumption-token.ts";
 

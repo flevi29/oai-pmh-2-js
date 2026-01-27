@@ -2,21 +2,21 @@ import type {
   ListOptions,
   OaiPmhRequestConstructorOptions,
   ReqOpt,
-} from "#model/oai-pmh";
+} from "./model/oai-pmh.ts";
 import type {
   OaiPmhHeader,
   OaiPmhIdentify,
   OaiPmhMetadataFormat,
   OaiPmhRecord,
   OaiPmhSet,
-} from "#model/oai-pmh-stuff";
+} from "./model/oai-pmh-stuff.ts";
 import type {
   ListContinuationParams,
   ListOptionsWithVerb,
   OaiPmhListResponse,
-} from "#model/list";
+} from "./model/list.ts";
 import { WebRequest } from "./web-request.ts";
-import { getOaiPmhParser, type OaiPmhParser } from "#parser/oai-pmh-parser";
+import { getOaiPmhParser, type OaiPmhParser } from "./parser/oai-pmh-parser.ts";
 
 function safeGetDOMParser(): typeof DOMParser {
   if (typeof DOMParser === "undefined") {

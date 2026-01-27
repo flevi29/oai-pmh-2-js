@@ -3,7 +3,7 @@ import { default as process } from "node:process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { DOMParser } from "linkedom/worker";
 import { getXMLParser } from "oai-pmh-2-js/parser/xml-parser";
-import { ParserHelper } from "#parser/helper/parse-helper";
+import { ParserHelper } from "oai-pmh-2-js/parser/helper/parse-helper";
 import { OaiPmh } from "oai-pmh-2-js/index";
 
 // useful info on status of maintained OAI-PMH lists

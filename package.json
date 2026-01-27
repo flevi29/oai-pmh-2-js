@@ -21,11 +21,6 @@
   },
   "homepage": "https://github.com/flevi29/oai-pmh-2-js#readme",
   "type": "module",
-  "imports": {
-    "#error/*": "./src/error/*.ts",
-    "#model/*": "./src/model/*.ts",
-    "#parser/*": "./src/parser/*.ts"
-  },
   "files": [
     "./src/",
     "./dist/",
