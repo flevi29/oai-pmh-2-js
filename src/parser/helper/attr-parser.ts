@@ -1,4 +1,4 @@
-import type { ParsedXMLAttributes } from "../../model/xml.ts";
+import type { ParsedXMLAttributes } from "../model/xml.ts";
 import type { ParserHelper } from "./parse-helper.ts";
 
 export class AttrParser {

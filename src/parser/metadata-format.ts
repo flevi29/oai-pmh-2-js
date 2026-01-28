@@ -1,5 +1,5 @@
-import type { OaiPmhMetadataFormat } from "../model/oai-pmh-stuff.ts";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
+import type { OaiPmhMetadataFormat } from "./model/metadata-format.ts";
 
 export function parseListMetadataFormats(
   childNodeList: NodeListOf<ChildNode>,

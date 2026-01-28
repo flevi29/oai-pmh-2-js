@@ -1,10 +1,10 @@
+import type { ParserHelper } from "./helper/parse-helper.ts";
 import type {
   ParsedXMLAttributes,
   ParsedXMLAttributeValue,
   ParsedXMLElement,
   ParsedXMLRecord,
-} from "../model/xml.ts";
-import type { ParserHelper } from "./helper/parse-helper.ts";
+} from "./model/xml.ts";
 
 function getPrefixAndLocalName(
   nodeName: string,

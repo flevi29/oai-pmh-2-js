@@ -1,5 +1,10 @@
-import type { ParsedXMLRecord } from "../model/xml.ts";
 import type { ParserHelper } from "./helper/parse-helper.ts";
+import type { ParsedXMLRecord } from "./model/xml.ts";
+
+export type OaiPmhListResponse<T> = {
+  records: T[];
+  resumptionToken: string | null;
+};
 
 export function parseResumptionToken(
   helper: ParserHelper,

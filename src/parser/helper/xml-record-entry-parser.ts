@@ -1,6 +1,6 @@
+import type { ParsedXMLElement, ParsedXMLRecord } from "../model/xml.ts";
 import { parseToRecordOrString, type XMLParseResult } from "../xml-parser.ts";
 import { AttrParser } from "./attr-parser.ts";
-import type { ParsedXMLElement, ParsedXMLRecord } from "../../model/xml.ts";
 import type { ParserHelper } from "./parse-helper.ts";
 
 export class XMLRecordEntryParser {
@@ -101,7 +101,7 @@ export class XMLRecordEntryParser {
     return records;
   }
 
-  toMaybeStrings(): [string | undefined, AttrParser][] | undefined {
+  toMaybeStrings(): [string, AttrParser][] | undefined {
     if (this.#xmlRecordEntry === undefined) {
       return;
     }
@@ -122,7 +122,7 @@ export class XMLRecordEntryParser {
     });
   }
 
-  toStrings(): [string | undefined, AttrParser][] {
+  toStrings(): [string, AttrParser][] {
     const maybeStrings = this.toMaybeStrings();
     if (maybeStrings === undefined) {
       throw this.#helper.getErr("missing node");

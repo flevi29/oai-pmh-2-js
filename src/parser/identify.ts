@@ -1,5 +1,5 @@
-import type { OaiPmhIdentify } from "../model/oai-pmh-stuff.ts";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
+import type { OaiPmhIdentify } from "./model/identify.ts";
 
 export function parseIdentify(
   childNodeList: NodeListOf<ChildNode>,
@@ -22,14 +22,14 @@ export function parseIdentify(
   const [granularity] = helper
     .parseXMLRecordEntry(identify, "granularity")
     .toString();
-  const [adminEmail] = helper
+  const adminEmail = helper
     .parseXMLRecordEntry(identify, "adminEmail")
-    .toString();
+    .toStrings()
+    .map(([text]) => text);
   const compression = helper
     .parseXMLRecordEntry(identify, "compression")
     .toMaybeStrings()
-    ?.map(([text]) => text)
-    .filter((text) => text !== undefined);
+    ?.map(([text]) => text);
 
   return {
     repositoryName,

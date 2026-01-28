@@ -1,11 +1,3 @@
-import type { OaiPmhListResponse } from "../model/list.ts";
-import type {
-  OaiPmhHeader,
-  OaiPmhIdentify,
-  OaiPmhMetadataFormat,
-  OaiPmhRecord,
-  OaiPmhSet,
-} from "../model/oai-pmh-stuff.ts";
 import { getXMLParser } from "./xml-parser.ts";
 import {
   OaiPmhInnerValidationError,
@@ -16,11 +8,37 @@ import { parseGetRecordResponse, parseListRecordsResponse } from "./record.ts";
 import { parseListIdentifiersResponse } from "./header.ts";
 import { parseListMetadataFormats } from "./metadata-format.ts";
 import { parseListSetsResponse } from "./set.ts";
+import type { OaiPmhListResponse } from "./resumption-token.ts";
+import type { OaiPmhIdentify } from "./model/identify.ts";
+import type { OaiPmhRecord } from "./model/record.ts";
+import type { OaiPmhHeader } from "./model/header.ts";
+import type { OaiPmhMetadataFormat } from "./model/metadata-format.ts";
+import type { OaiPmhSet } from "./model/set.ts";
+
+/** Parser specific options. */
+export type OaiPmhParserParameters = {
+  /**
+   * A DOMParser implementation (required in environments like Node.js where
+   * DOMParser is not available).
+   */
+  domParser?: typeof DOMParser;
+};
+
+function safeGetDOMParser(): typeof DOMParser {
+  if (typeof DOMParser === "undefined") {
+    // TODO: More helpful error message, perhaps linking to docs
+    throw new Error(
+      "environment doesn't have DOMParser, please provide it via options",
+    );
+  }
+
+  return DOMParser;
+}
 
 // TODO: provide a callback for XSD validation
 //       for instance https://github.com/nikku/node-xsd-schema-validator
-export function getOaiPmhParser(domParser: typeof DOMParser) {
-  const parseXML = getXMLParser(domParser);
+export function getOaiPmhParser({ domParser }: OaiPmhParserParameters) {
+  const parseXML = getXMLParser(domParser ?? safeGetDOMParser());
 
   function errorWrapper<TReturn>(
     xml: string,

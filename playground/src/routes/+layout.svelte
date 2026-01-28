@@ -7,12 +7,14 @@
 
   const { children } = $props();
 
-  let url = $state.raw(getLastOaiPmhUrl());
-  let isCorsProxied = $state.raw(true);
+  let url = $state(getLastOaiPmhUrl());
+  let isCorsProxied = $state(true);
+  let isUsingPost = $state(false);
 
   setupOaiPmh(
     () => url,
     () => isCorsProxied,
+    () => isUsingPost,
   );
 </script>
 
@@ -31,7 +33,7 @@
 
 <main class="mx-auto" style:max-width="64rem">
   <div style:padding-top="calc(var(--spacing) * 4)">
-    <OaiPmhURLInput bind:url bind:isCorsProxied />
+    <OaiPmhURLInput bind:url bind:isCorsProxied bind:isUsingPost />
   </div>
 
   <section class="mx-auto" style:max-width="52rem">

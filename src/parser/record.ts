@@ -1,10 +1,12 @@
-import type { ParsedXMLRecord } from "../model/xml.ts";
-import type { OaiPmhRecord } from "../model/oai-pmh-stuff.ts";
 import type { ParserHelper } from "./helper/parse-helper.ts";
-import type { OaiPmhListResponse } from "../model/list.ts";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
 import { parseHeader } from "./header.ts";
-import { parseResumptionToken } from "./resumption-token.ts";
+import {
+  parseResumptionToken,
+  type OaiPmhListResponse,
+} from "./resumption-token.ts";
+import type { OaiPmhRecord } from "./model/record.ts";
+import type { ParsedXMLRecord } from "./model/xml.ts";
 
 function parseRecord(
   helper: ParserHelper,

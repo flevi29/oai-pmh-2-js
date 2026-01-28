@@ -44,13 +44,14 @@
   import { setLastOaiPmhUrl } from "$lib/stores/oai-pmh.svelte";
   import DebouncedTextInput from "$lib/components/debounced-text-input.svelte";
   import Dialog from "$lib/components/dialog.svelte";
-  import More from "$lib/components/svgs/more.svelte";
+  import More from "$lib/components/more.svelte";
   import OaiPmhUrlList from "./oai-pmh-url-list.svelte";
 
   let {
     url = $bindable(),
     isCorsProxied = $bindable(),
-  }: { url: string; isCorsProxied: boolean } = $props();
+    isUsingPost = $bindable(),
+  }: { url: string; isCorsProxied: boolean; isUsingPost: boolean } = $props();
 
   const isUrlInvalid = $derived(!URL.canParse(url) || undefined);
   const urlsList = $derived.by(() => {
@@ -96,6 +97,34 @@
         <p>
           This setting mitigates this problem by proxying the OAI-PMH server
           response through a service that adds the appropriate headers.
+        </p>
+      </blockquote>
+    </details>
+
+    <label>
+      <input type="checkbox" bind:checked={isUsingPost} />
+      <b>Use POST</b>
+    </label>
+
+    <details>
+      <summary><small><i>Why?</i></small></summary>
+
+      <blockquote>
+        <p>
+          <a
+            href="https://en.wikipedia.org/wiki/HTTP#Request_methods"
+            rel="external"
+            target="_blank"><code>GET</code></a
+          > is the default HTTP method used to make requests to repositories.
+        </p>
+
+        <p>
+          <a
+            href="https://en.wikipedia.org/wiki/POST_(HTTP)"
+            rel="external"
+            target="_blank"><code>POST</code></a
+          > has the advantage of imposing no limitations on the length of arguments
+          in the rare event this becomes a problem.
         </p>
       </blockquote>
     </details>

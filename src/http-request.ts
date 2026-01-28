@@ -3,13 +3,25 @@ import { OaiPmhRequestInitError } from "./error/request-init-error.ts";
 import { OaiPmhRequestTimeOutError } from "./error/request-timeout-error.ts";
 import { OaiPmhRequestError } from "./error/request-error.ts";
 import type {
-  CustomRequestFn,
+  BaseRequestInit,
+  CustomRequestFunction,
   CustomRequestParams,
-  HttpRequestsRequestInit,
-  MainRequestOptions,
-  OaiPmhRequestConstructorOptions,
-  URLSearchParamsRecord,
-} from "./model/oai-pmh.ts";
+  HttpRequestConstructorOptions,
+  RequestOptions,
+} from "./http-request-model.ts";
+
+/** URL search parameters as a record of string values. */
+type URLSearchParamsRecord = Record<string, string>;
+
+/** Full options of a request. */
+type RequestOptionsWithParams = RequestOptions & {
+  /** The search parameters of the URL. */
+  params: URLSearchParamsRecord;
+};
+
+type HttpRequestsRequestInit = Omit<BaseRequestInit, "headers"> & {
+  headers: Headers;
+};
 
 /** Append a set of key value pairs to a {@link URLSearchParams} object. */
 function appendRecordToURLSearchParams(
@@ -120,15 +132,15 @@ function getTimeoutFn(
  * Handles the low-level HTTP communication with the OAI-PMH repository. Manages
  * base URLs, headers, timeouts, and method selection (GET/POST).
  */
-export class WebRequest {
+export class HttpRequest {
   readonly #baseUrl: URL;
   readonly #init: HttpRequestsRequestInit;
   readonly #usePost: boolean;
   readonly #paramsFn?: CustomRequestParams;
-  readonly #requestFn?: CustomRequestFn;
+  readonly #requestFn?: CustomRequestFunction;
   readonly #timeout?: number;
 
-  constructor(options: OaiPmhRequestConstructorOptions) {
+  constructor(options: HttpRequestConstructorOptions) {
     let baseUrl = options.baseUrl;
     if (!baseUrl.endsWith("/")) {
       baseUrl += "/";
@@ -185,7 +197,7 @@ export class WebRequest {
     params,
     usePost: post = this.#usePost,
     init: extraInit,
-  }: MainRequestOptions): Promise<string> {
+  }: RequestOptionsWithParams): Promise<string> {
     const url = new URL(this.#baseUrl);
 
     const init: RequestInit = {

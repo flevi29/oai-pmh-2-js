@@ -25,6 +25,7 @@ export { getOaiPmhGetter };
 export function setupOaiPmh(
   getUrl: () => string,
   getIsCorsProxied: () => boolean,
+  getIsUsingPost: () => boolean,
 ): void {
   const result = $derived.by<Result<OaiPmh>>(() => {
     try {
@@ -32,7 +33,7 @@ export function setupOaiPmh(
         success: true,
         value: new OaiPmh({
           baseUrl: getUrl(),
-          // TODO: usePost option
+          usePost: getIsUsingPost(),
           paramsFn: getIsCorsProxied()
             ? (input, init) => [getCorsProxiedUrl(input), init]
             : undefined,

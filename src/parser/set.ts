@@ -1,7 +1,9 @@
-import type { OaiPmhListResponse } from "../model/list.ts";
-import type { OaiPmhSet } from "../model/oai-pmh-stuff.ts";
 import { parseOaiPmh } from "./base-oai-pmh.ts";
-import { parseResumptionToken } from "./resumption-token.ts";
+import type { OaiPmhSet } from "./model/set.ts";
+import {
+  parseResumptionToken,
+  type OaiPmhListResponse,
+} from "./resumption-token.ts";
 
 export function parseListSetsResponse(
   childNodeList: NodeListOf<ChildNode>,

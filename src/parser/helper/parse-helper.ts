@@ -1,5 +1,5 @@
 import { OaiPmhInnerValidationError } from "../../error/validation-error.ts";
-import type { ParsedXMLRecord } from "../../model/xml.ts";
+import type { ParsedXMLRecord } from "../model/xml.ts";
 import { parseToRecordOrString } from "../xml-parser.ts";
 import { XMLRecordEntryParser } from "./xml-record-entry-parser.ts";
 

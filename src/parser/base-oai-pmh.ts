@@ -1,5 +1,7 @@
-import type { OaiPmhErrorCode } from "../model/oai-pmh-stuff.ts";
-import { OaiPmhResponseError } from "../error/response-error.ts";
+import {
+  OaiPmhErrorResponse,
+  type OaiPmhErrorCode,
+} from "../error/error-response.ts";
 import { ParserHelper } from "./helper/parse-helper.ts";
 
 export function parseOaiPmh(
@@ -28,7 +30,7 @@ export function parseOaiPmh(
       .parseXMLRecordEntry(oaiPmhRecord, "responseDate")
       .toString();
 
-    throw new OaiPmhResponseError({
+    throw new OaiPmhErrorResponse({
       errors: errors.map(([text, attr]) => ({
         text,
         ...(attr.toRecord("code") as { code: OaiPmhErrorCode }),
