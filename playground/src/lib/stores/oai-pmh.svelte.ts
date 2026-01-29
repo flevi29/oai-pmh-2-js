@@ -4,7 +4,10 @@ import type { Result } from "$lib/generic-result";
 
 function getCorsProxiedUrl(input: string | URL | Request) {
   const { url } = new Request(input);
-  return `https://corsproxy.io/?${encodeURIComponent(url)}`;
+  // TODO: recently used cors proxy was limited to localhost usage
+  // When will this one suffer the same consequence?
+  // Might want to consider other options, like making a Tauri app instead
+  return `https://api.cors.lol/?url=${encodeURIComponent(url)}`;
 }
 
 const LAST_OAI_PMH_URL_KEY = "lastOaiPmhUrl";

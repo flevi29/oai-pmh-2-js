@@ -78,13 +78,6 @@
 
       <blockquote>
         <p>
-          <a href="https://corsproxy.io/" rel="external" target="_blank"
-            >CorsProxy</a
-          > allows web applications to securely access resources from different domains,
-          overcoming browser restrictions.
-        </p>
-
-        <p>
           Most OAI-PMH providers do not send proper <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin"
             rel="external"

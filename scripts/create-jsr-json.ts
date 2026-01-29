@@ -9,9 +9,6 @@ const {
   files,
 } = pkg;
 
-const include = files.filter((v) => !v.includes("dist"));
-include.push("./package.json");
-
 writeFileSync(
   new URL("../jsr.json", import.meta.url),
   JSON.stringify(
@@ -26,7 +23,7 @@ writeFileSync(
           val.import.replace("dist/esm", "src").replace(/\.js$/, ".ts"),
         ]),
       ),
-      publish: { include },
+      publish: { include: files.filter((v) => !v.includes("dist")) },
     },
     null,
     2,

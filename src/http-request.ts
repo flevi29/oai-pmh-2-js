@@ -1,4 +1,3 @@
-import pkg from "../package.json" with { type: "json" };
 import { OaiPmhRequestInitError } from "./error/request-init-error.ts";
 import { OaiPmhRequestTimeOutError } from "./error/request-timeout-error.ts";
 import { OaiPmhRequestError } from "./error/request-error.ts";
@@ -36,10 +35,8 @@ function appendRecordToURLSearchParams(
 }
 
 /**
- * Creates a new Headers object from a {@link HeadersInit} and adds various
- * properties to it, some from {@link Config}.
- *
- * @returns A new Headers object
+ * Creates a new Headers object from a {@link HeadersInit} and adds the
+ * appropriate `Accept` header.
  */
 function getHeaders(headersInit?: HeadersInit): Headers {
   const headers = new Headers(headersInit);
@@ -47,16 +44,6 @@ function getHeaders(headersInit?: HeadersInit): Headers {
   const accept = "Accept";
   if (!headers.has(accept)) {
     headers.set(accept, "application/xml");
-  }
-
-  const userAgent = "User-Agent";
-  if (!headers.has(userAgent)) {
-    headers.set(userAgent, `${pkg.name}/${pkg.version}`);
-  }
-
-  const acceptEncoding = "Accept-Encoding";
-  if (!headers.has(acceptEncoding)) {
-    headers.set(acceptEncoding, "gzip,deflate,br,zstd,identity;q=1.0");
   }
 
   return headers;

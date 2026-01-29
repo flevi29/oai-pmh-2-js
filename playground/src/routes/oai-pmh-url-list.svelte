@@ -13,6 +13,7 @@
     "/favicon.png" | "/robots.txt" | "/valid-providers/date.json"
   >;
 
+  // TODO: This doesn't err if non-existent keys appear because of `(string & {})`
   const validProviderAssetPaths = Object.keys({
     "/valid-providers/providers-0.json": true,
     "/valid-providers/providers-1.json": true,
@@ -20,8 +21,6 @@
     "/valid-providers/providers-3.json": true,
     "/valid-providers/providers-4.json": true,
     "/valid-providers/providers-5.json": true,
-    "/valid-providers/providers-6.json": true,
-    "/valid-providers/providers-7.json": true,
   } satisfies { [TKey in ValidProviders]: true }).map(asset);
 </script>
 
@@ -108,7 +107,6 @@
 </p>
 
 <Pagination bind:this={pagination} values={parsedValues}>
-  <!-- TODO: better structure/styling -->
   {#snippet valueSnippet(valuesSlice, isLastPage)}
     <ul>
       {#each valuesSlice as value}

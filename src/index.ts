@@ -1,13 +1,22 @@
 /**
- * ## {@link https://www.openarchives.org/OAI/openarchivesprotocol.html | OAI-PMH Version 2.0} API ECMAScript client
+ * ## OAI-PMH Version 2.0 API ECMAScript client
  *
- * This module provides a client to interact with OAI-PMH 2.0 compliant
- * repositories. It supports all standard OAI-PMH verbs and handles pagination
- * (resumption tokens) automatically via async generators.
+ * A client to interact with
+ * {@link https://www.openarchives.org/OAI/openarchivesprotocol.html | OAI-PMH 2.0}
+ * compliant repositories. It supports all standard OAI-PMH verbs and handles
+ * pagination (resumption tokens) automatically via async generators.
  *
- * ### Example
+ * ### Example usage
+ *
+ * > ℹ️ The example below assumes that the environment is Node.js and the package
+ * > was installed from
+ * > [NPM](https://docs.npmjs.com/downloading-and-installing-packages-locally#installing-an-unscoped-package).
+ * > See [details on how to install from
+ * > JSR](https://jsr.io/docs/using-packages).
  *
  * ```ts
+ * import { OaiPmh } from "oai-pmh-2-js";
+ *
  * const oaiPmh = new OaiPmh({ baseUrl: "" });
  *
  * // get blabla

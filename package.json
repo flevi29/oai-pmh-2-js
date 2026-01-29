@@ -47,9 +47,9 @@
   },
   "devDependencies": {
     "@types/node": "24.10.9",
-    "jsr": "0.13.5",
+    "jsr": "0.14.1",
     "linkedom": "0.18.12",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "prettier-plugin-jsdoc": "1.8.0",
     "prettier-plugin-svelte": "3.4.1",
     "typescript": "5.9.3",
