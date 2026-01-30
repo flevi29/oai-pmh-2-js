@@ -6,28 +6,68 @@
  * compliant repositories. It supports all standard OAI-PMH verbs and handles
  * pagination (resumption tokens) automatically via async generators.
  *
- * ### Example usage
+ * ### Basic usage
  *
- * > ℹ️ The example below assumes that the environment is Node.js and the package
+ * > ℹ️ The examples below assume that the environment is Node.js and the package
  * > was installed from
  * > [NPM](https://docs.npmjs.com/downloading-and-installing-packages-locally#installing-an-unscoped-package).
  * > See [details on how to install from
  * > JSR](https://jsr.io/docs/using-packages).
  *
+ * #### Create an `OaiPmh` instance
+ *
  * ```ts
  * import { OaiPmh } from "oai-pmh-2-js";
+ * const oaiPmh = new OaiPmh({ baseUrl: "https://www.tethys.at/oai" });
+ * ```
  *
- * const oaiPmh = new OaiPmh({ baseUrl: "" });
+ * #### Identify
  *
- * // get blabla
- * const info = await oai.identify();
+ * ```ts
+ * const info = await oaiPmh.identify();
+ * console.log(info);
+ * ```
  *
- * // list blabla
- * for await (const records of oai.listRecords({
+ * #### ListIdentifiers
+ *
+ * ```ts
+ * for await (const headers of oaiPmh.listIdentifiers({
+ *   metadataPrefix: "oai_dc",
+ * })) {
+ *   console.log(headers);
+ * }
+ * ```
+ *
+ * #### MetadataFormats
+ *
+ * ```ts
+ * const metadataFormats = await oaiPmh.listMetadataFormats();
+ * console.log(metadataFormats);
+ * ```
+ *
+ * #### ListSets
+ *
+ * ```ts
+ * for await (const sets of oaiPmh.listSets()) {
+ *   console.log(sets);
+ * }
+ * ```
+ *
+ * #### ListRecords
+ *
+ * ```ts
+ * for await (const records of oaiPmh.listRecords({
  *   metadataPrefix: "oai_dc",
  * })) {
  *   console.log(records);
  * }
+ * ```
+ *
+ * #### GetRecord
+ *
+ * ```ts
+ * const record = await oaiPmh.getRecord("record-id");
+ * console.log(record);
  * ```
  *
  * @module
