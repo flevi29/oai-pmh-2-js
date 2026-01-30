@@ -1,6 +1,6 @@
 {
   "name": "oai-pmh-2-js",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "author": "Fodor Levente",
   "license": "MIT",
   "description": "OAI-PMH Version 2.0 API ECMAScript client.",
