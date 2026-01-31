@@ -1,7 +1,7 @@
 /// <reference lib="ESNEXT" />
 import { default as process } from "node:process";
 import { mkdirSync, writeFileSync } from "node:fs";
-import { DOMParser } from "linkedom/worker";
+import { DOMParser } from "linkedom";
 import { getXMLParser } from "oai-pmh-2-js/parser/xml-parser";
 import { ParserHelper } from "oai-pmh-2-js/parser/helper/parse-helper";
 import { OaiPmh } from "oai-pmh-2-js/index";

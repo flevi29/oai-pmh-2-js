@@ -1,5 +1,9 @@
-import type { ParsedXMLElement, ParsedXMLRecord } from "../model/xml.ts";
-import { parseToRecordOrString, type XMLParseResult } from "../xml-parser.ts";
+import type {
+  ParsedXMLElement,
+  ParsedXMLRecord,
+  XMLParseResult,
+} from "../model/xml.ts";
+import { parseToRecordOrStringWithHelper } from "../xml-parser.ts";
 import { AttrParser } from "./attr-parser.ts";
 import type { ParserHelper } from "./parse-helper.ts";
 
@@ -17,7 +21,7 @@ export class XMLRecordEntryParser {
     attr,
   }: ParsedXMLElement): [XMLParseResult, AttrParser] {
     return [
-      parseToRecordOrString(this.#helper, subChildNodeList),
+      parseToRecordOrStringWithHelper(subChildNodeList, this.#helper),
       new AttrParser(this.#helper, attr),
     ];
   }
@@ -75,9 +79,9 @@ export class XMLRecordEntryParser {
         throw nextHelper.getErr("expected child node elements");
       }
 
-      const recordOrString = parseToRecordOrString(
-        nextHelper,
+      const recordOrString = parseToRecordOrStringWithHelper(
         subChildNodeList,
+        nextHelper,
       );
 
       if (typeof recordOrString !== "object") {
@@ -109,9 +113,9 @@ export class XMLRecordEntryParser {
     return this.#xmlRecordEntry.map(({ value: subChildNodeList, attr }, i) => {
       const nextHelper = this.#helper.addPath(i.toString());
 
-      const recordOrString = parseToRecordOrString(
-        nextHelper,
+      const recordOrString = parseToRecordOrStringWithHelper(
         subChildNodeList,
+        nextHelper,
       );
 
       if (typeof recordOrString === "object") {

@@ -21,6 +21,26 @@
  * const oaiPmh = new OaiPmh({ baseUrl: "https://www.tethys.at/oai" });
  * ```
  *
+ * ##### The DOMParser
+ *
+ * This package uses the web standard [document object
+ * model](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) to parse
+ * XML. This interface is built into all browsers, but unfortunately not in any
+ * server-side runtime environments, like Node.js, Deno, Bun, etc.
+ *
+ * To use it with these, you need to provide an implementation of the
+ * `DOMParser`; the recommended and efficient one is
+ * [linkedom](https://github.com/WebReflection/linkedom), but there is also
+ * [jsdom](https://github.com/jsdom/jsdom).
+ *
+ * ```ts
+ * import { DOMParser } from "linkedom";
+ * new OaiPmh({
+ *   baseUrl: "https://www.tethys.at/oai",
+ *   domParser: DOMParser,
+ * });
+ * ```
+ *
  * #### Identify
  *
  * ```ts
@@ -70,10 +90,30 @@
  * console.log(record);
  * ```
  *
+ * ### Node lists and parsed XML elements
+ *
+ * Some properties have an unknown structure, due to not being strictly defined
+ * by the OAI-PMH specification, most notably the record metadata property. For
+ * this reason, some properties will have a
+ * {@linkcode https://developer.mozilla.org/en-US/docs/Web/API/NodeList | NodeList}
+ * of child
+ * {@linkcode https://developer.mozilla.org/en-US/docs/Web/API/Node | Node}s as
+ * their value.
+ *
+ * To parse these, one can either use the builtin `parseToRecordOrString` (read
+ * its documentation for details on its limitations), or write their own
+ * implementation of parsing/walking through these nodes.
+ *
+ * ```ts
+ * import { parseToRecordOrString } from "oai-pmh-2-js";
+ * ```
+ *
  * @module
  */
 
 export * from "./oai-pmh.ts";
+
+export { parseToRecordOrString } from "./parser/xml-parser.ts";
 
 export * from "./error/error-response.ts";
 export * from "./error/error.ts";

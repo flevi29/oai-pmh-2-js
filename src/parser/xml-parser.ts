@@ -4,6 +4,7 @@ import type {
   ParsedXMLAttributeValue,
   ParsedXMLElement,
   ParsedXMLRecord,
+  XMLParseResult,
 } from "./model/xml.ts";
 
 function getPrefixAndLocalName(
@@ -33,7 +34,7 @@ function parseAttributes(attributes: NamedNodeMap): ParsedXMLAttributes {
   return attr;
 }
 
-export function parseElementNode(node: Element): ParsedXMLElement {
+function parseElementNode(node: Element): ParsedXMLElement {
   const { nodeName, attributes, childNodes } = node;
   const [prefix, name] = getPrefixAndLocalName(nodeName);
 
@@ -50,76 +51,85 @@ export function parseElementNode(node: Element): ParsedXMLElement {
   return parsed;
 }
 
-export function parseTextNode(node: Text | CDATASection): string {
-  // `nodeValue` of Text or CDATASection cannot be null
-  return node.nodeValue!;
-}
-
-export const NON_WHITESPACE = /\S/;
-
-export type XMLParseResult = ParsedXMLRecord | string;
-
-// TODO: Open this up
-//       Later note: what did I mean?
-export function parseToRecordOrString(
-  helper: ParserHelper,
-  childNodeList: NodeListOf<ChildNode>,
+export function parseToRecordOrStringWithHelper(
+  childNodeList: NodeListOf<Node>,
+  helper?: ParserHelper,
 ): XMLParseResult {
-  let parsedXMLRecord: XMLParseResult | undefined = undefined;
+  let parseResult: XMLParseResult | undefined = undefined;
 
   for (const childNode of childNodeList) {
     switch (childNode.nodeType) {
       case childNode.ELEMENT_NODE: {
-        if (typeof parsedXMLRecord === "string") {
-          throw helper.getErr(
-            "invalid XML for OAI-PMH, non-whitespace Text and Element nodes can not mix",
-          );
+        const parsed = parseElementNode(childNode as Element);
+
+        if (parseResult === undefined || typeof parseResult === "string") {
+          parseResult = {};
         }
 
-        const parsed = parseElementNode(childNode as Element);
-        // `??=` doesn't seem to be doing type narrowing
-        (((parsedXMLRecord ??= {}) as ParsedXMLRecord)[parsed.name] ??=
-          []).push(parsed);
+        // TODO: What if there are multiple different prefixes for the same name?
+        (parseResult[parsed.name] ??= []).push(parsed);
 
         break;
       }
       case childNode.TEXT_NODE:
       case childNode.CDATA_SECTION_NODE: {
-        const parsed = parseTextNode(childNode as Text | CDATASection);
+        if (typeof parseResult === "object") {
+          // ignore text in case we have elements
+          break;
+        }
 
-        if (!NON_WHITESPACE.test(parsed)) {
+        const { data } = childNode as Text | CDATASection;
+
+        if (/\s/.test(data)) {
+          // ignore whitespace
           continue;
         }
 
-        if (typeof parsedXMLRecord === "object") {
-          throw helper.getErr(
-            "invalid XML for OAI-PMH, non-whitespace Text and Element nodes can not mix at this level",
-          );
-        }
-
-        parsedXMLRecord =
-          parsedXMLRecord === undefined ? parsed : parsedXMLRecord + parsed;
+        // combine with other character data nodes
+        parseResult = parseResult === undefined ? data : parseResult + data;
 
         break;
       }
       case childNode.PROCESSING_INSTRUCTION_NODE:
-      case childNode.COMMENT_NODE: {
+      case childNode.COMMENT_NODE:
+      case childNode.DOCUMENT_TYPE_NODE:
+        // ignore
         break;
-      }
-      default: {
-        throw helper.getErr(
-          `node type ${childNode.nodeType} not supported/implemented`,
-        );
-      }
+      default:
+        const message = `node type ${childNode.nodeType} not supported/implemented`;
+        throw helper !== undefined
+          ? helper.getErr(message)
+          : new Error(message);
     }
   }
 
-  return parsedXMLRecord ?? "";
+  return parseResult ?? "";
 }
 
-export type ParseXML = (xml: string) => XMLDocument;
+/**
+ * Parses a
+ * {@linkcode https://developer.mozilla.org/en-US/docs/Web/API/NodeList | NodeList}
+ * of {@linkcode https://developer.mozilla.org/en-US/docs/Web/API/Node | Node}s
+ * into either a record structure ({@linkcode ParsedXMLRecord}) or a string.
+ *
+ * Ignores `PROCESSING_INSTRUCTION_NODE`, `COMMENT_NODE` and
+ * `DOCUMENT_TYPE_NODE` nodes, white space
+ * {@linkcode https://developer.mozilla.org/en-US/docs/Web/API/CharacterData | CharacterData}
+ * nodes, ignores them altogether if there are
+ * {@linkcode https://developer.mozilla.org/en-US/docs/Web/API/Element | Element}
+ * nodes present in the list. Only supports `ELEMENT_NODE`, `TEXT_NODE`,
+ * `CDATA_SECTION_NODE`, `PROCESSING_INSTRUCTION_NODE`, `DOCUMENT_TYPE_NODE`,
+ * `COMMENT_NODE`. Will throw an error for any other types.
+ */
+export function parseToRecordOrString(
+  childNodeList: NodeListOf<Node>,
+): XMLParseResult {
+  return parseToRecordOrStringWithHelper(childNodeList);
+}
 
-export function getXMLParser(domParser: typeof DOMParser): ParseXML {
+export function getXMLParser(
+  domParser: typeof DOMParser,
+): (xml: string) => XMLDocument {
   const parser = new domParser();
   // TODO: https://developer.mozilla.org/en-US/docs/Web/API/DOMParser/parseFromString#error_handling
   return (xml) => parser.parseFromString(xml, "text/xml");

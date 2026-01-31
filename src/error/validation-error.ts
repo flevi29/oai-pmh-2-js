@@ -2,7 +2,7 @@ import { OaiPmhError } from "./error.ts";
 
 /**
  * Inner validation error, which is wrapped in the cause property of
- * {@linkcode OaiPmhValidationError}
+ * {@linkcode OaiPmhValidationError}.
  */
 export class OaiPmhInnerValidationError extends OaiPmhError {
   constructor(xmlPath: string, message: string) {
