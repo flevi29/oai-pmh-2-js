@@ -17,6 +17,7 @@ jobs:
       - name: Build
         env:
           PAGES_BASE_PATH: ${{steps.pages_cfg.outputs.base_path}}
+          PUBLIC_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
         run: |
           pnpm -C=playground prepare
           pnpm -C=playground build

@@ -1,6 +1,7 @@
 <script lang="ts">
   import "@picocss/pico/css/pico.sand.min.css";
   import "../app.css";
+  import { PUBLIC_REPOSITORY_URL } from "$env/static/public";
   import { getLastOaiPmhUrl, setupOaiPmh } from "$lib/stores/oai-pmh.svelte";
   import OaiPmhURLInput from "./oai-pmh-url-input.svelte";
   import Navigation from "$lib/components/navigation.svelte";
@@ -41,5 +42,7 @@
   </section>
 </main>
 
-<!-- TODO: page last updated, link to repository, license -->
-<footer class="text-center"><p><small><i>FOOTER TODO</i></small></p></footer>
+<footer class="text-center">
+  <hr />
+  <p><a href={PUBLIC_REPOSITORY_URL}><small><i>repository</i></small></a></p>
+</footer>

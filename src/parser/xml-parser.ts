@@ -34,7 +34,7 @@ function parseAttributes(attributes: NamedNodeMap): ParsedXMLAttributes {
   return attr;
 }
 
-function parseElementNode(node: Element): ParsedXMLElement {
+export function parseElementNode(node: Element): ParsedXMLElement {
   const { nodeName, attributes, childNodes } = node;
   const [prefix, name] = getPrefixAndLocalName(nodeName);
 
