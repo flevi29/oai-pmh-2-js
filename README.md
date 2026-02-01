@@ -10,3 +10,7 @@ pagination (resumption tokens) automatically via async generators.
 
 Check out the [overview](https://jsr.io/@fole/oai-pmh-2-js) and
 [documentation](https://jsr.io/@fole/oai-pmh-2-js/doc).
+
+Also check out the
+[OAI-PMH fiddle website](https://flevi29.github.io/oai-pmh-2-js/) (under
+construction 🚧).

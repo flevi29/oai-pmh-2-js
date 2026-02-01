@@ -29,7 +29,6 @@
   }
 </script>
 
-<!-- TODO: This interferes with role=group, need to separate from button -->
 <Dialog bind:this={dialogComponent} headerContent="Pick OAI-PMH Set">
   {#if r.result.status === resultStatus.success}
     <RadioInputList

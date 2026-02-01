@@ -31,7 +31,7 @@
  * To use it with these, you need to provide an implementation of the
  * `DOMParser`; the recommended and efficient one is
  * [linkedom](https://github.com/WebReflection/linkedom), but there is also
- * [jsdom](https://github.com/jsdom/jsdom).
+ * [jsdom](https://github.com/jsdom/jsdom) and a few others.
  *
  * ```ts
  * import { DOMParser } from "linkedom";

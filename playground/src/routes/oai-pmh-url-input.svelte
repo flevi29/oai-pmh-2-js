@@ -21,7 +21,6 @@
   const savedUrlsListId = "saved-urls";
 
   // TODO: Only save urls, that successfully run
-  //       And add datalist labels for their names perhaps combined with url
   function setSavedUrls(url: string) {
     cachedUrls.add(url);
 

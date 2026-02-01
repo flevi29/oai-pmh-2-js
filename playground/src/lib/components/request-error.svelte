@@ -7,7 +7,7 @@
   };
 
   function transformError(error: unknown): TransformedError {
-    // TODO: Arrays?
+    // TODO: Array of errors?
     if (typeof error === "object" && error !== null) {
       const te: TransformedError = {};
 

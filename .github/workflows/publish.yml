@@ -20,8 +20,6 @@ jobs:
           pnpm build
           pnpm create-jsr
 
-      # TODO: Remove `--no-git-checks` when https://github.com/pnpm/pnpm/issues/9011 is resolved
-
       - name: Publish to NPM
         if: "!github.event.release.prerelease"
         run: pnpm publish --access public --provenance --no-git-checks

@@ -26,7 +26,6 @@ export type OaiPmhParserParameters = {
 
 function safeGetDOMParser(): typeof DOMParser {
   if (typeof DOMParser === "undefined") {
-    // TODO: More helpful error message, perhaps linking to docs
     throw new Error(
       "environment doesn't have DOMParser, please provide it via options",
     );
@@ -35,8 +34,6 @@ function safeGetDOMParser(): typeof DOMParser {
   return DOMParser;
 }
 
-// TODO: provide a callback for XSD validation
-//       for instance https://github.com/nikku/node-xsd-schema-validator
 export function getOaiPmhParser({ domParser }: OaiPmhParserParameters) {
   const parseXML = getXMLParser(domParser ?? safeGetDOMParser());
 

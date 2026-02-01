@@ -112,9 +112,6 @@ function appendErrorFile(str: string) {
 }
 
 let no = 0;
-// TODO: Should have two sets of provider files
-//       - ones where CORS Proxy is required
-//       - one where it is not
 function writeOkFile(obj: unknown[]) {
   const fileUrl = new URL(`./providers-${no}.json`, okDirUrl);
 
