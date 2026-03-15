@@ -1,4 +1,4 @@
-import { writeFileSync } from "node:fs";
+import { writeFile } from "node:fs/promises";
 import pkg from "../package.json" with { type: "json" };
 
 const {
@@ -9,7 +9,7 @@ const {
   files,
 } = pkg;
 
-writeFileSync(
+await writeFile(
   new URL("../jsr.json", import.meta.url),
   JSON.stringify(
     {
@@ -20,7 +20,7 @@ writeFileSync(
       exports: Object.fromEntries(
         Object.entries(exports).map(([key, val]) => [
           key,
-          val.import.replace("dist/esm", "src").replace(/\.js$/, ".ts"),
+          val.replace("dist", "src").replace(/\.js$/, ".ts"),
         ]),
       ),
       publish: { include: files.filter((v) => !v.includes("dist")) },

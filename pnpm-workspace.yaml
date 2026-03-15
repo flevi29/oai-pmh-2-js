@@ -1,5 +1,4 @@
 packages:
   - playground
-
-onlyBuiltDependencies:
-  - esbuild
+ignoredBuiltDependencies:
+  - "@parcel/watcher"

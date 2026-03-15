@@ -1,23 +1,17 @@
 import tsconfig from "./tsconfig.json" with { type: "json" };
+import { basename, extname } from "node:path";
 import { defineConfig } from "vite";
+
+const entry = "./src/index.ts";
 
 export default defineConfig({
   build: {
     sourcemap: true,
     target: tsconfig.compilerOptions.target,
     lib: {
-      entry: "./src/index.ts",
-      formats: ["es", "cjs"],
-      fileName: (format, entryName) => {
-        switch (format) {
-          case "es":
-            return `esm/${entryName}.js`;
-          case "cjs":
-            return `cjs/${entryName}.cjs`;
-          default:
-            throw new Error(`bad format ${format}`);
-        }
-      },
+      entry,
+      formats: ["es"],
+      fileName: basename(entry, extname(entry)),
     },
   },
 });
