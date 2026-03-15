@@ -72,7 +72,7 @@ function* parseBaseURLs(childNodeList: NodeListOf<ChildNode>) {
     .toStrings();
 
   let lastI = 0;
-  for (const [i, [url, attr]] of urls.entries()) {
+  for (const [i, [url]] of urls.entries()) {
     if (url === undefined) {
       throw nextHelper.getErr("expected no missing text nodes");
     }
@@ -198,7 +198,7 @@ async function testAllMethodsAndGetInfo(url: string): Promise<{
     throw new Error("bad protocol version", { cause: identify });
   }
 
-  const accessControlAllowOrigin = headers!?.get("Access-Control-Allow-Origin");
+  const accessControlAllowOrigin = headers!.get("Access-Control-Allow-Origin");
 
   const metadataFormats = await wrapError(
     oaiPmh.listMetadataFormats.bind(oaiPmh),
@@ -213,9 +213,7 @@ async function testAllMethodsAndGetInfo(url: string): Promise<{
   let count = 0;
   await wrapError(async function listIdentifiers() {
     for await (const v of oaiPmh.listIdentifiers({ metadataPrefix })) {
-      if (identifier === undefined) {
-        identifier = v[0]!.identifier;
-      }
+      identifier ??= v[0]!.identifier;
 
       count += 1;
       if (count === 2) {

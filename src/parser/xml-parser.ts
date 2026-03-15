@@ -3,7 +3,7 @@ import type {
   ParsedXMLAttributes,
   ParsedXMLAttributeValue,
   ParsedXMLElement,
-  ParsedXMLRecord,
+  ParsedXMLRecord, // oxlint-disable-line no-unused-vars
   XMLParseResult,
 } from "./model/xml.ts";
 
@@ -13,7 +13,7 @@ function getPrefixAndLocalName(
   const indexOfColon = nodeName.indexOf(":");
 
   return indexOfColon === -1
-    ? [, nodeName]
+    ? [undefined, nodeName]
     : [nodeName.slice(0, indexOfColon), nodeName.slice(indexOfColon + 1)];
 }
 

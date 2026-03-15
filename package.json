@@ -45,12 +45,14 @@
     "create-jsr": "node scripts/create-jsr-json.ts",
     "check": "tsc",
     "format": "prettier --write .",
-    "lint": "prettier --check ."
+    "lint": "prettier --check . && oxlint"
   },
   "devDependencies": {
     "@types/node": "24.10.9",
     "jsr": "0.14.1",
     "linkedom": "0.18.12",
+    "oxlint": "1.55.0",
+    "oxlint-tsgolint": "0.16.0",
     "prettier": "3.8.1",
     "prettier-plugin-jsdoc": "1.8.0",
     "prettier-plugin-svelte": "3.4.1",

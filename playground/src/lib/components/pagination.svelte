@@ -32,7 +32,7 @@
   } = $props();
 
   let page = $derived.by(() => {
-    values;
+    values; // oxlint-disable-line no-unused-expressions
     return 0;
   });
 

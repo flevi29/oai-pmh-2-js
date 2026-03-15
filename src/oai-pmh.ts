@@ -205,7 +205,7 @@ export class OaiPmh {
     options?: RequestOptions,
   ): AsyncGenerator<OaiPmhHeader[], void> {
     return this.#list(
-      this.#parser.parseListIdentifiers,
+      this.#parser.parseListIdentifiers, // oxlint-disable-line unbound-method
       { verb: "ListIdentifiers", ...listOptions },
       options,
     );
@@ -259,7 +259,7 @@ export class OaiPmh {
     options?: RequestOptions,
   ): AsyncGenerator<OaiPmhRecord[], void> {
     return this.#list(
-      this.#parser.parseListRecords,
+      this.#parser.parseListRecords, // oxlint-disable-line unbound-method
       { verb: "ListRecords", ...listOptions },
       options,
     );
@@ -273,7 +273,7 @@ export class OaiPmh {
    */
   listSets(options?: RequestOptions): AsyncGenerator<OaiPmhSet[], void> {
     return this.#list(
-      this.#parser.parseListSets,
+      this.#parser.parseListSets, // oxlint-disable-line unbound-method
       { verb: "ListSets" },
       options,
     );
