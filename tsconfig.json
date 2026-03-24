@@ -6,7 +6,7 @@
     "noEmit": true,
     "module": "node20",
     "target": "ES2023",
-    "strict": true,
+    "types": ["node"],
     "verbatimModuleSyntax": true,
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true

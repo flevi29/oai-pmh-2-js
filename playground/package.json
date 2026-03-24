@@ -17,7 +17,7 @@
     "@sveltejs/adapter-static": "3.0.10",
     "@sveltejs/kit": "2.55.0",
     "@sveltejs/vite-plugin-svelte": "7.0.0",
-    "svelte": "5.53.12",
+    "svelte": "5.55.0",
     "svelte-check": "4.4.5"
   }
 }
