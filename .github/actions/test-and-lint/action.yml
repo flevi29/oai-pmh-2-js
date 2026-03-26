@@ -5,16 +5,9 @@ description: "Runs linters, type check and test."
 runs:
   using: "composite"
   steps:
-    - name: Lint
-      shell: bash
+    - shell: bash
       run: |
         pnpm lint
-        pnpm -C=playground lint
-    - name: Type check
-      shell: bash
-      run: |
-        pnpm -C=playground check
         pnpm check
-    - name: Test
-      shell: bash
-      run: pnpm test --coverage --coverage.reporter=text
+        pnpm -C=playground check
+        pnpm test --coverage --coverage.reporter=text

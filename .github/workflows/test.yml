@@ -8,6 +8,9 @@ jobs:
     name: Lint, type check and test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: ./.github/actions/setup-nodejs
-      - uses: ./.github/actions/test-and-lint
+      - name: Checkout codebase
+        uses: actions/checkout@v6
+      - name: Setup Node.js environment
+        uses: ./.github/actions/setup-nodejs
+      - name: Runs linters, type check and test
+        uses: ./.github/actions/test-and-lint

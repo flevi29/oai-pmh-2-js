@@ -11,11 +11,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: ./.github/actions/setup-nodejs
+      - name: Checkout codebase
+        uses: actions/checkout@v6
+      - name: Setup Node.js environment
+        uses: ./.github/actions/setup-nodejs
         with:
           registry-url: https://registry.npmjs.org/
-      - uses: ./.github/actions/test-and-lint
+      - name: Runs linters, type check and test
+        uses: ./.github/actions/test-and-lint
       - name: Build and create jsr.json
         run: |
           pnpm build

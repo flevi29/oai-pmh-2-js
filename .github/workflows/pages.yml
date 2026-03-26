@@ -11,9 +11,12 @@ jobs:
     steps:
       - id: pages_cfg
         uses: actions/configure-pages@v5
-      - uses: actions/checkout@v6
-      - uses: ./.github/actions/setup-nodejs
-      - uses: ./.github/actions/test-and-lint
+      - name: Checkout codebase
+        uses: actions/checkout@v6
+      - name: Setup Node.js environment
+        uses: ./.github/actions/setup-nodejs
+      - name: Runs linters, type check and test
+        uses: ./.github/actions/test-and-lint
       - name: Build
         env:
           PAGES_BASE_PATH: ${{steps.pages_cfg.outputs.base_path}}
