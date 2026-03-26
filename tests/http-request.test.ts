@@ -3,7 +3,7 @@ import { getClient } from "./util/client.ts";
 import { getFetchMock } from "./util/fetch.ts";
 import { getAsset } from "./util/asset.ts";
 import { getError, retract } from "./util/get-error.ts";
-import { OaiPmh, type CustomRequestFunction } from "#src/index";
+import type { CustomRequestFunction } from "#src/index";
 
 describe("http requests", () => {
   test("use POST", async () => {

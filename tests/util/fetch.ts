@@ -36,7 +36,7 @@ export function getFetchMock() {
         assert.deepEqual(
           Object.fromEntries(
             isPost
-              ? (init?.body as URLSearchParams).entries()
+              ? ((init?.body as URLSearchParams | undefined)?.entries() ?? [])
               : input.searchParams.entries(),
           ),
           searchParams,
