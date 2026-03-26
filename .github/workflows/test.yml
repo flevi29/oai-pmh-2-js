@@ -10,14 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-nodejs
-      - name: Lint
-        run: |
-          pnpm lint
-          pnpm -C=playground lint
-      - name: Type check
-        run: |
-          pnpm -C=playground check
-          pnpm check
-      - name: Test
-        # TODO
-        run: echo TODO
+      - uses: ./.github/actions/test-and-lint

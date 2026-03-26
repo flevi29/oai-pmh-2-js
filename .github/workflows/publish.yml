@@ -15,6 +15,7 @@ jobs:
       - uses: ./.github/actions/setup-nodejs
         with:
           registry-url: https://registry.npmjs.org/
+      - uses: ./.github/actions/test-and-lint
       - name: Build and create jsr.json
         run: |
           pnpm build

@@ -1,6 +1,5 @@
 name: Deploy to GitHub Pages
 
-# TODO: This should also run tests and linting
 on:
   push:
     branches: [main]
@@ -14,6 +13,7 @@ jobs:
         uses: actions/configure-pages@v5
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-nodejs
+      - uses: ./.github/actions/test-and-lint
       - name: Build
         env:
           PAGES_BASE_PATH: ${{steps.pages_cfg.outputs.base_path}}
