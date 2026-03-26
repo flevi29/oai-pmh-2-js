@@ -1,5 +1,7 @@
+minimumReleaseAge: 1440
 packages:
   - playground
+onlyBuiltDependencies:
+  - esbuild
 ignoredBuiltDependencies:
   - "@parcel/watcher"
-# minimumReleaseAge: 1440
