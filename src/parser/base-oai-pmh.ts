@@ -21,39 +21,39 @@ export function parseOaiPmh(
     .parseXMLRecordEntry(oaiPmhRecord, "error")
     .toMaybeStrings();
 
-  if (errors !== undefined) {
-    const [request, reqAttr] = nextHelper
-      .parseXMLRecordEntry(oaiPmhRecord, "request")
-      .toString();
-
-    const [responseDate] = nextHelper
-      .parseXMLRecordEntry(oaiPmhRecord, "responseDate")
-      .toString();
-
-    throw new OaiPmhErrorResponse({
-      errors: errors.map(([text, attr]) => ({
-        text,
-        ...(attr.toRecord("code") as { code: OaiPmhErrorCode }),
-      })),
-
-      request: {
-        value: request,
-        attr: reqAttr.toMaybeRecord(
-          "verb",
-          "identifier",
-          "metadataPrefix",
-          "from",
-          "until",
-          "set",
-          "resumptionToken",
-        ),
-      },
-
-      responseDate,
-    });
+  if (errors === undefined) {
+    return nextHelper
+      .parseXMLRecordEntry(oaiPmhRecord, oaiPmhMethodKey)
+      .toRecord();
   }
 
-  return nextHelper
-    .parseXMLRecordEntry(oaiPmhRecord, oaiPmhMethodKey)
-    .toRecord();
+  const [request, reqAttr] = nextHelper
+    .parseXMLRecordEntry(oaiPmhRecord, "request")
+    .toString();
+
+  const [responseDate] = nextHelper
+    .parseXMLRecordEntry(oaiPmhRecord, "responseDate")
+    .toString();
+
+  throw new OaiPmhErrorResponse({
+    errors: errors.map(([text, attr]) => ({
+      text,
+      ...(attr.toRecord("code") as { code: OaiPmhErrorCode }),
+    })),
+
+    request: {
+      value: request,
+      attr: reqAttr.toMaybeRecord(
+        "verb",
+        "identifier",
+        "metadataPrefix",
+        "from",
+        "until",
+        "set",
+        "resumptionToken",
+      ),
+    },
+
+    responseDate,
+  });
 }

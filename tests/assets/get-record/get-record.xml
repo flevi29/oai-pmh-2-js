@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:13:59Z</responseDate>
+  <request verb="GetRecord" metadataPrefix="oai_dc">https://www.tethys.at/oai</request>
+  <GetRecord>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:1</identifier>
+        <datestamp>2022-09-08T12:00:00Z</datestamp>
+        <setSpec>data-type:gis</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="de">GEOFAST 1:50.000, Blatt 53 – Amstetten, Stand 2019</dc:title>
+          <dc:title xml:lang="en">GEOFAST 1:50,000. Map Nr. 53 – Amstetten, stand 2019</dc:title>
+          <dc:title xml:lang="de">Zusammenstellung ausgewählter Archivunterlagen der Geologischen
+            Bundesanstalt</dc:title>
+          <dc:creator>Linner, Manfred</dc:creator>
+          <dc:creator>Moser, Michael</dc:creator>
+          <dc:subject xml:lang="de">Vektordaten</dc:subject>
+          <dc:subject xml:lang="de">Kompilation</dc:subject>
+          <dc:subject xml:lang="de">Kartenwerk</dc:subject>
+          <dc:subject xml:lang="de">Niederösterreich</dc:subject>
+          <dc:subject>:550</dc:subject>
+          <dc:description xml:lang="de">GEOFAST steht als Abkürzung für Geologische Karten von
+            Österreich die durch Zusammenstellung ausgewählter Archivunterlagen der Geologischen
+            Bundesanstalt im Maßstab 1:50.000 kompiliert wurden. Hierfür werden die Archivbestände
+            der Geologischen Bundesanstalt für den Raum des Kartenblattes 53 Amstetten durchforstet,
+            zusammen mit Regionalexperten wissenschaftlich fundiert ausgewählt und anschließend die
+            besten Inhalte zu einer Karte kompiliert, digitalisiert und in moderner Form auf die
+            aktuelle Topografie angepasst inklusive der Verwendung von hoch aufgelösten digitalen
+            Geländemodellen (Laserscan). Diskontinuitäten zwischen den verwendeten Kartenunterlagen
+            verschiedener Autoren werden bewusst beibehalten und können sich als Sprünge in den
+            Konturlinien äußern. Geologische Inhalte werden in die aktuellen stratigrafischen und
+            tektonischen Modelle überführt. Aufgrund der Übertragung der geologischen Inhalte von
+            Karten mit veralteter Topografie und größeren Maßstäben in die aktuelle topografische
+            Grundlage sind Lageungenauigkeiten vorhanden.</dc:description>
+          <dc:description xml:lang="en">GEOFAST stands for geological maps of Austria that were
+            compiled by a set of selected maps form the archives of the Geological Survey of Austria
+            on a scale of 1: 50,000. For this purpose, archives of the Geological Survey of Austria
+            for the map sheet 53 Amstetten are scanned and the best available maps selected in
+            cooperation with regional experts, resulting in a compiled and digitized map
+            additionally adapted to the current topography, including the use of high-resolution
+            digital terrain models (laser scan). Discontinuities between the map documents used by
+            different authors are deliberately retained and can manifest themselves as jumps in the
+            contour lines. Geological content is transferred to the current stratigraphic and
+            tectonic models. Due to the transfer of the geological content of maps with outdated
+            topography and larger scales to the current topographical basis, there are positional
+            inaccuracies.</dc:description>
+          <dc:description xml:lang="" />
+          <dc:publisher>Tethys RDR</dc:publisher>
+          <dc:contributor>Stöckl, Werner</dc:contributor>
+          <dc:contributor>Bayer, Isabella</dc:contributor>
+          <dc:contributor>Pavlik, Wolfgang</dc:contributor>
+          <dc:date>2020-09-03</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>doc-type:ResearchData</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/geopackage+sqlite3</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:identifier>https://www.tethys.at/dataset/1</dc:identifier>
+          <dc:language>ger</dc:language>
+          <dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.24341/tethys.1</dc:relation>
+          <dc:relation />
+          <dc:coverage>SOUTH-BOUND LATITUDE: 47.996492 * WEST-BOUND LONGITUDE: 14.826144 *
+            NORTH-BOUND LATITUDE: 48.253491 * EAST-BOUND LONGITUDE: 15.09176</dc:coverage>
+          <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+          <dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+          <dc:source>Moser, M.,Linner, M. (2020): GEOFAST 1:50.000, Blatt 53 – Amstetten, Stand
+            2019.Tethys RDR, Geologische Bundesanstalt (GBA), Wien</dc:source>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+  </GetRecord>
+</OAI-PMH>

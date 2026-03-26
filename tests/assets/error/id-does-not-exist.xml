@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:15:14Z</responseDate>
+  <request verb="GetRecord">https://www.tethys.at/oai</request>
+  <error code="idDoesNotExist">The value of the identifier argument is unknown or illegal in this repository.</error>
+</OAI-PMH>

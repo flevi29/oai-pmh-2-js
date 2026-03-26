@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:13:06Z</responseDate>
+  <request verb="ListRecords" metadataPrefix="oai_dc">https://www.tethys.at/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:4</identifier>
+        <datestamp>2022-09-08T12:00:00Z</datestamp>
+        <setSpec>data-type:gis</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="de">Kartendaten 102 Aflenz Kurort (1:50.000)</dc:title>
+          <dc:title xml:lang="en">Mapdata 102 Aflenz Kurort (1:50,000)</dc:title>
+          <dc:creator>Bryda, Gerhard</dc:creator>
+          <dc:subject xml:lang="de">Vektordaten</dc:subject>
+          <dc:subject xml:lang="de">Kartenserie</dc:subject>
+          <dc:subject xml:lang="de">Steiermark</dc:subject>
+          <dc:subject xml:lang="de">GK50</dc:subject>
+          <dc:subject>:550</dc:subject>
+          <dc:description xml:lang="de">Die in dieser Datenpublikation publizierten Daten wurden für
+            die Erstellung des Kartenwerkes Geologische Karte der Republik Österreich, Blatt 102,
+            AFLENZ KURORT im Maßstab 1:50.000 verwendet und entsprechen dem aktuellen Wissensstand
+            zum Zeitpunkt des Kartendruckes (November 2020). Die Datengrundlage basiert auf einer
+            umfassenden Basisdatenerhebung im Rahmen der gesetzlich verankerten geologischen
+            Landesaufnahme, welche eine umfangreiche Literaturrecherche, die Geländekartierung,
+            sowie die Probenahme mit wissenschaftlichen Analysen und Messungen beinhaltet.</dc:description>
+          <dc:description xml:lang="en">The data provided in this dataset was used printing the
+            Geological Map of Austria, map sheet 102, AFLENZ KURORT on a scale of 1: 50,000. They
+            correspond to the current state of knowledge in November 2020 at the time the map was
+            printed. The dataset is based on a comprehensive collection of basic geological data in
+            the Division of Geological Mapping at the Geological Survey of Austria including
+            literature research, geological mapping and scientific research on rock samples.</dc:description>
+          
+          <dc:publisher>Tethys RDR</dc:publisher>
+          <dc:contributor>Ruthner, Jacek</dc:contributor>
+          <dc:contributor>Stöckl, Werner</dc:contributor>
+          <dc:date>2020-11-11</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>doc-type:ResearchData</dc:type>
+          <dc:format>application/geopackage+sqlite3</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:identifier>https://www.tethys.at/dataset/4</dc:identifier>
+          <dc:language>ger</dc:language>
+          <dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.24341/tethys.4</dc:relation>
+          <dc:relation />
+          <dc:coverage>SOUTH-BOUND LATITUDE: 47.4995384116009 * WEST-BOUND LONGITUDE:
+            15.0823385696285 * NORTH-BOUND LATITUDE: 47.7495175044698 * EAST-BOUND LONGITUDE:
+            15.3323230027887</dc:coverage>
+          <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+          <dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+          <dc:source>Bryda, G. (2020): Kartendaten 102 Aflenz Kurort (1:50.000).Tethys RDR,
+            Geologische Bundesanstalt (GBA), Wien</dc:source>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:5</identifier>
+        <datestamp>2021-06-10T12:00:00Z</datestamp>
+        <setSpec>data-type:monitoring</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="en">Geoelectrical Monitoring - landslide Ampflwang (Upper Austria)</dc:title>
+          <dc:title xml:lang="de">Geoelektrisches Monitoring - Hangrutschung Ampflwang (OÖ)</dc:title>
+          <dc:creator>Ottowitz, David</dc:creator>
+          <dc:creator>Jochum, Birgit</dc:creator>
+          <dc:creator>Pfeiler, Stefan</dc:creator>
+          <dc:creator>Römer, Alexander</dc:creator>
+          <dc:creator>Supper, Robert</dc:creator>
+          <dc:subject xml:lang="en">electrical resistivity</dc:subject>
+          <dc:subject xml:lang="en">infiltration processes</dc:subject>
+          <dc:subject xml:lang="en">Geomon4D</dc:subject>
+          <dc:subject>:550</dc:subject>
+          <dc:description xml:lang="en">The geoelectrical monitoring dataset was acquired on a
+            landslide formed after a house construction within the area of an old deep-seated
+            landslide near to the town of Ampflwang (Upper Austria). The deep-seated landslide
+            developed mostly in quaternary slope/landslide deposits and anthropogenic deposits,
+            situated above the underlying Neogene rocks, i.e.: fluvial gravels of Hausruck Formation
+            at the top, limnic to fluvial coal-rich clay with brown coal beds of Ampflwang Formation
+            in the middle, and marine silty-sandy marl to silty sand of Ottnang Formation at the
+            base. The small part of the old deep-seated landslide reactivated in March 2010, was
+            observed by topographic changes and inclinometric data. It is about 110 m long, 40 m
+            wide, 4 m thick and represents a shallow rotational-translational landslide of an
+            elliptic shape and quite smooth topography. The surrounding infrastructure (e.g.
+            terrace, sewage pipes) of the newly constructed family house was partly damaged by the
+            landslide. The main purpose of the collection of continuous geoelectrical data was to
+            investigate the correlation between the temporal change of electrical resistivity and
+            the acceleration of the landslide body, which was directly influenced by increased water
+            saturation of the subsurface. Therefore, the recorded temporal changes of the electrical
+            resistivity are mainly based on the changes of water saturation and soil temperature.
+            The monitoring period lasts for almost one year (12/2010 to 09/2011) and a complete
+            geoelectrical dataset was collected every four hours, consisting of 1765 data points.
+            The data collection was achieved with the Geomon4D system, which was developed by the
+            Department of Geophysics of the Geological Survey of Austria. The provided series of
+            geoelectrical datasets represents raw data, where a very simple preliminary filtering is
+            performed, to eliminate data points that are erroneous due to technical limitations of
+            the monitoring system. This is applied to all data points exceeding the voltage range of
+            -9.95 to +9.95 V or with injection current below 0.5 mA (forward or reverse). Therefore,
+            a comprehensive data analysis, processing and inversion are possible with the published
+            datasets.</dc:description>
+          <dc:description xml:lang="de">Der geoelektrische Monitoringdatensatz wurde auf einer
+            Hangrutschung aufgenommen, die unmittelbar nach der Neuerrichtung eines
+            Einfamilienhauses im Bereich einer älteren, tieferreichenden Hangrutschung in der Nähe
+            der Ortschaft Ampflwang (Oberösterreich), entstanden war. Die ältere, tieferreichende
+            Hangrutschung entwickelte sich ausschließlich in quartären Hang- und
+            Erdrutschablagerungen und anthropogenen Ablagerungen, die sich über den
+            darunterliegenden Gesteinen aus dem Neogen befinden. Diese umfassen Flusskies der
+            Hausruck-Formation oben, limnischer bis fluvialer kohlereiche Tone mit
+            Braunkohle-Zwischenlagen der Ampflwang-Formation in der Mitte und marine
+            schluffig-sandige Mergel bis schluffige Sande der Ottnang-Formation an der Basis. Der
+            kleine Teil der älteren, tieferreichenden Hangrutschung, deren Reaktivierung im März
+            2010 durch topografische Veränderungen und Inklinometer-Daten bemerkt wurde, ist etwa
+            110 m lang, 40 m breit und erstreckt sich bis in eine Tiefe von etwa 4 m. Es ist eine
+            flache rotations-translatorische Hangrutschung mit elliptischer Form und relativ glatter
+            Topografie. Die umgebende Infrastruktur (z. B. Terrasse, Abwasserrohre) des neu
+            errichteten Einfamilienhauses wurde durch die Hangrutschung teilweise beschädigt. Der
+            Hauptzweck der Akquirierung kontinuierlicher geoelektrischer Messdaten bestand darin,
+            die Korrelation zwischen der Änderung des elektrischen Widerstandes (zeitlich) und der
+            Beschleunigung des Hangrutschungskörpers, die direkt durch die Wassersättigung des
+            Untergrundes beeinflusst war, zu untersuchen. Daher stehen die aufgezeichneten
+            Änderungen des elektrischen Widerstandes (zeitlich) in direkten Bezug zu den Änderungen
+            der Wassersättigung des Untergrundes und der Bodentemperatur. Der Monitoringzeitraum
+            umfasste fast ein Jahr (12/2010 bis 09/2011). In diesem Zeitraum wurde im zeitlichen
+            Abstand von vier Stunden ein vollständiger geoelektrischer Datensatz mit 1765
+            Datenpunkten erfasst. Die Datenerfassung erfolgte mit dem Geomon4D-System, das von der
+            Fachabteilung Geophysik der Geologischen Bundesanstalt entwickelt wurde. Die hier
+            veröffentlichten geoelektrischen Datensätze stellen Rohdaten dar, bei denen
+            ausschließlich aus messtechnischer Sicht fehlerhafte Datenpunkte entfernt wurden
+            (Stromeinspeisung kleiner als 0.5 mA und Spannungen größer als ±9.95 V). Daher ist mit
+            den veröffentlichten Datensätzen weiterhin eine umfassende Datenanalyse, -verarbeitung
+            und -inversion möglich.</dc:description>
+          <dc:description xml:lang="en">The published dataset consists of more than 1600 individual
+            geoelectric depth sections that were acquired over a period of almost one year. Each
+            individual depth section can be inverted into a 2D model of the electrical resistivity
+            of the subsurface. The temporal change of these models represents the essential
+            information content of this dataset. The geoelectrical monitoring was carried out with
+            the measuring system (Geomon4D) developed by the Department of Geophysics of the
+            Geological Survey of Austria, which is specially designed for monitoring application.
+            The measuring point distribution (in total 1765 measuring points per depth section)
+            corresponds to the so-called multiple-gradient array. The geoelectric monitoring profile
+            consists of 61 stainless steel electrodes with a constant electrode spacing of 1 m.</dc:description>
+          <dc:description xml:lang="de">Der publizierte Datensatz besteht aus über 1600 einzelnen
+            geoelektrischen Tiefensektionen, die über einen Zeitraum von knapp einem Jahr
+            aufgenommen wurden. Jede einzelne Tiefensektion kann mittels Inversionsrechnung in ein
+            2D-Modell des spezifischen elektrischen Widerstandes des Untergrundes umgesetzt werden.
+            Die zeitliche Änderung dieser Modelle stellt den wesentlichen Informationsgehalt dieses
+            Datensatzes dar. Das geoelektrische Monitoring erfolgte mit einem an der Geologischen
+            Bundesanstalt entwickelten Messsystem (Geomon4D), das speziell für den Monitoring
+            Einsatz konzipiert ist. Die Messpunktverteilung (in Summe 1765 Messpunkte pro
+            Tiefensektion) entspricht der sogenannten Multiplen-Gradienten-Anordnung. Das
+            geoelektrische Monitoring Profil umfasst in Summe 61 Edelstahlelektroden mit einem
+            konstanten Elektrodenabstand von 1 m.</dc:description>
+          <dc:publisher>Tethys RDR</dc:publisher>
+          <dc:contributor />
+          <dc:date>2021-02-12</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>doc-type:ResearchData</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>text/plain</dc:format>
+          <dc:format>text/plain</dc:format>
+          <dc:format>application/zip</dc:format>
+          <dc:identifier>https://www.tethys.at/dataset/5</dc:identifier>
+          <dc:language>eng</dc:language>
+          <dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.24341/tethys.5</dc:relation>
+          <dc:relation>https://doi.org/10.3997/1873-0604.2013060</dc:relation>
+          <dc:coverage>SOUTH-BOUND LATITUDE: 48.0985 * WEST-BOUND LONGITUDE: 13.554 * NORTH-BOUND
+            LATITUDE: 48.102 * EAST-BOUND LONGITUDE: 13.562 * ELEVATION ABSOLUT: 615 * DEPTH
+            ABSOLUT: 15 * TIME MIN: 2010-12-02 17:51:00 * TIME MAX: 2011-09-07 08:00:00</dc:coverage>
+          <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+          <dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+          <dc:source>Ottowitz, D.,Jochum, B.,Pfeiler, S.,Römer, A.,Supper, R. (2021): Geoelectrical
+            Monitoring - landslide Ampflwang (Upper Austria).Tethys RDR, Geologische Bundesanstalt
+            (GBA), Wien</dc:source>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:6</identifier>
+        <datestamp>2022-09-08T12:00:00Z</datestamp>
+        <setSpec>data-type:gis</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="de">Geodaten - Blatt 71 Ybbsitz (1:50.000)</dc:title>
+          <dc:title xml:lang="en">Geodata - sheet 71 Ybbsitz (1:50,000)</dc:title>
+          <dc:creator>Geologische Bundesanstalt Österreich</dc:creator>
+          <dc:subject xml:lang="de">Vektordaten</dc:subject>
+          <dc:subject xml:lang="de">Niederösterreich</dc:subject>
+          <dc:subject xml:lang="de">Kartenserie</dc:subject>
+          <dc:subject xml:lang="de">Steiermark</dc:subject>
+          <dc:subject xml:lang="de">GK 50</dc:subject>
+          <dc:subject>:550</dc:subject>
+          <dc:description xml:lang="de">Die Geodaten wurden aus dem Kartenwerk GK50 „Geologische
+            Karte der Republik Österreich 1:50.000“ abgeleitet. Die Datengrundlage basiert auf einer
+            umfassenden Datenerhebung im Rahmen der gesetzlich verankerten geologischen
+            Landesaufnahme von Österreich, welche eine umfangreiche Literaturrecherche, die
+            Geländekartierung, sowie die Probenahme mit wissenschaftlichen Analysen und Messungen
+            beinhaltet. Die im BMN-Blattschnitt veröffentlichten Geodaten entsprechen dem aktuellen
+            Wissensstand zum Zeitpunkt des Kartendruckes und können geringfügig von den Originalen
+            abweichen.</dc:description>
+          <dc:description xml:lang="en">The geodata were derived from the corresponding printed map
+            sheet series “Geological Map of Austria 1:50.000”. The dataset is based on a
+            comprehensive collection of geological data in the Division of Geological Mapping at the
+            Geological Survey of Austria including extensive literature research, geological mapping
+            and scientific research on rock samples. The geodata are published in the BMN-map sheet
+            layout and correspond to the current state of knowledge at the time of the map printing.
+            The published data may slightly deviate of the originals due to e.g. error correction
+            (typos).</dc:description>
+          <dc:description xml:lang="de">Die vorliegende Datenpublikation ist ein Bestandteil der
+            Kartenserie „Geologische Karte der Republik Österreich 1:50.000“ (GK50), die im Zeitraum
+            zwischen 1977 und 2017 veröffentlicht wurden und aus insgesamt 89 Geodatensätzen
+            besteht. Eine ausführliche Datenbeschreibung wird mit den Kartendaten bereitgestellt und
+            kann direkt zu jeder Publikation heruntergeladen werden.</dc:description>
+          <dc:description xml:lang="en">This data publication is part of the map series "Geological
+            Map of the Republic of Austria 1:50.000" (GK50), published between 1977 and 2017
+            consisting of 89 spatial data sets. A detailed data description is provided with the map
+            data and can be downloaded together with the data publication.</dc:description>
+          <dc:publisher>Tethys RDR</dc:publisher>
+          <dc:contributor>Stöckl, Werner</dc:contributor>
+          <dc:contributor>Ranftl, Eva-Maria</dc:contributor>
+          <dc:contributor>Haider, Viktoria</dc:contributor>
+          <dc:date>2021-06-14</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>doc-type:ResearchData</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/geopackage+sqlite3</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:identifier>https://www.tethys.at/dataset/6</dc:identifier>
+          <dc:language>ger</dc:language>
+          <dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.24341/tethys.6</dc:relation>
+          <dc:relation />
+          <dc:coverage>SOUTH-BOUND LATITUDE: 47.75 * WEST-BOUND LONGITUDE: 14.8333333333333 *
+            NORTH-BOUND LATITUDE: 48 * EAST-BOUND LONGITUDE: 15.0833333333333</dc:coverage>
+          <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+          <dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+          <dc:source>Geologische Bundesanstalt Österreich (2021): Geodaten - Blatt 71 Ybbsitz
+            (1:50.000).Tethys RDR, Geologische Bundesanstalt (GBA), Wien</dc:source>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <resumptionToken expirationDate="2026-03-25T02:13:06Z" completeListSize="3" cursor="1">177435798700000</resumptionToken>
+  </ListRecords>
+</OAI-PMH>

@@ -89,4 +89,11 @@ export type RequestOptions = {
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/RequestInit}
    */
   init?: ExtraRequestInit;
+  /**
+   * Milliseconds before the request times out.
+   *
+   * @remarks
+   *   Overrides {@linkcode HttpRequestConstructorOptions.timeout}.
+   */
+  timeout?: number;
 };

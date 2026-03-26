@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import tsconfig from "./tsconfig.json" with { type: "json" };
 import { basename, extname } from "node:path";
 import { defineConfig } from "vite";
@@ -13,5 +14,9 @@ export default defineConfig({
       formats: ["es"],
       fileName: basename(entry, extname(entry)),
     },
+  },
+  test: {
+    include: ["tests/**/*.test.ts"],
+    coverage: { include: ["src/**/*.ts"] },
   },
 });

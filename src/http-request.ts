@@ -76,7 +76,9 @@ function getTimeoutFn(
     if (signal.aborted) {
       ac.abort(signal.reason);
     } else {
-      const fn = () => ac.abort(signal.reason);
+      const fn = () => {
+        ac.abort(signal.reason);
+      };
 
       signal.addEventListener("abort", fn, { once: true });
 
@@ -89,7 +91,9 @@ function getTimeoutFn(
         return;
       }
 
-      const to = setTimeout(() => ac.abort(TIMEOUT_ID), ms);
+      const to = setTimeout(() => {
+        ac.abort(TIMEOUT_ID);
+      }, ms);
       const fn = () => {
         clearTimeout(to);
 
@@ -110,8 +114,13 @@ function getTimeoutFn(
   requestInit.signal = ac.signal;
 
   return () => {
-    const to = setTimeout(() => ac.abort(TIMEOUT_ID), ms);
-    return () => clearTimeout(to);
+    const to = setTimeout(() => {
+      ac.abort(TIMEOUT_ID);
+    }, ms);
+
+    return () => {
+      clearTimeout(to);
+    };
   };
 }
 
@@ -184,6 +193,7 @@ export class HttpRequest {
     params,
     usePost: post = this.#usePost,
     init: extraInit,
+    timeout = this.#timeout,
   }: RequestOptionsWithParams): Promise<string> {
     const url = new URL(this.#baseUrl);
 
@@ -202,7 +212,7 @@ export class HttpRequest {
     init.headers = this.#getHeaders(extraInit?.headers);
 
     const startTimeout =
-      this.#timeout !== undefined ? getTimeoutFn(init, this.#timeout) : null;
+      timeout !== undefined ? getTimeoutFn(init, timeout) : null;
 
     const stopTimeout = startTimeout?.();
 
@@ -233,7 +243,7 @@ export class HttpRequest {
       throw new OaiPmhRequestInitError(
         url.toString(),
         Object.is(error, TIMEOUT_ID)
-          ? new OaiPmhRequestTimeOutError(this.#timeout!, init)
+          ? new OaiPmhRequestTimeOutError(timeout!, init)
           : error,
       );
     } finally {

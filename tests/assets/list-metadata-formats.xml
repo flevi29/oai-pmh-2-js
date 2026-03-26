@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:20:41Z</responseDate>
+  <request verb="ListMetadataFormats">https://www.tethys.at/oai</request>
+  <ListMetadataFormats>
+    <metadataFormat>
+      <metadataPrefix>oai_dc</metadataPrefix>
+      <schema>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</schema>
+      <metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/</metadataNamespace>
+    </metadataFormat>
+    <metadataFormat>
+      <metadataPrefix>oai_datacite</metadataPrefix>
+      <schema>http://schema.datacite.org/meta/kernel-4.3/metadata.xsd</schema>
+      <metadataNamespace>http://datacite.org/schema/kernel-4</metadataNamespace>
+    </metadataFormat>
+    <metadataFormat>
+      <metadataPrefix>iso19139</metadataPrefix>
+      <schema>http://www.isotc211.org/2005/gmd/gmd.xsd</schema>
+      <metadataNamespace>http://www.isotc211.org/2005/gmd</metadataNamespace>
+    </metadataFormat>
+  </ListMetadataFormats>
+</OAI-PMH>

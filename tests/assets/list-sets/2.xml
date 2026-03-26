@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:21:54Z</responseDate>
+  <request verb="ListSets">https://www.tethys.at/oai</request>
+  <ListSets>
+    <set>
+      <setSpec>data-type:monitoring</setSpec>
+      <setName>Set for document type 'monitoring'</setName>
+    </set>
+    <set>
+      <setSpec>data-type:gis</setSpec>
+      <setName>Set for document type 'gis'</setName>
+    </set>
+    <set>
+      <setSpec>data-type:analysisdata</setSpec>
+      <setName>Set for document type 'analysisdata'</setName>
+    </set>
+    <resumptionToken expirationDate="2026-03-25T02:18:30Z" completeListSize="3" cursor="1">177435832000000</resumptionToken>
+  </ListSets>
+</OAI-PMH>

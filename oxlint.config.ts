@@ -6,4 +6,12 @@ export default defineConfig({
   env: { browser: true },
 
   categories: { correctness: "error" },
+
+  // Vitest
+  overrides: [
+    {
+      files: ["tests/**/*.test.ts"],
+      plugins: ["vitest"],
+    },
+  ],
 });

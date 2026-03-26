@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`base OAI-PMH data validation > empty response 1`] = `
+{
+  "cause": {
+    "message": ": expected element child nodes",
+    "name": "OaiPmhInnerValidationError",
+  },
+  "message": ": expected element child nodes",
+  "name": "OaiPmhValidationError",
+  "xml": "",
+}
+`;

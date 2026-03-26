@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T12:46:36Z</responseDate>
+  <request verb="Identify">https://www.tethys.at/oai</request>
+  <Identify>
+    <repositoryName>Tethys RDR</repositoryName>
+    <baseURL>https://www.tethys.at/oai</baseURL>
+    <protocolVersion>2.0</protocolVersion>
+    <adminEmail>repository@geosphere.at</adminEmail>
+    <earliestDatestamp>2020-09-03T15:37:57Z</earliestDatestamp>
+    <deletedRecord>persistent</deletedRecord>
+    <granularity>YYYY-MM-DDThh:mm:ssZ</granularity>
+    <compression>gzip</compression>
+    <compression>deflate</compression>
+    <description>
+      <oai-identifier xmlns="http://www.openarchives.org/OAI/2.0/oai-identifier"
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai-identifier http://www.openarchives.org/OAI/2.0/oai-identifier.xsd">
+        <scheme>oai</scheme>
+        <repositoryIdentifier>tethys.at</repositoryIdentifier>
+        <delimiter>:</delimiter>
+        <sampleIdentifier>oai:tethys.at:1</sampleIdentifier>
+      </oai-identifier>
+    </description>
+  </Identify>
+</OAI-PMH>

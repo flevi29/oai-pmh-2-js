@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:13:06Z</responseDate>
+  <request verb="ListRecords" metadataPrefix="oai_dc">https://www.tethys.at/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:7</identifier>
+        <datestamp>2022-09-08T12:00:00Z</datestamp>
+        <setSpec>data-type:gis</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="de">Geodaten - Blatt 7 Groß Siegharts (1:50.000)</dc:title>
+          <dc:title xml:lang="en">Geodata - sheet 7 Groß Siegharts (1:50,000)</dc:title>
+          <dc:creator>Geologische Bundesanstalt Österreich</dc:creator>
+          <dc:subject xml:lang="de">Vektordaten</dc:subject>
+          <dc:subject xml:lang="de">Niederösterreich</dc:subject>
+          <dc:subject xml:lang="de">Kartenserie</dc:subject>
+          <dc:subject xml:lang="de">GK 50</dc:subject>
+          <dc:subject>:550</dc:subject>
+          <dc:description xml:lang="de">Die Geodaten wurden aus dem Kartenwerk GK50 „Geologische
+            Karte der Republik Österreich 1:50.000“ abgeleitet. Die Datengrundlage basiert auf einer
+            umfassenden Datenerhebung im Rahmen der gesetzlich verankerten geologischen
+            Landesaufnahme von Österreich, welche eine umfangreiche Literaturrecherche, die
+            Geländekartierung, sowie die Probenahme mit wissenschaftlichen Analysen und Messungen
+            beinhaltet. Die im BMN-Blattschnitt veröffentlichten Geodaten entsprechen dem aktuellen
+            Wissensstand zum Zeitpunkt des Kartendruckes und können geringfügig von den Originalen
+            abweichen.</dc:description>
+          <dc:description xml:lang="en">The geodata were derived from the corresponding printed map
+            sheet series “Geological Map of Austria 1:50.000”. The dataset is based on a
+            comprehensive collection of geological data in the Division of Geological Mapping at the
+            Geological Survey of Austria including extensive literature research, geological mapping
+            and scientific research on rock samples. The geodata are published in the BMN-map sheet
+            layout and correspond to the current state of knowledge at the time of the map printing.
+            The published data may slightly deviate of the originals due to e.g. error correction
+            (typos).</dc:description>
+          <dc:description xml:lang="de">Die vorliegende Datenpublikation ist ein Bestandteil der
+            Kartenserie „Geologische Karte der Republik Österreich 1:50.000“ (GK50), die im Zeitraum
+            zwischen 1977 und 2017 veröffentlicht wurden und aus insgesamt 89 Geodatensätzen
+            besteht. Eine ausführliche Datenbeschreibung wird mit den Kartendaten bereitgestellt und
+            kann direkt zu jeder Publikation heruntergeladen werden.</dc:description>
+          <dc:description xml:lang="en">This data publication is part of the map series "Geological
+            Map of the Republic of Austria 1:50.000" (GK50), published between 1977 and 2017
+            consisting of 89 spatial data sets. A detailed data description is provided with the map
+            data and can be downloaded together with the data publication.</dc:description>
+          <dc:publisher>Tethys RDR</dc:publisher>
+          <dc:contributor>Stöckl, Werner</dc:contributor>
+          <dc:contributor>Ranftl, Eva-Maria</dc:contributor>
+          <dc:date>2021-06-15</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>doc-type:ResearchData</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/geopackage+sqlite3</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:identifier>https://www.tethys.at/dataset/7</dc:identifier>
+          <dc:language>ger</dc:language>
+          <dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.24341/tethys.7</dc:relation>
+          <dc:relation />
+          <dc:coverage>SOUTH-BOUND LATITUDE: 48.75 * WEST-BOUND LONGITUDE: 15.3333333333333 *
+            NORTH-BOUND LATITUDE: 49 * EAST-BOUND LONGITUDE: 15.5833333333333</dc:coverage>
+          <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+          <dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+          <dc:source>Geologische Bundesanstalt Österreich (2021): Geodaten - Blatt 7 Groß Siegharts
+            (1:50.000).Tethys RDR, Geologische Bundesanstalt (GBA), Wien</dc:source>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:8</identifier>
+        <datestamp>2022-09-08T12:00:00Z</datestamp>
+        <setSpec>data-type:gis</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="de">Geodaten - Blatt 9 Retz (1:50.000)</dc:title>
+          <dc:title xml:lang="en">Geodata - sheet 9 Retz (1:50,000)</dc:title>
+          <dc:creator>Geologische Bundesanstalt Österreich</dc:creator>
+          <dc:subject xml:lang="de">Vektordaten</dc:subject>
+          <dc:subject xml:lang="de">Niederösterreich</dc:subject>
+          <dc:subject xml:lang="de">Kartenserie</dc:subject>
+          <dc:subject xml:lang="de">GK 50</dc:subject>
+          <dc:subject>:550</dc:subject>
+          <dc:description xml:lang="de">Die Geodaten wurden aus dem Kartenwerk GK50 „Geologische
+            Karte der Republik Österreich 1:50.000“ abgeleitet. Die Datengrundlage basiert auf einer
+            umfassenden Datenerhebung im Rahmen der gesetzlich verankerten geologischen
+            Landesaufnahme von Österreich, welche eine umfangreiche Literaturrecherche, die
+            Geländekartierung, sowie die Probenahme mit wissenschaftlichen Analysen und Messungen
+            beinhaltet. Die im BMN-Blattschnitt veröffentlichten Geodaten entsprechen dem aktuellen
+            Wissensstand zum Zeitpunkt des Kartendruckes und können geringfügig von den Originalen
+            abweichen.</dc:description>
+          <dc:description xml:lang="en">The geodata were derived from the corresponding printed map
+            sheet series “Geological Map of Austria 1:50.000”. The dataset is based on a
+            comprehensive collection of geological data in the Division of Geological Mapping at the
+            Geological Survey of Austria including extensive literature research, geological mapping
+            and scientific research on rock samples. The geodata are published in the BMN-map sheet
+            layout and correspond to the current state of knowledge at the time of the map printing.
+            The published data may slightly deviate of the originals due to e.g. error correction
+            (typos).</dc:description>
+          <dc:description xml:lang="de">Die vorliegende Datenpublikation ist ein Bestandteil der
+            Kartenserie „Geologische Karte der Republik Österreich 1:50.000“ (GK50), die im Zeitraum
+            zwischen 1977 und 2017 veröffentlicht wurden und aus insgesamt 89 Geodatensätzen
+            besteht. Eine ausführliche Datenbeschreibung wird mit den Kartendaten bereitgestellt und
+            kann direkt zu jeder Publikation heruntergeladen werden.</dc:description>
+          <dc:description xml:lang="en">This data publication is part of the map series "Geological
+            Map of the Republic of Austria 1:50.000" (GK50), published between 1977 and 2017
+            consisting of 89 spatial data sets. A detailed data description is provided with the map
+            data and can be downloaded together with the data publication.</dc:description>
+          <dc:publisher>Tethys RDR</dc:publisher>
+          <dc:contributor>Stöckl, Werner</dc:contributor>
+          <dc:contributor>Ranftl, Eva-Maria</dc:contributor>
+          <dc:date>2021-06-15</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>doc-type:ResearchData</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/geopackage+sqlite3</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:identifier>https://www.tethys.at/dataset/8</dc:identifier>
+          <dc:language>ger</dc:language>
+          <dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.24341/tethys.8</dc:relation>
+          <dc:relation />
+          <dc:coverage>SOUTH-BOUND LATITUDE: 48.75 * WEST-BOUND LONGITUDE: 15.8333333333333 *
+            NORTH-BOUND LATITUDE: 49 * EAST-BOUND LONGITUDE: 16.0833333333333</dc:coverage>
+          <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+          <dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+          <dc:source>Geologische Bundesanstalt Österreich (2021): Geodaten - Blatt 9 Retz
+            (1:50.000).Tethys RDR, Geologische Bundesanstalt (GBA), Wien</dc:source>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:9</identifier>
+        <datestamp>2022-09-08T12:00:00Z</datestamp>
+        <setSpec>data-type:gis</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="de">Geodaten - Blatt 12 Passau (1:50.000)</dc:title>
+          <dc:title xml:lang="en">Geodata - sheet 12 Passau (1:50,000)</dc:title>
+          <dc:creator>Geologische Bundesanstalt Österreich</dc:creator>
+          <dc:subject xml:lang="de">Vektordaten</dc:subject>
+          <dc:subject xml:lang="de">Kartenserie</dc:subject>
+          <dc:subject xml:lang="de">GK 50</dc:subject>
+          <dc:subject xml:lang="de">Oberösterreich</dc:subject>
+          <dc:subject>:550</dc:subject>
+          <dc:description xml:lang="de">Die Geodaten wurden aus dem Kartenwerk GK50 „Geologische
+            Karte der Republik Österreich 1:50.000“ abgeleitet. Die Datengrundlage basiert auf einer
+            umfassenden Datenerhebung im Rahmen der gesetzlich verankerten geologischen
+            Landesaufnahme von Österreich, welche eine umfangreiche Literaturrecherche, die
+            Geländekartierung, sowie die Probenahme mit wissenschaftlichen Analysen und Messungen
+            beinhaltet. Die im BMN-Blattschnitt veröffentlichten Geodaten entsprechen dem aktuellen
+            Wissensstand zum Zeitpunkt des Kartendruckes und können geringfügig von den Originalen
+            abweichen.</dc:description>
+          <dc:description xml:lang="en">The geodata were derived from the corresponding printed map
+            sheet series “Geological Map of Austria 1:50.000”. The dataset is based on a
+            comprehensive collection of geological data in the Division of Geological Mapping at the
+            Geological Survey of Austria including extensive literature research, geological mapping
+            and scientific research on rock samples. The geodata are published in the BMN-map sheet
+            layout and correspond to the current state of knowledge at the time of the map printing.
+            The published data may slightly deviate of the originals due to e.g. error correction
+            (typos).</dc:description>
+          <dc:description xml:lang="de">Die vorliegende Datenpublikation ist ein Bestandteil der
+            Kartenserie „Geologische Karte der Republik Österreich 1:50.000“ (GK50), die im Zeitraum
+            zwischen 1977 und 2017 veröffentlicht wurden und aus insgesamt 89 Geodatensätzen
+            besteht. Eine ausführliche Datenbeschreibung wird mit den Kartendaten bereitgestellt und
+            kann direkt zu jeder Publikation heruntergeladen werden.</dc:description>
+          <dc:description xml:lang="en">This data publication is part of the map series "Geological
+            Map of the Republic of Austria 1:50.000" (GK50), published between 1977 and 2017
+            consisting of 89 spatial data sets. A detailed data description is provided with the map
+            data and can be downloaded together with the data publication.</dc:description>
+          <dc:publisher>Tethys RDR</dc:publisher>
+          <dc:contributor>Stöckl, Werner</dc:contributor>
+          <dc:contributor>Ranftl, Eva-Maria</dc:contributor>
+          <dc:date>2021-06-15</dc:date>
+          <dc:type>Dataset</dc:type>
+          <dc:type>doc-type:ResearchData</dc:type>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:format>application/geopackage+sqlite3</dc:format>
+          <dc:format>application/pdf</dc:format>
+          <dc:identifier>https://www.tethys.at/dataset/9</dc:identifier>
+          <dc:language>ger</dc:language>
+          <dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.24341/tethys.9</dc:relation>
+          <dc:relation />
+          <dc:coverage>SOUTH-BOUND LATITUDE: 48.5 * WEST-BOUND LONGITUDE: 13.3333333333333 *
+            NORTH-BOUND LATITUDE: 48.75 * EAST-BOUND LONGITUDE: 13.5833333333333</dc:coverage>
+          <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+          <dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+          <dc:source>Geologische Bundesanstalt Österreich (2021): Geodaten - Blatt 12 Passau
+            (1:50.000).Tethys RDR, Geologische Bundesanstalt (GBA), Wien</dc:source>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+  </ListRecords>
+</OAI-PMH>

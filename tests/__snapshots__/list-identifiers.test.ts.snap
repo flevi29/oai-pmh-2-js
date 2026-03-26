@@ -1,0 +1,120 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`method \`listIdentifiers\` > successful response 1`] = `
+[
+  [
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:1",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:2",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:551",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:3",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+  ],
+  [
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:4",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+    {
+      "datestamp": "2021-06-10T12:00:00Z",
+      "identifier": "oai:tethys.at:5",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:monitoring",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:6",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+  ],
+  [
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:7",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:8",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+    {
+      "datestamp": "2022-09-08T12:00:00Z",
+      "identifier": "oai:tethys.at:9",
+      "isDeleted": false,
+      "setSpec": [
+        "data-type:gis",
+        "ddc:550",
+        "open_access",
+        "openaire_data",
+        "doc-type:ResearchData",
+      ],
+    },
+  ],
+]
+`;

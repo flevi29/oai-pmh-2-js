@@ -1,0 +1,57 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`method \`listSets\` > successful response 1`] = `
+[
+  [
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "open_access",
+    },
+    {
+      "setDescription": undefined,
+      "setName": "OpenAIRE",
+      "setSpec": "openaire_data",
+    },
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "doc-type:ResearchData",
+    },
+  ],
+  [
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "data-type:monitoring",
+    },
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "data-type:gis",
+    },
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "data-type:analysisdata",
+    },
+  ],
+  [
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "data-type:models",
+    },
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "data-type:mixedtype",
+    },
+    {
+      "setDescription": undefined,
+      "setName": "",
+      "setSpec": "data-type:measurementdata",
+    },
+  ],
+]
+`;

@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`error responses > simple error 1`] = `
+{
+  "cause": {
+    "errors": [
+      {
+        "code": "idDoesNotExist",
+        "text": "",
+      },
+    ],
+    "request": {
+      "attr": {
+        "from": undefined,
+        "identifier": undefined,
+        "metadataPrefix": undefined,
+        "resumptionToken": undefined,
+        "set": undefined,
+        "until": undefined,
+        "verb": "GetRecord",
+      },
+      "value": "https://www.tethys.at/oai",
+    },
+    "responseDate": "2026-03-24T14:15:14Z",
+  },
+  "message": "OAI-PMH provider returned error(s):
+idDoesNotExist: <error code has no accompanying description>",
+  "name": "OaiPmhErrorResponse",
+}
+`;

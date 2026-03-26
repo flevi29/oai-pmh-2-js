@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:18:29Z</responseDate>
+  <request verb="ListIdentifiers" metadataPrefix="oai_dc">https://www.tethys.at/oai</request>
+  <ListIdentifiers>
+    <header>
+      <identifier>oai:tethys.at:4</identifier>
+      <datestamp>2022-09-08T12:00:00Z</datestamp>
+      <setSpec>data-type:gis</setSpec>
+      <setSpec>ddc:550</setSpec>
+      <setSpec>open_access</setSpec>
+      <setSpec>openaire_data</setSpec>
+      <setSpec>doc-type:ResearchData</setSpec>
+    </header>
+    <header>
+      <identifier>oai:tethys.at:5</identifier>
+      <datestamp>2021-06-10T12:00:00Z</datestamp>
+      <setSpec>data-type:monitoring</setSpec>
+      <setSpec>ddc:550</setSpec>
+      <setSpec>open_access</setSpec>
+      <setSpec>openaire_data</setSpec>
+      <setSpec>doc-type:ResearchData</setSpec>
+    </header>
+    <header>
+      <identifier>oai:tethys.at:6</identifier>
+      <datestamp>2022-09-08T12:00:00Z</datestamp>
+      <setSpec>data-type:gis</setSpec>
+      <setSpec>ddc:550</setSpec>
+      <setSpec>open_access</setSpec>
+      <setSpec>openaire_data</setSpec>
+      <setSpec>doc-type:ResearchData</setSpec>
+    </header>
+    <resumptionToken expirationDate="2026-03-25T02:18:30Z" completeListSize="3" cursor="1">177435832000000</resumptionToken>
+  </ListIdentifiers>
+</OAI-PMH>

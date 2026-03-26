@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:21:54Z</responseDate>
+  <request verb="ListSets">https://www.tethys.at/oai</request>
+  <ListSets>
+    <set>
+      <setSpec>open_access</setSpec>
+      <setName>Set for open access licenses</setName>
+    </set>
+    <set>
+      <setSpec>openaire_data</setSpec>
+      <setName>OpenAIRE</setName>
+    </set>
+    <set>
+      <setSpec>doc-type:ResearchData</setSpec>
+      <setName>Set for document type ResearchData</setName>
+    </set>
+    <resumptionToken expirationDate="2026-03-25T02:18:30Z" completeListSize="3" cursor="0">177435831000000</resumptionToken>
+  </ListSets>
+</OAI-PMH>

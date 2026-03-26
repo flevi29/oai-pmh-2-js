@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`method \`listMetadataFormats\` > successful response 1`] = `
+[
+  {
+    "metadataNamespace": "http://www.openarchives.org/OAI/2.0/oai_dc/",
+    "metadataPrefix": "oai_dc",
+    "schema": "http://www.openarchives.org/OAI/2.0/oai_dc.xsd",
+  },
+  {
+    "metadataNamespace": "http://datacite.org/schema/kernel-4",
+    "metadataPrefix": "oai_datacite",
+    "schema": "http://schema.datacite.org/meta/kernel-4.3/metadata.xsd",
+  },
+  {
+    "metadataNamespace": "http://www.isotc211.org/2005/gmd",
+    "metadataPrefix": "iso19139",
+    "schema": "http://www.isotc211.org/2005/gmd/gmd.xsd",
+  },
+]
+`;
