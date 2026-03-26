@@ -9,5 +9,6 @@ runs:
       run: |
         pnpm lint
         pnpm check
+        cp playground/.env.example playground/.env
         pnpm -C=playground check
         pnpm test --coverage --coverage.reporter=text
