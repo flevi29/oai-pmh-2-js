@@ -2,6 +2,10 @@ name: "Test"
 
 description: "Runs linters, type check and test."
 
+inputs:
+  coverage:
+    default: false
+
 runs:
   using: "composite"
   steps:
@@ -11,4 +15,5 @@ runs:
         pnpm check
         cp playground/.env.example playground/.env
         pnpm -C=playground check
-        pnpm test --coverage --coverage.reporter=text
+        echo ${{ inputs.coverage }}
+        pnpm test ${{ inputs.coverage == 'true' && '--coverage --coverage.reporter=text' || '' }}

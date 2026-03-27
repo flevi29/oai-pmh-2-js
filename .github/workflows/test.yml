@@ -14,3 +14,5 @@ jobs:
         uses: ./.github/actions/setup-nodejs
       - name: Runs linters, type check and test
         uses: ./.github/actions/test-and-lint
+        with:
+          coverage: true
