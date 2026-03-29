@@ -130,10 +130,7 @@ function writeDateFile(date: Date) {
 }
 
 async function fetchUrls() {
-  const parse = getXMLParser(
-    // @ts-expect-error: https://github.com/WebReflection/linkedom/issues/167
-    DOMParser,
-  );
+  const parse = getXMLParser(DOMParser as typeof globalThis.DOMParser);
 
   const response = await fetch(URL_LIST_URL);
 
@@ -171,8 +168,7 @@ async function testAllMethodsAndGetInfo(url: string): Promise<{
   const oaiPmh = new OaiPmh({
     baseUrl: url,
     timeout: 30_000,
-    // @ts-expect-error: https://github.com/WebReflection/linkedom/issues/167
-    domParser: DOMParser,
+    domParser: DOMParser as typeof globalThis.DOMParser,
     async requestFn(...params) {
       const response = await fetch(...params);
       const responseBodyAsText = await response.text();

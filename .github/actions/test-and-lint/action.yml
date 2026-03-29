@@ -15,5 +15,10 @@ runs:
         pnpm check
         cp playground/.env.example playground/.env
         pnpm -C=playground check
-        echo ${{ inputs.coverage }}
-        pnpm test ${{ inputs.coverage == 'true' && '--coverage --coverage.reporter=text' || '' }}
+        pnpm test ${{ inputs.coverage == 'true' && '--coverage' || '' }}
+
+    - if: inputs.coverage == 'true'
+      uses: actions/upload-artifact@v7
+      with:
+        name: coverage
+        path: coverage/

@@ -51,13 +51,13 @@ export function parseElementNode(node: Element): ParsedXMLElement {
   return parsed;
 }
 
-export function parseToRecordOrStringWithHelper(
-  childNodeList: NodeListOf<Node>,
+export function parseNodeListWithHelper(
+  nodeList: NodeListOf<Node>,
   helper?: ParserHelper,
 ): XMLParseResult {
   let parseResult: XMLParseResult | undefined = undefined;
 
-  for (const childNode of childNodeList) {
+  for (const childNode of nodeList) {
     switch (childNode.nodeType) {
       case childNode.ELEMENT_NODE: {
         const parsed = parseElementNode(childNode as Element);
@@ -80,7 +80,7 @@ export function parseToRecordOrStringWithHelper(
 
         const { data } = childNode as Text | CDATASection;
 
-        if (/\s/.test(data)) {
+        if (/^\s*$/.test(data)) {
           // ignore whitespace
           continue;
         }
@@ -121,10 +121,8 @@ export function parseToRecordOrStringWithHelper(
  * `CDATA_SECTION_NODE`, `PROCESSING_INSTRUCTION_NODE`, `DOCUMENT_TYPE_NODE`,
  * `COMMENT_NODE`. Will throw an error for any other types.
  */
-export function parseToRecordOrString(
-  childNodeList: NodeListOf<Node>,
-): XMLParseResult {
-  return parseToRecordOrStringWithHelper(childNodeList);
+export function parseNodeList(nodeList: NodeListOf<Node>): XMLParseResult {
+  return parseNodeListWithHelper(nodeList);
 }
 
 export function getXMLParser(

@@ -1,6 +1,6 @@
 import { OaiPmhInnerValidationError } from "../../error/validation-error.ts";
 import type { ParsedXMLRecord } from "../model/xml.ts";
-import { parseToRecordOrStringWithHelper } from "../xml-parser.ts";
+import { parseNodeListWithHelper } from "../xml-parser.ts";
 import { XMLRecordEntryParser } from "./xml-record-entry-parser.ts";
 
 export class ParserHelper {
@@ -19,7 +19,7 @@ export class ParserHelper {
   }
 
   parseChildNodeListToXMLRecord(childNodeList: NodeListOf<ChildNode>) {
-    const xmlRecord = parseToRecordOrStringWithHelper(childNodeList, this);
+    const xmlRecord = parseNodeListWithHelper(childNodeList, this);
 
     if (typeof xmlRecord !== "object") {
       throw this.getErr("expected element child nodes");

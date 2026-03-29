@@ -3,7 +3,7 @@ import type {
   ParsedXMLRecord,
   XMLParseResult,
 } from "../model/xml.ts";
-import { parseToRecordOrStringWithHelper } from "../xml-parser.ts";
+import { parseNodeListWithHelper } from "../xml-parser.ts";
 import { AttrParser } from "./attr-parser.ts";
 import type { ParserHelper } from "./parse-helper.ts";
 
@@ -21,7 +21,7 @@ export class XMLRecordEntryParser {
     attr,
   }: ParsedXMLElement): [XMLParseResult, AttrParser] {
     return [
-      parseToRecordOrStringWithHelper(subChildNodeList, this.#helper),
+      parseNodeListWithHelper(subChildNodeList, this.#helper),
       new AttrParser(this.#helper, attr),
     ];
   }
@@ -79,7 +79,7 @@ export class XMLRecordEntryParser {
         throw nextHelper.getErr("expected child node elements");
       }
 
-      const recordOrString = parseToRecordOrStringWithHelper(
+      const recordOrString = parseNodeListWithHelper(
         subChildNodeList,
         nextHelper,
       );
@@ -113,7 +113,7 @@ export class XMLRecordEntryParser {
     return this.#xmlRecordEntry.map(({ value: subChildNodeList, attr }, i) => {
       const nextHelper = this.#helper.addPath(i.toString());
 
-      const recordOrString = parseToRecordOrStringWithHelper(
+      const recordOrString = parseNodeListWithHelper(
         subChildNodeList,
         nextHelper,
       );
