@@ -8,13 +8,6 @@ exports[`base OAI-PMH data validation > empty response 1`] = `
 }
 `;
 
-exports[`base OAI-PMH data validation > no default dom parser 1`] = `
-{
-  "cause": undefined,
-  "msg": "[Error]: environment doesn't have DOMParser, please provide it via options",
-}
-`;
-
 exports[`base OAI-PMH data validation > no default dom parser error 1`] = `
 {
   "cause": undefined,
