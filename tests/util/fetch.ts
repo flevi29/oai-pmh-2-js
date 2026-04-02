@@ -1,46 +1,62 @@
 import { vi, assert } from "vitest";
 
-// TODO: Make it so that we can do using _ = fizz.buzz()
-export function getFetchMock() {
+function fetchMockWrap(cb: typeof fetch) {
   const originalFetch = globalThis.fetch;
   const fetchMock = vi.fn<typeof fetch>();
   globalThis.fetch = fetchMock;
 
+  fetchMock.mockImplementation(cb);
+
   return {
-    custom(cb: typeof fetch) {
-      fetchMock.mockImplementation(async (...params) => await cb(...params));
+    [Symbol.dispose]() {
+      globalThis.fetch = originalFetch;
     },
+  };
+}
 
-    abortable() {
-      fetchMock.mockImplementation(async (_input, init) => {
-        const signal = init?.signal;
-        assert.isOk(signal);
+export const fetchMock = {
+  custom: fetchMockWrap,
 
-        return await new Promise((_resolve, reject) => {
-          signal.throwIfAborted();
-          signal.onabort = () => {
-            reject(signal.reason);
-          };
-        });
+  abortable: () =>
+    fetchMockWrap(async (_input, init) => {
+      const signal = init?.signal;
+      assert.isOk(signal);
+
+      return await new Promise((_resolve, reject) => {
+        signal.throwIfAborted();
+        signal.onabort = () => {
+          reject(signal.reason);
+        };
       });
-    },
+    }),
 
-    simple(
-      searchParams: Record<string, string>,
-      responseBody?: BodyInit,
-      isPost = false,
-    ) {
-      fetchMock.mockImplementation(async (input, init) => {
+  response(
+    searchParams: Record<string, string>,
+    responseBodies?: BodyInit[],
+    isPost = false,
+  ) {
+    let i = 0;
+    return fetchMockWrap(async (input, init) => {
+      try {
         assert.instanceOf(input, URL);
 
-        assert.deepEqual(
-          Object.fromEntries(
-            isPost
-              ? ((init?.body as URLSearchParams | undefined)?.entries() ?? [])
-              : input.searchParams.entries(),
-          ),
-          searchParams,
+        const inputSearchParams = Object.fromEntries(
+          isPost
+            ? ((init?.body as URLSearchParams | undefined)?.entries() ?? [])
+            : input.searchParams.entries(),
         );
+
+        if (i === 0) {
+          assert.deepEqual(inputSearchParams, searchParams);
+        } else {
+          const { resumptionToken, ...rest } = inputSearchParams;
+
+          assert(
+            resumptionToken === undefined ||
+              typeof resumptionToken === "string",
+          );
+          assert.deepEqual(rest, { verb: searchParams.verb! });
+        }
 
         assert.strictEqual(init?.method, isPost ? "POST" : undefined);
 
@@ -49,47 +65,10 @@ export function getFetchMock() {
           { accept: "application/xml" },
         );
 
-        return new Response(responseBody);
-      });
-    },
-
-    // TODO: This can be used above as well
-    list(searchParams: Record<string, string>, responseBodies: BodyInit[]) {
-      let i = 0;
-      fetchMock.mockImplementation(async (input, init) => {
-        try {
-          assert.instanceOf(input, URL);
-
-          const inputSearchParams = Object.fromEntries(
-            input.searchParams.entries(),
-          );
-
-          if (i === 0) {
-            assert.deepEqual(inputSearchParams, searchParams);
-          } else {
-            const { resumptionToken, ...rest } = inputSearchParams;
-
-            assert(
-              resumptionToken === undefined ||
-                typeof resumptionToken === "string",
-            );
-            assert.deepEqual(rest, { verb: searchParams.verb! });
-          }
-
-          assert.deepEqual(
-            Object.fromEntries(new Headers(init?.headers).entries()),
-            { accept: "application/xml" },
-          );
-
-          return new Response(responseBodies[i]);
-        } finally {
-          i += 1;
-        }
-      });
-    },
-
-    [Symbol.dispose]() {
-      globalThis.fetch = originalFetch;
-    },
-  };
-}
+        return new Response(responseBodies?.[i]);
+      } finally {
+        i += 1;
+      }
+    });
+  },
+};

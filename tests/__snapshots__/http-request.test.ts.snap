@@ -3,32 +3,28 @@
 exports[`http requests > abort 1`] = `
 {
   "cause": "<sample reason>",
-  "message": "request to http://mock.api/?verb=Identify has failed",
-  "name": "OaiPmhRequestInitError",
+  "msg": "[OaiPmhRequestInitError]: request to http://mock.api/?verb=Identify has failed",
 }
 `;
 
 exports[`http requests > abort with timeout, after timeout 1`] = `
 {
   "cause": "<sample reason>",
-  "message": "request to http://mock.api/?verb=Identify has failed",
-  "name": "OaiPmhRequestInitError",
+  "msg": "[OaiPmhRequestInitError]: request to http://mock.api/?verb=Identify has failed",
 }
 `;
 
 exports[`http requests > abort with timeout, after timeout but before something todo 1`] = `
 {
   "cause": "<sample reason>",
-  "message": "request to http://mock.api/?verb=Identify has failed",
-  "name": "OaiPmhRequestInitError",
+  "msg": "[OaiPmhRequestInitError]: request to http://mock.api/?verb=Identify has failed",
 }
 `;
 
 exports[`http requests > abort with timeout, before timeout 1`] = `
 {
   "cause": "<sample reason>",
-  "message": "request to http://mock.api/?verb=Identify has failed",
-  "name": "OaiPmhRequestInitError",
+  "msg": "[OaiPmhRequestInitError]: request to http://mock.api/?verb=Identify has failed",
 }
 `;
 
@@ -37,11 +33,9 @@ exports[`http requests > custom request fn with error 1`] = `
   "cause": {
     "cause": "<retracted>",
     "fullMessage": "message sample",
-    "message": "message sample",
-    "name": "OaiPmhRequestError",
+    "msg": "[OaiPmhRequestError]: message sample",
   },
-  "message": "request to http://mock.api/?verb=Identify has failed",
-  "name": "OaiPmhRequestInitError",
+  "msg": "[OaiPmhRequestInitError]: request to http://mock.api/?verb=Identify has failed",
 }
 `;
 
@@ -49,8 +43,7 @@ exports[`http requests > response outside of 200-299 status 1`] = `
 {
   "cause": "<retracted>",
   "fullMessage": "message sample",
-  "message": "message sample",
-  "name": "OaiPmhRequestError",
+  "msg": "[OaiPmhRequestError]: message sample",
 }
 `;
 
@@ -58,8 +51,7 @@ exports[`http requests > response outside of 200-299 status 2`] = `
 {
   "cause": "<retracted>",
   "fullMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta lobortis sagittis.Mauris porttitor enim at aliquam interdum. Mauris et arcu ut augue convallis finibusut sit amet ipsum. Morbi auctor vulputate volutpat. Integer ultrices, ligula utvenenatis pretium, velit odio finibus mauris, vel eleifend felis enim non metus.",
-  "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta lobortis sagittis.Mauris porttitor enim at aliquam interdum. Mauris et arcu ut augue convallis finibusut sit amet ipsum. Morbi auctor vulputate volutpat. Integer ultrices, ligula utven ...",
-  "name": "OaiPmhRequestError",
+  "msg": "[OaiPmhRequestError]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta lobortis sagittis.Mauris porttitor enim at aliquam interdum. Mauris et arcu ut augue convallis finibusut sit amet ipsum. Morbi auctor vulputate volutpat. Integer ultrices, ligula utven ...",
 }
 `;
 
@@ -67,8 +59,7 @@ exports[`http requests > response outside of 200-299 status 3`] = `
 {
   "cause": "<retracted>",
   "fullMessage": "",
-  "message": "request returned an error",
-  "name": "OaiPmhRequestError",
+  "msg": "[OaiPmhRequestError]: request returned an error",
 }
 `;
 
@@ -79,10 +70,8 @@ exports[`http requests > timeout error 1`] = `
       "init": "<retracted>",
       "timeout": 0,
     },
-    "message": "request timed out after 0ms",
-    "name": "OaiPmhRequestTimeOutError",
+    "msg": "[OaiPmhRequestTimeOutError]: request timed out after 0ms",
   },
-  "message": "request to http://mock.api/?verb=Identify has failed",
-  "name": "OaiPmhRequestInitError",
+  "msg": "[OaiPmhRequestInitError]: request to http://mock.api/?verb=Identify has failed",
 }
 `;

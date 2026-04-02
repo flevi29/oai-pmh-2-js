@@ -5,7 +5,7 @@ exports[`method \`listSets\` > successful response 1`] = `
   [
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for open access licenses",
       "setSpec": "open_access",
     },
     {
@@ -15,41 +15,41 @@ exports[`method \`listSets\` > successful response 1`] = `
     },
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for document type ResearchData",
       "setSpec": "doc-type:ResearchData",
     },
   ],
   [
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for document type 'monitoring'",
       "setSpec": "data-type:monitoring",
     },
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for document type 'gis'",
       "setSpec": "data-type:gis",
     },
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for document type 'analysisdata'",
       "setSpec": "data-type:analysisdata",
     },
   ],
   [
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for document type 'models'",
       "setSpec": "data-type:models",
     },
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for document type 'mixedtype'",
       "setSpec": "data-type:mixedtype",
     },
     {
       "setDescription": undefined,
-      "setName": "",
+      "setName": "Set for document type 'measurementdata'",
       "setSpec": "data-type:measurementdata",
     },
   ],

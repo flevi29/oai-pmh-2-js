@@ -1,19 +1,17 @@
 import { expect } from "vitest";
 
-function makeErrorSerializable(error: unknown) {
-  if (error instanceof Error) {
-    Object.defineProperty(error, "name", { enumerable: true });
-    Object.defineProperty(error, "message", { enumerable: true });
-
-    if (error.cause !== undefined) {
-      Object.defineProperty(error, "cause", { enumerable: true });
-      error.cause = makeErrorSerializable(error.cause);
-    }
-
-    error = Object.fromEntries(Object.entries(error));
-  }
-
-  return error;
+function makeErrorSerializable(error: unknown): unknown {
+  return error instanceof Error
+    ? {
+        msg: `[${error.name}]: ${error.message}`,
+        cause: makeErrorSerializable(error.cause),
+        ...Object.fromEntries(
+          Object.entries(error).filter(
+            ([key]) => key !== "name" && key !== "message",
+          ),
+        ),
+      }
+    : error;
 }
 
 export async function getError(cb: (...args: any[]) => any) {

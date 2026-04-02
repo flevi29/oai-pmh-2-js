@@ -125,11 +125,6 @@ exports[`method \`getRecord\` > successful response 1`] = `
       </dc:description>
       
           
-      <dc:description
-        xml:lang=""
-      />
-      
-          
       <dc:publisher>
         Tethys RDR
       </dc:publisher>
@@ -224,5 +219,33 @@ exports[`method \`getRecord\` > successful response 1`] = `
     
       ,
   ],
+}
+`;
+
+exports[`method \`getRecord\` > wrong header 1`] = `
+{
+  "cause": [OaiPmhInnerValidationError: .OAI-PMH.GetRecord.record: expected \`metadata\` child node element],
+  "msg": "[OaiPmhValidationError]: .OAI-PMH.GetRecord.record: expected \`metadata\` child node element",
+  "xml": "<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="assets/oai2_style.xslt"?>
+<OAI-PMH xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-03-24T14:13:59Z</responseDate>
+  <request verb="GetRecord" metadataPrefix="oai_dc">https://www.tethys.at/oai</request>
+  <GetRecord>
+    <record>
+      <header>
+        <identifier>oai:tethys.at:1</identifier>
+        <datestamp>2022-09-08T12:00:00Z</datestamp>
+        <setSpec>data-type:gis</setSpec>
+        <setSpec>ddc:550</setSpec>
+        <setSpec>open_access</setSpec>
+        <setSpec>openaire_data</setSpec>
+        <setSpec>doc-type:ResearchData</setSpec>
+      </header>
+    </record>
+  </GetRecord>
+</OAI-PMH>",
 }
 `;

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { getClient } from "./util/client.ts";
-import { getFetchMock } from "./util/fetch.ts";
+import { fetchMock } from "./util/fetch.ts";
 import { getAsset } from "./util/asset.ts";
 import { getError, retract } from "./util/get-error.ts";
 import type { CustomRequestFunction } from "#src/index";
@@ -9,9 +9,8 @@ describe("http requests", () => {
   test("use POST", async () => {
     const client = getClient();
 
-    using mock = getFetchMock();
     const identifyXml = await getAsset("./identify.xml");
-    mock.simple({ verb: "Identify" }, identifyXml, true);
+    using _ = fetchMock.response({ verb: "Identify" }, [identifyXml], true);
 
     await client.identify({ usePost: true });
   });
@@ -19,9 +18,8 @@ describe("http requests", () => {
   test("timeout", async () => {
     const client = getClient();
 
-    using mock = getFetchMock();
     const identifyXml = await getAsset("./identify.xml");
-    mock.simple({ verb: "Identify" }, identifyXml);
+    using _ = fetchMock.response({ verb: "Identify" }, [identifyXml]);
 
     await client.identify({ timeout: 60_000 });
   });
@@ -29,8 +27,7 @@ describe("http requests", () => {
   test("timeout error", async () => {
     const client = getClient();
 
-    using mock = getFetchMock();
-    mock.abortable();
+    using _ = fetchMock.abortable();
 
     const error = await getError(() => client.identify({ timeout: 0 }));
     retract(error, ["cause.cause.init"]);
@@ -40,8 +37,7 @@ describe("http requests", () => {
   test("abort", async () => {
     const client = getClient();
 
-    using mock = getFetchMock();
-    mock.abortable();
+    using _ = fetchMock.abortable();
 
     const ac = new AbortController();
     ac.abort("<sample reason>");
@@ -56,8 +52,7 @@ describe("http requests", () => {
   test("abort with timeout, before timeout", async () => {
     const client = getClient();
 
-    using mock = getFetchMock();
-    mock.abortable();
+    using _ = fetchMock.abortable();
 
     const ac = new AbortController();
     ac.abort("<sample reason>");
@@ -72,8 +67,7 @@ describe("http requests", () => {
   test("abort with timeout, after timeout", async () => {
     const client = getClient();
 
-    using mock = getFetchMock();
-    mock.abortable();
+    using _ = fetchMock.abortable();
 
     const ac = new AbortController();
 
@@ -92,8 +86,7 @@ describe("http requests", () => {
   test("abort with timeout, after timeout but before something todo", async () => {
     const client = getClient();
 
-    using mock = getFetchMock();
-    mock.abortable();
+    using _ = fetchMock.abortable();
 
     const ac = new AbortController();
 
@@ -117,8 +110,7 @@ describe("http requests", () => {
   ])("response outside of 200-299 status", async (bodyMessage) => {
     const client = getClient();
 
-    using mock = getFetchMock();
-    mock.custom(() =>
+    using _ = fetchMock.custom(() =>
       Promise.resolve(new Response(bodyMessage, { status: 500 })),
     );
 
@@ -139,9 +131,8 @@ describe("http requests", () => {
   test("custom request fn", async () => {
     const client = getClient({ requestFn: customRequestFn });
 
-    using mock = getFetchMock();
     const identifyXml = await getAsset("./identify.xml");
-    mock.simple({ verb: "Identify" }, identifyXml);
+    using _ = fetchMock.response({ verb: "Identify" }, [identifyXml]);
 
     await client.identify();
   });
@@ -149,8 +140,7 @@ describe("http requests", () => {
   test("custom request fn with error", async () => {
     const client = getClient({ requestFn: customRequestFn });
 
-    using mock = getFetchMock();
-    mock.custom(() =>
+    using _ = fetchMock.custom(() =>
       Promise.resolve(new Response("message sample", { status: 500 })),
     );
 

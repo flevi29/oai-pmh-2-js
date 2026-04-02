@@ -6,7 +6,7 @@ exports[`error responses > simple error 1`] = `
     "errors": [
       {
         "code": "idDoesNotExist",
-        "text": "",
+        "text": "The value of the identifier argument is unknown or illegal in this repository.",
       },
     ],
     "request": {
@@ -23,8 +23,7 @@ exports[`error responses > simple error 1`] = `
     },
     "responseDate": "2026-03-24T14:15:14Z",
   },
-  "message": "OAI-PMH provider returned error(s):
-idDoesNotExist: <error code has no accompanying description>",
-  "name": "OaiPmhErrorResponse",
+  "msg": "[OaiPmhErrorResponse]: OAI-PMH provider returned error(s):
+idDoesNotExist: The value of the identifier argument is unknown or illegal in this repository.",
 }
 `;

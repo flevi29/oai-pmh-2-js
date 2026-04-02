@@ -2,6 +2,10 @@ name: "Test"
 
 description: "Runs linters, type check and test."
 
+inputs:
+  coverage:
+    default: false
+
 runs:
   using: "composite"
   steps:
@@ -11,4 +15,10 @@ runs:
         pnpm check
         cp playground/.env.example playground/.env
         pnpm -C=playground check
-        pnpm test --coverage --coverage.reporter=text
+        pnpm test ${{ inputs.coverage == 'true' && '--coverage' || '' }}
+
+    - if: inputs.coverage == 'true'
+      uses: actions/upload-artifact@v7
+      with:
+        name: coverage
+        path: coverage/
