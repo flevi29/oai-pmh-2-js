@@ -2,7 +2,7 @@ import { describe, test, expect, assert } from "vitest";
 import { getClient, getParser } from "./util/client.ts";
 import { fetchMock } from "./util/fetch.ts";
 import { getError } from "./util/get-error.ts";
-import { OaiPmh, parseToRecordOrString } from "#src/index";
+import { OaiPmh, parseNodeList } from "#src/index";
 import { DOMParser } from "linkedom";
 
 describe("base OAI-PMH data validation", () => {
@@ -36,14 +36,14 @@ describe("base OAI-PMH data validation", () => {
   test("xml parser works", () => {
     const parseXml = getParser();
     expect(
-      parseToRecordOrString(parseXml("<hello>Friend</hello>").childNodes),
+      parseNodeList(parseXml("<hello>Friend</hello>").childNodes),
     ).toMatchSnapshot();
   });
 
   test("xml parser ignores certain node types", () => {
     const parseXml = getParser();
     assert.strictEqual(
-      parseToRecordOrString(
+      parseNodeList(
         parseXml(
           // linkedom doesn't parse processing instructions,
           // so the test doesn't cover it, but that's fine
@@ -57,7 +57,7 @@ describe("base OAI-PMH data validation", () => {
   test("xml parser with differing text nodes", () => {
     const parseXml = getParser();
     expect(
-      parseToRecordOrString(
+      parseNodeList(
         parseXml(
           "Here is a CDATA section: <![CDATA[ < > & ]]> with all kinds of unescaped text.",
         ).childNodes,
@@ -68,9 +68,7 @@ describe("base OAI-PMH data validation", () => {
   test("xml with namespaced elements", () => {
     const parseXml = getParser();
     expect(
-      parseToRecordOrString(
-        parseXml("<pre:fixed>Prefixed</pre:fixed>").childNodes,
-      ),
+      parseNodeList(parseXml("<pre:fixed>Prefixed</pre:fixed>").childNodes),
     ).toMatchSnapshot();
   });
 

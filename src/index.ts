@@ -106,12 +106,12 @@
  * child [`Node`](https://developer.mozilla.org/en-US/docs/Web/API/Node)s as
  * their value.
  *
- * To parse these, one can either use the builtin `parseToRecordOrString` (read
- * its documentation for details on its limitations), or write their own
+ * To parse these, one can either use the builtin `parseNodeList` (read its
+ * documentation for details on its limitations), or write their own
  * implementation of parsing/walking through these nodes.
  *
  * ```ts
- * import { parseToRecordOrString } from "oai-pmh-2-js";
+ * import { parseNodeList } from "oai-pmh-2-js";
  * ```
  *
  * @module
@@ -119,7 +119,7 @@
 
 export * from "./oai-pmh.ts";
 
-export { parseNodeList as parseToRecordOrString } from "./parser/xml-parser.ts";
+export { parseNodeList } from "./parser/xml-parser.ts";
 
 export * from "./error/error-response.ts";
 export * from "./error/error.ts";
