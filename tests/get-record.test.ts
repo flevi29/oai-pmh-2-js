@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { getClient } from "./util/client.ts";
-import { getFetchMock } from "./util/fetch.ts";
+import { fetchMock } from "./util/fetch.ts";
 import { getAsset } from "./util/asset.ts";
 import { getError } from "./util/get-error.ts";
 
@@ -14,9 +14,8 @@ describe("method `getRecord`", () => {
       metadataPrefix: "oai_dc",
     };
 
-    using mock = getFetchMock();
     const getRecordXml = await getAsset("./get-record/get-record.xml");
-    mock.simple(searchParams, getRecordXml);
+    using _ = fetchMock.response(searchParams, [getRecordXml]);
 
     const result = await client.getRecord(
       searchParams.identifier,
@@ -34,11 +33,10 @@ describe("method `getRecord`", () => {
       metadataPrefix: "oai_dc",
     };
 
-    using mock = getFetchMock();
     const getRecordXml = await getAsset(
       "./get-record/get-record-malformed.xml",
     );
-    mock.simple(searchParams, getRecordXml);
+    using _ = fetchMock.response(searchParams, [getRecordXml]);
 
     const error = await getError(() =>
       client.getRecord(searchParams.identifier, searchParams.metadataPrefix),
