@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "first-phase-fetch": "node main.ts",
+    "second-phase-fetch": "vite dev --open"
+  },
+  "dependencies": {
+    "oai-pmh-2-js": "workspace:*"
+  }
+}

@@ -70,6 +70,12 @@ importers:
         specifier: 4.4.5
         version: 4.4.5(picomatch@4.0.3)(svelte@5.55.0)(typescript@6.0.2)
 
+  sources:
+    dependencies:
+      oai-pmh-2-js:
+        specifier: workspace:*
+        version: link:..
+
 packages:
 
   '@babel/helper-string-parser@7.27.1':
