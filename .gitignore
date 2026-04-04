@@ -21,6 +21,7 @@ vite.config.ts.timestamp-*
 /coverage
 
 # Output
+/sources/url-list
 /playground/.svelte-kit
 /playground/build
 /dist

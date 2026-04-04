@@ -48,9 +48,8 @@
 
   let {
     url = $bindable(),
-    isCorsProxied = $bindable(),
     isUsingPost = $bindable(),
-  }: { url: string; isCorsProxied: boolean; isUsingPost: boolean } = $props();
+  }: { url: string; isUsingPost: boolean } = $props();
 
   const isUrlInvalid = $derived(!URL.canParse(url) || undefined);
   const urlsList = $derived.by(() => {
@@ -68,38 +67,12 @@
 <Dialog bind:this={dialogElement} headerContent="Options">
   <fieldset>
     <label>
-      <input type="checkbox" bind:checked={isCorsProxied} />
-      <b>CORS Proxy</b>
-    </label>
-
-    <details>
-      <summary><small><i>Why?</i></small></summary>
-
-      <blockquote>
-        <p>
-          Most OAI-PMH providers do not send proper <a
-            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin"
-            rel="external"
-            target="_blank"><code>Access-Control-Allow-Origin</code></a
-          >
-          headers, so modern browsers block their response from being read from ECMAScript
-          code.
-        </p>
-
-        <p>
-          This setting mitigates this problem by proxying the OAI-PMH server
-          response through a service that adds the appropriate headers.
-        </p>
-      </blockquote>
-    </details>
-
-    <label>
       <input type="checkbox" bind:checked={isUsingPost} />
       <b>Use POST</b>
     </label>
 
     <details>
-      <summary><small><i>Why?</i></small></summary>
+      <summary><small><i>Use what now?</i></small></summary>
 
       <blockquote>
         <p>
@@ -123,6 +96,39 @@
   </fieldset>
 
   <hr />
+
+  <details>
+    <summary
+      ><small
+        ><i
+          >Why the curated list below, and why am I getting a network error for
+          almost any other OAI-PMH provider?</i
+        ></small
+      ></summary
+    >
+
+    <blockquote>
+      <p>
+        Most OAI-PMH providers do not send proper <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin"
+          rel="external"
+          target="_blank"><code>Access-Control-Allow-Origin</code></a
+        >
+        headers, and sometimes they serve
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Mixed_content"
+          rel="external"
+          target="_blank">mixed content</a
+        >, among other potential issues, so modern browsers block their response
+        from being read from ECMAScript code.
+      </p>
+
+      <p>
+        Below is a list of a few repositories that actually serve content that
+        can be read from ECMAScript code within browsers.
+      </p>
+    </blockquote>
+  </details>
 
   <OaiPmhUrlList
     useUrl={(v) => {

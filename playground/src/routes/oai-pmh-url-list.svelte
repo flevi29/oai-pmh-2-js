@@ -1,27 +1,12 @@
 <script module lang="ts">
   import { asset } from "$app/paths";
-  import type { Asset } from "$app/types";
 
   type ValidProviderObject = {
     url: string;
     repositoryName: string;
-    accessControlAllowOrigin: string | null;
   };
 
-  type ValidProviders = Exclude<
-    Asset,
-    "/favicon.png" | "/robots.txt" | "/valid-providers/date.json"
-  >;
-
-  // TODO: This doesn't err if non-existent keys appear because of `(string & {})`
-  const validProviderAssetPaths = Object.keys({
-    "/valid-providers/providers-0.json": true,
-    "/valid-providers/providers-1.json": true,
-    "/valid-providers/providers-2.json": true,
-    "/valid-providers/providers-3.json": true,
-    "/valid-providers/providers-4.json": true,
-    "/valid-providers/providers-5.json": true,
-  } satisfies { [TKey in ValidProviders]: true }).map(asset);
+  const urlListPath = asset("/valid-providers/cors.json");
 </script>
 
 <script lang="ts">
@@ -32,9 +17,6 @@
   // TODO: Find out why the following doesn't work
   // import(asset("/valid-providers/date.json"), { with: { type: "json" } });
 
-  let pagination = $state.raw<Pagination<ValidProviderObject>>();
-
-  // TODO: Fetch only when parent dialog is opened
   const datePromise = fetch(asset("/valid-providers/date.json")).then(
     (response) => {
       if (!response.ok) {
@@ -45,18 +27,16 @@
     },
   );
 
+  // TODO: how about the full list, should give URL?
+
   let i = $state(0);
   let parsedValues = $state.raw<ValidProviderObject[]>();
-  const canParseNext = $derived(i < validProviderAssetPaths.length);
+  let canFetch = $state(true);
 
   let isFetching = $state(false);
-  function fetchNext() {
-    if (!canParseNext) {
-      throw new Error("there are no more files to parse");
-    }
-
+  function fetchList() {
     isFetching = true;
-    fetch(validProviderAssetPaths[i]!)
+    fetch(urlListPath)
       .then(async (response) => {
         if (!response.ok) {
           throw new Error(
@@ -69,6 +49,7 @@
         i += 1;
 
         parsedValues = responseJson;
+        canFetch = false;
       })
       .catch((reason) => {
         console.error(reason);
@@ -83,8 +64,8 @@
 {#snippet buttonSnippet(title: string)}
   <button
     type="button"
-    onclick={() => fetchNext()}
-    disabled={isFetching || !canParseNext}>{title}</button
+    onclick={() => fetchList()}
+    disabled={isFetching || !canFetch}>{title}</button
   >
 {/snippet}
 
@@ -106,8 +87,8 @@
   </small>
 </p>
 
-<Pagination bind:this={pagination} values={parsedValues}>
-  {#snippet valueSnippet(valuesSlice, isLastPage)}
+<Pagination values={parsedValues}>
+  {#snippet valueSnippet(valuesSlice)}
     <ul>
       {#each valuesSlice as value}
         <li>
@@ -118,12 +99,6 @@
         </li>
       {/each}
     </ul>
-
-    {#if isLastPage}
-      <div role="group">
-        {@render buttonSnippet("More")}
-      </div>
-    {/if}
   {/snippet}
   {#snippet pendingSnippet()}
     {@render buttonSnippet("Fetch valid providers")}
