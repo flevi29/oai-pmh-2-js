@@ -61,7 +61,7 @@
     "prettier": "3.8.1",
     "prettier-plugin-jsdoc": "1.8.0",
     "prettier-plugin-svelte": "3.5.1",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "vite": "8.0.7",
     "vitest": "4.1.3"
   },
