@@ -12,7 +12,7 @@ jobs:
       - id: pages_cfg
         uses: actions/configure-pages@v5
       - name: Checkout codebase
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup Node.js environment
         uses: ./.github/actions/setup-nodejs
       - name: Runs linters, type check and test
