@@ -33,8 +33,7 @@ export type FailureCustomRequestFunctionResult = {
 
 /** A discriminated union object returned by {@linkcode CustomRequestFunction}. */
 export type CustomRequestFunctionResult =
-  | SuccessCustomRequestFunctionResult
-  | FailureCustomRequestFunctionResult;
+  SuccessCustomRequestFunctionResult | FailureCustomRequestFunctionResult;
 
 /**
  * A custom request function, that is called instead of {@linkcode fetch} on HTTP

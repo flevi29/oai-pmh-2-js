@@ -1,9 +1,6 @@
 <script module lang="ts">
   export type EnclosingType =
-    | "curly-braces"
-    | "square-brackets"
-    | "angle-brackets"
-    | "empty";
+    "curly-braces" | "square-brackets" | "angle-brackets" | "empty";
 
   function getEnclosingCharacters(
     kind: EnclosingType,
