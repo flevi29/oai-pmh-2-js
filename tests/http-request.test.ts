@@ -12,7 +12,7 @@ describe("http requests", () => {
     const identifyXml = await getAsset("./identify.xml");
     using _ = fetchMock.response({ verb: "Identify" }, [identifyXml], true);
 
-    await client.identify({ usePost: true });
+    await expect(client.identify({ usePost: true })).resolves.not.toThrow();
   });
 
   test("timeout", async () => {
@@ -21,7 +21,7 @@ describe("http requests", () => {
     const identifyXml = await getAsset("./identify.xml");
     using _ = fetchMock.response({ verb: "Identify" }, [identifyXml]);
 
-    await client.identify({ timeout: 60_000 });
+    await expect(client.identify({ timeout: 60_000 })).resolves.not.toThrow();
   });
 
   test("timeout error", async () => {
@@ -134,7 +134,7 @@ describe("http requests", () => {
     const identifyXml = await getAsset("./identify.xml");
     using _ = fetchMock.response({ verb: "Identify" }, [identifyXml]);
 
-    await client.identify();
+    await expect(client.identify()).resolves.not.toThrow();
   });
 
   test("custom request fn with error", async () => {
@@ -149,10 +149,13 @@ describe("http requests", () => {
     expect(error).toMatchSnapshot();
   });
 
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("search params with undefined or null value");
 
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("extra headers");
 
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("headers with accept");
 
   test("invalid URL construction error", () => {

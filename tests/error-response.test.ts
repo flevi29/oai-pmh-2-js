@@ -23,5 +23,6 @@ describe("error responses", () => {
     expect(error).toMatchSnapshot();
   });
 
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("multiple errors");
 });
