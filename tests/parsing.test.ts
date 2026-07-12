@@ -27,7 +27,7 @@ describe("base OAI-PMH data validation", () => {
     const originalDOMParser = globalThis.DOMParser;
     globalThis.DOMParser = DOMParser as typeof globalThis.DOMParser;
     try {
-      new OaiPmh({ baseUrl: "http://mock.api" });
+      expect(() => new OaiPmh({ baseUrl: "http://mock.api" })).not.toThrow();
     } finally {
       globalThis.DOMParser = originalDOMParser;
     }
@@ -73,12 +73,18 @@ describe("base OAI-PMH data validation", () => {
   });
 
   // TODO: How to test this? Cannot create document fragment via linkedom I believe
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("xml parser throws for certain node types");
 
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("expected attributes missing or no attributes at all");
 
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("missing object node or nodes with specific key");
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("missing string node or nodes with specific key");
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("node is of type text whereas it was supposed to be an object");
+  // oxlint-disable-next-line vitest/warn-todo
   test.todo("node is of type object whereas it was supposed to a string");
 });
