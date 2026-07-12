@@ -3,5 +3,5 @@ packages:
   - sources
   - playground
 allowBuilds:
-  '@parcel/watcher': false
+  "@parcel/watcher": false
   esbuild: true
