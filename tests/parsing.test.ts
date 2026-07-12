@@ -27,7 +27,7 @@ describe("base OAI-PMH data validation", () => {
     const originalDOMParser = globalThis.DOMParser;
     globalThis.DOMParser = DOMParser as typeof globalThis.DOMParser;
     try {
-      expect(new OaiPmh({ baseUrl: "http://mock.api" })).not.toThrow();
+      expect(() => new OaiPmh({ baseUrl: "http://mock.api" })).not.toThrow();
     } finally {
       globalThis.DOMParser = originalDOMParser;
     }
