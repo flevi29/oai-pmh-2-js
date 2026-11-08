@@ -14,7 +14,7 @@ runs:
     - name: Install pnpm
       uses: pnpm/action-setup@v6
     - name: Set up Node.js ${{ inputs.node-version }}
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ inputs.node-version }}
         registry-url: ${{ inputs.registry-url }}
